@@ -1,0 +1,3394 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Dashboard</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+<style>
+            .table-max thead tr {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 100 !important;
+            }
+        </style>
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template">
+<div class="header__row-wrapper">
+<div class="header__group">
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="lazy object-cover header__logo !rounded-lg entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1779420063-fowvtXxSk0.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Universitas Sentra Vidya Utama</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="header__action">
+<div class="dropdown dropdown_nav dropdown_notification">
+<button aria-expanded="false" class="btn btn_icon btn_nav !border-white/50" data-toggle="dropdown" id="qn-nav-notification">
+<span class="icon icon-bell-solid"></span>
+</button>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 z-10 !hidden md:!flex">
+            9+
+        </span>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 !hidden animate-ping md:!flex">
+            9+
+        </span>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="notification">
+<div class="notification__header">
+<div class="notification__wrapper">
+<h3 class="notification__title"><span class="icon icon-x-mark-mini" data-toggle="dropdown"></span>
+                        Notifikasi
+                    </h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/mark-all-as-read" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__header-btn" type="submit">
+                                Tandai Sudah Dibaca Semua
+                            </button>
+</form>
+</div>
+<nav class="nav-tab">
+<ul class="nav-tab__wrapper">
+<li class="nav-tab__item active" data-target="#notification-general-section" data-toggle="tab">
+                            Semua
+                                                            <span class="badge badge_sm badge_secondary-primary">
+    9+
+</span>
+</li>
+</ul>
+</nav>
+</div>
+<div class="notification__body">
+<div class="notification__section p-0 active" id="notification-general-section">
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 08 Jul 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/4c97d8b4-3e4e-45da-a518-32165e486ee7" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/f3f06c53-1232-4142-9578-47171ed17245" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 20 Mei 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/e56eac70-ec49-4b93-ba17-f883b2bd6607" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>akun desin testing</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Senin, 27 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/0cef242b-261a-40ee-b364-2c9cbe0ac9ef" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User test Tolak</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Selasa, 21 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/f07c6af0-bef2-45ad-84f5-5e0b27519e42" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User Testing Daftar Affliator</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="notification__footer">
+<a class="notification__footer-btn mx-auto" data-mockup-unresolved="/crm/notifications" href="#">
+                    Lihat semua
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dropdown dropdown_nav dropdown_profile">
+<button aria-expanded="false" class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a href="../super-admin/dashboard.html">
+<span class="icon icon-arrow-uturn-left"></span>
+                                    Kembali ke Super Admin
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="dashboard.html">
+<span>Profil Kampus</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Profil Kampus</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Informasi Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-university-majors.html">
+                                        Program Studi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-prices.html">Biaya Kuliah</a>
+</li>
+<div x-data="{ showDropdown: false }">
+<li class="dropdown__item">
+<a class="w-full" href="dashboard.html" x-on:click="showDropdown = !showDropdown">
+                                            Manajemen Konten
+                                            <span :class="{ '-rotate-180': showDropdown }" class="icon icon-chevron-down ml-auto transition-all duration-500"></span>
+</a>
+</li>
+<li hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDropdown">
+<ul>
+<li class="dropdown__item">
+<a href="galleries.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Galeri
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="brochures.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Brosur
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="articles.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Artikel
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="testimonies.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Testimoni
+                                                </a>
+</li>
+</ul>
+</li>
+</div>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="admission-cycles.html">Periode Pendaftaran</a>
+</li>
+<li class="dropdown__item">
+<a href="admissions.html">Jalur Pendaftaran</a>
+</li>
+<li class="dropdown__item">
+<a href="scholarships.html">Beasiswa</a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="admins.html">Staf PMB</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="dashboard.html">
+<span>CRM</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">CRM</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="prospects.html">
+                                            Manajemen Prospek
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a class="flex w-full flex-row items-center gap-1" href="interested-users.html">
+                                        Peminat Baru
+                                        <span class="icon icon-fire-solid ml-auto"></span>
+</a>
+</li>
+<div x-data="{ showDropdown: false }">
+<li class="dropdown__item">
+<a class="w-full" href="dashboard.html" x-on:click="showDropdown = !showDropdown">
+                                                Afiliator
+                                                <span :class="{ '-rotate-180': showDropdown }" class="icon icon-chevron-down ml-auto transition-all duration-500"></span>
+</a>
+</li>
+<li hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDropdown">
+<ul>
+<li class="dropdown__item">
+<a href="dashboard-affiliator.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Dashboard Afiliator
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/affiliates/validate" href="#">
+<span class="icon icon-arrow-right"></span>
+                                                        Validasi Peminat
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliates-payment.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Pembayaran Komisi
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliates-payment-histories.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Riwayat Pembayaran
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="admission-cycles-referral-commission.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Tarif Komisi
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliators.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Afiliator Kampus
+                                                    </a>
+</li>
+</ul>
+</li>
+<li class="dropdown__line"></li>
+</div>
+<li class="dropdown__item">
+<a href="custom-landing-pages.html">
+                                            Tracker &amp; Landing Page
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="dashboard.html">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="school-profilings.html">Profiling Sekolah</a>
+</li>
+<li class="dropdown__item">
+<a href="test.html">Tes Potensi Siswa</a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">Tryout</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<main class="main">
+<div class="container">
+<div class="modal" id="filter__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Filter Lain</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<form method="GET" onsubmit="addParams(event)">
+<div class="modal__body">
+<div class="modal__content-input">
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__time-period">Periode Waktu
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__time-period" name="filter[time_period]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Periode Waktu --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Periode Waktu --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Periode Waktu --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__time-period-item-choice-1" role="option">-- Pilih Periode Waktu --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="daily" id="choices--select__time-period-item-choice-2" role="option">
+                        Harian
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="weekly" id="choices--select__time-period-item-choice-3" role="option">
+                        Mingguan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="monthly" id="choices--select__time-period-item-choice-4" role="option">
+                        Bulanan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="annually" id="choices--select__time-period-item-choice-5" role="option">
+                        Tahunan
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__admission-cycle">Periode Pendaftaran
+                                </label>
+<div class="form-control__group">
+<select class="form-control__select" id="select__admission-cycle" name="admission_cycle_id">
+<option selected="" value="">-- Pilih Periode Pendaftaran --</option>
+<option value="127">
+                        2024/2025 Ganjil
+                    </option>
+<option value="22">
+                        Siklus Tes Dulu
+                    </option>
+<option value="6">
+                        2024/2025 penerimaan
+                    </option>
+<option value="4">
+                        testing iain ternate
+                    </option>
+<option value="3">
+                        tes
+                    </option>
+<option value="2">
+                        2023/2024 Ganjil
+                    </option>
+<option value="1">
+                        tes pmb
+                    </option>
+</select>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="hr-intext">
+<span class="hr-intext__line"></span>
+<p class="hr-intext__text">Atau</p>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__start-date">Tanggal Awal
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__start-date" max="" name="filter[start_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__end-date">Tanggal Akhir
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__end-date" min="" name="filter[end_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="main__header">
+<div class="main__location">
+<div class="main__wrapper">
+<h1 class="main__title">Dashboard</h1>
+<p class="main__subtitle">Terakhir diperbarui: 09 Jul 2026 14:37 WIB</p>
+</div>
+</div>
+<div class="main__action">
+<div class="flex flex-row items-center gap-4">
+<button class="btn btn_outline" data-target="#filter__modal" data-toggle="modal">
+<span class="btn__text !font-medium">
+            2024/2025 Ganjil
+        </span>
+<span class="icon icon-funnel-solid"></span>
+</button>
+<form action="#" data-mockup-unresolved="/crm/forget-cache" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <input name="cache_key" type="hidden" value="campus-admin-dashboard-773"/>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Perbarui Data
+        </span>
+<span class="icon icon-arrow-path"></span>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-sparkles-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Kelengkapan Informasi Kampus</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col" x-data="{ showInformation: false }">
+<div class="bg-[#009B24] relative flex flex-row flex-wrap items-center justify-between gap-2 rounded-lg px-4 py-2">
+<svg class="absolute inset-0 z-0 opacity-10" height="100%" id="patternId" width="100%" xmlns="#">
+<defs>
+<pattern height="173.21" id="a" patterntransform="scale(2) rotate(0)" patternunits="userSpaceOnUse" width="100">
+<rect fill="hsla(0, 0%, 100%, 0)" height="100%" width="100%" x="0" y="0"></rect>
+<path d="M0 0v4.74L2.73 0zm4.14 0 6.44 11.15 2.38-4.12L8.9 0zm23.81 0 .49.84h-14.3l2.39 4.13h11.9l-7.14 12.37h4.77L34.39 2.9 32.71 0zm9.52 0 .49.84h19.05l7.14 12.37H49.87l2.38 4.13h11.9l-7.14 12.37h4.76l8.34-14.44L61.28 0zm28.57 0 7.64 13.21h19.04l7.15 12.37h-14.3l2.39 4.13h11.9l-7.14 12.37h4.77l2.5-4.34V17.57l-3.7-6.42 3.7-6.41V0h-2.01l-5.25 9.1H78.44L83.7 0h-4.77l-4.06 7.03L70.81 0zm22.41 0-2.87 4.97h4.76L93.21 0zm-50.5 4.97-9.51 16.5h-14.3l7.15-12.38h-4.76L10.58 19.4 3.44 7.03l-2.39 4.12 8.34 14.43h19.05l7.14 12.38H21.29l2.39 4.12h11.9l-7.14 12.38h4.75l8.34-14.44-9.52-16.5 7.14-12.37 7.14 12.37 2.38-4.12-5.95-10.3h14.29l-2.38-4.13zm35.72 12.37-9.52 16.5H49.87l7.14-12.38h-4.76l-5.96 10.31-7.14-12.37-2.38 4.12 8.33 14.44h19.05l7.14 12.37H57.01l2.38 4.13h11.9l-7.14 12.37h4.76l8.33-14.44-9.52-16.5 7.14-12.37 7.15 12.38 2.38-4.13-5.95-10.3h14.28l-2.38-4.13zM0 17.57v20.16l5.82-10.08zm9.39 12.14-9.4 16.27v4.57L7 62.71H0v4.12h7L0 78.97v.23h4.63l8.33-14.43-9.52-16.5 7.14-12.37 7.14 12.37 2.38-4.13-5.95-10.3h14.29l-2.38-4.13zm65.47 2.06-2.38 4.13 8.34 14.43h19.05l.13.22v-4.57l-.13.23h-14.3l7.15-12.38h-4.76l-5.95 10.31zM45.1 42.08l-9.52 16.5H21.29l7.15-12.37h-4.76l-5.96 10.3-7.14-12.37-2.38 4.13 8.33 14.44h19.05l7.14 12.37H28.44l2.38 4.12h11.9l-7.14 12.37h4.76l8.33-14.43-9.52-16.5 7.14-12.37 7.15 12.37 2.38-4.12-5.95-10.31h14.28l-2.38-4.13zm35.72 12.38-9.53 16.49H57.01l7.14-12.37h-4.76l-5.95 10.3-7.15-12.36-2.37 4.12 8.33 14.44h19.04l7.15 12.37h-14.3l2.39 4.12h11.9l-7.14 12.37h4.77l8.33-14.43-9.53-16.5 7.15-12.37 7.14 12.37 2.38-4.12-5.95-10.31h14.29l-2.39-4.12zm11.9 8.25 2.38 4.12h4.9v-4.12zm-76.2 4.12L7 83.33H0v4.12h7l7.15 12.37H0v.23l2.25 3.9h11.9L7 116.31h4.77l8.33-14.43-9.52-16.5 7.14-12.37 7.14 12.37 2.38-4.12-5.95-10.31h14.29l-2.39-4.12zm65.49 2.06-2.38 4.12 8.33 14.44H100v-4.13h-7.28l7.15-12.37H95.1l-5.95 10.3zM100 78.97l-.13.23h.13zm-47.75.23-9.53 16.5H28.44l7.14-12.38h-4.76l-5.96 10.31-7.14-12.37-2.38 4.12 8.34 14.44h19.04l7.15 12.37h-14.3l2.39 4.12h11.9l-7.14 12.37h4.76l8.34-14.43-9.53-16.5 7.15-12.37 7.14 12.38 2.38-4.13-5.95-10.3h14.28l-2.38-4.13zM0 91.57v4.12h7l-2.37-4.12zm87.96 0-9.52 16.5h-14.3l7.15-12.38h-4.76L60.58 106l-7.14-12.37-2.39 4.13 8.34 14.43h19.05l7.14 12.37H71.29l2.38 4.12h11.9l-7.13 12.38h4.76l8.33-14.44-9.52-16.5 7.14-12.36 7.14 12.37 2.38-4.13-5.95-10.3H100v-4.13zm11.9 8.25.14.22v-.22zm-76.18 4.12-9.53 16.5H0v4.12h14.15l7.14 12.37H7l2.39 4.13h11.9l-7.14 12.37h4.76L27.24 139l-9.52-16.5 7.14-12.37 7.15 12.37 2.38-4.13-5.95-10.3h14.28l-2.38-4.13zM89.15 106l-2.38 4.13 8.33 14.43h4.9v-4.12h-.13l.13-.22v-8.26l-3.7 6.41zm-86.9 2.07L0 111.97v8.24l7-12.14zm57.14 8.24-9.52 16.5h-14.3l7.15-12.37h-4.76l-5.95 10.3-7.15-12.37-2.38 4.13 8.34 14.43h19.05l7.14 12.38H42.72l2.38 4.12h11.91l-7.14 12.37h4.76l8.33-14.43-9.52-16.5 7.14-12.37 7.14 12.37 2.39-4.12-5.96-10.31h14.29l-2.38-4.13zm-59.4 12.37v4.13h14.16l-2.38-4.13zm95.11 0-9.52 16.5H71.29l7.14-12.37h-4.75l-5.96 10.31-7.14-12.37-2.38 4.12 8.33 14.44h19.05l7.14 12.37H78.43l2.39 4.12h11.9l-4.27 7.4h4.76l5.46-9.46-9.52-16.5 7.14-12.37 3.7 6.42v-8.26l-.12-.23h.13v-4.13zM0 133.04v8.25l3.44 5.95 2.38-4.12zm30.82 8.02-9.53 16.5H7l7.15-12.38H9.39l-5.95 10.31L0 149.54v8.24l2.25 3.9h19.04l6.66 11.52h4.76l-7.85-13.58 7.15-12.38 7.14 12.38 2.38-4.13-5.95-10.3h14.29l-2.39-4.13zm65.47 2.06-2.38 4.12 6.09 10.55v-8.25zm-29.76 10.3-9.52 16.5H42.72l7.15-12.37H45.1l-5.95 10.32-7.14-12.38-2.38 4.13 7.84 13.58h23.81l-.7-1.21 7.14-12.37 7.14 12.37 2.38-4.12-5.95-10.32h14.29l-2.38-4.12zM2.25 165.8 0 169.7v3.5h2.73l.7-1.21.7 1.21H8.9L7 169.93h14.3l-2.39-4.13zm65.47 2.07-2.38 4.12.7 1.21h4.76zm32.28 1.82-2.03 3.51H100zm-19.18.24-1.9 3.27h4.77l1.89-3.27z" fill="hsla(0, 0%, 100%, 1)" stroke="none" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#a)" height="800%" transform="translate(0,0)" width="800%"></rect>
+</svg>
+<div class="z-10 flex flex-row flex-wrap items-center gap-4">
+<div class="flex flex-row items-center gap-2">
+<div class="relative h-24 w-40">
+<svg class="rotate-180" viewbox="0 0 36 36" xmlns="#">
+
+<circle class="stroke-current text-white/50" cx="18" cy="18" fill="none" r="16" stroke-dasharray="50 100" stroke-linecap="round" stroke-width="1"></circle>
+
+<circle class="stroke-current text-white" cx="18" cy="18" fill="none" id="progress__bar" r="16" stroke-dasharray="40 100" stroke-linecap="round" stroke-width="1.5"></circle>
+</svg>
+
+<div class="absolute start-1/2 top-9 flex -translate-x-1/2 transform flex-col items-center">
+<span class="text-2xl font-bold text-white" id="percentage__text">80%</span>
+<span class="font-bold text-white">
+                                    Baik
+                                </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="font-bold text-white">
+                            Tingkatkan Kelengkapan Informasi Kampus Anda!
+                        </div>
+<div class="text-white">
+                            Lengkapi dan terus update informasi tentang kampus anda
+                            sehingga dapat
+                            <br/>
+                            meningkatkan kepercayaan calon mahasiswa untuk mendaftar di
+                            kampus anda
+                        </div>
+</div>
+</div>
+<button class="btn btn_outline z-10 w-full !font-medium lg:w-max" type="button" x-on:click="showInformation = !showInformation">
+<span class="btn__text !font-medium">
+<div class="flex flex-row items-center gap-2.5">
+<span :class="showInformation ? '-rotate-180' : ''" class="icon icon-chevron-down transition-all duration-300"></span>
+<span x-text="showInformation ? 'Sembunyikan' : 'Tampilkan'">Tampilkan</span>
+</div>
+</span>
+</button>
+</div>
+<div class="mt-4 flex flex-col gap-4" hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showInformation">
+<div class="font-medium">Informasi yang Perlu Diperbarui</div>
+<div class="!grid grid-cols-1 gap-x-8 sm:grid-cols-2">
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Melengkapi informasi umum
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-red-600 hover:!bg-red-600 focus:!bg-red-600" type="button">
+<span class="icon icon-exclamation-triangle-solid !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="master-universities.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Mengisi program studi kampus (min 1)
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-green-600 hover:!bg-green-600 focus:!bg-green-600" type="button">
+<span class="icon icon-check !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="master-university-majors.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Upload galeri kampus
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-green-600 hover:!bg-green-600 focus:!bg-green-600" type="button">
+<span class="icon icon-check !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="galleries.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Mengatur cover galeri kampus
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-red-600 hover:!bg-red-600 focus:!bg-red-600" type="button">
+<span class="icon icon-exclamation-triangle-solid !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="galleries.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Upload brosur kampus
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-green-600 hover:!bg-green-600 focus:!bg-green-600" type="button">
+<span class="icon icon-check !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="brochures.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Mengisi jalur pendaftaran
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-green-600 hover:!bg-green-600 focus:!bg-green-600" type="button">
+<span class="icon icon-check !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="admissions.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Mengisi Testimoni (min 3)
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-green-600 hover:!bg-green-600 focus:!bg-green-600" type="button">
+<span class="icon icon-check !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="testimonies.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Mengisi artikel (min 1)
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-green-600 hover:!bg-green-600 focus:!bg-green-600" type="button">
+<span class="icon icon-check !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="articles.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Mengisi biaya kampus
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-green-600 hover:!bg-green-600 focus:!bg-green-600" type="button">
+<span class="icon icon-check !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="master-universities-prices.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 border-t border-dashed border-neutral-300 py-2">
+<div class="font-medium">
+                                Mengisi harga brosur
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<button class="btn btn_outline btn_icon !cursor-auto !bg-green-600 hover:!bg-green-600 focus:!bg-green-600" type="button">
+<span class="icon icon-check !text-white hover:!text-white"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="brochures.html">
+<span class="icon icon-pencil-solid"></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card card_table">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-presentation-chart-bar-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Performa Penerimaan Mahasiswa Baru</h2>
+</div>
+</div>
+<div class="card__header-right">
+<a class="btn btn_outline" href="interested-users-report.html" target="_blank">
+<span class="icon icon-document-chart-bar"></span>
+<span class="btn__text !font-medium">
+            Edit Performa Penerimaan Mahasiswa Baru
+        </span>
+</a>
+</div>
+</div>
+<div class="card__body">
+<div class="box-table">
+<div class="box-table__content">
+<div class="overflow-x-auto" style="--qn-table-cell-action-width: 0px; --qn-table-cell-action-alone-width: 8px; --qn-table-shadow-right-translate-x: 8px;">
+<table class="!border-separate !border-spacing-0">
+<thead>
+<tr>
+<th class="sticky left-0 top-0 z-10 w-[10%] !border bg-blue-100" rowspan="2">
+                                        Program Studi
+                                    </th>
+<th class="text-center" colspan="2">
+                                        Januari
+                                    </th>
+<th class="text-center" colspan="2">
+                                        Februari
+                                    </th>
+<th class="text-center" colspan="2">
+                                        Maret
+                                    </th>
+<th class="text-center" colspan="2">
+                                        April
+                                    </th>
+<th class="text-center" colspan="2">
+                                        Mei
+                                    </th>
+<th class="text-center" colspan="2">
+                                        Juni
+                                    </th>
+<th class="text-center" colspan="2">
+                                        Juli
+                                    </th>
+<th class="text-center" colspan="2">
+                                        Agustus
+                                    </th>
+<th class="text-center" colspan="2">
+                                        September
+                                    </th>
+<th class="text-center" colspan="2">
+                                        Oktober
+                                    </th>
+<th class="text-center" colspan="2">
+                                        November
+                                    </th>
+<th class="text-center" colspan="2">
+                                        Desember
+                                    </th>
+<th class="sticky right-0 top-0 !border bg-blue-200 text-center" colspan="2">
+                                        Total
+                                    </th>
+</tr>
+<tr>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="text-center">
+                                            2025
+                                        </th>
+<th class="text-center">
+                                            2026
+                                        </th>
+<th class="sticky top-0 !border bg-blue-100 text-center" id="total_header_left" style="right: 73px;">
+                                        2025
+                                    </th>
+<th class="sticky right-0 top-0 !border bg-blue-100 text-center" id="total_header_right">
+                                        2026
+                                    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="sticky left-0 top-0 z-10 whitespace-nowrap !border bg-blue-50">
+<h3 class="cell-double__title">
+                                                S1 -
+                                                Kedokteran 1
+                                            </h3>
+</td>
+<td class="text-center">
+                                                8
+                                            </td>
+<td class="bg-green-100 text-green-600 text-center" data-tooltip="+12">
+                                                20
+                                            </td>
+<td class="text-center">
+                                                342
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-342">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                421
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-421">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                111
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-111">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                8267
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-8267">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                937
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-937">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                737
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-737">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                63
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-63">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                918
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-918">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                981
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-981">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                636
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-636">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                761
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-761">
+                                                0
+                                            </td>
+<td class="sticky top-0 !border bg-blue-50 text-center" id="total_body_left_1" style="right: 73px;">
+                                                                                        14182
+                                        </td>
+<td class="sticky right-0 top-0 !border bg-blue-50 text-center" id="total_body_right_1">
+                                                                                        20
+                                        </td>
+</tr>
+<tr>
+<td class="sticky left-0 top-0 z-10 whitespace-nowrap !border bg-blue-50">
+<h3 class="cell-double__title">
+                                                S1 -
+                                                Manajemen Bisnis
+                                            </h3>
+</td>
+<td class="text-center">
+                                                452
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-452">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                344
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-344">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                567
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-567">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                222
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-222">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                671
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-671">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                72
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-72">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                192
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-192">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                729
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-729">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                722
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-722">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                112
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-112">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                311
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-311">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                231
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-231">
+                                                0
+                                            </td>
+<td class="sticky top-0 !border bg-blue-50 text-center" id="total_body_left_2" style="right: 73px;">
+                                                                                        4625
+                                        </td>
+<td class="sticky right-0 top-0 !border bg-blue-50 text-center" id="total_body_right_2">
+                                                                                        0
+                                        </td>
+</tr>
+<tr>
+<td class="sticky left-0 top-0 z-10 whitespace-nowrap !border bg-blue-50">
+<h3 class="cell-double__title">
+                                                S1 -
+                                                Teknik Informatika
+                                            </h3>
+</td>
+<td class="text-center">
+                                                458
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-458">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                888
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-888">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                343
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-343">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                129
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-129">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                6152
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-6152">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                8192
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-8192">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                6351
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-6351">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                987
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-987">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                981
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-981">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                172
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-172">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                271
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-271">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                111
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-111">
+                                                0
+                                            </td>
+<td class="sticky top-0 !border bg-blue-50 text-center" id="total_body_left_3" style="right: 73px;">
+                                                                                        25035
+                                        </td>
+<td class="sticky right-0 top-0 !border bg-blue-50 text-center" id="total_body_right_3">
+                                                                                        0
+                                        </td>
+</tr>
+<tr>
+<td class="sticky left-0 top-0 z-10 whitespace-nowrap !border bg-blue-50">
+<h3 class="cell-double__title">
+                                                S2 -
+                                                Manajemen
+                                            </h3>
+</td>
+<td class="text-center">
+                                                112
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-112">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                98
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-98">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                443
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-443">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                232
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-232">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                654
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-654">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                182
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-182">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                776
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-776">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                569
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-569">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                971
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-971">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                219
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-219">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                927
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-927">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                72
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-72">
+                                                0
+                                            </td>
+<td class="sticky top-0 !border bg-blue-50 text-center" id="total_body_left_4" style="right: 73px;">
+                                                                                        5255
+                                        </td>
+<td class="sticky right-0 top-0 !border bg-blue-50 text-center" id="total_body_right_4">
+                                                                                        0
+                                        </td>
+</tr>
+<tr>
+<td class="sticky left-0 top-0 z-10 whitespace-nowrap !border bg-blue-50">
+<h3 class="cell-double__title">
+                                                S1 -
+                                                Ilmu Politik
+                                            </h3>
+</td>
+<td class="text-center">
+                                                223
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-223">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                555
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-555">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                333
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-333">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                888
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-888">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                91
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-91">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                719
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-719">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                721
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-721">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                812
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-812">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                721
+                                            </td>
+<td class="bg-red-100 text-red-600 text-center" data-tooltip="-721">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="sticky top-0 !border bg-blue-50 text-center" id="total_body_left_5" style="right: 73px;">
+                                                                                        5063
+                                        </td>
+<td class="sticky right-0 top-0 !border bg-blue-50 text-center" id="total_body_right_5">
+                                                                                        0
+                                        </td>
+</tr>
+<tr>
+<td class="sticky left-0 top-0 z-10 whitespace-nowrap !border bg-blue-50">
+<h3 class="cell-double__title">
+                                                D4 -
+                                                Akuntansi REGULER
+                                            </h3>
+</td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="text-center">
+                                                0
+                                            </td>
+<td class="text-center" data-tooltip="0">
+                                                0
+                                            </td>
+<td class="sticky top-0 !border bg-blue-50 text-center" id="total_body_left_6" style="right: 73px;">
+                                                                                        0
+                                        </td>
+<td class="sticky right-0 top-0 !border bg-blue-50 text-center" id="total_body_right_6">
+                                                                                        0
+                                        </td>
+</tr>
+<tr>
+<td class="sticky left-0 top-0 z-10 bg-blue-100">
+<h3 class="cell-double__title">
+                                            Total
+                                        </h3>
+</td>
+<td class="bg-slate-50" colspan="24">
+</td>
+<td class="sticky top-0 !border bg-blue-100 text-center" id="total_body_left_25" style="right: 73px;">
+<span class="font-semibold">
+                                            54160
+                                        </span>
+</td>
+<td class="sticky right-0 top-0 !border bg-blue-100 text-center" id="total_body_right_25">
+<span class="font-semibold">
+                                            20
+                                        </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="box-table__footer">
+</div>
+</div>
+</div>
+<div class="card card_table">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-users-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Aktivitas Staf PMB</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="box-table">
+<div class="box-table__content">
+<div class="table-max" id="table-max" style="--qn-table-cell-action-width: 0px; --qn-table-cell-action-alone-width: 8px; --qn-table-shadow-right-translate-x: 8px;">
+<table>
+<thead>
+<tr>
+<th class="" style="width:50%">
+            Nama Staf
+    </th>
+<th class="text-center">
+            Ditugaskan
+    </th>
+<th class="text-center">
+            Dikontak
+    </th>
+<th class="text-center">
+            Terdaftar
+    </th>
+<th class="text-center">
+            Aktivitas Terakhir
+    </th>
+<th class="text-center">
+            Aksi
+    </th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Desin admin...
+                                </h3>
+</td>
+<td class="text-center">
+                                2
+                            </td>
+<td class="text-center">
+                                2
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                07 Juli 2026, 10:14
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Desintya Admin...
+                                </h3>
+</td>
+<td class="text-center">
+                                1
+                            </td>
+<td class="text-center">
+                                1
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                03 Juni 2026, 10:27
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Alliance Testing...
+                                </h3>
+</td>
+<td class="text-center">
+                                1
+                            </td>
+<td class="text-center">
+                                1
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                21 Mei 2026, 15:53
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Hanif Al...
+                                </h3>
+</td>
+<td class="text-center">
+                                1
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                14 April 2026, 13:46
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Halim Supervisor...
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Adit Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Rendy Testing
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Fifin Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Abdul Ghofur...
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Afif Fathurrahman
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Mei Lisa...
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Nata AM...
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    admin pt
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Anjar Incredibles
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Arga Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Adi Prianto
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Bayu Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Qausya
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Nanda Fuji...
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Cika Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Septiana Hanif...
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Santi Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Hala
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Team FLash
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Anam Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Yanuar Izulyansah
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Henny Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Dewi
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Nazila Riska
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Devi Purwita...
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Fadhol Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Suhadaya Langgeng...
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Alwi Assegaff
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Monica Rhasintya...
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Reynaldi Ariston
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Sigit Sevima
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-slate-100">
+<td>
+<h3 class="cell-double__title">
+                                    Desin
+                                </h3>
+</td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                0
+                            </td>
+<td class="text-center">
+                                -
+                            </td>
+<td>
+<div class="flex flex-row justify-center">
+<a class="btn btn_outline btn_icon" data-tooltip="Detail" href="prospects.html" target="_blank">
+<span class="icon icon-eye-solid"></span>
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="box-table__footer">
+</div>
+</div>
+</div>
+</div>
+<div class="grid">
+<div class="col-12 col-sm-8">
+<div class="card card_details-default" id="performance__card">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-presentation-chart-line-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Performa Kinerja Staf PMB</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col gap-2">
+<div class="grid">
+<div class="col-12 col-sm-6 flex flex-row items-center gap-2">
+<span class="size-4 rounded bg-[#0f6af5]"></span>
+<span class="font-semibold">Belum Dikontak</span>
+<span class="size-4 rounded bg-[#FFB224]"></span>
+<span class="font-semibold">Dikontak</span>
+</div>
+<div class="col-12 col-sm-6 grid">
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<div class="form-control__group">
+<select class="form-control__select" id="select__agent" name="filter[agent]">
+<option selected="" value="">-- Pilih Admin --</option>
+<option value="4">
+                        Desintya Admin Kampus Internal
+                    </option>
+<option value="5">
+                        Alliance Testing Internal
+                    </option>
+<option value="7">
+                        Desin admin testing
+                    </option>
+<option value="11">
+                        Qausya
+                    </option>
+<option value="19">
+                        Dewi
+                    </option>
+<option value="32">
+                        Team FLash
+                    </option>
+<option value="87">
+                        Adit Sevima
+                    </option>
+<option value="126">
+                        Bayu Sevima
+                    </option>
+<option value="735">
+                        Adi Prianto
+                    </option>
+<option value="1761">
+                        Anam Sevima
+                    </option>
+<option value="3865">
+                        Nazila Riska
+                    </option>
+<option value="8155">
+                        Mei Lisa Arista
+                    </option>
+<option value="8613">
+                        Fadhol Sevima
+                    </option>
+<option value="11684">
+                        Henny Sevima
+                    </option>
+<option value="14040">
+                        Desin
+                    </option>
+<option value="14184">
+                        Alwi Assegaff
+                    </option>
+<option value="14185">
+                        Desin
+                    </option>
+<option value="15307">
+                        Suhadaya Langgeng Kurniawan
+                    </option>
+<option value="23632">
+                        devi tes
+                    </option>
+<option value="23638">
+                        Iftitah Hidayati
+                    </option>
+<option value="16624">
+                        Devi Purwita Sari
+                    </option>
+<option value="28006">
+                        Anjar Incredibles
+                    </option>
+<option value="72691">
+                        Hala
+                    </option>
+<option value="72693">
+                        admin pt
+                    </option>
+<option value="75709">
+                        Cika Sevima
+                    </option>
+<option value="86890">
+                        Desintya Sevima
+                    </option>
+<option value="94035">
+                        Fifin Sevima
+                    </option>
+<option value="98461">
+                        Monica Rhasintya Indira Amarilys
+                    </option>
+<option value="100771">
+                        Sigit Sevima
+                    </option>
+<option value="101612">
+                        Ismardiyanti Windiaputri Prasetiawan
+                    </option>
+<option value="114098">
+                        test admin keuangan
+                    </option>
+<option value="120997">
+                        Rendy Testing
+                    </option>
+<option value="127688">
+                        Dieno
+                    </option>
+<option value="128723">
+                        Nata AM Sevima
+                    </option>
+<option value="137115">
+                        Santi Sevima
+                    </option>
+<option value="137125">
+                        Afif Fathurrahman
+                    </option>
+<option value="137123">
+                        Septiana Hanif Tri Armananti
+                    </option>
+<option value="137121">
+                        Hanif Al Fathoni
+                    </option>
+<option value="137120">
+                        Yanuar Izulyansah
+                    </option>
+<option value="137118">
+                        Reynaldi Ariston
+                    </option>
+<option value="137033">
+                        Halim Supervisor PT
+                    </option>
+<option value="137365">
+                        Dieno
+                    </option>
+<option value="141944">
+                        Jennifer Laura Bachsin
+                    </option>
+<option value="141943">
+                        Nanda Fuji Lestari
+                    </option>
+<option value="146372">
+                        Muhammad Nur Fauzan
+                    </option>
+<option value="146374">
+                        Muhammad Nur Fauzan
+                    </option>
+<option value="147749">
+                        Ahmad Dimas
+                    </option>
+<option value="150920">
+                        Camelia
+                    </option>
+<option value="152342">
+                        Abdul Ghofur Sevima
+                    </option>
+<option value="156597">
+                        EKKY ERLANGGA
+                    </option>
+<option value="160159">
+                        Arga Sevima
+                    </option>
+</select>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<div class="form-control__group">
+<select class="form-control__select" id="select__performance_year" name="filter[performance_year]">
+<option selected="" value="">-- Pilih Tahun --</option>
+<option selected="" value="2026">
+                        2026
+                    </option>
+<option value="2025">
+                        2025
+                    </option>
+<option value="2024">
+                        2024
+                    </option>
+<option value="2023">
+                        2023
+                    </option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h-[300px]">
+<canvas height="375" id="performance__chart" width="1063"></canvas>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-4">
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-users-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Prospek Calon Mahasiswa</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col gap-2">
+<div class="flex h-[200px] flex-row justify-center">
+<canvas height="250" id="prospect-category__chart" width="250"></canvas>
+</div>
+<div class="flex flex-col divide-y divide-dashed">
+<div class="flex items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<div class="size-4 rounded bg-[#0f6af5]"></div>
+<span class="flex flex-row items-center gap-2 font-semibold" data-tooltip="Prospek memiliki lebih dari 8 Poin Aktivitas">
+                                            Prospek Tinggi
+                                            <span class="icon icon-information-circle text-lg"></span>
+</span>
+</div>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        6 Prospek
+                                    </a>
+</div>
+<div class="flex items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<div class="size-4 rounded bg-[#FFB224]"></div>
+<span class="flex flex-row items-center gap-2 font-semibold" data-tooltip="Prospek memiliki 4 - 8 Poin Aktivitas">
+                                            Prospek Sedang
+                                            <span class="icon icon-information-circle text-lg"></span>
+</span>
+</div>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        1 Prospek
+                                    </a>
+</div>
+<div class="flex items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<div class="size-4 rounded bg-[#29D1FF]"></div>
+<span class="flex flex-row items-center gap-2 font-semibold" data-tooltip="Prospek meiliki kurang dari 4 Poin Aktivitas">
+                                            Prospek Rendah
+                                            <span class="icon icon-information-circle text-lg"></span>
+</span>
+</div>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        17 Prospek
+                                    </a>
+</div>
+</div>
+<a class="btn btn_primary" href="prospects.html" target="_blank">
+<span class="btn__text !font-medium">
+            Lihat Detail
+        </span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-8">
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-presentation-chart-line-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Alur Prospek</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col gap-4">
+<div class="!grid grid-cols-1 sm:grid-cols-3">
+<div class="flex flex-col items-start gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="font-semibold">
+                                            Mengunjungi Halaman
+                                        </span>
+<div data-tooltip="Prospek yang mengunjungi halaman kampus anda">
+<span class="icon icon-information-circle text-lg"></span>
+</div>
+</div>
+<span class="text-xl font-medium">
+                                        11
+                                    </span>
+</div>
+<div class="flex flex-col items-start gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="font-semibold">
+                                            Melakukan Aktivitas
+                                        </span>
+<div data-tooltip="Prospek yang melakukan aktivitas di halaman kampus anda seperti melihat prodi, download brosur, serta mengikuti tes potensi siswa">
+<span class="icon icon-information-circle text-lg"></span>
+</div>
+</div>
+<span class="text-xl font-medium">
+                                        7
+                                    </span>
+</div>
+<div class="flex flex-col items-start gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="font-semibold">
+                                            Mengajukan Pendaftaran
+                                        </span>
+<div data-tooltip="Prospek yang mengajukan pendaftaran di halaman kampus anda">
+<span class="icon icon-information-circle text-lg"></span>
+</div>
+</div>
+<span class="text-xl font-medium">
+                                        4
+                                    </span>
+</div>
+</div>
+<div class="mt-auto h-[300px] overflow-hidden">
+<canvas class="-ml-2" height="375" id="prospect-channel__chart" width="1075"></canvas>
+</div>
+<div class="!grid grid-cols-3">
+<span class="font-semibold">Tingkat Konversi:</span>
+<span class="font-semibold">
+                                    63.64%
+                                </span>
+<span class="text-[#F83634] font-semibold">
+                                    57.14%
+                                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-4">
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-users-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Jumlah Prospek Berdasarkan Status</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed">
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="whitespace-nowrap rounded-full px-2 py-1 font-semibold bg-[#EEF2F6] text-[#697586]">
+                                        1. Perlu Dikontak
+                                    </span>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        18
+                                        Prospek
+                                    </a>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="whitespace-nowrap rounded-full px-2 py-1 font-semibold bg-[#F1F6FE] text-[#0F6AF5]">
+                                        2. Sudah Dikontak
+                                    </span>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        3
+                                        Prospek
+                                    </a>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="whitespace-nowrap rounded-full px-2 py-1 font-semibold bg-[#EEF2F6] text-[#697586]">
+                                        3. Tidak Merespons
+                                    </span>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        0
+                                        Prospek
+                                    </a>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="whitespace-nowrap rounded-full px-2 py-1 font-semibold bg-[#FFF7E9] text-[#EF9600]">
+                                        4. Tertarik
+                                    </span>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        1
+                                        Prospek
+                                    </a>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="whitespace-nowrap rounded-full px-2 py-1 font-semibold bg-[#F1F6FE] text-[#0F6AF5]">
+                                        5. Follow Up
+                                    </span>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        0
+                                        Prospek
+                                    </a>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="whitespace-nowrap rounded-full px-2 py-1 font-semibold bg-[#FFF7E9] text-[#EF9600]">
+                                        6. Pertimbangan
+                                    </span>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        2
+                                        Prospek
+                                    </a>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="whitespace-nowrap rounded-full px-2 py-1 font-semibold bg-[#FDEFED] text-[#EC3D27]">
+                                        7. Ditolak
+                                    </span>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        0
+                                        Prospek
+                                    </a>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="whitespace-nowrap rounded-full px-2 py-1 font-semibold bg-[#F0FDF9] text-[#0E9384]">
+                                        8. Terdaftar
+                                    </span>
+<a class="link !text-xs !font-normal" href="prospects.html" target="_blank">
+                                        0
+                                        Prospek
+                                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid">
+<div class="col-12 col-sm-6">
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-star-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Program Studi Favorit</h2>
+</div>
+</div>
+<div class="card__header-right">
+<a class="btn btn_outline" data-mockup-unresolved="/crm/university-major-favourites" href="#" target="_blank">
+<span class="btn__text !font-medium">
+            Lihat Detail
+        </span>
+</a>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed">
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="font-semibold">
+                                    S1 -
+                                    Teknik Informatika
+                                </span>
+<span>
+                                    2 Pendaftar
+                                                                    </span>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="font-semibold">
+                                    S1 -
+                                    Kedokteran 1
+                                </span>
+<span>
+                                    2 Pendaftar
+                                                                    </span>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="font-semibold">
+                                    S1 -
+                                    Manajemen Bisnis
+                                </span>
+<span>
+                                    1 Pendaftar
+                                                                    </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-users-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Peserta Tes Potensi Siswa</h2>
+</div>
+</div>
+<div class="card__header-right">
+<a class="btn btn_outline" href="test.html" target="_blank">
+<span class="btn__text !font-medium">
+            Lihat Detail
+        </span>
+</a>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed">
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="font-semibold">
+                                        Tes RIASEC
+                                    </span>
+<span>
+                                        5 Peserta
+                                    </span>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="font-semibold">
+                                        Tes Gaya Belajar
+                                    </span>
+<span>
+                                        1 Peserta
+                                    </span>
+</div>
+<div class="flex flex-row items-center justify-between gap-2 py-2">
+<span class="font-semibold">
+                                        Tes MBTI
+                                    </span>
+<span>
+                                        1 Peserta
+                                    </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/chart.js"></script><script>
+                let performaceChartData = {"labels":["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"],"datas":{"Januari":{"not_contacted":2,"contacted":1},"Februari":{"not_contacted":1,"contacted":7},"Maret":{"not_contacted":1,"contacted":1},"April":{"not_contacted":6,"contacted":4},"Mei":{"not_contacted":9,"contacted":2},"Juni":{"not_contacted":5,"contacted":1},"Juli":{"not_contacted":1,"contacted":1},"Agustus":{"not_contacted":0,"contacted":0},"September":{"not_contacted":0,"contacted":0},"Oktober":{"not_contacted":0,"contacted":0},"November":{"not_contacted":0,"contacted":0},"Desember":{"not_contacted":0,"contacted":0}}};
+
+                performaceChartData = {
+                    labels: Object.keys(performaceChartData.datas),
+                    datasets: [{
+                            label: 'Belum Dikontak',
+                            data: Object.values(performaceChartData.datas).map((data) => data
+                                .not_contacted),
+                            backgroundColor: '#0f6af5',
+                        },
+                        {
+                            label: 'Sudah Dikontak',
+                            data: Object.values(performaceChartData.datas).map((data) => data
+                                .contacted),
+                            backgroundColor: '#FF9A29',
+                        },
+                    ],
+                };
+
+                const performanceChart = document.getElementById('performance__chart');
+                new Chart(performanceChart, {
+                    type: 'bar',
+                    data: performaceChartData,
+                    options: {
+                        maintainAspectRatio: false,
+                        borderRadius: 8,
+                        plugins: {
+                            legend: {
+                                display: false,
+                            },
+                        },
+                        scales: {
+                            x: {
+                                grid: {
+                                    display: false,
+                                },
+                                border: {
+                                    display: false,
+                                },
+                            },
+                            y: {
+                                beginAtZero: true,
+                                grid: {
+                                    color: '#E5E5EA',
+                                },
+                                border: {
+                                    dash: [6, 4],
+                                    display: false,
+                                },
+                                ticks: {
+                                    precision: 0,
+                                    autoSkip: false,
+                                },
+                            },
+                        },
+                    },
+                });
+            </script><script>
+                const prospectCategoryChart = document.getElementById('prospect-category__chart');
+                new Chart(prospectCategoryChart, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                                                            'Prospek Rendah',
+                                                            'Prospek Sedang',
+                                                            'Prospek Tinggi',
+                                                    ],
+                        datasets: [{
+                            label: '# Jumlah Prospek',
+                            data: [
+                                                                    '17',
+                                                                    '1',
+                                                                    '6',
+                                                            ],
+                            backgroundColor: [
+                                '#29D1FF',
+                                '#FFB224',
+                                '#0f6af5',
+                            ],
+                        }],
+                    },
+                    options: {
+                        borderRadius: 10,
+                        plugins: {
+                            legend: {
+                                display: false,
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.dataset.data[context.dataIndex] > 0) {
+                                            label += context.dataset.data[context
+                                                    .dataIndex] + ' (' + Math.round(
+                                                    context
+                                                    .dataset.data[context.dataIndex] /
+                                                    24 * 100) +
+                                                '%)';
+                                        } else {
+                                            label += '0 (0%)';
+                                        }
+                                        return label;
+                                    },
+                                },
+                            },
+                        },
+                    },
+                });
+            </script><script>
+                const dt = {
+                    datasets: [
+                                                    {
+                                label: 'Peminat',
+                                data: 11,
+                                backgroundColor: '#0f6af5',
+                            },
+                                                    {
+                                label: 'Peminat',
+                                data: 7,
+                                backgroundColor: '#509EFF',
+                            },
+                                                    {
+                                label: 'Peminat',
+                                data: 4,
+                                backgroundColor: '#7CB6FF',
+                            },
+                                            ],
+                };
+
+                let datasets = [];
+                let labels = [];
+
+                for (let i = 0; i < dt.datasets.length; i++) {
+                    let tempData = [];
+                    dt.datasets.forEach(function() {
+                        tempData.push(null);
+                    });
+                    tempData.push(null);
+                    tempData[i] = dt.datasets[i].data;
+                    tempData[i + 1] =
+                        dt.datasets.length - 1 == i ?
+                        dt.datasets[i].data :
+                        dt.datasets[i + 1].data;
+                    datasets = [
+                        ...datasets,
+                        {
+                            data: tempData,
+                            borderWidth: 0,
+                            backgroundColor: [dt.datasets[i].backgroundColor],
+                            fill: true,
+                        },
+                    ];
+                    labels.push(dt.datasets[i].label);
+                    if (dt.datasets.length - 1 === i) {
+                        labels.push(dt.datasets[i].label);
+                    }
+                }
+
+                const prospectChannelChart = document.getElementById('prospect-channel__chart');
+                new Chart(prospectChannelChart, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: datasets,
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        hover: {
+                            mode: null
+                        },
+                        plugins: {
+                            filler: {
+                                propagate: false,
+                            },
+                            legend: {
+                                display: false,
+                            },
+                            title: {
+                                display: false,
+                            },
+                            tooltip: false,
+                        },
+                        interaction: {
+                            intersect: false,
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    display: false,
+                                },
+                                grid: {
+                                    display: false,
+                                },
+                                border: {
+                                    display: false,
+                                },
+                                type: 'linear',
+                            },
+                            x: {
+                                beginAtZero: true,
+                                borderWidth: 10,
+                                border: {
+                                    color: '#E5E5EA',
+                                    dash: [3, 2],
+                                    display: false,
+                                },
+                                ticks: {
+                                    display: false,
+                                },
+                            },
+                        },
+                        elements: {
+                            point: {
+                                radius: 0,
+                            },
+                        },
+                    },
+                });
+            </script><script src="_assets/mockup-interactions.js"></script></body></html>

@@ -1,0 +1,2093 @@
+"use strict";
+(() => {
+    parseFloat(
+        getComputedStyle(document.body).getPropertyValue("--qn-breakpoint-xs")
+    );
+    const d =
+        16 *
+        parseFloat(
+            getComputedStyle(document.body).getPropertyValue("--qn-breakpoint-sm")
+        ),
+        b =
+            16 *
+            parseFloat(
+                getComputedStyle(document.body).getPropertyValue("--qn-breakpoint-md")
+            ),
+        f =
+            16 *
+            parseFloat(
+                getComputedStyle(document.body).getPropertyValue("--qn-breakpoint-lg")
+            ),
+        e =
+            16 *
+            parseFloat(
+                getComputedStyle(document.body).getPropertyValue("--qn-breakpoint-xl")
+            );
+    parseFloat(
+        getComputedStyle(document.body).getPropertyValue("--qn-breakpoint-xxl")
+    );
+    const g = () => {
+        (() => {
+            document.querySelectorAll("body > .layout-overlay").forEach((m) => {
+                m.remove();
+            });
+            const n = document.createElement("div");
+            n.className = "layout-overlay";
+            document.body.prepend(n);
+        })();
+        (() => {
+            document.querySelectorAll("body .header__sidebar-nav").forEach((m) => {
+                m.remove();
+            });
+            const n = document.querySelector(".sidebar");
+            if (n) {
+                const m = document.querySelector(".header__group"),
+                    q = n.dataset.toggleLabel;
+                if (m) {
+                    const r = document.createElement("button");
+                    r.classList = "header__sidebar-nav";
+                    r.setAttribute("aria-label", q || "Toggle sidebar");
+                    n.classList.contains("sidebar_without-icon") &&
+                        r.classList.add("header__sidebar-nav_simple");
+                    r.innerHTML =
+                        '<span class="icon icon-bars-3-bottom-left-solid"></span>';
+                    m.prepend(r);
+                }
+            }
+        })();
+        a();
+    },
+        a = () => {
+            const n = document.querySelector(".sidebar");
+            if (n) {
+                let m = 0;
+                document.querySelectorAll(".sidebar > *").forEach((q) => {
+                    m += q.offsetHeight;
+                });
+                n.classList.remove("sidebar_scroll");
+                n.classList.remove("sidebar_without-scroll");
+                m > n.offsetHeight
+                    ? n.classList.add("sidebar_scroll")
+                    : n.classList.add("sidebar_without-scroll");
+            }
+        },
+        c = (n) => {
+            n.classList.add("expand-enter-active");
+            n.classList.add("sidebar_expanded");
+            setTimeout(() => {
+                n.classList.remove("expand-enter-active");
+            }, 350);
+        },
+        h = (n) => {
+            n.classList.add("expand-enter-active");
+            n.closest(".sidebar_expanded") &&
+                ((n.style.width = "0rem"),
+                    setTimeout(() => {
+                        n.style.width = "";
+                        n.classList.remove("expand-enter-active");
+                        n.classList.remove("sidebar_expanded");
+                        document
+                            .querySelector(".layout-overlay_content")
+                            ?.classList.remove("layout-overlay_content");
+                    }, 350));
+        },
+        k = (n) => {
+            const m = n.closest('[data-toggle="dropdown-list"]');
+            if (m) {
+                const q = document.querySelector(m.dataset.target);
+                m.closest(".dropdown__list")
+                    .querySelectorAll('[data-toggle="dropdown-list"]')
+                    .forEach((r) => {
+                        const v = document.querySelector(r.dataset.target);
+                        v && (r.classList.remove("show"), v.classList.remove("show"));
+                        v === q && (m.classList.add("show"), v.classList.add("show"));
+                    });
+            }
+        },
+        l = () => {
+            const n = document.querySelectorAll(
+                ".dropdown.dropdown_nav:not(.dropdown_notification)"
+            ),
+                m = document.querySelectorAll(
+                    ".dropdown.dropdown_nav.dropdown_notification"
+                );
+            n.forEach((q) => {
+                const r = q.querySelector(".dropdown__box");
+                if (r && !r.querySelector(".dropdown__box-header")) {
+                    q = q.querySelector('[data-toggle="dropdown"]');
+                    const v = document.createElement("div");
+                    v.classList = "dropdown__box-header";
+                    v.innerHTML = `
+
+                <span class="icon icon-x-mark-mini" role="button" data-toggle="dropdown"></span>
+
+                <span class="dropdown__box-title">${r.dataset.dropdownTitle ?? (q ? q.textContent?.trim() : "")
+                        }</span>
+
+            `.trim();
+                    r.prepend(v);
+                }
+            });
+            m.forEach((q) => {
+                if ((q = q.querySelector(".notification__title"))) {
+                    const r = document.createElement("span");
+                    r.classList = "icon icon-x-mark-mini";
+                    r.dataset.toggle = "dropdown";
+                    q.prepend(r);
+                }
+            });
+        },
+        p = (n) => {
+            const m = document.createElement("li");
+            m.className = "nav__item";
+            m.innerHTML = `
+
+            <div class="dropdown dropdown_nav">
+
+                <a class="nav__link nav__link_more active" href="#" data-toggle="dropdown" aria-expanded="false">
+
+                    <span>${n.dataset.moreText ?? "Lainnya"}</span>
+
+                    <span class="icon icon-chevron-down-mini"></span>
+
+                </a>
+
+                <div class="dropdown__box dropdown__box_multi">
+
+                    <ul class="dropdown__list"></ul>
+
+                </div>
+
+            </div>
+
+        `.trim();
+            n.append(m);
+        },
+        t = (n, m, q, r) => {
+            n = document
+                .querySelector(".header__navigation .nav__link.nav__link_more")
+                .closest(".dropdown");
+            const v = document
+                .querySelector(".header__navigation .nav__link.nav__link_more")
+                .closest(".nav__item"),
+                y = m.closest(".dropdown"),
+                z = document.createElement("li");
+            z.className = `
+
+            dropdown__item
+
+            ${""}
+
+            ${m.closest(".nav__item.active") ? " active" : ""}
+
+        `.trim();
+            y
+                ? ((z.dataset.toggle = "dropdown-list"),
+                    (z.dataset.target = "#qn-dropdown-list-" + q),
+                    z.setAttribute("aria-expanded", q == r ? "true" : "false"),
+                    (z.innerHTML = `
+
+                <button>
+
+                    ${m.text.trim()}
+
+                    <span class="dropdown__item-right">
+
+                        <span class="icon icon-arrow-right"></span>
+
+                    </span>
+
+                </button>
+
+            `.trim()),
+                    (r = y.querySelector(".dropdown__list")),
+                    r.classList.add("dropdown__list_hidden"),
+                    (r.id = "qn-dropdown-list-" + q),
+                    (q = document.createElement("li")),
+                    (q.className = "dropdown__item-title"),
+                    (q.innerHTML = `
+
+                <span class="icon icon-arrow-left-mini" data-hide="dropdown-list"></span>
+
+                <p>${m.text.trim()}</p>
+
+            `.trim()),
+                    r.prepend(q),
+                    m.closest(".nav__item.active") &&
+                    (n.querySelectorAll(".dropdown__box").forEach((A) => {
+                        A.classList.remove("show");
+                    }),
+                        v.classList.contains("active") || v.classList.add("active"),
+                        v.querySelectorAll(".dropdown__item.show").forEach((A) => {
+                            A.classList.remove("show");
+                            document.querySelector(A.dataset.target).classList.remove("show");
+                            A.setAttribute("aria-expanded", !1);
+                        })),
+                    n.querySelector(".dropdown__box").append(r),
+                    m.remove())
+                : (m.closest(".nav__item.active") &&
+                    !v.classList.contains("active") &&
+                    v.classList.add("active"),
+                    m.classList.remove("nav__link"),
+                    z.append(m));
+            n.querySelector(".dropdown__list:not(.dropdown__list_hidden)").append(z);
+        },
+        x = (n, m = !1) => {
+            document
+                .querySelectorAll(".header__navigation .nav__link:not(.nav__link_more)")
+                .forEach((q, r) => {
+                    r += 1;
+                    r >= n && t(m, q, r, n);
+                });
+        },
+        u = (n, m = !1) => {
+            document.querySelector(".header__navigation .nav__link.nav__link_more");
+            document
+                .querySelectorAll(".header__navigation .nav__link:not(.nav__link_more)")
+                .forEach((q, r) => {
+                    q.closest(".dropdown");
+                    r += 1;
+                    r >= n && t(m, q, r, n);
+                });
+        },
+        w = () => {
+            const n = document.querySelector(".header__navigation .nav__list"),
+                m = document.querySelectorAll(
+                    ".header__navigation .nav__link:not(.nav__link_more)"
+                ),
+                q = document.querySelector(
+                    ".header__navigation .nav__link.nav__link_more"
+                );
+            q
+                ? q &&
+                (document.body.clientWidth >= e
+                    ? 6 < m.length && u(6)
+                    : document.body.clientWidth >= f
+                        ? 5 < m.length && u(5)
+                        : document.body.clientWidth >= b
+                            ? 4 < m.length && u(4)
+                            : document.body.clientWidth >= d
+                                ? 3 < m.length && u(3)
+                                : 2 < m.length && u(2, !0))
+                : document.body.clientWidth >= e
+                    ? 6 < m.length && (p(n), x(6))
+                    : document.body.clientWidth >= f
+                        ? 5 < m.length && (p(n), x(5))
+                        : document.body.clientWidth >= b
+                            ? 4 < m.length && (p(n), x(4))
+                            : document.body.clientWidth >= d
+                                ? 3 < m.length && (p(n), x(3))
+                                : 2 < m.length && (p(n), x(2, !0));
+        },
+        B = () => {
+            var n = document.querySelector(".form-nav__button-wrapper");
+            const m = document.querySelector(".form-table"),
+                q = document.querySelector(".main > form");
+            if (q && (m || n)) {
+                document.querySelector(".form-table_sticky-bottom")?.remove();
+                const r = document.createElement("div");
+                r.className = "form-table form-table_sticky-bottom";
+                const v = document.createElement("div");
+                v.className = "form-table__wrapper";
+                if (m) {
+                    const y = document.createElement("div");
+                    y.className = "collapse";
+                    y.id = "qn-form-table-sticky";
+                    y.innerHTML = m.innerHTML;
+                    r.append(y);
+                    v.innerHTML += `
+
+                    <button type="button" class="btn btn_secondary btn_icon" data-toggle="collapse" data-target="#${y.id}" aria-expanded="false">
+
+                        <span class="icon icon-list-bullet-mini"></span>
+
+                    </button>
+
+                `.trim();
+                }
+                n &&
+                    ((n = n.cloneNode(!0)),
+                        (n.className = "form-table__button-wrapper"),
+                        n.setAttribute("data-placement", "top"),
+                        v.append(n));
+                r.append(v);
+                q.append(r);
+            }
+        };
+    document.addEventListener("click", (n) => {
+        n = n.target;
+        var m = document.querySelector(".layout-overlay"),
+            q = document.querySelector(".sidebar");
+        const r = document.querySelector(".form-table_sticky-bottom");
+        n.closest(".layout-overlay") &&
+            (m?.classList.remove("layout-overlay_main"),
+                q && h(q),
+                r && r.querySelector('[data-toggle="collapse"].show')?.click());
+        n.closest(".header__sidebar-nav") &&
+            (m = document.querySelector(".sidebar")) &&
+            (m.classList.contains("sidebar_expanded") ? h(m) : c(m), a());
+        (m = n.closest(".form-table__title .icon")) &&
+            !m?.closest(".form-table_sticky-bottom") &&
+            (m = m.closest(".form-table")) &&
+            (m.classList.contains("form-table_collapse")
+                ? m.classList.remove("form-table_collapse")
+                : m.classList.add("form-table_collapse"));
+        k(n);
+        (m = n.closest('[data-hide="dropdown-list"]')) &&
+            m.closest(".dropdown__list") &&
+            m.closest(".dropdown__list").classList.remove("show");
+        m = n.closest(".form-table_sticky-bottom");
+        q = n.closest(".form-table__item");
+        n = n.closest(".form-table__title  .icon");
+        m && (q || n) && m.querySelector('[data-toggle="collapse"].show')?.click();
+    });
+    document.addEventListener("DOMContentLoaded", (n) => {
+        document.querySelector(".header__navigation .nav__list") &&
+            document.querySelector(".header__navigation .nav__list").cloneNode(!0);
+        g();
+        w();
+        l();
+        B();
+        document.addEventListener("click", (m) => {
+            (m = m.target.closest("[data-click-for]")) &&
+                (m = m.dataset.clickFor) &&
+                document.querySelector(m) &&
+                document.querySelector(m).click();
+            m = document.querySelector(".layout-overlay");
+            var q = document.querySelector(
+                '.form-table_sticky-bottom [data-toggle="collapse"]'
+            );
+            q &&
+                (q.classList.contains("show")
+                    ? m.classList.add("layout-overlay_form-content")
+                    : m.classList.remove("layout-overlay_form-content"));
+            (q = document.querySelector(".header")) &&
+                (0 <
+                    q.querySelectorAll(
+                        ".dropdown__box.show:not(.dropdown__list_hidden), .dropdown__box.show:not(.dropdown__list_hidden)"
+                    ).length
+                    ? m.classList.add("layout-overlay_main")
+                    : m.classList.remove("layout-overlay_main"));
+            (q = document.querySelector(".sidebar")) &&
+                (q.classList.contains("sidebar_expanded")
+                    ? m.classList.add("layout-overlay_content")
+                    : m.classList.remove("layout-overlay_content"));
+        });
+    });
+    (() => {
+        new MutationObserver((n, m) => {
+            for (const q of n)
+                "childList" === q.type &&
+                    q.addedNodes.forEach((r) => {
+                        r.classList &&
+                            (r.classList.contains("header") ||
+                                r.classList.contains("sidebar")) &&
+                            (g(), w());
+                    });
+        }).observe(document.body, { childList: !0, subtree: !0 });
+    })();
+    window.addEventListener("resize", () => {
+        w();
+        a();
+    });
+    document.addEventListener("mouseover", (n) => {
+        (n = n.target.closest('.dropdown__item[data-toggle="dropdown-list"]')) &&
+            document.body.clientWidth >= d &&
+            n.click();
+    });
+})();
+(() => {
+    const d = () => {
+        const a = document.querySelectorAll(".form-table__title");
+        0 < a.length &&
+            a.forEach((c) => {
+                var h = c.querySelector(".icon");
+                h && h.remove();
+                h = document.createElement("span");
+                h.classList.add("icon");
+                c.append(h);
+            });
+    },
+        b = () => {
+            var a = document.querySelector(
+                ".form-table:not(.form-table__sticky-bottom)"
+            );
+            let c = document.querySelector(".form-nav");
+            var h = document.querySelector(".form-nav ~ .container .breadcrumb"),
+                k = document.querySelector(".header");
+            let l = document.querySelector(".header.header_position-static");
+            if (a) {
+                let p = 0;
+                k && (p += k.getBoundingClientRect().height);
+                c && (p += c.getBoundingClientRect().height);
+                if (l) {
+                    let t = l.getBoundingClientRect();
+                    p = 0 <= t.bottom ? p - (t.height - t.bottom) : p - t.height;
+                }
+                a.style.top = p + "px";
+            }
+            c &&
+                h &&
+                ((a = 0),
+                    k && (a += k.getBoundingClientRect().height),
+                    c && (a += c.getBoundingClientRect().height),
+                    l &&
+                    ((k = l.getBoundingClientRect()),
+                        (a = 0 <= k.bottom ? a - (k.height - k.bottom) : a - k.height)),
+                    (h = 0 >= h.getBoundingClientRect().bottom - a ? 1 : 0),
+                    (c.querySelector(".form-nav__middle").style.opacity = h));
+        },
+        f = () => {
+            if (document.querySelector(".form-table ~ .container")) {
+                let a = window.location.href;
+                const c = () => {
+                    document
+                        .querySelectorAll(
+                            ".form-table__list > .form-table__item:first-child .form-table__anchor"
+                        )
+                        .forEach((h) => {
+                            h?.click();
+                        });
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                };
+                try {
+                    let h = new URL(a).hash.substring(1).replace(/\/\s*$/, "");
+                    h
+                        ? document.querySelectorAll("[href='#" + h + "']").forEach((k) => {
+                            k ? k.click() : c();
+                        })
+                        : c();
+                } catch (h) {
+                    c();
+                }
+            }
+        },
+        e = (a) => {
+            document.querySelector(".form-table ~ .container") &&
+                a.closest(".container") &&
+                (a = a.closest(".card")) &&
+                (a
+                    .closest(".container")
+                    .querySelectorAll(".card")
+                    .forEach((c) => {
+                        c.classList.remove("card_highlight");
+                    }),
+                    a.classList.add("card_highlight"),
+                    a.id &&
+                    (a = document.querySelectorAll("[href='#" + a.id + "']")) &&
+                    a.forEach((c) => {
+                        c.closest(".form-table")
+                            .querySelectorAll(".form-table__item")
+                            .forEach((h) => {
+                                h.classList.remove("active");
+                            });
+                        c.closest(".form-table__item")?.classList.add("active");
+                    }));
+        },
+        g = () => {
+            document.querySelectorAll("form [type='submit']").forEach((a) => {
+                let c = a.closest("form");
+                if (c) {
+                    let h = !1;
+                    c.querySelectorAll(
+                        "input:required, select:required, textarea:required"
+                    ).forEach((k) => {
+                        if (k.type == "checkbox") {
+                            if (c.querySelectorAll("input[name='" + k.name + "']:checked").length == 0) {
+                                h = !0;
+                            }
+                        } else if (c.type != "checkbox" && "" == k.value) {
+                            h = !0;
+                        }
+                    });
+                    h && document.querySelector(".form-nav")
+                        ? ((a.parentNode.dataset.tooltip =
+                            "Pastikan semua inputan mandatori telah diisi"),
+                            (a.parentNode.dataset.placement = "left"),
+                            a.closest(".form-table_sticky-bottom") &&
+                            (a.parentNode.dataset.placement = "top"))
+                        : a.parentNode.removeAttribute("data-tooltip");
+                    a.disabled = h;
+                }
+            });
+        };
+    document.addEventListener("DOMContentLoaded", (a) => {
+        d();
+        b();
+        g();
+        f();
+    });
+    window.addEventListener("scroll", (a) => {
+        b();
+    });
+    document.addEventListener("change", (a) => {
+        g();
+    });
+    document.addEventListener("input", (a) => {
+        g();
+    });
+    document.addEventListener("focusin", (a) => {
+        e(a.target);
+    });
+    document.addEventListener("click", (a) => {
+        let c = a.target;
+        e(c);
+        if (c.closest('a[href^="#"]')) {
+            a.preventDefault();
+            let h =
+                "#" != c.closest('a[href^="#"]')?.getAttribute("href")
+                    ? document.querySelector(
+                        c.closest('a[href^="#"]')?.getAttribute("href")
+                    )
+                    : !1;
+            if (h) {
+                a =
+                    h.getBoundingClientRect().top -
+                    72 +
+                    (window.pageYOffset || document.documentElement.scrollTop);
+                let k = c.closest(".form-table");
+                h.classList.contains("card") &&
+                    k &&
+                    h.closest(".container") &&
+                    (k.querySelectorAll(".form-table__item").forEach((l) => {
+                        l.classList.remove("active");
+                    }),
+                        c
+                            .closest('a[href^="#"]')
+                            .closest(".form-table__item")
+                            ?.classList.add("active"),
+                        h
+                            .closest(".container")
+                            .querySelectorAll(".card")
+                            .forEach((l) => {
+                                l.classList.remove("card_highlight");
+                            }),
+                        setTimeout(() => {
+                            h.classList.add("card_highlight");
+                        }, 150));
+                window.scrollTo({ top: a, behavior: "smooth" });
+            }
+        }
+    });
+})();
+(() => {
+    const d = () => {
+        const a = document.querySelectorAll(".header_template");
+        0 < a.length &&
+            a.forEach((c) => {
+                var h = c.querySelector(".header__group");
+                if (h) {
+                    var k = c.querySelector(
+                        ".header__row-wrapper:not(.header__row-wrapper_nav)"
+                    ),
+                        l = window.getComputedStyle(k);
+                    c = parseFloat(l.paddingTop);
+                    l = parseFloat(l.paddingBottom);
+                    k = k.offsetHeight;
+                    h = h.offsetHeight;
+                    document.body.style.setProperty(
+                        "--qn-semantic-header-row-wrapper-height",
+                        ""
+                    );
+                    h > k - c - l &&
+                        document.body.style.setProperty(
+                            "--qn-semantic-header-row-wrapper-height",
+                            h + c + l + "px"
+                        );
+                }
+            });
+    };
+    let b = "";
+    const f = () => {
+        const a = document.querySelector(".header__row-wrapper_nav");
+        var c = a.querySelector(".nav__list");
+        const h = window.getComputedStyle(a);
+        c = window.getComputedStyle(c);
+        return {
+            "padding-left": parseFloat(h.paddingLeft) ?? 0,
+            "padding-right": parseFloat(h.paddingRight) ?? 0,
+            "padding-x":
+                (parseFloat(h.paddingLeft) ?? 0) + (parseFloat(h.paddingRight) ?? 0),
+            gap: parseFloat(c.gap) ?? 0,
+            width: a.clientWidth ?? 0,
+        };
+    },
+        e = (a, c, h = 100) => {
+            const k = a.querySelector(".nav__link");
+            let l = !1;
+            var p =
+                16 *
+                parseFloat(
+                    getComputedStyle(document.body).getPropertyValue("--qn-breakpoint-sm")
+                );
+            document.body.clientWidth < p && (l = !0);
+            p = document
+                .querySelector(".header__row-wrapper_nav .nav__link.nav__link_more")
+                .closest(".dropdown");
+            const t = document
+                .querySelector(".header__row-wrapper_nav .nav__link.nav__link_more")
+                .closest(".nav__item"),
+                x = k.closest(".dropdown"),
+                u = document.createElement("li");
+            u.className = `
+
+            dropdown__item
+
+            ${x && !l && 1 == c ? " show" : ""}
+
+            ${k.closest(".nav__item.active") ? " active" : ""}
+
+        `.trim();
+            x
+                ? ((u.dataset.toggle = "dropdown-list"),
+                    (u.dataset.target = "#qn-dropdown-list-" + c),
+                    u.setAttribute("aria-expanded", c == h ? "true" : "false"),
+                    (u.innerHTML = `
+
+                <button>
+
+                    ${k.text.trim()}
+
+                    <span class="dropdown__item-right">
+
+                        <span class="icon icon-arrow-right"></span>
+
+                    </span>
+
+                </button>
+
+            `.trim()),
+                    (h = x.querySelector(".dropdown__list")),
+                    h.classList.add("dropdown__list_hidden"),
+                    (h.id = "qn-dropdown-list-" + c),
+                    1 != c || l || h.classList.add("show"),
+                    (c = document.createElement("li")),
+                    (c.className = "dropdown__item-title"),
+                    (c.innerHTML = `
+
+                <span class="icon icon-arrow-left-mini" data-hide="dropdown-list"></span>
+
+                <p>${k.text.trim()}</p>
+
+            `.trim()),
+                    h.prepend(c),
+                    k.closest(".nav__item.active") &&
+                    (p.querySelectorAll(".dropdown__box").forEach((w) => {
+                        w.classList.remove("show");
+                    }),
+                        l || h.classList.add("show"),
+                        t.classList.contains("active") || t.classList.add("active"),
+                        t.querySelectorAll(".dropdown__item.show").forEach((w) => {
+                            w.classList.remove("show");
+                            document.querySelector(w.dataset.target).classList.remove("show");
+                            w.setAttribute("aria-expanded", !1);
+                        })),
+                    p.querySelector(".dropdown__box").append(h))
+                : (k.closest(".nav__item.active") &&
+                    !t.classList.contains("active") &&
+                    t.classList.add("active"),
+                    k.classList.remove("nav__link"),
+                    u.append(k));
+            a.remove();
+            p.querySelector(".dropdown__list:not(.dropdown__list_hidden)").append(u);
+        },
+        g = () => {
+            if (document.querySelector(".header_template")) {
+                var a = document.querySelector(".header__row-wrapper_nav");
+                b = a ? a.innerHTML : "";
+                var c = document.querySelector(".header__row-wrapper_nav .nav__list"),
+                    h = c ? c.clientWidth : 0;
+                a = f().width - f()["padding-x"];
+                if (h > a) {
+                    var k = document.createElement("li");
+                    k.className = "nav__item nav__item_more";
+                    k.style.opacity = "0";
+                    k.style.pointerEvents = "none";
+                    k.innerHTML = `
+
+            <div class="dropdown dropdown_nav">
+
+                <a class="nav__link nav__link_more active" href="#" data-toggle="dropdown" aria-expanded="false">
+
+                    <span>${c.dataset.moreText ?? "Lainnya"}</span>
+
+                    <span class="icon icon-chevron-down-mini"></span>
+
+                </a>
+
+                <div class="dropdown__box dropdown__box_multi" data-popper-placement="bottom-right">
+
+                    <ul class="dropdown__list"></ul>
+
+                </div>
+
+            </div>
+
+        `.trim();
+                    c.append(k);
+                    if ((k = c.querySelector(".nav__link_more"))) {
+                        var l = k.closest(".dropdown_nav");
+                        if (
+                            l &&
+                            (k = l.querySelector(".dropdown__box")) &&
+                            !k.querySelector(".dropdown__box-header")
+                        ) {
+                            l = l.querySelector('[data-toggle="dropdown"]');
+                            var p = document.createElement("div");
+                            p.classList = "dropdown__box-header";
+                            p.innerHTML = `
+
+                <span class="icon icon-x-mark-mini" role="button" data-toggle="dropdown"></span>
+
+                <span class="dropdown__box-title">${k.dataset.dropdownTitle ?? (l ? l.textContent?.trim() : "")
+                                }</span>
+
+            `.trim();
+                            k.prepend(p);
+                        }
+                    }
+                    k = c.querySelector(".nav__item.nav__item_more");
+                    c = Array.from(c.querySelectorAll(".nav__item:not(.nav__item_more)"));
+                    l = h;
+                    h = [];
+                    p = !0;
+                    for (let t = c.length - 1; 0 <= t; t--)
+                        l - c[t].clientWidth + k.clientWidth > a && !0 === p
+                            ? ((l -= c[t].clientWidth + f().gap), h.push(c[t]))
+                            : l - c[t].clientWidth + k.clientWidth < a &&
+                            !0 === p &&
+                            ((p = !1), h.push(c[t]));
+                    for (a = h.length - 1; 0 <= a; a--) e(h[a], h.length - a);
+                    k.style.opacity = "";
+                    k.style.pointerEvents = "";
+                }
+            }
+        };
+    document.addEventListener("DOMContentLoaded", (a) => {
+        g();
+        d();
+        a = document.body;
+        const c = document.querySelector(".nav-mobile");
+        a && c && a.classList.add("body_has-nav-mobile");
+    });
+    window.addEventListener("resize", (a) => {
+        document.querySelector(".header__row-wrapper_nav").innerHTML = `${b}`;
+        g();
+        d();
+    });
+})();
+(() => {
+    document.addEventListener("click", (d) => {
+        var b = d.target;
+        d = b.closest(".alert");
+        b = b.closest("[data-dismiss='alert']");
+        d && b && d.remove();
+    });
+})();
+(() => {
+    const d = () => {
+        document
+            .querySelectorAll(
+                ".avatar[data-avatar-name], .avatar__circle[data-avatar-name]"
+            )
+            .forEach((b) => {
+                const f = b.dataset.avatarName;
+                if (f) {
+                    var e = b.closest(".avatar");
+                    e?.querySelector(".avatar__acronym") &&
+                        e.querySelector(".avatar__acronym").remove();
+                    e = document.createElement("p");
+                    e.className = "avatar__acronym";
+                    let g = f.matchAll(/\b(\w)\w*\b/g);
+                    e.innerHTML = 1 < g.length ? g.slice(0, 2) : f.slice(0, 2);
+                    b?.append(e);
+                }
+            });
+    };
+    document.addEventListener("DOMContentLoaded", (b) => {
+        d();
+    });
+    new MutationObserver((b) => {
+        b.forEach((f) => {
+            "attributes" === f.type &&
+                "data-avatar-name" === f.attributeName &&
+                f.target.closest(".avatar") &&
+                d();
+        });
+    }).observe(document.body, {
+        attributes: !0,
+        subtree: !0,
+        attributeOldValue: !0,
+        attributeFilter: ["data-avatar-name"],
+    });
+})();
+const triggers = document.querySelectorAll(
+    '.code__action [data-toggle="collapse"]'
+);
+triggers.forEach((d) => {
+    d.addEventListener("click", (b) => {
+        b = b.target.closest('[data-toggle="collapse"]');
+        const f = b.getAttribute("data-target");
+        collapse(f, "toggle")
+            ? ((b.style.cssText =
+                "background-color: #141414; border-radius: 0.375rem 0.375rem 0 0; color: #fff"),
+                (b.querySelector(".icon").style.cssText = "color: white !important;"))
+            : (b.removeAttribute("style"),
+                b.querySelector(".icon").removeAttribute("style"));
+    });
+});
+const fnmap = { toggle: "toggle", show: "add", hide: "remove" },
+    collapse = (d, b) => {
+        d = document.querySelector(d);
+        d.classList[fnmap[b]]("show");
+        return d.classList.contains("show") ? !0 : !1;
+    };
+(() => {
+    const d = (f, e, g, a = "show") => {
+        let c = window.getComputedStyle
+            ? getComputedStyle(e, null)
+            : e.currentStyle,
+            h = () => {
+                let k = 0;
+                document.querySelectorAll(g + " > *").forEach((l) => {
+                    k += l.getBoundingClientRect().height;
+                });
+                k += parseInt(c.paddingTop, 10);
+                k += parseInt(c.paddingBottom, 10);
+                k += parseInt(c.marginTop, 10);
+                return (k += parseInt(c.marginBottom, 10));
+            };
+        "show" == a
+            ? (f?.classList.add("show"),
+                e.classList.add("expand-enter-active"),
+                f?.setAttribute("aria-expanded", !0),
+                e.classList.add("show"),
+                (e.style.height = "0"),
+                (e.style.height = h() + "px"),
+                setTimeout(() => {
+                    e.classList.remove("expand-enter-active");
+                    e.style.height = "auto";
+                }, 350))
+            : (f?.classList.remove("show"),
+                e.classList.add("expand-leave-active"),
+                f?.setAttribute("aria-expanded", !1),
+                (e.style.height = h() + "px"),
+                setTimeout(() => {
+                    e.style.height = "0";
+                    e.style.paddingTop = "0";
+                    e.style.paddingBottom = "0";
+                }),
+                setTimeout(() => {
+                    e.classList.remove("expand-leave-active");
+                    e.style.height = "auto";
+                    e.style.paddingTop = "";
+                    e.style.paddingBottom = "";
+                    e.classList.remove("show");
+                }, 350));
+    },
+        b = (f, e = "toggle") => {
+            if (f.closest("[data-toggle='collapse']")) {
+                f = f.closest("[data-toggle='collapse']");
+                let g = f.dataset.target,
+                    a = document.querySelector(g);
+                ("true" == f.getAttribute("aria-expanded") ||
+                    f.classList.contains("show")) &&
+                    a
+                    ? "toggle" == e
+                        ? d(f, a, g, "hide")
+                        : d(f, a, g, "show")
+                    : "toggle" == e
+                        ? d(f, a, g, "show")
+                        : d(f, a, g, "hide");
+            }
+        };
+    document.addEventListener("click", (f) => {
+        f = f.target;
+        b(f);
+        if ((f = f.closest('[data-close="collapse"]')))
+            if ((f = f.closest(".collapse")))
+                (f = f.id) &&
+                    (f = document.querySelector('[data-target="#' + f + '"]')),
+                    f.click();
+    });
+    document.addEventListener("DOMContentLoaded", (f) => {
+        document.body.querySelectorAll("[data-toggle='collapse']").forEach((e) => {
+            b(e, "check");
+        });
+    });
+})();
+class Dropdown {
+    constructor(d, b = {}) {
+        this.typeList = ["select", "autocomplete", "multiple"];
+        this.element = d;
+        this.type = b?.type?.toLowerCase() ?? "select";
+        this.id = b?.id ?? !1;
+        this.class = b?.class ?? !1;
+        this.tags = b?.tags ?? !1;
+        this.search = b?.search ?? !0;
+        this.searchName = b?.searchName ?? !1;
+        this.searchPlaceholder = b?.searchPlaceholder ?? "Masukkan kata kunci";
+        this.searchMinimalLength = b?.searchMinimalLength ?? 1;
+        this.noResult = b?.noResult ?? !0;
+        this.noResultHelper =
+            b?.noResultHelper ??
+            `Coba cari dengan kata kunci lain${0 != b?.tags ? ", atau tambahkan data baru jika diperlukan" : ""
+            }.`;
+        this.init();
+        this.typeList;
+    }
+    init() {
+        if (
+            this.element &&
+            this.typeList.includes(this.type) &&
+            ((this.element.style.display = "none"),
+                this.element.removeAttribute("tabindex"),
+                !this.element.nextElementSibling?.classList.contains("dropdown"))
+        ) {
+            var d = this.element.options[this.element.selectedIndex],
+                b = document.createElement("div");
+            b.className = `dropdown dropdown_full-width${this.class ? " " + this.class : ""
+                }${this.element.classList.contains("error") ? " error" : ""}${this.element.classList.contains("loading") ? " loading" : ""
+                }`;
+            b.id = this.id ? this.id : "";
+            b.innerHTML = (
+                ("autocomplete" != this.type
+                    ? `<span class="dropdown__text dropdown__selected" data-toggle="dropdown" tabindex="0" aria-expanded="false">${d.innerHTML}</span>`
+                    : "") +
+                '<div class="dropdown__box"><ul class="dropdown__list"></ul></div>'
+            ).trim();
+            this.element.after(b);
+            let f = this.element.nextElementSibling;
+            this.element.querySelectorAll("option").forEach((e, g) => {
+                e.innerHTML &&
+                    ((g = document.createElement("li")),
+                        (g.className = `dropdown__item ${e.selected ? "selected " : ""} ${e.disabled ? "disabled " : ""
+                            }`),
+                        this.typeList.includes(this.type) &&
+                        (g.setAttribute("data-value", e.value),
+                            g.setAttribute("data-alt", e.dataset.alt ?? "")),
+                        (g.innerHTML =
+                            `<button type="button"${e.disabled ? " disabled " : ""}>` +
+                            (e.dataset.imgSrc
+                                ? `<img src="${e.dataset.imgSrc}" alt="${e.dataset.imgAlt || ""
+                                }">`
+                                : "") +
+                            (e.dataset.icon
+                                ? `<span class="icon icon-${e.dataset.icon}"></span>`
+                                : "") +
+                            e.textContent +
+                            "</button>"),
+                        f.querySelector(".dropdown__list").appendChild(g));
+            });
+            if (this.typeList.includes(this.type) && 0 != this.noResult) {
+                b = document.createElement("div");
+                b.className = "dropdown__empty";
+                const e = this.noResult.button
+                    ? '<div class="dropdown__empty-action"><button class="btn btn_secondary dropdown__action">Tambahkan Item</button></div>'
+                    : "";
+                b.innerHTML =
+                    (
+                        '<div class="dropdown__empty-information"><span class="dropdown__empty-title"></span>' +
+                        `<p class="dropdown__empty-helper">${this.noResultHelper}</p>` +
+                        '</div><div class="dropdown__loader"><div class="dropdown__loader-wrapper"><span class="loader loader_lg"></span></div></div>'
+                    ).trim() + e.trim();
+                f.querySelector(".dropdown__box").appendChild(b);
+            }
+            if ("autocomplete" == this.type || 0 != this.search)
+                (d =
+                    '<div class="form-control"><div class="form-control__group"><span data-input-icon="search"></span>' +
+                    `<input
+
+                                    type="text"
+
+                                    class="form-control__input"
+
+                                    placeholder="${this.searchPlaceholder
+                        ? this.searchPlaceholder
+                        : ""
+                    }"
+
+                                    ${this.id
+                        ? ' id="' + this.id + '__search"'
+                        : ""
+                    }
+
+                                    ${this.searchName
+                        ? ' name="' + this.searchName + '"'
+                        : ""
+                    }
+
+                                    ${"autocomplete" == this.type
+                        ? 'value="' + d.text + '"'
+                        : ""
+                    }
+
+                                    autocomplete="off"
+
+                                />` +
+                    '<span data-clear="input"></span></div></div>'),
+                    (b = document.createElement("div")),
+                    (b.className = "dropdown__search-box"),
+                    (b.innerHTML = d.trim()),
+                    "select" == this.type
+                        ? f.querySelector(".dropdown__list").before(b)
+                        : (f.innerHTML = b.trim() + f.innerHTML);
+        }
+    }
+    setOptions(d = []) {
+        let b = [],
+            f = !0;
+        if ("object" == typeof d) (b = d), (f = !1);
+        else if ("function" == typeof d) {
+            let e = this.element,
+                g = this.element.nextElementSibling,
+                a = g.querySelector(".dropdown__list");
+            "dynamic" != a.dataset.dataDropdown &&
+                (a.dataset.dataDropdown = "dynamic");
+            let c = this.typeList.includes(this.type);
+            a.innerHTML = "";
+            const h = document.createElement("li");
+            h.className = "dropdown__item";
+            h.innerHTML = "<i>Searching</i>";
+            a.appendChild(h);
+            (async function () {
+                b = await d();
+                f = !1;
+                if ("object" == typeof b && !f) {
+                    a.innerHTML = "";
+                    b.forEach((l) => {
+                        const p = document.createElement("li");
+                        p.className = `dropdown__item ${e.value == l.value ? "selected " : ""
+                            } ${l.disabled ? "disabled " : ""}`;
+                        c &&
+                            (p.setAttribute("data-value", l.value),
+                                p.setAttribute("data-alt", l.alt ?? ""));
+                        p.innerHTML = `<button type="button"${1 == l.disabled ? " disabled " : ""
+                            }>
+
+                                ${l.imgSrc
+                                ? `<img src="${l.imgSrc}" alt="${l.imgAlt || ""
+                                }">`
+                                : ""
+                            }
+
+                                ${l.icon
+                                ? `<span class="icon icon-${l.icon}"></span>`
+                                : ""
+                            }
+
+                                ${l.label ? l.label : l.value}
+
+                            </button>`.trim();
+                        a.appendChild(p);
+                    });
+                    let k = g.querySelector(".dropdown__empty");
+                    k.style.display = "";
+                    if (1 > b.length) {
+                        const l = `<i>"</i>${g.querySelector(".dropdown__search-box .form-control__input")
+                            .value
+                            } tidak ditemukan<i>"</i>`,
+                            p = k.querySelector(
+                                ".dropdown__empty-information .dropdown__empty-title"
+                            );
+                        p && (p.innerHTML = l);
+                        k.style.display = "flex";
+                    }
+                }
+            })();
+        } else b = !1;
+    }
+    setInputSearch(d = "default") {
+        let b = this.element.nextElementSibling?.querySelector(".dropdown__search");
+        b &&
+            (b.classList.remove("error"),
+                b.classList.remove("loading"),
+                "error" == d
+                    ? b.classList.add("error")
+                    : "loading" == d && b.classList.add("loading"));
+        "autocomplete" == this.type && this.setSelect(d);
+    }
+    setSelect(d = "default") {
+        let b = this.element.nextElementSibling?.closest(".dropdown");
+        b &&
+            (b.classList.remove("error"),
+                b.classList.remove("loading"),
+                "error" == d
+                    ? b.classList.add("error")
+                    : "loading" == d && b.classList.add("loading"));
+    }
+}
+(() => {
+    const d = (g) => {
+        if (
+            g.matches(".form-control__input") &&
+            g.closest(".dropdown__search-box") &&
+            !g.querySelector("[data-dropdown-list='dynamic']")
+        ) {
+            var a = g.closest(".dropdown");
+            if (a) {
+                let c = !0;
+                a.querySelectorAll(".dropdown__list > .dropdown__item").forEach(
+                    (h) => {
+                        0 <=
+                            h.textContent
+                                .trim()
+                                .toLowerCase()
+                                .indexOf(g.value.trim().toLowerCase()) ||
+                            0 <=
+                            h.dataset.alt
+                                ?.trim()
+                                .toLowerCase()
+                                .indexOf(g.value.trim().toLowerCase())
+                            ? ((h.style.display = ""), (c = !1))
+                            : (h.style.display = "none");
+                    }
+                );
+                if ((a = a.querySelector(".dropdown__empty")))
+                    if (((a.style.display = ""), c)) {
+                        const h = `<i>"</i>${g.value} tidak ditemukan<i>"</i>`,
+                            k = a.querySelector(
+                                ".dropdown__empty-information .dropdown__empty-title"
+                            );
+                        k && (k.innerHTML = h);
+                        a.style.display = "flex";
+                    }
+            }
+        }
+    },
+        b = (g = "dropdown__box") => {
+            document.querySelectorAll(".dropdown").forEach((a) => {
+                let c = a.querySelector('[data-toggle="dropdown"]'),
+                    h = a.querySelector(".dropdown__box");
+                a = a.querySelector(".dropdown__list");
+                let k = !1;
+                "dropdown__box" == g ? (k = h) : "dropdown__list" == g && (k = a);
+                k &&
+                    (k.classList.remove("show"),
+                        (k.style.inset = ""),
+                        (k.style.transform = ""),
+                        c?.setAttribute("aria-expanded", !1),
+                        c?.classList.remove("show"));
+            });
+        };
+    document.addEventListener("click", (g) => {
+        var a = g.target;
+        a.closest(".dropdown")?.querySelector(".dropdown__box.show") ||
+            b("dropdown__box");
+        a.closest(".dropdown")?.querySelector(".dropdown__list.show") ||
+            b("dropdown__list");
+        if (a.closest('[data-toggle="dropdown"]:not(:disabled)')) {
+            let u = a.closest(".dropdown"),
+                w = a.closest('[data-toggle="dropdown"]');
+            var c = u.querySelector(".dropdown__box"),
+                h = u.querySelector(".dropdown__list");
+            g = "";
+            document.querySelectorAll(".dropdown").forEach((B) => {
+                B !== u &&
+                    (B.querySelector(".dropdown__box")?.classList.remove("show"),
+                        B.querySelector(".dropdown__list")?.classList.remove("show"),
+                        w?.setAttribute("aria-expanded", !1));
+            });
+            c
+                ? (c.classList.toggle("show"), (g = c))
+                : h && (h.classList.toggle("show"), (g = h));
+            if (g.classList.contains("show")) {
+                w?.setAttribute("aria-expanded", !0);
+                w?.classList.add("show");
+                g?.querySelector("input.form-control__input")?.focus();
+                c = document.body.getBoundingClientRect();
+                h = g.getBoundingClientRect();
+                var k = h.top - c.top;
+                (window.innerHeight >= h.height || k + h.height >= c.height) &&
+                    h.top + h.height >= window.innerHeight - 1 &&
+                    ((g.style.top = "unset"), (g.style.bottom = "calc(100% + 0.25rem)"));
+            } else w?.setAttribute("aria-expanded", !1), w?.classList.remove("show");
+        }
+        a.closest(".dropdown") &&
+            a.closest('[data-clear="input"]') &&
+            ((a.closest(".dropdown").querySelector(".form-control__input").value =
+                ""),
+                a.closest(".dropdown").querySelector(".form-control__input").focus(),
+                d(a.closest(".dropdown").querySelector(".form-control__input")));
+        if (a.closest(".dropdown__item")) {
+            var l = a.closest(".dropdown");
+            g = l.querySelector('[data-toggle="dropdown"]');
+            var p = l.querySelector(".dropdown__selected");
+            a = a.closest(".dropdown__item");
+            c = a.querySelector("a");
+            h = a.querySelector("button");
+            var t = l.querySelectorAll(".dropdown__item");
+            k = l.querySelector(".dropdown__box");
+            var x = l.querySelector(".dropdown__list");
+            let u = "";
+            k ? (u = k) : x && (u = x);
+            if (
+                h &&
+                !h.disabled &&
+                p &&
+                (t.forEach((w) => {
+                    w.classList.remove("selected");
+                }),
+                    a.classList.add("selected"),
+                    (p.innerHTML = h.innerHTML),
+                    (l = l.parentNode.querySelector("select")),
+                    (p = a?.dataset.value),
+                    l && void 0 !== p)
+            ) {
+                t = !1;
+                for (x = 0; x < l.options.length; x++)
+                    if (l.options[x].value === p) {
+                        t = !0;
+                        break;
+                    }
+                t ||
+                    ((t = document.createElement("option")),
+                        (t.value = p),
+                        (t.innerHTML = h?.innerHTML),
+                        l.appendChild(t));
+                l.value = a?.dataset.value;
+            }
+            ((c && !c.disabled) || (h && !h.disabled)) &&
+                (!k?.classList.contains("dropdown__box_multi") ||
+                    a.closest(".dropdown__list_hidden")) &&
+                u &&
+                (u.classList.remove("show"),
+                    u.classList.contains("show")
+                        ? g?.setAttribute("aria-expanded", !0)
+                        : g?.setAttribute("aria-expanded", !1),
+                    g?.focus());
+        }
+    });
+    const f = (g = null, a = null) => {
+        if ((a && a.closest(".dropdown_nav") && null == g) || (g && null == a)) {
+            g = g ?? a.closest(".dropdown_nav");
+            const c =
+                g.querySelector(".dropdown__box") ??
+                g.querySelector(".dropdown__list");
+            setTimeout(() => {
+                c &&
+                    void 0 == c.dataset.popperPlacement &&
+                    c.getBoundingClientRect().right > window.innerWidth - 24 &&
+                    (c.dataset.popperPlacement = "bottom-right");
+            }, 10);
+        }
+    },
+        e = () => {
+            document.querySelectorAll(".dropdown_nav").forEach((g) => {
+                f(g);
+            });
+        };
+    document.addEventListener("DOMContentLoaded", () => {
+        e();
+    });
+    document.addEventListener("click", (g) => {
+        f(null, g.target);
+    });
+    document.addEventListener("keydown", (g) => {
+        "Escape" === g.key && (b("dropdown__box"), b("dropdown__list"));
+    });
+    document.addEventListener("focusin", (g) => {
+        g = g.target;
+        g.closest(".dropdown")?.querySelector(".dropdown__box.show") ||
+            b("dropdown__box");
+        g.closest(".dropdown")?.querySelector(".dropdown__list.show") ||
+            b("dropdown__list");
+    });
+    document.addEventListener("input", (g) => {
+        d(g.target);
+    });
+    window.addEventListener("resize", () => {
+        document.querySelectorAll(".dropdown__box.show").forEach((g) => {
+            g.parentNode.querySelector('[data-toggle="dropdown"]');
+        });
+        document.querySelectorAll(".dropdown__list.show").forEach((g) => {
+            g.parentNode.querySelector('[data-toggle="dropdown"]');
+        });
+        e();
+    });
+    window.addEventListener("scroll", () => {
+        document.querySelectorAll(".dropdown__box.show").forEach((g) => {
+            g.parentNode.querySelector('[data-toggle="dropdown"]');
+        });
+        document.querySelectorAll(".dropdown__list.show").forEach((g) => {
+            g.parentNode.querySelector('[data-toggle="dropdown"]');
+        });
+    });
+})();
+const getValueWidth = (d, b = "value") => {
+    const f = document.createElement("span");
+    f.className = "dropdown__tag-hidden";
+    f.innerText = "value" == b ? d.value : d.placeholder;
+    d.closest(".dropdown__tag-input").appendChild(f);
+    b = f.offsetWidth;
+    d.closest(".dropdown__tag-input").removeChild(f);
+    return b + 12;
+};
+document.addEventListener("click", (d) => {
+    d = d.target;
+    d.closest(".dropdown__tag") &&
+        d.closest(".dropdown__tag").querySelector("input")?.focus();
+});
+const setwidthDropdownTagInput = (d) => {
+    d.closest(".dropdown__tag-input") &&
+        ((d = d.closest(".dropdown__tag-input").querySelector("input")),
+            (d.style.width = getValueWidth(d) + "px"),
+            (d.style.maxWidth = getValueWidth(d) + "px"));
+};
+document.addEventListener("input", (d) => {
+    setwidthDropdownTagInput(d.target);
+});
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.querySelectorAll(".dropdown__tag-input input").forEach((d) => {
+        d.style.minWidth = getValueWidth(d, "placeholder") + "px";
+        d.style.maxWidth = getValueWidth(d, "placeholder") + "px";
+    });
+});
+function adjustWidth(d) {
+    d && ((d.style.width = "auto"), (d.style.width = `${d.scrollWidth}px`));
+}
+window.addEventListener("DOMContentLoaded", function () {
+    const d = document.querySelector(".dropdown__tag-input input");
+    adjustWidth(d);
+});
+document.addEventListener("DOMContentLoaded", function () {
+    var d = document.querySelectorAll(".select-search");
+    for (let f = 0; f < d.length; ++f) {
+        var b = d[f];
+        new Choices(b, {
+            allowHTML: !0,
+            shouldSort: !1,
+            renderChoiceLimit: 20,
+            placeholderValue: b.dataset.placeholder ?? "",
+            searchPlaceholderValue: b.dataset.searchPlaceholder ?? "",
+        });
+    }
+    (function (f) {
+        document.querySelectorAll(f).forEach(function (e) {
+            new Choices(e, {
+                allowHTML: !0,
+                shouldSort: !1,
+                renderChoiceLimit: 20,
+                searchEnabled: !1,
+                removeItemButton: !1,
+            });
+        });
+    })(".select-default");
+    (function (f) {
+        document.querySelectorAll(f).forEach(function (e) {
+            new Choices(e, { allowHTML: !0, shouldSort: !1 });
+        });
+    })(".select-multiple-without-remove");
+    (function (f) {
+        document.querySelectorAll(f).forEach(function (e) {
+            new Choices(e, {
+                allowHTML: !0,
+                shouldSort: !1,
+                delimiter: ",",
+                removeItemButton: !0,
+            });
+        });
+    })(".select-multiple");
+    (function (f, e) {
+        document.querySelectorAll(f).forEach(function (g) {
+            new Choices(g, {
+                allowHTML: !1,
+                shouldSort: !1,
+                placeholder: !0,
+                placeholderValue: "Pick a Strokes record",
+            }).setChoices(function () {
+                return fetch(e)
+                    .then(function (a) {
+                        return a.json();
+                    })
+                    .then(function (a) {
+                        return a.releases.map(function (c) {
+                            return {
+                                value: c.title,
+                                label: c.title,
+                            };
+                        });
+                    });
+            });
+        });
+    })(
+        ".select-multiple-remote-fetch",
+        "https://api.discogs.com/artists/55980/releases?token=QBRmstCkwXEvCjTclCpumbtNwvVkEzGAdELXyRyW"
+    );
+    (function (f, e, g) {
+        document.querySelectorAll(f).forEach(function (a) {
+            new Choices(a, {
+                allowHTML: !1,
+                shouldSort: !1,
+                searchPlaceholderValue: "Search for an Arctic Monkeys record",
+            })
+                .setChoices(function () {
+                    return fetch(e)
+                        .then(function (c) {
+                            return c.json();
+                        })
+                        .then(function (c) {
+                            return c.releases.map(function (h) {
+                                return { label: h.title, value: h.title };
+                            });
+                        });
+                })
+                .then(function (c) {
+                    c.setChoiceByValue(g);
+                });
+        });
+    })(
+        ".select-single-remote-fetch",
+        "https://api.discogs.com/artists/391170/releases?token=QBRmstCkwXEvCjTclCpumbtNwvVkEzGAdELXyRyW",
+        "Fake Tales Of San Francisco"
+    );
+});
+(() => {
+    const d = () => {
+        document.querySelectorAll(".choices__list--dropdown").forEach((b) => {
+            const f = b.getBoundingClientRect(),
+                e = window.innerHeight,
+                g = document.body.getBoundingClientRect(),
+                a = f.top - g.top;
+            (e >= f.height || a + f.height >= g.height) &&
+                f.bottom >= window.innerHeight - 1 &&
+                (b = b.closest(".choices")) &&
+                b.classList.add("is-flipped");
+        });
+    };
+    document.addEventListener("DOMContentLoaded", () => {
+        d();
+    });
+})();
+(() => {
+    const d = (e, g, a = !1) => {
+        a && (g.innerHTML = "");
+        e.querySelectorAll("a, button").forEach((c) => {
+            if (
+                !c.closest('[data-toggle="dropdown"]') &&
+                !c.closest('[data-dropdown-group="show"]') &&
+                !c.closest(".dropdwon__item")
+            ) {
+                const k = document.createElement("div");
+                k.classList = "dropdown__item";
+                let l = c.cloneNode(!0);
+                var h = Array.from(l.classList).filter((p) => p.startsWith("btn_"));
+                l.classList.remove("btn");
+                h.forEach((p) => {
+                    l.classList.remove(p);
+                });
+                if (
+                    (h =
+                        l.getAttribute("aria-label") ??
+                        l.dataset.tooltip ??
+                        l.dataset.btnLabel)
+                )
+                    l.innerHTML += h;
+                k.append(l);
+                g.append(k);
+            }
+            c.closest(".dropdwon__item") &&
+                ((c = c.closest(".dropdwon__item").cloneNode(!0)), g.append(c));
+        });
+    },
+        b = (e) => {
+            var g = e.querySelector(".dropdown-group__target"),
+                a = e.querySelector(".dropdown-group__toggle");
+            a &&
+                (a.querySelectorAll("a, button").forEach((c) => {
+                    c.dataset.toggle = "dropdown";
+                }),
+                    (a = a.innerHTML.trim()),
+                    (g.classList = "dropdown"),
+                    (g.dataset.dropdownGroup = "show"),
+                    (g.innerHTML = `
+
+                ${a}
+
+                <div class="dropdown__list dropdown__list_menu-end"></div>
+
+            `.trim()),
+                    (g = g.querySelector(".dropdown__list")),
+                    d(e, g));
+        },
+        f = () => {
+            document.querySelectorAll(".dropdown-group").forEach((e) => {
+                b(e);
+            });
+        };
+    document.addEventListener("DOMContentLoaded", (e) => {
+        f();
+    });
+    new MutationObserver((e) => {
+        e.forEach((g) => {
+            "childList" === g.type &&
+                0 < g.addedNodes.length &&
+                ((g = Array.from(g.addedNodes).filter(
+                    (a) => a.classList && a.classList.contains("dropdown-group")
+                )),
+                    0 < g.length &&
+                    g.forEach((a) => {
+                        b(a);
+                    }));
+        });
+    }).observe(document.body, { childList: !0, subtree: !0 });
+})();
+(() => {
+    document.addEventListener("click", (d) => {
+        d = d.target;
+        if (d.matches("[data-clear='input']")) {
+            var b = d.parentNode;
+            b && (b = b.querySelector(".form-control__input")) && (b.value = "");
+            b.dispatchEvent(new Event("change"));
+            b.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+        d.matches("[data-visibility='input']") &&
+            ((b = d.parentNode),
+                (d = b.querySelector("[data-visibility='input']")),
+                b &&
+                ((b = b.querySelector("input")),
+                    "text" == d.dataset.type
+                        ? ((b.type = "password"), (d.dataset.type = "password"))
+                        : ((b.type = "text"), (d.dataset.type = "text"))));
+    });
+})();
+document.addEventListener("DOMContentLoaded", () => {
+    "xs sm md lg xl xxl".split(" ").forEach((d) => {
+        document.querySelectorAll(`.form-control_expand-${d}`).forEach((b) => {
+            b = b.querySelector("input");
+            b.addEventListener("focus", (f) => {
+                f.target
+                    .closest(".form-control")
+                    .classList.add("form-control_expanded");
+            });
+            b.addEventListener("focusout", (f) => {
+                f.target
+                    .closest(".form-control")
+                    .classList.remove("form-control_expanded");
+            });
+        });
+    });
+});
+(() => {
+    const d = (b, f = !0) => {
+        const e = b.classList.contains("upload-draggable__file-input");
+        b = b.closest(".upload-draggable");
+        e &&
+            b &&
+            (f ? b.classList.add("is-active") : b.classList.remove("is-active"));
+    };
+    document.addEventListener("click", (b) => {
+        var f = b.target;
+        d(f, !0);
+        b = f.closest(".attachment");
+        f = f.closest("[data-dismiss='attachment']");
+        b && f && b.remove();
+    });
+    document.addEventListener("focusin", (b) => {
+        d(b.target, !0);
+    });
+    document.addEventListener("dragenter", (b) => {
+        d(b.target, !0);
+    });
+    document.addEventListener("drop", (b) => {
+        d(b.target, !1);
+    });
+    document.addEventListener("focusout", (b) => {
+        d(b.target, !1);
+    });
+    document.addEventListener("dragleave", (b) => {
+        d(b.target, !1);
+    });
+    document.addEventListener("change", (b) => {
+        b = b.target;
+        if (b.classList.contains("upload-draggable__file-input")) {
+            const f = b.parentNode,
+                e = f.parentNode.querySelector(".upload-draggable__success");
+            f.style.opacity = 0;
+            e.style.display = "flex";
+            const g = b.files.length;
+            1 === g
+                ? (e.innerHTML = `<span>${b.value.split("\\").pop()}</span>`)
+                : 1 < g
+                    ? (e.innerHTML = "<span>" + g + " berkas</span> dipilih")
+                    : ((f.style.opacity = 1), (e.style.display = "none"));
+        }
+    });
+})();
+var phonenumber = document.getElementById("phone-number");
+phonenumber &&
+    phonenumber.addEventListener("keyup", function (d) {
+        phonenumber.value = phoneFormat(this.value);
+    });
+function phoneFormat(d, b) {
+    d = d
+        .replace(/[^,\d]/g, "")
+        .toString()
+        .split(" ");
+    var f = d[0].length % 4,
+        e = d[0].substr(0, f),
+        g = d[0].substr(f).match(/\d{4}/gi);
+    g && ((separator = f ? " " : ""), (e += separator + g.join(" ")));
+    e = void 0 != d[1] ? e + " " + d[1] : e;
+    return void 0 == b ? e : e ? "+62 " + e : "";
+}
+(() => {
+    const d = (e) => {
+        e.classList.add("on-closing");
+        setTimeout(() => {
+            e.classList.remove("on-closing");
+            e.classList.remove("is-visible");
+        }, 450);
+    },
+        b = (e) => {
+            var g = e.target;
+            const a = g.closest('[data-toggle="modal"]'),
+                c = a?.getAttribute("data-target");
+            if (a && c) {
+                e.preventDefault();
+                const h = document.querySelector(c);
+                h &&
+                    !h.classList.contains("is-visible") &&
+                    (h.classList.add("on-opening"),
+                        setTimeout(() => {
+                            h.classList.remove("on-opening");
+                            h.classList.add("is-visible");
+                        }, 10));
+            }
+            e = g.closest('[data-dismiss="modal"]');
+            g = g.closest(".modal");
+            e && g && d(g);
+        },
+        f = (e) => {
+            "Escape" === e.key &&
+                document.querySelectorAll(".modal.is-visible").forEach((g) => {
+                    d(g);
+                });
+        };
+    document.addEventListener("click", (e) => {
+        b(e);
+    });
+    document.addEventListener("keydown", (e) => {
+        f(e);
+    });
+})();
+class Pagination {
+    constructor(d, b = {}) {
+        this.element = d;
+        this.url = this.element?.dataset.pageUrl
+            ? this.element.dataset.pageUrl
+            : b?.url ?? "";
+        this.stringification = this.element?.dataset.pageStringification
+            ? this.element.dataset.pageStringification
+            : b?.stringification ?? "<<$page>>";
+        this.total = this.element?.dataset.pageTotal
+            ? this.element.dataset.pageTotal
+            : b?.total ?? 1;
+        this.current = this.element?.dataset.pageCurrent
+            ? this.element.dataset.pageCurrent
+            : b?.current ?? 1;
+        this.pageLimit = this.element?.dataset.pageLimit
+            ? this.element.dataset.pageLimit
+            : b?.limit ?? 7;
+        this.lang = {
+            previous: b?.lang?.previous ?? "Previous",
+            next: b?.lang?.next ?? "Next",
+            page: b?.lang?.page ?? "Page",
+            of: b?.lang?.of ?? "of",
+        };
+        this.prevText = b?.prevText ?? this.lang?.previous;
+        this.nextText = b?.nextText ?? this.lang?.next;
+        this.init();
+    }
+    init() {
+        this.total = parseInt(this.total);
+        this.current = parseInt(this.current);
+        this.pageLimit = Math.floor(parseInt(this.pageLimit));
+        this.pageLimit =
+            0 == this.pageLimit % 2 ? this.pageLimit + 1 : this.pageLimit;
+        this.element.style.display = "none";
+        const d = document.createElement("div");
+        d.className = "pagination";
+        const b = (a) =>
+            `<li class="pagination__item${this.current == a ? " active" : ""
+            }"><a href="${this.linkPage(a)}"${this.current == a ? ' onclick="return false;"' : ""
+            }>${a}</a></li>`;
+        var f = () => '<li class="pagination__ellipsis">...</li>';
+        d.innerHTML =
+            1 >= this.current
+                ? d.innerHTML +
+                `<button class="pagination__button-previous" aria-label="${this.prevText
+                }" disabled><span class="pagination__button-text"${0 == this.prevText ? ' style="display: none;"' : ""
+                }>${this.prevText}</span></button>`
+                : d.innerHTML +
+                `<button class="pagination__button-previous" aria-label="${this.prevText
+                }" onclick="window.location.href='${this.linkPage(
+                    this.current - 1
+                )}'"><span class="pagination__button-text"${0 == this.prevText ? ' style="display: none;"' : ""
+                }>${this.prevText}</span></button>`;
+        if (0 < this.total) {
+            let a = document.createElement("ul");
+            a.className = "pagination__list";
+            a.dataset.mobileText = `${this.lang.page} ${this.current} ${this.lang.of} ${this.total}`;
+            var e = Math.floor(this.pageLimit / 2);
+            let c = this.total - e;
+            var g = e - 2;
+            let h = this.current - g;
+            g = this.current + g;
+            a.innerHTML += b(1).trim();
+            if (1 < this.total)
+                if (1 < this.total && this.total <= this.pageLimit)
+                    for (f = 2; f <= this.total; f++) a.innerHTML += b(f).trim();
+                else if (this.current <= 1 + e) {
+                    for (e = 2; e <= this.pageLimit - 2; e++) a.innerHTML += b(e).trim();
+                    a.innerHTML += f();
+                    a.innerHTML += b(this.total).trim();
+                } else if (this.current > c)
+                    for (a.innerHTML += f(), f = c; f <= this.total; f++)
+                        a.innerHTML += b(f).trim();
+                else {
+                    if (this.current <= this.total)
+                        for (a.innerHTML += f(), e = h; e <= g; e++) a.innerHTML += b(e);
+                    a.innerHTML += f();
+                    a.innerHTML += b(this.total).trim();
+                }
+            d.appendChild(a);
+        } else d.innerHTML += b(1).trim();
+        d.innerHTML =
+            this.current >= this.total
+                ? d.innerHTML +
+                `<button class="pagination__button-next" aria-label="${this.nextText
+                }" disabled><span class="pagination__button-text"${0 == this.nextText ? ' style="display: none;"' : ""
+                }>${this.nextText}</span></button>`
+                : d.innerHTML +
+                `<button class="pagination__button-next" aria-label="${this.nextText
+                }" onclick="window.location.href='${this.linkPage(
+                    this.current + 1
+                )}'"><span class="pagination__button-text"${0 == this.nextText ? ' style="display: none;"' : ""
+                }>${this.nextText}</span></button>`;
+        this.element.after(d);
+    }
+    linkPage(d) {
+        return this.url.replace(this.stringification, d);
+    }
+}
+(() => {
+    const d = (a, c = !1) => {
+        const h = a.querySelector(".progress__bar"),
+            k = a.querySelector(".progress__percentage");
+        let l = h.dataset.percentStart ?? 0,
+            p = h.dataset.percentEnd ?? 100;
+        l = parseInt(l);
+        p = parseInt(p);
+        c ||
+            (k && (k.textContent = l + "%"),
+                a.style.setProperty("--qn-progress-percent", l + "%"));
+        setTimeout(
+            () => {
+                k && (k.textContent = p + "%");
+                a.style.setProperty("--qn-progress-percent", p + "%");
+            },
+            c ? 150 : 0
+        );
+    },
+        b = () => {
+            document.querySelectorAll(".progress").forEach((a) => {
+                d(a);
+            });
+        },
+        f = (a) => {
+            var c = a.querySelector(".progress-circle__bar");
+            a.querySelector("svg circle") ||
+                (a.innerHTML += "<svg><circle></circle><circle></circle></svg>");
+            c = c.dataset.percentEnd;
+            c = parseInt(c);
+            a.style.setProperty("--progress-circle-percent", (98 * c) / 100);
+            0 >= c
+                ? (a.style.setProperty("--progress-dashoffset-end", 1), (c = 0))
+                : 100 <= c
+                    ? (a.style.setProperty("--progress-dashoffset-end", ""),
+                        a.style.setProperty("--progress-circle-percent", 102),
+                        (c = 100))
+                    : a.style.setProperty("--progress-dashoffset-end", "");
+            a.querySelector(".progress-circle__number").textContent = c + "%";
+            a.querySelector("svg circle:nth-child(2)").classList.add("animation");
+        },
+        e = () => {
+            document.querySelectorAll(".progress-circle").forEach((a) => {
+                f(a);
+            });
+        };
+    document.addEventListener("DOMContentLoaded", (a) => {
+        b();
+        e();
+    });
+    const g = (a) => {
+        a.nodeType === Node.ELEMENT_NODE &&
+            a.querySelectorAll(".progress").forEach((c) => {
+                d(c);
+            });
+    };
+    new MutationObserver((a) => {
+        a.forEach((c) => {
+            "childList" === c.type &&
+                0 < c.addedNodes.length &&
+                ((c = Array.from(c.addedNodes)),
+                    c.filter((h) => h.classList && h.classList.contains("progress")),
+                    c.forEach((h) => {
+                        h.classList && h.classList.contains("progress") ? d(h) : g(h);
+                    }),
+                    (c = c.filter(
+                        (h) => h.classList && h.classList.contains("progress-circle")
+                    )),
+                    0 < c.length &&
+                    c.forEach((h) => {
+                        f(h);
+                    }));
+        });
+    }).observe(document.body, { childList: !0, subtree: !0 });
+    new MutationObserver((a) => {
+        a.forEach((c) => {
+            if ("attributes" === c.type && "data-percent-end" === c.attributeName) {
+                c = c.target;
+                const h = c.closest(".progress");
+                h && d(h, !0);
+                (c = c.closest(".progress-circle")) && f(c);
+            }
+        });
+    }).observe(document.body, {
+        attributes: !0,
+        subtree: !0,
+        attributeOldValue: !0,
+        attributeFilter: ["data-percent-end"],
+    });
+})();
+const getElmInnerSize = (d, b = !1) => {
+    const f = getComputedStyle(d);
+    let e = d.clientWidth;
+    d = d.clientHeight;
+    e -= parseFloat(f.paddingLeft) + parseFloat(f.paddingRight);
+    d -= parseFloat(f.paddingTop) + parseFloat(f.paddingBottom);
+    b &&
+        ((e += parseFloat(f.borderLeft) + parseFloat(f.borderRight)),
+            (d += parseFloat(f.borderTop) + parseFloat(f.borderBottom)));
+    return { width: e, height: d };
+};
+(() => {
+    const d = (b) => {
+        const f = b.closest("table"),
+            e = b.closest(".check-all-item");
+        f &&
+            e &&
+            f.querySelectorAll(".check-item:not([disabled])").forEach((g) => {
+                g.checked = e.checked;
+            });
+    };
+    document.addEventListener("click", (b) => {
+        var f = b.target;
+        d(f);
+        b = f.closest("table");
+        f = f.closest(".check-item");
+        if (b && f) {
+            f = b.querySelector(".check-all-item");
+            const e = b.querySelectorAll(".check-item:not([disabled])");
+            b = b.querySelectorAll(".check-item:checked");
+            f.checked = !1;
+            e.length === b.length && (f.checked = !0);
+        }
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".table-max").forEach((b) => {
+            const f = (e) => {
+                if (b) {
+                    const c = (h, k, l = !1) => {
+                        h.clientWidth > k.clientWidth
+                            ? (k.classList.add("table-max_absolute"),
+                                h.querySelectorAll(".cell-action").forEach((p) => {
+                                    p.style.height = p.closest("tr").offsetHeight + "px";
+                                    p.style.maxHeight = p.closest("tr").offsetHeight + "px";
+                                }))
+                            : (k.classList.remove("table-max_absolute"),
+                                k.setAttribute("style", ""),
+                                l && c(h, k));
+                    };
+                    c(e, b, !0);
+                }
+                e = e.querySelectorAll("tr");
+                b &&
+                    b.classList.contains("table-max_absolute") &&
+                    b.style.setProperty("--qn-table-cell-action-width", "fit-content");
+                let g = 0,
+                    a = 0;
+                e.forEach((c) => {
+                    c.classList.contains("row-skip") && (a += c.clientHeight);
+                    var h = c.querySelector(".cell-action");
+                    if (h) {
+                        const k = getComputedStyle(h);
+                        h = parseFloat(k.paddingLeft) + parseFloat(k.paddingRight);
+                        let l = 0;
+                        c.querySelectorAll(".cell-action > *").forEach((p, t) => {
+                            l += p.clientWidth;
+                            0 < t ? (l += parseFloat(k.gap)) : "";
+                        });
+                        c = h + l;
+                        c > g && (g = c);
+                    }
+                });
+                b
+                    ? (b.style.setProperty("--qn-table-cell-action-width", g + "px"),
+                        b.style.setProperty(
+                            "--qn-table-shadow-right-bottom-offset",
+                            a + "px"
+                        ),
+                        0 == g &&
+                        (b.style.setProperty("--qn-table-shadow-right-bottom-offset", ""),
+                            b.style.setProperty("--qn-table-cell-action-alone-width", "8px"),
+                            b.style.setProperty(
+                                "--qn-table-shadow-right-translate-x",
+                                "8px"
+                            )))
+                    : b.style.setProperty("--qn-table-cell-action-width", "");
+            };
+            f(b.querySelector("table"));
+            window.addEventListener("resize", (e) => {
+                f(b.querySelector("table"));
+            });
+            b.addEventListener("scroll", (e) => {
+                e = e.target;
+                const g = e.closest(".table-max"),
+                    a = e.closest(".table-max_absolute");
+                g &&
+                    a &&
+                    e.querySelector("table") &&
+                    (g.scrollLeft + g.clientWidth >= g.scrollWidth - 1
+                        ? a.classList.add("table-max_without-right-shadow")
+                        : a.classList.remove("table-max_without-right-shadow"),
+                        0 < g.scrollLeft
+                            ? a.classList.add("table-max_with-left-shadow")
+                            : a.classList.remove("table-max_with-left-shadow"));
+            });
+        });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const b = (e) => {
+            f(e.target);
+        },
+            f = (e) => {
+                let g = Math.max(
+                    document.documentElement.clientHeight || 0,
+                    window.innerHeight || 0
+                );
+                const a = e.closest(".choices");
+                e = e.closest(".table-max_absolute") || e.closest(".table-responsive");
+                if (a && e) {
+                    const c = a.querySelector(".choices__list.choices__list--dropdown");
+                    if (c) {
+                        c.getBoundingClientRect();
+                        "true" != a.dataset.listenerAlt &&
+                            window.addEventListener("scroll", () => {
+                                a.getBoundingClientRect().top < c.offsetWidth &&
+                                    a.classList.remove("is-flipped");
+                            });
+                        const h = () => {
+                            const k = a.getBoundingClientRect();
+                            c.removeAttribute("style");
+                            c.style.height = "fit-content";
+                            c.style.position = "fixed";
+                            c.style.zIndex = "1000";
+                            c.style.transition = "inset 0s linear";
+                            c.style.left = `${k.x}px`;
+                            c.style.top = `${k.y + k.height}px`;
+                            c.style.bottom = "";
+                            c.style.width = `${a.offsetWidth}px`;
+                            a.classList.contains("is-flipped") &&
+                                ((c.style.zIndex = "1010"),
+                                    (c.style.top = ""),
+                                    (c.style.bottom = `${g - k.y}px`),
+                                    (c.style.borderRadius = ".5rem"));
+                        };
+                        h();
+                        "true" != a.dataset.listenerAlt &&
+                            (e.addEventListener("scroll", (k) => {
+                                document.body.click();
+                            }),
+                                e.addEventListener("scroll", h),
+                                window.addEventListener("scroll", h));
+                        a.dataset.listenerAlt = "true";
+                    }
+                }
+            };
+        document
+            .querySelectorAll(
+                ".table-responsive .choices, .table-max_absolute .choices"
+            )
+            .forEach((e) => {
+                f(e);
+            });
+        document.addEventListener("click", b);
+        document.addEventListener("focusin", b);
+    });
+})();
+(() => {
+    const d = (f) => {
+        const e = f.closest('[data-toggle="tab"]:not(.disabled)');
+        if (e) {
+            const g = e.dataset.target;
+            e.parentNode.querySelectorAll('[data-toggle="tab"]').forEach((a) => {
+                const c = a.dataset.target,
+                    h = document.querySelectorAll(c);
+                a?.classList.remove("active");
+                h.forEach((k) => {
+                    k.classList.remove("active");
+                    c === g && k?.classList.add("active");
+                });
+                e?.classList.add("active");
+            });
+        }
+    },
+        b = () => {
+            document.querySelectorAll('[data-toggle="tab"].active').forEach((f) => {
+                if (f) {
+                    const e = f.dataset.target;
+                    document.querySelector(e);
+                    f.parentNode.querySelectorAll('[data-toggle="tab"]').forEach((g) => {
+                        const a = g.dataset.target,
+                            c = document.querySelectorAll(a);
+                        g?.classList.remove("active");
+                        c.forEach((h) => {
+                            h.classList.remove("active");
+                            a === e &&
+                                (f?.classList.add("active"), h?.classList.add("active"));
+                        });
+                    });
+                }
+            });
+        };
+    document.addEventListener("click", (f) => {
+        d(f.target);
+    });
+    document.addEventListener("DOMContentLoaded", (f) => {
+        b();
+    });
+})();
+(() => {
+    document.addEventListener("click", (d) => {
+        var b = d.target;
+        d = b.closest(".tag");
+        b = b.closest("[data-dismiss='tag']");
+        d && b && d.remove();
+    });
+})();
+document.querySelector(".text-editor") &&
+    document.querySelector(".text-editor").classList.contains("ql-disabled") &&
+    (document.querySelectorAll(".ql-toolbar button").forEach(function (d) {
+        d.disabled = !0;
+    }),
+        document.querySelectorAll(".ql-toolbar input").forEach(function (d) {
+            d.disabled = !0;
+        }),
+        document.querySelectorAll(".ql-toolbar select").forEach(function (d) {
+            d.disabled = !0;
+        }),
+        document.querySelectorAll(".ql-toolbar textarea").forEach(function (d) {
+            d.disabled = !0;
+        }));

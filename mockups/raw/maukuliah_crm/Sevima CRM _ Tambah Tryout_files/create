@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        >
+
+        <!-- Favicons -->
+        <link
+            rel="icon"
+            type="image/svg"
+            sizes="32x32"
+            href="https://maukuliah.id/crm.ico"
+        />
+
+        <!-- Title -->
+        <title>Sevima CRM | Tambah Tryout</title>
+
+        <!-- CSRF Token -->
+        <meta
+            name="csrf-token"
+            content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"
+        />
+
+        <!-- Font -->
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        >
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        >
+        <link
+            href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet"
+        >
+
+        <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+            <link
+        rel="stylesheet"
+        href="https://maukuliah.id/quantum\assets\js\vendors\choices.js-10.2.0\public\assets\styles\choices.min.css"
+    >
+        <link
+            href="https://maukuliah.id/quantum/assets/release/core.css"
+            rel="stylesheet"
+        >
+        <link rel="preload" as="style" href="https://maukuliah.id/build/assets/core-BnhZqdSm.css" /><link rel="modulepreload" href="https://maukuliah.id/build/assets/app-BbkPvvSm.js" /><link rel="stylesheet" href="https://maukuliah.id/build/assets/core-BnhZqdSm.css" data-navigate-track="reload" /><script type="module" src="https://maukuliah.id/build/assets/app-BbkPvvSm.js" data-navigate-track="reload"></script>    </head>
+
+    <body
+        x-data="{}"
+        class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600"
+    >
+        
+                            
+                                                        <div class="header header_template header_position-static">
+    <div class="header__row-wrapper">
+        <div class="header__group">
+            <a
+                href="https://maukuliah.id/crm/dashboard"
+                class="header__identity"
+            >
+                <div class="header__identity-logo">
+                    <img
+    loading="lazy"
+    src="https://s3.ap-southeast-1.amazonaws.com/maukuliah/logo/1779420063-fowvtXxSk0.jpg"
+    data-src="https://s3.ap-southeast-1.amazonaws.com/maukuliah/logo/1779420063-fowvtXxSk0.jpg"
+    onerror="this.src='/quantum/assets/images/default.webp'"
+    alt="logo"
+    class="lazy object-cover header__logo !rounded-lg"
+/>
+                </div>
+                <div class="header__identity-wrapper">
+                    <span class="header__identity-sub">Sevima CRM</span>
+                    <h1 class="header__identity-title">Universitas Sentra Vidya Utama</h1>
+                </div>
+            </a>
+        </div>
+                <div class="header__right">
+            <div class="header__action">
+                <div class="dropdown dropdown_nav dropdown_notification">
+    <button
+        class="btn btn_icon btn_nav !border-white/50"
+        data-toggle="dropdown"
+        id="qn-nav-notification"
+        aria-expanded="false"
+    >
+        <span class="icon icon-bell-solid"></span>
+    </button>
+            <span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 z-10 !hidden md:!flex">
+            9+
+        </span>
+        <span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 !hidden animate-ping md:!flex">
+            9+
+        </span>
+        <div class="dropdown__box dropdown__box_menu-end">
+        <div class="notification">
+            <div class="notification__header">
+                <div class="notification__wrapper">
+                    <h3 class="notification__title">
+                        Notifikasi
+                    </h3>
+                                            <form action="https://maukuliah.id/crm/notifications/mark-all-as-read" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">        <input type="hidden" name="_method" value="POST">        <button
+                                type="submit"
+                                class="notification__header-btn"
+                            >
+                                Tandai Sudah Dibaca Semua
+                            </button>
+</form>
+                                    </div>
+                <nav class="nav-tab">
+                    <ul class="nav-tab__wrapper">
+                        <li
+                            class="nav-tab__item active"
+                            data-toggle="tab"
+                            data-target="#notification-general-section"
+                        >
+                            Semua
+                                                            <span class="badge badge_sm badge_secondary-primary">
+    9+
+</span>
+                                                    </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="notification__body">
+                <div
+                    class="notification__section p-0"
+                    id="notification-general-section"
+                >
+                                            <div class="notification__item">
+                            <h3 class="notification__item-title bg-slate-100 px-4">Rabu, 08 Jul 2026</h3>
+                                                            <form action="https://maukuliah.id/crm/notifications/read/4c97d8b4-3e4e-45da-a518-32165e486ee7" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">        <input type="hidden" name="_method" value="POST">        <button
+                                        type="submit"
+                                        class="notification__item-body  px-4 hover:bg-slate-200"
+                                    >
+                                        <div class="notification__avatar">
+                                            <div class="header__user">
+                                                <div class="header__user-avatar">
+                                                    <div
+                                                        class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+                                                        <span class="icon icon-user-solid !text-blue-600">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification__content">
+                                            <div class="notification__content-nav">
+                                                <span class="notification__text text-start">
+                                                    <b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+                                                <span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </button>
+</form>
+                                                            <form action="https://maukuliah.id/crm/notifications/read/f3f06c53-1232-4142-9578-47171ed17245" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">        <input type="hidden" name="_method" value="POST">        <button
+                                        type="submit"
+                                        class="notification__item-body  px-4 hover:bg-slate-200"
+                                    >
+                                        <div class="notification__avatar">
+                                            <div class="header__user">
+                                                <div class="header__user-avatar">
+                                                    <div
+                                                        class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+                                                        <span class="icon icon-user-solid !text-blue-600">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification__content">
+                                            <div class="notification__content-nav">
+                                                <span class="notification__text text-start">
+                                                    <b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+                                                <span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </button>
+</form>
+                                                    </div>
+                                            <div class="notification__item">
+                            <h3 class="notification__item-title bg-slate-100 px-4">Rabu, 20 Mei 2026</h3>
+                                                            <form action="https://maukuliah.id/crm/notifications/read/e56eac70-ec49-4b93-ba17-f883b2bd6607" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">        <input type="hidden" name="_method" value="POST">        <button
+                                        type="submit"
+                                        class="notification__item-body  px-4 hover:bg-slate-200"
+                                    >
+                                        <div class="notification__avatar">
+                                            <div class="header__user">
+                                                <div class="header__user-avatar">
+                                                    <div
+                                                        class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+                                                        <span class="icon icon-user-solid !text-blue-600">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification__content">
+                                            <div class="notification__content-nav">
+                                                <span class="notification__text text-start">
+                                                    <b>akun desin testing</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+                                                <span class="notification__text-muted text-start">
+                                                    1 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </button>
+</form>
+                                                    </div>
+                                            <div class="notification__item">
+                            <h3 class="notification__item-title bg-slate-100 px-4">Senin, 27 Apr 2026</h3>
+                                                            <form action="https://maukuliah.id/crm/notifications/read/0cef242b-261a-40ee-b364-2c9cbe0ac9ef" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">        <input type="hidden" name="_method" value="POST">        <button
+                                        type="submit"
+                                        class="notification__item-body  px-4 hover:bg-slate-200"
+                                    >
+                                        <div class="notification__avatar">
+                                            <div class="header__user">
+                                                <div class="header__user-avatar">
+                                                    <div
+                                                        class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+                                                        <span class="icon icon-user-solid !text-blue-600">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification__content">
+                                            <div class="notification__content-nav">
+                                                <span class="notification__text text-start">
+                                                    <b>User test Tolak</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+                                                <span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </button>
+</form>
+                                                    </div>
+                                            <div class="notification__item">
+                            <h3 class="notification__item-title bg-slate-100 px-4">Selasa, 21 Apr 2026</h3>
+                                                            <form action="https://maukuliah.id/crm/notifications/read/f07c6af0-bef2-45ad-84f5-5e0b27519e42" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">        <input type="hidden" name="_method" value="POST">        <button
+                                        type="submit"
+                                        class="notification__item-body  px-4 hover:bg-slate-200"
+                                    >
+                                        <div class="notification__avatar">
+                                            <div class="header__user">
+                                                <div class="header__user-avatar">
+                                                    <div
+                                                        class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+                                                        <span class="icon icon-user-solid !text-blue-600">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification__content">
+                                            <div class="notification__content-nav">
+                                                <span class="notification__text text-start">
+                                                    <b>User Testing Daftar Affliator</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+                                                <span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </button>
+</form>
+                                                    </div>
+                                    </div>
+            </div>
+            <div class="notification__footer">
+                <a
+                    href="https://maukuliah.id/crm/notifications"
+                    class="notification__footer-btn mx-auto"
+                >
+                    Lihat semua
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="dropdown dropdown_nav dropdown_profile">
+                <button
+                    class="header__switch-avatar"
+                    data-toggle="dropdown"
+                    id="qn-nav-profile"
+                >
+                    <span
+                        class="avatar avatar_xs"
+                        data-avatar-name="Ahmad Dimas"
+                    >
+                    </span>
+                    <span class="header__switch-avatar-name">Ahmad Dimas</span>
+                </button>
+                <div class="dropdown__box dropdown__box_menu-end">
+                    <div class="dropdown__box-header">
+                        <span
+                            class="icon icon-x-mark-mini"
+                            role="button"
+                            data-toggle="dropdown"
+                        ></span>
+                        <span class="dropdown__box-title">
+                            Profil
+                        </span>
+                    </div>
+                    <ul class="dropdown__list !p-0">
+                        <li class="dropdown__avatar p-2">
+                            <div class="avatar avatar_sm">
+                                <div
+                                    class="avatar__circle"
+                                    data-avatar-name="Ahmad Dimas"
+                                >
+                                </div>
+                                <div class="avatar__text">
+                                    <span class="avatar__title">Ahmad Dimas</span>
+                                    <span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown__line"></li>
+                                                    <li class="dropdown__item">
+                                <a href="https://maukuliah.id/super-admin/profile/edit">
+                                    <span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="https://maukuliah.id/super-admin/dashboard">
+                                    <span class="icon icon-arrow-uturn-left"></span>
+                                    Kembali ke Super Admin
+                                </a>
+                            </li>
+                                                                                                                            <li class="dropdown__item">
+                                <a href="https://maukuliah.id/super-admin/settings">
+                                    <span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+                            </li>
+                                                <li class="dropdown__item dropdown__item_danger">
+                            <form
+                                action="https://maukuliah.id/logout"
+                                method="POST"
+                            >
+                                <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">                                <button type="submit">
+                                    <span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__row-wrapper header__row-wrapper_nav">
+        <nav class="nav nav_template">
+            <ul
+                class="nav__list"
+                data-more-text="Lainnya"
+            >
+                <li class="nav__item">
+                    <a
+                        class="nav__link"
+                        href="https://maukuliah.id/crm/dashboard"
+                    >
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <div class="dropdown dropdown_nav">
+                        <a
+                            class="nav__link"
+                            href="#"
+                            data-toggle="dropdown"
+                        >
+                            <span>Profil Kampus</span>
+                            <span class="icon icon-chevron-down-mini"></span>
+                        </a>
+                        <div class="dropdown__box dropdown__box_multi">
+                            <div class="dropdown__box-header">
+                                <span
+                                    class="icon icon-x-mark-mini"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                ></span>
+                                <span class="dropdown__box-title">Profil Kampus</span>
+                            </div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/crm/master/universities">
+                                        Informasi Kampus
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/crm/master/university-majors">
+                                        Program Studi
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/crm/master/universities/prices">Biaya Kuliah</a>
+                                </li>
+                                <div x-data="{ showDropdown: false }">
+                                    <li class="dropdown__item">
+                                        <a
+                                            href="#"
+                                            class="w-full"
+                                            x-on:click="showDropdown = !showDropdown"
+                                        >
+                                            Manajemen Konten
+                                            <span
+                                                :class="{ '-rotate-180': showDropdown }"
+                                                class="icon icon-chevron-down ml-auto transition-all duration-500"
+                                            ></span>
+                                        </a>
+                                    </li>
+                                    <li
+                                        x-cloak
+                                        x-collapse
+                                        x-show="showDropdown"
+                                    >
+                                        <ul>
+                                            <li class="dropdown__item">
+                                                <a href="https://maukuliah.id/crm/galleries">
+                                                    <span class="icon icon-arrow-right"></span>
+                                                    Galeri
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="https://maukuliah.id/crm/brochures">
+                                                    <span class="icon icon-arrow-right"></span>
+                                                    Brosur
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="https://maukuliah.id/crm/articles">
+                                                    <span class="icon icon-arrow-right"></span>
+                                                    Artikel
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="https://maukuliah.id/crm/testimonies">
+                                                    <span class="icon icon-arrow-right"></span>
+                                                    Testimoni
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <li class="dropdown__line"></li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/crm/admission-cycles">Periode Pendaftaran</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/crm/admissions">Jalur Pendaftaran</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/crm/scholarships">Beasiswa</a>
+                                </li>
+                                <li class="dropdown__line"></li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/crm/admins">Staf PMB</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="dropdown dropdown_nav">
+                        <a
+                            class="nav__link"
+                            href="#"
+                            data-toggle="dropdown"
+                        >
+                            <span>CRM</span>
+                            <span class="icon icon-chevron-down-mini"></span>
+                        </a>
+                        <div class="dropdown__box dropdown__box_multi">
+                            <div class="dropdown__box-header">
+                                <span
+                                    class="icon icon-x-mark-mini"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                ></span>
+                                <span class="dropdown__box-title">CRM</span>
+                            </div>
+                            <ul class="dropdown__list">
+                                                                    <li class="dropdown__item">
+                                        <a href="https://maukuliah.id/crm/prospects">
+                                            Manajemen Prospek
+                                        </a>
+                                    </li>
+                                                                <li class="dropdown__item">
+                                    <a
+                                        href="https://maukuliah.id/crm/interested-users"
+                                        class="flex w-full flex-row items-center gap-1"
+                                    >
+                                        Peminat Baru
+                                        <span class="icon icon-fire-solid ml-auto"></span>
+                                    </a>
+                                </li>
+                                                                    <div x-data="{ showDropdown: false }">
+                                        <li class="dropdown__item">
+                                            <a
+                                                href="#"
+                                                class="w-full"
+                                                x-on:click="showDropdown = !showDropdown"
+                                            >
+                                                Afiliator
+                                                <span
+                                                    :class="{ '-rotate-180': showDropdown }"
+                                                    class="icon icon-chevron-down ml-auto transition-all duration-500"
+                                                ></span>
+                                            </a>
+                                        </li>
+                                        <li
+                                            x-cloak
+                                            x-collapse
+                                            x-show="showDropdown"
+                                        >
+                                            <ul>
+                                                <li class="dropdown__item">
+                                                    <a href="https://maukuliah.id/crm/dashboard-affiliator">
+                                                        <span class="icon icon-arrow-right"></span>
+                                                        Dashboard Afiliator
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a href="https://maukuliah.id/crm/affiliates/validate">
+                                                        <span class="icon icon-arrow-right"></span>
+                                                        Validasi Peminat
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a href="https://maukuliah.id/crm/affiliates/payment">
+                                                        <span class="icon icon-arrow-right"></span>
+                                                        Pembayaran Komisi
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a href="https://maukuliah.id/crm/affiliates/payment-histories">
+                                                        <span class="icon icon-arrow-right"></span>
+                                                        Riwayat Pembayaran
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a
+                                                        href="https://maukuliah.id/crm/admission-cycles/referral-commission">
+                                                        <span class="icon icon-arrow-right"></span>
+                                                        Tarif Komisi
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a href="https://maukuliah.id/crm/affiliators">
+                                                        <span class="icon icon-arrow-right"></span>
+                                                        Afiliator Kampus
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown__line"></li>
+                                    </div>
+                                                                                                    <li class="dropdown__item">
+                                        <a href="https://maukuliah.id/crm/custom-landing-pages">
+                                            Tracker & Landing Page
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </li>
+                                    <li class="nav__item">
+                        <div class="dropdown dropdown_nav">
+                            <a
+                                class="nav__link"
+                                href="#"
+                                data-toggle="dropdown"
+                            >
+                                <span>Analitik</span>
+                                <span class="icon icon-chevron-down-mini"></span>
+                            </a>
+                            <div class="dropdown__box dropdown__box_multi">
+                                <div class="dropdown__box-header">
+                                    <span
+                                        class="icon icon-x-mark-mini"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                    ></span>
+                                    <span class="dropdown__box-title">Analitik</span>
+                                </div>
+                                <ul class="dropdown__list">
+                                                                            <li class="dropdown__item">
+                                            <a href="https://maukuliah.id/crm/school-profilings">Profiling Sekolah</a>
+                                        </li>
+                                                                                                                <li class="dropdown__item">
+                                            <a href="https://maukuliah.id/crm/test">Tes Potensi Siswa</a>
+                                        </li>
+                                                                                                                <li class="dropdown__item">
+                                            <a href="https://maukuliah.id/crm/tryouts">Tryout</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </li>
+                            </ul>
+        </nav>
+    </div>
+</div>
+                
+                
+                                    
+        
+        
+        
+        
+
+                    <main class="main">
+                <form action="https://maukuliah.id/crm/tryouts" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">        <input type="hidden" name="_method" value="POST">        <div class="form-nav">
+    <div class="form-nav__left">
+        <a href="https://maukuliah.id/crm/tryouts" class="btn btn_outline">
+            <span class="icon icon-arrow-left-mini"></span>
+                <span class="btn__text !font-medium">
+            Kembali
+        </span>
+            </a>
+    </div>
+    <div
+        class="form-nav__middle"
+        style="opacity: 1;"
+    >
+        <ul class="form-nav__breadcrumb">
+            <li class="form-nav__breadcrumb-item">
+                <a
+                    href="#"
+                    class="form-nav__breadcrumb-btn"
+                >Tryout</a>
+            </li>
+            <li class="form-nav__breadcrumb-diagonal"></li>
+            <li class="form-nav__breadcrumb-item active">
+                Tambah
+            </li>
+        </ul>
+    </div>
+    <div class="form-nav__right">
+        <div class="form-nav__wrapper">
+                            <div
+                    class="form-nav__button-wrapper"
+                    data-tooltip="Pastikan semua inputan mandatori telah diisi"
+                    data-placement="left"
+                >
+                    <button
+                        type="submit"
+                        class="btn btn_primary"
+                        disabled
+                    >
+                        Simpan
+                    </button>
+                </div>
+                    </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="main__header">
+    <div class="main__location">
+                    <ul class="breadcrumb">
+            <li class="breadcrumb__item ">
+            <a href="https://maukuliah.id/crm/tryouts">Tryout</a>
+        </li>
+            <li class="breadcrumb__item  active ">
+            <a href="#">Tambah Tryout</a>
+        </li>
+    </ul>
+                <div class="main__wrapper">
+            <h1 class="main__title">Tambah Tryout</h1>
+            <p class="main__subtitle"></p>
+        </div>
+    </div>
+    <div class="main__action">
+        
+    </div>
+</div>
+            <div class="card card_form">
+        <div class="card__body">
+                        <div class="cols-1 grid">
+                    <input type="hidden" id="input__tryoutable-id" name="tryoutable_id" value="773">
+                    <input type="hidden" id="input__tryoutable-type" name="tryoutable_type" value="App\Models\University">
+                    <div class="form-control">
+            <label
+            for="input__name"
+            class="form-control__label"
+        >Nama Tryout
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="text"
+            id="input__name" name="name" value="" placeholder="Masukkan nama tryout" required="true" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    <div class="form-control">
+            <label
+            for="select__package-code"
+            class="form-control__label"
+        >Kode Paket
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <select
+             id="select__package-code" name="package_code" required="true" class="select-search"                                 >
+            <option
+                value=""
+                 selected             >-- Pilih Kode Paket --</option>
+                                                                <option
+                        value="23"
+                        
+                    >
+                        Ujian Masuk Perguruan Tinggi Keagamaan Islam Negeri (UM-PTKIN)
+                    </option>
+                                                                                <option
+                        value="24"
+                        
+                    >
+                        Seleksi Nasional Berbasis Tes (SNBT)
+                    </option>
+                                                                                <option
+                        value="30"
+                        
+                    >
+                        Seleksi Nasional Berbasis Tes (SNBT) Paket 2
+                    </option>
+                                                                                <option
+                        value="31"
+                        
+                    >
+                        Seleksi Nasional Berbasis Tes (SNBT) Paket 3
+                    </option>
+                                    </select>
+    </div>
+        </div>
+
+
+                    <div class="form-control">
+            <label
+            for="input__picture"
+            class="form-control__label"
+        >Gambar
+                                </label>
+                <iframe
+            id="iframe-input__picture"
+            src=""
+            frameborder="0"
+            class="mb-2 hidden h-[500px] w-full rounded-lg"
+        >
+        </iframe>
+
+        <label for="input__picture">
+            <img
+                wire:ignore
+                id="preview-input__picture"
+                src="#"
+                alt="preview"
+                class="mb-2 hidden aspect-video w-full max-w-sm cursor-pointer rounded-lg border bg-slate-300 object-contain hover:brightness-50"
+            >
+        </label>
+        <div
+        wire:ignore
+        class="form-control__group  "
+    >
+        <div class="upload-draggable upload-draggable_inline">
+            <div class="upload-draggable__box-inline">
+                <input
+                    type="file"
+                    accept=".jpg,.jpeg,.png"
+                    id="input__picture" name="picture" class="upload-draggable__file-input"
+                >
+                <div class="upload-draggable__inline-wrapper">
+                    <label class="upload-draggable__icon">
+                        <span class="icon icon-cloud-arrow-up"></span>
+                    </label>
+                    <div class="upload-draggable__wrapper">
+                        <h2 class="upload-draggable__title">
+                            Klik untuk pilih file
+                            <span class="upload-draggable__subtitle">
+                                atau seret file ke sini
+                            </span>
+                        </h2>
+                        <p class="upload-draggable__support">
+                            PNG, JPG, atau JPEG (max 2MB)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-draggable__success line-clamp-1 break-all">
+            </div>
+        </div>
+    </div>
+        
+    </div>
+                    <div class="grid">
+                        <div class="col-12 col-sm-6">
+                            <div class="form-control">
+            <label
+            for="input__start-date"
+            class="form-control__label"
+        >Tanggal Mulai
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="datetime-local"
+            id="input__start-date" name="start_date" value="" required="true" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-control">
+            <label
+            for="input__end-date"
+            class="form-control__label"
+        >Tanggal Akhir
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="datetime-local"
+            id="input__end-date" name="end_date" value="" required="true" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-control">
+            <label
+            for="input__duration"
+            class="form-control__label"
+        >Durasi
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="tel"
+            id="input__duration" name="duration" value="" placeholder="Durasi dalam satuan menit" required="true" maxlength="3" class="form-control__input"
+            data-label="Durasi"
+                                     oninput="formatIntegerOnly(event)" 
+                    >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+
+
+                            </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-control">
+            <label
+            for="input__number-of-questions"
+            class="form-control__label"
+        >Jumlah Pertanyaan
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="tel"
+            id="input__number-of-questions" name="number_of_questions" value="" placeholder="0 Pertanyaan" required="true" class="form-control__input"
+            data-label="Jumlah Pertanyaan"
+                         readonly                         oninput="formatNumberOnly(event)"         >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+
+
+                        </div>
+                    </div>
+                    <div class="form-control">
+            <label
+            for="input_organizer"
+            class="form-control__label"
+        >Penyelenggara
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="text"
+            id="input_organizer" name="organizer" value="" placeholder="Penyelenggara tryout" required="true" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    <div class="form-control">
+            <label
+            for="input__description"
+            class="form-control__label"
+        >Deskripsi
+                                </label>
+        <div class="form-control__group ">
+        <textarea
+            id="input__description" name="description" placeholder="Deskripsi tryout" class="form-control__input textarea"
+                                ></textarea>
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                </div>
+    </div>
+    </div>
+        </div>
+</form>
+                <footer class="footer">
+    <div class="footer__copyright-wrapper">
+        <div class="footer__logo-wrapper">
+            <img src="https://maukuliah.id/quantum/assets/images/logos/sevima-logo.webp" alt="logo" class="footer__logo">
+        </div>
+        <p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+    </div>
+    <p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+            </main>
+        
+        <script src="/livewire/livewire.min.js?id=0f6341c0"   data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+            <script src="https://maukuliah.id/quantum\assets\js\vendors\choices.js-10.2.0\public\assets\scripts\choices.min.js"></script>
+        <script>
+            function previewFile_input__picture() {
+                const inputFile_input__picture = document.getElementById('input__picture');
+                const preview_input__picture = document.getElementById('preview-input__picture');
+                const iframe_input__picture = document.getElementById('iframe-input__picture');
+
+                inputFile_input__picture.addEventListener('change', function() {
+                    const file = this.files[0];
+                    if (file) {
+                        if (file.size > 2048 * 1024) {
+                            alert('Ukuran file terlalu besar. Maksimal ' + 2048 + 'KB');
+                            inputFile_input__picture.value = null;
+                            inputFile_input__picture.dispatchEvent(new Event('change', {
+                                bubbles: true
+                            }));
+                            return;
+                        }
+                        const acceptedTypes = inputFile_input__picture.accept.split(',').map(type => type
+                            .replace('.', ''));
+                        const fileExtension = file.name.split('.').pop().toLowerCase();
+                        if (!acceptedTypes.includes(fileExtension)) {
+                            alert('File harus bertipe ' + inputFile_input__picture.accept);
+                            preview_input__picture.src = '';
+                            inputFile_input__picture.value = null;
+                            inputFile_input__picture.dispatchEvent(new Event('change', {
+                                bubbles: true
+                            }));
+                            return;
+                        }
+                        if (file.type.match('image.*')) {
+                            preview_input__picture.classList.remove('hidden');
+                            iframe_input__picture.classList.add('hidden');
+                            const reader = new FileReader();
+                            reader.onload = function(e) {
+                                preview_input__picture.setAttribute('src', e.target.result);
+                            };
+                            reader.readAsDataURL(file);
+                        } else if (file.type.match('application/pdf')) {
+                            preview_input__picture.classList.add('hidden');
+                            iframe_input__picture.classList.remove('hidden');
+                            iframe_input__picture.src = URL.createObjectURL(file);
+                        }
+                    } else {
+                                                    preview_input__picture.classList.add('hidden');
+                                                iframe_input__picture.classList.add('hidden');
+                    }
+                })
+            }
+
+            document.addEventListener('livewire:initialized', () => {
+                previewFile_input__picture();
+            })
+
+            Livewire.hook('commit', ({
+                component,
+                commit,
+                respond,
+                succeed,
+                fail
+            }) => {
+                // Runs immediately before a commit's payload is sent to the server...
+
+                respond(() => {
+                    // Runs after a response is received but before it's processed...
+                })
+
+                succeed(({
+                    snapshot,
+                    effect
+                }) => {
+                    previewFile_input__picture();
+                })
+
+                fail(() => {
+                    // Runs if some part of the request failed...
+                })
+            })
+        </script>
+        <script>
+        const selectAdmissionCycle = document.getElementById('select__admission-cycle');
+        const inputStartDate = document.getElementById('input__start-date');
+        const inputEndDate = document.getElementById('input__end-date');
+
+        function handleDateInputs() {
+            if (inputStartDate.value || inputEndDate.value) {
+                if (selectAdmissionCycle) {
+                    selectAdmissionCycle.disabled = true;
+                    selectAdmissionCycle.parentNode.setAttribute(
+                        'data-tooltip',
+                        'Hapus filter tanggal awal dan akhir terlebih dahulu',
+                    );
+                }
+            } else {
+                if (selectAdmissionCycle) {
+                    selectAdmissionCycle.disabled = false;
+                    selectAdmissionCycle.parentNode.removeAttribute('data-tooltip');
+                }
+            }
+
+            // Set min and max values
+            inputEndDate.min = inputStartDate.value;
+            inputStartDate.max = inputEndDate.value;
+        }
+
+        if (inputStartDate && inputEndDate) {
+            inputStartDate.addEventListener('change', handleDateInputs);
+            inputEndDate.addEventListener('change', handleDateInputs);
+
+            handleDateInputs();
+        }
+    </script>
+    <script>
+        function formatNumberOnly(event) {
+            let numberOnly = event.target.value;
+            numberOnly = numberOnly.replace(/[^0-9]/g, '');
+            event.target.value = numberOnly;
+
+            const inputLabel = event.target.getAttribute('data-label');
+            const inputMinLength = event.target.getAttribute('minlength') ?? 0;
+            const inputMaxLength = event.target.getAttribute('maxlength') ?? 15;
+
+            if (numberOnly.length > 0 && numberOnly.length < inputMinLength) {
+                event.target.setCustomValidity(inputLabel + ' harus diisi minimal ' + inputMinLength + ' karakter');
+            } else if (numberOnly.length > 0 && numberOnly.length > inputMaxLength) {
+                event.target.setCustomValidity(inputLabel + ' harus diisi maksimal ' + inputMaxLength + ' karakter');
+            } else {
+                event.target.setCustomValidity('');
+            }
+        }
+    </script>
+        <script>
+            function cleanNumber(numberOnly) {
+                // If the input is exactly "0", allow it
+                if (numberOnly === "0") {
+                    return numberOnly;
+                }
+
+                // If the input starts with "0" and is not "0", remove the leading zeros
+                if (/^0/.test(numberOnly)) {
+                    numberOnly = numberOnly.replace(/^0+/, '');
+                }
+
+                // Remove any non-digit characters
+                numberOnly = numberOnly.replace(/[^0-9]/g, '');
+
+                // Return the cleaned number, defaulting to "0" if it's empty after cleanup
+                return numberOnly;
+            }
+
+            function formatIntegerOnly(event) {
+                let numberOnly = event.target.value;
+                numberOnly = cleanNumber(numberOnly);
+                event.target.value = numberOnly;
+
+                const inputLabel = event.target.getAttribute('data-label');
+                const inputMinLength = event.target.getAttribute('minlength') ?? 0;
+                const inputMaxLength = event.target.getAttribute('maxlength') ?? 15;
+
+                if (numberOnly.length > 0 && numberOnly.length < inputMinLength) {
+                    event.target.setCustomValidity(inputLabel + ' harus diisi minimal ' + inputMinLength + ' karakter');
+                } else if (numberOnly.length > 0 && numberOnly.length > inputMaxLength) {
+                    event.target.setCustomValidity(inputLabel + ' harus diisi maksimal ' + inputMaxLength + ' karakter');
+                } else {
+                    event.target.setCustomValidity('');
+                }
+
+                const inputMaxValue = event.target.getAttribute('max');
+                if (inputMaxValue && Number.parseInt(numberOnly) > Number.parseInt(inputMaxValue)) {
+                    event.target.setCustomValidity(inputLabel + ' tidak boleh lebih dari ' + inputMaxValue);
+                }
+            }
+        </script>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const packageCode = document.querySelector('#select__package-code');
+                const numberOfQuestions = document.querySelector('#input__number-of-questions');
+                packageCode.addEventListener('change', function() {
+                    const id = this.value;
+                    const url = `https://maukuliah.id/crm/tryouts/detail-package/:id`.replace(':id', id);
+                    fetch(url)
+                        .then((response) => response.json())
+                        .then((data) => {
+                            numberOfQuestions.value = data.total_question;
+                        });
+                });
+
+                if (packageCode.value && numberOfQuestions.value == null) {
+                    packageCode.dispatchEvent(new Event('change'));
+                }
+            });
+        </script>
+            <script
+            type="text/javascript"
+            src="https://maukuliah.id/quantum/assets/release/core.js"
+        ></script>
+    </body>
+
+</html>

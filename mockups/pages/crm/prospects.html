@@ -1,0 +1,2794 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Manajemen Prospek</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+<style>
+            table td {
+                padding: 1rem !important;
+            }
+        </style>
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="checkboxesProspects()"><div class="layout-overlay"></div>
+<div class="header header_template">
+<div class="header__row-wrapper">
+<div class="header__group"><button aria-label="Toggle sidebar" class="header__sidebar-nav header__sidebar-nav_simple"><span class="icon icon-bars-3-bottom-left-solid"></span></button>
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="lazy object-cover header__logo !rounded-lg entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1779420063-fowvtXxSk0.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Universitas Sentra Vidya Utama</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="header__action">
+<div class="dropdown dropdown_nav dropdown_notification">
+<button aria-expanded="false" class="btn btn_icon btn_nav !border-white/50" data-toggle="dropdown" id="qn-nav-notification">
+<span class="icon icon-bell-solid"></span>
+</button>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 z-10 !hidden md:!flex">
+            9+
+        </span>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 !hidden animate-ping md:!flex">
+            9+
+        </span>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="notification">
+<div class="notification__header">
+<div class="notification__wrapper">
+<h3 class="notification__title"><span class="icon icon-x-mark-mini" data-toggle="dropdown"></span>
+                        Notifikasi
+                    </h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/mark-all-as-read" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__header-btn" type="submit">
+                                Tandai Sudah Dibaca Semua
+                            </button>
+</form>
+</div>
+<nav class="nav-tab">
+<ul class="nav-tab__wrapper">
+<li class="nav-tab__item active" data-target="#notification-general-section" data-toggle="tab">
+                            Semua
+                                                            <span class="badge badge_sm badge_secondary-primary">
+    9+
+</span>
+</li>
+</ul>
+</nav>
+</div>
+<div class="notification__body">
+<div class="notification__section p-0 active" id="notification-general-section">
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 08 Jul 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/4c97d8b4-3e4e-45da-a518-32165e486ee7" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/f3f06c53-1232-4142-9578-47171ed17245" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 20 Mei 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/e56eac70-ec49-4b93-ba17-f883b2bd6607" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>akun desin testing</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Senin, 27 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/0cef242b-261a-40ee-b364-2c9cbe0ac9ef" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User test Tolak</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Selasa, 21 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/f07c6af0-bef2-45ad-84f5-5e0b27519e42" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User Testing Daftar Affliator</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="notification__footer">
+<a class="notification__footer-btn mx-auto" data-mockup-unresolved="/crm/notifications" href="#">
+                    Lihat semua
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dropdown dropdown_nav dropdown_profile">
+<button aria-expanded="false" class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a href="../super-admin/dashboard.html">
+<span class="icon icon-arrow-uturn-left"></span>
+                                    Kembali ke Super Admin
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Manajemen Prospek_files/prospects">
+<span>Profil Kampus</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Profil Kampus</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Informasi Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-university-majors.html">
+                                        Program Studi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-prices.html">Biaya Kuliah</a>
+</li>
+<div x-data="{ showDropdown: false }">
+<li class="dropdown__item">
+<a class="w-full" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="showDropdown = !showDropdown">
+                                            Manajemen Konten
+                                            <span :class="{ '-rotate-180': showDropdown }" class="icon icon-chevron-down ml-auto transition-all duration-500"></span>
+</a>
+</li>
+<li hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDropdown">
+<ul>
+<li class="dropdown__item">
+<a href="galleries.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Galeri
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="brochures.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Brosur
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="articles.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Artikel
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="testimonies.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Testimoni
+                                                </a>
+</li>
+</ul>
+</li>
+</div>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="admission-cycles.html">Periode Pendaftaran</a>
+</li>
+<li class="dropdown__item">
+<a href="admissions.html">Jalur Pendaftaran</a>
+</li>
+<li class="dropdown__item">
+<a href="scholarships.html">Beasiswa</a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="admins.html">Staf PMB</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Manajemen Prospek_files/prospects">
+<span>CRM</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">CRM</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="prospects.html">
+                                            Manajemen Prospek
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a class="flex w-full flex-row items-center gap-1" href="interested-users.html">
+                                        Peminat Baru
+                                        <span class="icon icon-fire-solid ml-auto"></span>
+</a>
+</li>
+<div x-data="{ showDropdown: false }">
+<li class="dropdown__item">
+<a class="w-full" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="showDropdown = !showDropdown">
+                                                Afiliator
+                                                <span :class="{ '-rotate-180': showDropdown }" class="icon icon-chevron-down ml-auto transition-all duration-500"></span>
+</a>
+</li>
+<li hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDropdown">
+<ul>
+<li class="dropdown__item">
+<a href="dashboard-affiliator.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Dashboard Afiliator
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/affiliates/validate" href="#">
+<span class="icon icon-arrow-right"></span>
+                                                        Validasi Peminat
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliates-payment.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Pembayaran Komisi
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliates-payment-histories.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Riwayat Pembayaran
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="admission-cycles-referral-commission.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Tarif Komisi
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliators.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Afiliator Kampus
+                                                    </a>
+</li>
+</ul>
+</li>
+<li class="dropdown__line"></li>
+</div>
+<li class="dropdown__item">
+<a href="custom-landing-pages.html">
+                                            Tracker &amp; Landing Page
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Manajemen Prospek_files/prospects">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="school-profilings.html">Profiling Sekolah</a>
+</li>
+<li class="dropdown__item">
+<a href="test.html">Tes Potensi Siswa</a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">Tryout</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<aside class="sidebar sidebar_without-icon sidebar_without-scroll">
+<div class="sidebar__group">
+<div class="sidebar__group-header">
+<span class="sidebar__group-title">CRM</span>
+</div>
+<ul class="sidebar__list">
+<li class="sidebar__item active">
+<a class="sidebar__link" href="prospects.html">
+<span class="sidebar__link-text">Manajemen Prospek</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="interested-users.html">
+<span class="sidebar__link-text flex w-full flex-row items-center gap-1">
+<span>Peminat Baru</span>
+<span class="icon icon-fire-solid ml-auto"></span>
+</span>
+</a>
+</li>
+<div class="flex flex-col gap-1" x-data="{ openDropdown: false }">
+<li class="sidebar__item">
+<a class="sidebar__link" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="openDropdown = !openDropdown">
+<span class="sidebar__link-text">Afiliator</span>
+<span :class="openDropdown ? '-rotate-180' : ''" class="icon icon-chevron-down ml-auto transition-all duration-500">
+</span>
+</a>
+</li>
+<div hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="openDropdown">
+<ul class="sidebar__list mx-4 rounded-lg bg-slate-100 py-1">
+<li class="sidebar__item">
+<a class="sidebar__link" href="dashboard-affiliator.html">
+<span class="sidebar__link-text">Dashboard Afiliator</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" data-mockup-unresolved="/crm/affiliates/validate" href="#">
+<span class="sidebar__link-text">Validasi Peminat</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="affiliates-payment.html">
+<span class="sidebar__link-text">Pembayaran Komisi</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="affiliates-payment-histories.html">
+<span class="sidebar__link-text">Riwayat Pembayaran</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="admission-cycles-referral-commission.html">
+<span class="sidebar__link-text">Tarif Komisi</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="affiliators.html">
+<span class="sidebar__link-text">Afiliator Kampus</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<hr/>
+<li class="sidebar__item">
+<a class="sidebar__link" href="custom-landing-pages.html">
+<span class="sidebar__link-text">Tracker &amp; Landing Page</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<main class="main">
+<div class="container">
+<div class="modal" id="filter__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Filter Data Prospek</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<form method="GET" onsubmit="addParams(event)">
+<div class="modal__body">
+<div class="modal__content-input">
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__is-follow-up">Sudah Dikontak?
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__is-follow-up" name="filter[is_follow_up]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Sudah Dikontak? --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Sudah Dikontak? --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Sudah Dikontak? --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__is-follow-up-item-choice-1" role="option">-- Pilih Sudah Dikontak? --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="0" id="choices--select__is-follow-up-item-choice-2" role="option">
+                        Belum Dikontak
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="1" id="choices--select__is-follow-up-item-choice-3" role="option">
+                        Sudah Dikontak
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__category">Level Prospek
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__category" name="filter[category]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Level Prospek --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Level Prospek --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Level Prospek --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__category-item-choice-1" role="option">-- Pilih Level Prospek --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="low" id="choices--select__category-item-choice-2" role="option">
+                        Rendah
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="medium" id="choices--select__category-item-choice-3" role="option">
+                        Sedang
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="high" id="choices--select__category-item-choice-4" role="option">
+                        Tinggi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__status">Status Prospek
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__status" name="filter[status]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Status Prospek --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Status Prospek --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Status Prospek --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__status-item-choice-1" role="option">-- Pilih Status Prospek --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="not_contacted" id="choices--select__status-item-choice-2" role="option">
+                        1. Perlu Dikontak
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="contacted" id="choices--select__status-item-choice-3" role="option">
+                        2. Sudah Dikontak
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="no_respond" id="choices--select__status-item-choice-4" role="option">
+                        3. Tidak Merespons
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="interested" id="choices--select__status-item-choice-5" role="option">
+                        4. Tertarik
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="follow_up" id="choices--select__status-item-choice-6" role="option">
+                        5. Follow Up
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="decision" id="choices--select__status-item-choice-7" role="option">
+                        6. Pertimbangan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="rejected" id="choices--select__status-item-choice-8" role="option">
+                        7. Ditolak
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="9" data-select-text="" data-value="registered" id="choices--select__status-item-choice-9" role="option">
+                        8. Terdaftar
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__agent">Admin yang Ditugaskan
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__agent" name="filter[agent]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Admin yang Ditugaskan --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Admin yang Ditugaskan --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Admin yang Ditugaskan --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__agent-item-choice-1" role="option">-- Pilih Admin yang Ditugaskan --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="-" id="choices--select__agent-item-choice-2" role="option">
+                        -- Belum Ada Admin yang Ditugaskan --
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="4" id="choices--select__agent-item-choice-3" role="option">
+                        Desintya Admin Kampus Internal
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="5" id="choices--select__agent-item-choice-4" role="option">
+                        Alliance Testing Internal
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="7" id="choices--select__agent-item-choice-5" role="option">
+                        Desin admin testing
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="11" id="choices--select__agent-item-choice-6" role="option">
+                        Qausya
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="19" id="choices--select__agent-item-choice-7" role="option">
+                        Dewi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="32" id="choices--select__agent-item-choice-8" role="option">
+                        Team FLash
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="9" data-select-text="" data-value="87" id="choices--select__agent-item-choice-9" role="option">
+                        Adit Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="10" data-select-text="" data-value="126" id="choices--select__agent-item-choice-10" role="option">
+                        Bayu Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="11" data-select-text="" data-value="735" id="choices--select__agent-item-choice-11" role="option">
+                        Adi Prianto
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="12" data-select-text="" data-value="1761" id="choices--select__agent-item-choice-12" role="option">
+                        Anam Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="13" data-select-text="" data-value="3865" id="choices--select__agent-item-choice-13" role="option">
+                        Nazila Riska
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="14" data-select-text="" data-value="8155" id="choices--select__agent-item-choice-14" role="option">
+                        Mei Lisa Arista
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="15" data-select-text="" data-value="8613" id="choices--select__agent-item-choice-15" role="option">
+                        Fadhol Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="16" data-select-text="" data-value="11684" id="choices--select__agent-item-choice-16" role="option">
+                        Henny Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="17" data-select-text="" data-value="14040" id="choices--select__agent-item-choice-17" role="option">
+                        Desin
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="18" data-select-text="" data-value="14184" id="choices--select__agent-item-choice-18" role="option">
+                        Alwi Assegaff
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="19" data-select-text="" data-value="14185" id="choices--select__agent-item-choice-19" role="option">
+                        Desin
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="20" data-select-text="" data-value="15307" id="choices--select__agent-item-choice-20" role="option">
+                        Suhadaya Langgeng Kurniawan
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__school">Asal Sekolah
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__school" name="filter[school]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Asal Sekolah --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Asal Sekolah --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Asal Sekolah --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__school-item-choice-1" role="option">-- Pilih Asal Sekolah --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="MA 2 MATARAM" id="choices--select__school-item-choice-2" role="option">
+                        MA 2 MATARAM
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="MA AN-NUR PANCA MUKTI LALUNDU" id="choices--select__school-item-choice-3" role="option">
+                        MA AN-NUR PANCA MUKTI LALUNDU
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="MA NURUL HUDA" id="choices--select__school-item-choice-4" role="option">
+                        MA NURUL HUDA
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="SMA Fortuna Kaputu" id="choices--select__school-item-choice-5" role="option">
+                        SMA Fortuna Kaputu
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="SMA ISLAM NURUL HUDA LEMBANG" id="choices--select__school-item-choice-6" role="option">
+                        SMA ISLAM NURUL HUDA LEMBANG
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="SMAN 1 BANGKALAN" id="choices--select__school-item-choice-7" role="option">
+                        SMAN 1 BANGKALAN
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="SMAN 1 Surabaya" id="choices--select__school-item-choice-8" role="option">
+                        SMAN 1 Surabaya
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="9" data-select-text="" data-value="SMA Negeri 1 Surabaya" id="choices--select__school-item-choice-9" role="option">
+                        SMA Negeri 1 Surabaya
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="10" data-select-text="" data-value="SMAN Negeri 5 Jakarta" id="choices--select__school-item-choice-10" role="option">
+                        SMAN Negeri 5 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="11" data-select-text="" data-value="SMAS Kartika III-5 Cirebon" id="choices--select__school-item-choice-11" role="option">
+                        SMAS Kartika III-5 Cirebon
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="12" data-select-text="" data-value="SMKN 2 Bandung" id="choices--select__school-item-choice-12" role="option">
+                        SMKN 2 Bandung
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="13" data-select-text="" data-value="SMKN 5 BATANGHARI" id="choices--select__school-item-choice-13" role="option">
+                        SMKN 5 BATANGHARI
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="14" data-select-text="" data-value="SMKS KRIDA TARUNA SUKAMANDI" id="choices--select__school-item-choice-14" role="option">
+                        SMKS KRIDA TARUNA SUKAMANDI
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="15" data-select-text="" data-value="SMK TELKOM" id="choices--select__school-item-choice-15" role="option">
+                        SMK TELKOM
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="16" data-select-text="" data-value="SMK Wachid Hasyim" id="choices--select__school-item-choice-16" role="option">
+                        SMK Wachid Hasyim
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="17" data-select-text="" data-value="Universitas Narotama" id="choices--select__school-item-choice-17" role="option">
+                        Universitas Narotama
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__admission-cycle">Periode Pendaftaran
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__admission-cycle" name="admission_cycle_id" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Periode Pendaftaran --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Periode Pendaftaran --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Periode Pendaftaran --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__admission-cycle-item-choice-1" role="option">-- Pilih Periode Pendaftaran --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="127" id="choices--select__admission-cycle-item-choice-2" role="option">
+                        2024/2025 Ganjil
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="22" id="choices--select__admission-cycle-item-choice-3" role="option">
+                        Siklus Tes Dulu
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="6" id="choices--select__admission-cycle-item-choice-4" role="option">
+                        2024/2025 penerimaan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="4" id="choices--select__admission-cycle-item-choice-5" role="option">
+                        testing iain ternate
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="3" id="choices--select__admission-cycle-item-choice-6" role="option">
+                        tes
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="2" id="choices--select__admission-cycle-item-choice-7" role="option">
+                        2023/2024 Ganjil
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="1" id="choices--select__admission-cycle-item-choice-8" role="option">
+                        tes pmb
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="hr-intext">
+<span class="hr-intext__line"></span>
+<p class="hr-intext__text">Atau</p>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__start-date">Tanggal Awal
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__start-date" max="" name="filter[start_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__end-date">Tanggal Akhir
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__end-date" min="" name="filter[end_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="modal modal_confirmation-error" id="delete__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Hapus Data Prospek</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<p>Apakah anda yakin ingin menghapus prospek ini?</p>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<form enctype="multipart/form-data" method="POST" x-on:set-delete.window="$el.action = $event.detail.action">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="DELETE"/> <button class="btn btn_destructive w-full" type="submit">
+<span class="btn__text !font-medium">
+            Hapus
+        </span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" id="add_log__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Tambah Log</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<div class="modal__content-input">
+<form enctype="multipart/form-data" method="POST" x-on:set-add-log.window="$el.action = $event.detail.action">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__channel">Channel
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__channel" name="channel" required="true" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Channel --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Channel --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Channel --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__channel-item-choice-1" role="option">-- Pilih Channel --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="email" id="choices--select__channel-item-choice-2" role="option">
+                        Email
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="whatsapp" id="choices--select__channel-item-choice-3" role="option">
+                        Whatsapp
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="phone" id="choices--select__channel-item-choice-4" role="option">
+                        Telepon
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="other" id="choices--select__channel-item-choice-5" role="option">
+                        Lainnya
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="system" id="choices--select__channel-item-choice-6" role="option">
+                        Sistem
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__description">Deskripsi
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<textarea class="form-control__input textarea" id="input__description" name="description" placeholder="Deskripsikan log prospek" required="true"></textarea>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12">
+<button class="btn btn_primary w-full" disabled="" type="submit">
+<span class="btn__text !font-medium">
+            Simpan
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" id="change_status_bulk__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Ubah Status</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<div class="modal__content-input">
+<form action="prospects-116282.html" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <template x-for="prospect in prospects"></template>
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__change_status">Status
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__change_status" name="status" required="true" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Status --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Status --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Status --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__change_status-item-choice-1" role="option">-- Pilih Status --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="not_contacted" id="choices--select__change_status-item-choice-2" role="option">
+                        1. Perlu Dikontak
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="contacted" id="choices--select__change_status-item-choice-3" role="option">
+                        2. Sudah Dikontak
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="no_respond" id="choices--select__change_status-item-choice-4" role="option">
+                        3. Tidak Merespons
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="interested" id="choices--select__change_status-item-choice-5" role="option">
+                        4. Tertarik
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="follow_up" id="choices--select__change_status-item-choice-6" role="option">
+                        5. Follow Up
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="decision" id="choices--select__change_status-item-choice-7" role="option">
+                        6. Pertimbangan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="rejected" id="choices--select__change_status-item-choice-8" role="option">
+                        7. Ditolak
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="9" data-select-text="" data-value="registered" id="choices--select__change_status-item-choice-9" role="option">
+                        8. Terdaftar
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<button class="btn btn_primary w-full" disabled="" type="submit">
+<span class="btn__text !font-medium">
+            Simpan
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" id="assign_admin_bulk__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Tugaskan Admin</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<div class="modal__content-input">
+<form action="prospects-116282.html" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <template x-for="prospect in prospects"></template>
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__agents">Admin
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-multiple" role="combobox"><div class="choices__inner"><select class="select-multiple choices__input" data-choice="active" hidden="" id="select__agents" multiple="true" name="agents[]" required="true" tabindex="-1"></select><div class="choices__list choices__list--multiple"></div><input aria-autocomplete="list" aria-label="-- Pilih Admin --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="-- Pilih Admin --" role="textbox" spellcheck="false" style="min-width: 18ch; width: 1ch;" type="search"/></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><div aria-multiselectable="true" class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="4" id="choices--select__agents-item-choice-2" role="option">
+                        Desintya Admin Kampus Internal
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="5" id="choices--select__agents-item-choice-3" role="option">
+                        Alliance Testing Internal
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="7" id="choices--select__agents-item-choice-4" role="option">
+                        Desin admin testing
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="11" id="choices--select__agents-item-choice-5" role="option">
+                        Qausya
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="19" id="choices--select__agents-item-choice-6" role="option">
+                        Dewi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="32" id="choices--select__agents-item-choice-7" role="option">
+                        Team FLash
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="87" id="choices--select__agents-item-choice-8" role="option">
+                        Adit Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="9" data-select-text="" data-value="126" id="choices--select__agents-item-choice-9" role="option">
+                        Bayu Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="10" data-select-text="" data-value="735" id="choices--select__agents-item-choice-10" role="option">
+                        Adi Prianto
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="11" data-select-text="" data-value="1761" id="choices--select__agents-item-choice-11" role="option">
+                        Anam Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="12" data-select-text="" data-value="3865" id="choices--select__agents-item-choice-12" role="option">
+                        Nazila Riska
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="13" data-select-text="" data-value="8155" id="choices--select__agents-item-choice-13" role="option">
+                        Mei Lisa Arista
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="14" data-select-text="" data-value="8613" id="choices--select__agents-item-choice-14" role="option">
+                        Fadhol Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="15" data-select-text="" data-value="11684" id="choices--select__agents-item-choice-15" role="option">
+                        Henny Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="16" data-select-text="" data-value="14040" id="choices--select__agents-item-choice-16" role="option">
+                        Desin
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="17" data-select-text="" data-value="14184" id="choices--select__agents-item-choice-17" role="option">
+                        Alwi Assegaff
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="18" data-select-text="" data-value="14185" id="choices--select__agents-item-choice-18" role="option">
+                        Desin
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="19" data-select-text="" data-value="15307" id="choices--select__agents-item-choice-19" role="option">
+                        Suhadaya Langgeng Kurniawan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="20" data-select-text="" data-value="23632" id="choices--select__agents-item-choice-20" role="option">
+                        devi tes
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="21" data-select-text="" data-value="23638" id="choices--select__agents-item-choice-21" role="option">
+                        Iftitah Hidayati
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="22" data-select-text="" data-value="16624" id="choices--select__agents-item-choice-22" role="option">
+                        Devi Purwita Sari
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="23" data-select-text="" data-value="28006" id="choices--select__agents-item-choice-23" role="option">
+                        Anjar Incredibles
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="24" data-select-text="" data-value="72691" id="choices--select__agents-item-choice-24" role="option">
+                        Hala
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="25" data-select-text="" data-value="72693" id="choices--select__agents-item-choice-25" role="option">
+                        admin pt
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="26" data-select-text="" data-value="75709" id="choices--select__agents-item-choice-26" role="option">
+                        Cika Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="27" data-select-text="" data-value="86890" id="choices--select__agents-item-choice-27" role="option">
+                        Desintya Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="28" data-select-text="" data-value="94035" id="choices--select__agents-item-choice-28" role="option">
+                        Fifin Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="29" data-select-text="" data-value="98461" id="choices--select__agents-item-choice-29" role="option">
+                        Monica Rhasintya Indira Amarilys
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="30" data-select-text="" data-value="100771" id="choices--select__agents-item-choice-30" role="option">
+                        Sigit Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="31" data-select-text="" data-value="101612" id="choices--select__agents-item-choice-31" role="option">
+                        Ismardiyanti Windiaputri Prasetiawan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="32" data-select-text="" data-value="114098" id="choices--select__agents-item-choice-32" role="option">
+                        test admin keuangan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="33" data-select-text="" data-value="120997" id="choices--select__agents-item-choice-33" role="option">
+                        Rendy Testing
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="34" data-select-text="" data-value="127688" id="choices--select__agents-item-choice-34" role="option">
+                        Dieno
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="35" data-select-text="" data-value="128723" id="choices--select__agents-item-choice-35" role="option">
+                        Nata AM Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="36" data-select-text="" data-value="137115" id="choices--select__agents-item-choice-36" role="option">
+                        Santi Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="37" data-select-text="" data-value="137125" id="choices--select__agents-item-choice-37" role="option">
+                        Afif Fathurrahman
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="38" data-select-text="" data-value="137123" id="choices--select__agents-item-choice-38" role="option">
+                        Septiana Hanif Tri Armananti
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="39" data-select-text="" data-value="137121" id="choices--select__agents-item-choice-39" role="option">
+                        Hanif Al Fathoni
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="40" data-select-text="" data-value="137120" id="choices--select__agents-item-choice-40" role="option">
+                        Yanuar Izulyansah
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="41" data-select-text="" data-value="137118" id="choices--select__agents-item-choice-41" role="option">
+                        Reynaldi Ariston
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="42" data-select-text="" data-value="137033" id="choices--select__agents-item-choice-42" role="option">
+                        Halim Supervisor PT
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="43" data-select-text="" data-value="137365" id="choices--select__agents-item-choice-43" role="option">
+                        Dieno
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="44" data-select-text="" data-value="141944" id="choices--select__agents-item-choice-44" role="option">
+                        Jennifer Laura Bachsin
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="45" data-select-text="" data-value="141943" id="choices--select__agents-item-choice-45" role="option">
+                        Nanda Fuji Lestari
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="46" data-select-text="" data-value="146372" id="choices--select__agents-item-choice-46" role="option">
+                        Muhammad Nur Fauzan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="47" data-select-text="" data-value="146374" id="choices--select__agents-item-choice-47" role="option">
+                        Muhammad Nur Fauzan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="48" data-select-text="" data-value="147749" id="choices--select__agents-item-choice-48" role="option">
+                        Ahmad Dimas
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="49" data-select-text="" data-value="150920" id="choices--select__agents-item-choice-49" role="option">
+                        Camelia
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="50" data-select-text="" data-value="152342" id="choices--select__agents-item-choice-50" role="option">
+                        Abdul Ghofur Sevima
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="51" data-select-text="" data-value="156597" id="choices--select__agents-item-choice-51" role="option">
+                        EKKY ERLANGGA
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="52" data-select-text="" data-value="160159" id="choices--select__agents-item-choice-52" role="option">
+                        Arga Sevima
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<button class="btn btn_primary w-full" disabled="" type="submit">
+<span class="btn__text !font-medium">
+            Simpan
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="modal modal_confirmation-primary" id="assign_self_bulk__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Tugaskan kepada Saya</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<p>Apakah anda yakin ingin menugaskan prospek ini kepada Anda?</p>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<form action="prospects-116282.html" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <template x-for="prospect in prospects"></template>
+<button class="btn btn_primary w-full" type="submit">
+<span class="btn__text !font-medium">
+            Tugaskan
+        </span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="modal modal_confirmation-error" id="delete_bulk__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Hapus Data Prospek</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<p x-text="`Apakah anda yakin ingin menghapus ${prospects.length} data prospek ini?`">Apakah anda yakin ingin menghapus 0 data prospek ini?</p>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<form action="prospects-116282.html" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="DELETE"/> <template x-for="prospect in prospects"></template>
+<button class="btn btn_destructive w-full" type="submit">
+<span class="btn__text !font-medium">
+            Hapus
+        </span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" id="import__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Import Data Prospek</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<div class="modal__content-input">
+<form action="#" data-mockup-unresolved="/crm/import/prospects" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <div class="grid">
+<div class="col-12">
+<a class="btn btn_outline" data-mockup-unresolved="/assets/backend/excel/template-import-prospek.xlsx" href="#">
+<span class="icon icon-arrow-down-tray-solid"></span>
+<span class="btn__text !font-medium">
+            Unduh Template Import
+        </span>
+</a>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__file">File Prospek
+                            <span class="important">*</span>
+</label>
+<iframe class="mb-2 hidden h-[500px] w-full rounded-lg" frameborder="0" id="iframe-input__file" src="./Sevima CRM _ Manajemen Prospek_files/saved_resource.html">
+</iframe>
+<label for="input__file">
+<img alt="preview" class="mb-2 hidden aspect-video w-full max-w-sm cursor-pointer rounded-lg border bg-slate-300 object-contain hover:brightness-50" id="preview-input__file" src="_assets/captured-images/prospects"/>
+</label>
+<div class="form-control__group">
+<div class="upload-draggable upload-draggable_inline">
+<div class="upload-draggable__box-inline">
+<input accept=".xls,.xlsx" class="upload-draggable__file-input" id="input__file" name="file_prospect" required="true" type="file"/>
+<div class="upload-draggable__inline-wrapper">
+<label class="upload-draggable__icon">
+<span class="icon icon-cloud-arrow-up"></span>
+</label>
+<div class="upload-draggable__wrapper">
+<h2 class="upload-draggable__title">
+                            Klik untuk pilih file
+                            <span class="upload-draggable__subtitle">
+                                atau seret file ke sini
+                            </span>
+</h2>
+<p class="upload-draggable__support">
+                            XLS atau XLSX
+                        </p>
+</div>
+</div>
+</div>
+<div class="upload-draggable__success line-clamp-1 break-all">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<button class="btn btn_primary w-full" disabled="" type="submit">
+<span class="btn__text !font-medium">
+            Simpan
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="main__header">
+<div class="main__location">
+<div class="main__wrapper">
+<h1 class="main__title">Manajemen Prospek</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+<div class="flex flex-row items-center gap-4">
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-vertical"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/export/prospects" href="#">
+                            Export Prospek
+                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#import__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects">
+                            Import Prospek
+                        </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="prospects-116282.html">Pengaturan</a>
+</li>
+</ul>
+</div>
+<a class="btn btn_primary" href="prospects-detail-create.html">
+<span class="icon icon-plus-solid"></span>
+<span class="btn__text !font-medium">
+            Tambah Prospek
+        </span>
+</a>
+</div>
+</div>
+</div>
+<div class="card card_table">
+<div class="card__body">
+<div class="box-table">
+<div class="box-table__header">
+<div :class="prospects.length == 0 ? '!grid' : 'hidden'" class="grid-cols-12 gap-4 !grid">
+<div class="col-span-12 lg:col-span-4">
+<form enctype="multipart/form-data" method="GET" onsubmit="addParams(event)">
+<div class="form-control">
+<div class="form-control__group">
+<span data-input-icon="search"></span>
+<input class="form-control__input" id="input__search" name="filter[search]" placeholder="Cari data prospek" type="search" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</form>
+</div>
+<div class="col-span-12 lg:col-span-8">
+<div class="flex flex-row flex-wrap items-center justify-end gap-4">
+<button class="btn btn_outline w-full md:w-auto md:flex-1 lg:flex-none lg:w-max" data-target="#filter__modal" data-toggle="modal">
+<span class="btn__text !font-medium">
+            2024/2025 Ganjil
+        </span>
+<span class="icon icon-funnel-solid"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="prospects.html">
+<span class="icon icon-arrow-path"></span>
+<span class="btn__text !font-medium">
+            Reset Filter
+        </span>
+</a>
+</div>
+</div>
+</div>
+<div :class="prospects.length &gt; 0 ? '!grid' : 'hidden'" class="grid-cols-12 gap-4 hidden">
+<div class="col-span-2 lg:col-span-4">
+<div class="flex h-full flex-row items-center gap-1 font-medium">
+<span x-text="prospects.length">0</span>
+                            Data Terpilih
+                        </div>
+</div>
+<div class="col-span-10 lg:col-span-8">
+<div class="flex flex-row items-center justify-end gap-4">
+<button class="btn btn_outline" data-target="#change_status_bulk__modal" data-toggle="modal">
+<span class="icon icon-flag-solid"></span>
+<span class="btn__text !font-medium">
+            Ubah Status
+        </span>
+</button>
+<button class="btn btn_outline" data-target="#assign_admin_bulk__modal" data-toggle="modal">
+<span class="icon icon-user-plus-solid"></span>
+<span class="btn__text !font-medium">
+            Tugaskan Admin
+        </span>
+</button>
+<button class="btn btn_destructive" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete_bulk__modal" data-toggle="modal">
+<span class="icon icon-trash-solid"></span>
+<span class="btn__text !font-medium">
+            Hapus
+        </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="box-table__content">
+<div class="table-max table-max_absolute" id="table-max" style="--qn-table-cell-action-width: 158.33440000000002px; --qn-table-shadow-right-bottom-offset: 0px;">
+<table>
+<thead>
+<tr>
+<th class="flex justify-center items-center">
+<div data-placement="right" data-tooltip="Klik untuk menyeleksi semua">
+<input :checked="allChecked" class="form-control__checkbox" name="check_all" type="checkbox" x-on:change="toggleAll"/>
+</div>
+</th>
+<th class="cell-sorting" onclick="sortBy('name')">
+            Peminat
+    </th>
+<th class="cell-sorting" onclick="sortBy('created_at')">
+            Tanggal Masuk Prospek
+    </th>
+<th class="">
+            Kontak
+    </th>
+<th class="cell-sorting" onclick="sortBy('last_log')">
+            Terakhir Dikontak
+    </th>
+<th class="text-center cell-sorting" onclick="sortBy('status')">
+            Status Prospek
+    </th>
+<th class="text-center cell-sorting" onclick="sortBy('activities_sum_point')">
+            Level Prospek
+    </th>
+<th class="cell-action" style="height: 56px; max-height: 56px;">
+            Aksi
+    </th>
+</tr>
+</thead>
+<tbody>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="117306" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                fahmi test
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        08 Jul 2026, 13:28
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/6285895176251" href="#" onclick='updateStatusContacted({"prospect_id":117306,"status":"not_contacted"})' target="_blank">
+                                            085895176251
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('085895176251'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:testingfahmi@yopmail.com">testingfahmi@yopmail.com</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<h3 class="cell-double__title">
+                                08 Jul 2026, 13:28:50
+                            </h3>
+<span class="cell-double__subtitle">
+                                Oleh
+                                fahmi test
+                            </span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#EEF2F6] text-[#697586]">
+                            1. Perlu Dikontak
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-success font-semibold">
+    Tinggi
+                            : 9
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/prospects/117306/detail/edit" href="#">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="117221" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                DANENDRA ADINATA
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        06 Jul 2026, 12:27
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/6281231576071" href="#" onclick='updateStatusContacted({"prospect_id":117221,"status":"decision"})' target="_blank">
+                                            081231576071
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('081231576071'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:endahudaya97@gmail.com">endahudaya97@gmail.com</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<h3 class="cell-double__title">
+                                07 Jul 2026, 10:14:00
+                            </h3>
+<span class="cell-double__subtitle">
+                                Oleh
+                                Desintya Falcon
+                            </span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#FFF7E9] text-[#EF9600]">
+                            6. Pertimbangan
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-default font-semibold">
+    Rendah
+                            : 1
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/prospects/117221/detail/edit" href="#">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="116282" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                Ajeng
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        23 Jun 2026, 09:17
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/628123456789" href="#" onclick='updateStatusContacted({"prospect_id":116282,"status":"not_contacted"})' target="_blank">
+                                            08123456789
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('08123456789'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:ajeng263@yopmail.com">ajeng263@yopmail.com</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<h3 class="cell-double__title">
+                                23 Jun 2026, 09:17:11
+                            </h3>
+<span class="cell-double__subtitle">
+                                Oleh
+                                Ajeng
+                            </span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#EEF2F6] text-[#697586]">
+                            1. Perlu Dikontak
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-default font-semibold">
+    Rendah
+                            : 2
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a href="prospects-116282-detail-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="116275" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                Satria
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        22 Jun 2026, 20:27
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/628123456789" href="#" onclick='updateStatusContacted({"prospect_id":116275,"status":"not_contacted"})' target="_blank">
+                                            08123456789
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('08123456789'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:satria263@yopmail.com">satria263@yopmail.com</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<h3 class="cell-double__title">
+                                22 Jun 2026, 20:27:46
+                            </h3>
+<span class="cell-double__subtitle">
+                                Oleh
+                                Satria
+                            </span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#EEF2F6] text-[#697586]">
+                            1. Perlu Dikontak
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-success font-semibold">
+    Tinggi
+                            : 20
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/prospects/116275/detail/edit" href="#">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="105486" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                Tes Polteksi
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        10 Jun 2026, 11:37
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/628182831823821" href="#" onclick='updateStatusContacted({"prospect_id":105486,"status":"contacted"})' target="_blank">
+                                            08182831823821
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('08182831823821'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:ekkyerlangga2@gmail.com">ekkyerlangga2@gmail.com</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<h3 class="cell-double__title">
+                                10 Jun 2026, 11:37:57
+                            </h3>
+<span class="cell-double__subtitle">
+                                Oleh
+                                Ekky Sevima
+                            </span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#F1F6FE] text-[#0F6AF5]">
+                            2. Sudah Dikontak
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-default font-semibold">
+    Rendah
+                            : 0
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/prospects/105486/detail/edit" href="#">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="105480" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                Ekky Sevima
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        10 Jun 2026, 08:42
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/628123456789" href="#" onclick='updateStatusContacted({"prospect_id":105480,"status":"not_contacted"})' target="_blank">
+                                            08123456789
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('08123456789'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:ekky.erlangga@sevima.id">ekky.erlangga@sevima.id</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<h3 class="cell-double__title">
+                                10 Jun 2026, 08:42:00
+                            </h3>
+<span class="cell-double__subtitle">
+                                Oleh
+                                Ekky Sevima
+                            </span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#EEF2F6] text-[#697586]">
+                            1. Perlu Dikontak
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-default font-semibold">
+    Rendah
+                            : 1
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/prospects/105480/detail/edit" href="#">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="105181" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                EKKY ERLANGGA
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        04 Jun 2026, 10:57
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/6281804348233" href="#" onclick='updateStatusContacted({"prospect_id":105181,"status":"not_contacted"})' target="_blank">
+                                            081804348233
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('081804348233'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:qausya@gmail.com">qausya@gmail.com</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<span class="cell-double__subtitle">Belum dikontak</span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#EEF2F6] text-[#697586]">
+                            1. Perlu Dikontak
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-success font-semibold">
+    Tinggi
+                            : 9
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/prospects/105181/detail/edit" href="#">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="105108" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                user test
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        03 Jun 2026, 10:53
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/628123456789" href="#" onclick='updateStatusContacted({"prospect_id":105108,"status":"not_contacted"})' target="_blank">
+                                            08123456789
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('08123456789'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:testuser222@yopmail.com">testuser222@yopmail.com</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<h3 class="cell-double__title">
+                                03 Jun 2026, 10:53:09
+                            </h3>
+<span class="cell-double__subtitle">
+                                Oleh
+                                user test
+                            </span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#EEF2F6] text-[#697586]">
+                            1. Perlu Dikontak
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-warning font-semibold">
+    Sedang
+                            : 6
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/prospects/105108/detail/edit" href="#">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="104416" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                Dilan Anjasmara Priambodo
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        21 Mei 2026, 14:55
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/6281110021213" href="#" onclick='updateStatusContacted({"prospect_id":104416,"status":"contacted"})' target="_blank">
+                                            081110021213
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('081110021213'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:gujuqueuxauffi-1272@yopmail.com">gujuqueuxauffi-1272@yopmail.com</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<h3 class="cell-double__title">
+                                21 Mei 2026, 15:53:38
+                            </h3>
+<span class="cell-double__subtitle">
+                                Oleh
+                                Desintya Falcon
+                            </span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#F1F6FE] text-[#0F6AF5]">
+                            2. Sudah Dikontak
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-default font-semibold">
+    Rendah
+                            : 0
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/prospects/104416/detail/edit" href="#">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="flex h-full w-full items-start justify-center">
+<input class="form-control__checkbox" name="prospects[]" type="checkbox" value="104417" x-model="prospects"/>
+</div>
+</td>
+<td class="cell-double align-top">
+<h3 class="cell-double__title">
+<a href="prospects-116282.html">
+                                Raisa Siburian
+                            </a>
+</h3>
+<span class="cell-double__subtitle"></span>
+</td>
+<td class="align-top">
+                        21 Mei 2026, 14:55
+                    </td>
+<td class="align-top">
+<div class="flex flex-col gap-2">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-phone-solid text-lg"></span>
+<a class="whitespace-nowrap" data-mockup-unresolved="/6281110021214" href="#" onclick='updateStatusContacted({"prospect_id":104417,"status":"contacted"})' target="_blank">
+                                            081110021214
+                                        </a>
+<div class="cursor-pointer" data-tooltip="Salin nomor telepon" x-on:click="navigator.clipboard.writeText('081110021214'); alert('Nomor telepon telah disalin');">
+<span class="icon icon-document-duplicate-solid text-lg"></span>
+</div>
+</div>
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-envelope text-lg"></span>
+<a class="whitespace-nowrap" href="mailto:jesseilloipafre-1294@yopmail.com">jesseilloipafre-1294@yopmail.com</a>
+</div>
+</div>
+</td>
+<td class="cell-double w-[10%] align-top">
+<h3 class="cell-double__title">
+                                03 Jun 2026, 10:27:30
+                            </h3>
+<span class="cell-double__subtitle">
+                                Oleh
+                                Desintya Falcon
+                            </span>
+</td>
+<td class="w-[10%] align-top">
+<div class="rounded-full px-2 font-medium whitespace-nowrap w-max font-semibold bg-[#F1F6FE] text-[#0F6AF5]">
+                            2. Sudah Dikontak
+                        </div>
+</td>
+<td class="w-[10%] align-top">
+<span class="badge badge_sm badge_secondary-default font-semibold">
+    Rendah
+                            : 0
+</span>
+</td>
+<td class="cell-action !items-start align-top" style="height: 113px; max-height: 113px;">
+<div class="flex flex-row items-center justify-center gap-1">
+<button class="btn btn_outline btn_icon" data-target="#add_log__modal" data-toggle="modal" data-tooltip="Tambah Log" x-on:click="$dispatch('set-add-log', {action: '#'});">
+<span class="icon icon-plus"></span>
+</button>
+<div class="dropdown" data-tooltip="Ubah Status">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown" type="button">
+<span class="icon icon-flag-solid"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end max-h-[200px] !overflow-auto">
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'not_contacted'})">
+                                                1. Perlu Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item disabled">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'contacted'})">
+                                                2. Sudah Dikontak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'no_respond'})">
+                                                3. Tidak Merespons
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'interested'})">
+                                                4. Tertarik
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'follow_up'})">
+                                                5. Follow Up
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'decision'})">
+                                                6. Pertimbangan
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'rejected'})">
+                                                7. Ditolak
+                                            </a>
+</li>
+<li class="dropdown__item">
+<a class="link-status" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-status', {action: '#', status: 'registered'})">
+                                                8. Terdaftar
+                                            </a>
+</li>
+</ul>
+<form enctype="multipart/form-data" method="POST" x-on:set-status.window="$el.action = $event.detail.action; setTimeout(() =&gt; $el.submit(), 100);">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="PUT"/> <input id="input__status" name="status" type="hidden" x-on:set-status.window="$el.value = $event.detail.status"/>
+</form>
+</div>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="prospects-116282.html">
+                                            Detail
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/prospects/104417/detail/edit" href="#">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" href="./Sevima CRM _ Manajemen Prospek_files/prospects" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="box-table__footer">
+<div class="box-table__action">
+<div class="box-table__action-left">
+<p class="box-table__result">
+                Menampilkan
+                <b>1-10</b> dari Total 24
+                data
+            </p>
+</div>
+<div class="box-table__action-right">
+<div class="pagination">
+<button class="pagination__button-previous" disabled="">
+</button>
+<ul class="pagination__list" data-mobile-text="Halaman 1 dari 3">
+<li class="pagination__item active">1</li>
+<li class="pagination__item"><a href="prospects.html">2</a>
+</li>
+<li class="pagination__item"><a href="prospects.html">3</a>
+</li>
+</ul>
+<a class="pagination__button-next" href="prospects.html">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

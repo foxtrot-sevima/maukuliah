@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Kampus</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template">
+<div class="header__row-wrapper">
+<div class="header__group"><button aria-label="Toggle sidebar" class="header__sidebar-nav header__sidebar-nav_simple"><span class="icon icon-bars-3-bottom-left-solid"></span></button>
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="header__logo" src="_assets/captured-images/mk-crm-logo-mini.webp"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Sevima Platform</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="dropdown dropdown_nav dropdown_profile">
+<button aria-expanded="false" class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="../crm/super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="master-universities.html">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="interested-users.html">
+                                        Pengajuan Pendaftaran
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="consultations.html">
+                                        Konsultasi
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="subscriptions.html">
+                                        Subscription
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="master-universities.html">
+<span>Data</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Data</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-users.html">
+                                        Pengguna
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-majors.html">
+                                        Jurusan Umum
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-categories.html">
+                                        Kategori Jurusan
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-jobs.html">
+                                        Prospek Kerja
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-schools.html">
+                                        Sekolah Asal
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="scholarships.html">
+                                        Beasiswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="banners.html">
+                                        Banner
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="modules.html">
+                                        Modul Fitur
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="master-universities.html">
+<span>Tes Maukuliah</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Tes Maukuliah</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="test.html">
+                                        Tes Potensi Siswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">
+                                        Tryout
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="master-universities.html">
+<span>Log</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Log</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/applications" href="#">
+                                        Log Aplikasi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/accesses" href="#">
+                                        Log Akses
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-activities.html">
+                                        Log Aktivitas
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-modules.html">
+                                        Log Penggunaan Modul
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<aside class="sidebar sidebar_without-icon sidebar_scroll">
+<div class="sidebar__group">
+<div class="sidebar__group-header">
+<span class="sidebar__group-title">Data</span>
+</div>
+<ul class="sidebar__list">
+<li class="sidebar__item">
+<a class="sidebar__link" href="master-users.html">
+<span class="sidebar__link-text">Pengguna</span>
+</a>
+</li>
+<li class="sidebar__item active">
+<a class="sidebar__link" href="master-universities.html">
+<span class="sidebar__link-text">Kampus</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="master-majors.html">
+<span class="sidebar__link-text">Jurusan Umum</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="master-categories.html">
+<span class="sidebar__link-text">Kategori Jurusan</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="master-jobs.html">
+<span class="sidebar__link-text">Prospek Kerja</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="master-schools.html">
+<span class="sidebar__link-text">Sekolah Asal</span>
+</a>
+</li>
+<hr/>
+<li class="sidebar__item">
+<a class="sidebar__link" href="scholarships.html">
+<span class="sidebar__link-text">Beasiswa</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="banners.html">
+<span class="sidebar__link-text">Banner</span>
+</a>
+</li>
+<hr/>
+<li class="sidebar__item">
+<a class="sidebar__link" href="modules.html">
+<span class="sidebar__link-text">Modul Fitur</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<main class="main">
+<div class="container">
+<div class="modal" id="filter__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Filter Lain</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<form method="GET" onsubmit="addParams(event)">
+<div class="modal__body">
+<div class="modal__content-input">
+<div class="grid">
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__status">Status
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__status" name="filter[status]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Status --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Status --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Status --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__status-item-choice-1" role="option">-- Pilih Status --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="state" id="choices--select__status-item-choice-2" role="option">
+                        Negeri
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="private" id="choices--select__status-item-choice-3" role="option">
+                        Swasta
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__type">Jenis
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__type" name="filter[type]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Jenis --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Jenis --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Jenis --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__type-item-choice-1" role="option">-- Pilih Jenis --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="university" id="choices--select__type-item-choice-2" role="option">
+                        Universitas
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="institute" id="choices--select__type-item-choice-3" role="option">
+                        Institut
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="polytechnic" id="choices--select__type-item-choice-4" role="option">
+                        Politeknik
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="academy" id="choices--select__type-item-choice-5" role="option">
+                        Akademi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="high_school" id="choices--select__type-item-choice-6" role="option">
+                        Sekolah Tinggi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__accreditation">Akreditasi
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__accreditation" name="filter[accreditation]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Akreditasi --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Akreditasi --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Akreditasi --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__accreditation-item-choice-1" role="option">-- Pilih Akreditasi --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="A" id="choices--select__accreditation-item-choice-2" role="option">
+                        A
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="B" id="choices--select__accreditation-item-choice-3" role="option">
+                        B
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="C" id="choices--select__accreditation-item-choice-4" role="option">
+                        C
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="U" id="choices--select__accreditation-item-choice-5" role="option">
+                        Unggul
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="BA" id="choices--select__accreditation-item-choice-6" role="option">
+                        Baik
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="BS" id="choices--select__accreditation-item-choice-7" role="option">
+                        Baik Sekali
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="-" id="choices--select__accreditation-item-choice-8" role="option">
+                        Belum Terakreditasi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="modal modal_confirmation-error" id="delete__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Hapus Data Kampus</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<p>Apakah anda yakin ingin menghapus kampus ini?</p>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<form enctype="multipart/form-data" method="POST" x-on:set-delete.window="$el.action = $event.detail.action">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="DELETE"/> <button class="btn btn_destructive w-full" type="submit">
+<span class="btn__text !font-medium">
+            Hapus
+        </span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="main__header">
+<div class="main__location">
+<div class="main__wrapper">
+<h1 class="main__title">Kampus</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+<form action="master-universities-universitas-sentra-vidya-utama.html" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary" type="submit">
+<span class="icon icon-arrow-path-solid"></span>
+<span class="btn__text !font-medium">
+            Sinkronisasi Prodi
+        </span>
+</button>
+</form>
+<a class="btn btn_primary" href="master-universities-create.html">
+<span class="icon icon-plus-solid"></span>
+<span class="btn__text !font-medium">
+            Tambah Kampus
+        </span>
+</a>
+</div>
+</div>
+<div class="card card_table">
+<div class="card__body">
+<div class="box-table">
+<div class="box-table__header">
+<div class="!grid grid-cols-12 gap-4">
+<div class="col-span-12 lg:col-span-4">
+<form enctype="multipart/form-data" method="GET" onsubmit="addParams(event)">
+<div class="form-control">
+<div class="form-control__group">
+<span data-input-icon="search"></span>
+<input class="form-control__input" id="input__search" name="filter[search]" placeholder="Cari data kampus" type="search" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</form>
+</div>
+<div class="col-span-12 lg:col-span-8">
+<div class="flex flex-row items-center justify-end gap-4">
+<button class="btn btn_outline w-full lg:w-max" data-target="#filter__modal" data-toggle="modal">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+<span class="icon icon-funnel-solid"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="master-universities.html">
+<span class="icon icon-arrow-path"></span>
+<span class="btn__text !font-medium">
+            Reset Filter
+        </span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="box-table__content">
+<div class="table-max" id="table-max" style="--qn-table-cell-action-width: 175.33440000000002px; --qn-table-shadow-right-bottom-offset: 0px;">
+<table>
+<thead>
+<tr>
+<th class="cell-sorting" onclick="sortBy('name')">
+            Nama
+    </th>
+<th class="cell-sorting" onclick="sortBy('type')">
+            Jenis
+    </th>
+<th class="cell-sorting" onclick="sortBy('status')">
+            Status
+    </th>
+<th class="cell-sorting" onclick="sortBy('accreditation')">
+            Akreditasi
+    </th>
+<th class="cell-action">
+            Aksi
+    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1782368737-ZWOHCfsKoF.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1782368737-ZWOHCfsKoF.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas Islam Zainul Hasan Genggong Probolinggo
+                                                                                    <span class="icon icon-check-badge-solid text-lg"></span>
+</a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 211001
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Universitas
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        Baik Sekali
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/universitas-islam-zainul-hasan-genggong-probolinggo" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="true" class="btn btn_outline btn_icon show" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end show">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1781751812-kOv2Ydeu8F.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1781751812-kOv2Ydeu8F.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Sekolah Tinggi Teologi Baptis Kalvari Jakarta
+                                                                                    <span class="icon icon-check-badge-solid text-lg"></span>
+</a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 233344
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Sekolah Tinggi
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        Baik
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/sekolah-tinggi-teologi-baptis-kalvari-jakarta" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1776824749-2FWjisYWyv.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1776824749-2FWjisYWyv.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Sekolah Tinggi Ilmu Kesehatan Advaita Medika Tabanan
+                                                                            </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 083065
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Sekolah Tinggi
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        Baik
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/sekolah-tinggi-ilmu-kesehatan-advaita-medika-tabanan" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1776823407-IAOWfMow10.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1776823407-IAOWfMow10.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas 17 Agustus 1945 Cirebon
+                                                                            </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 041010
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Universitas
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        Baik Sekali
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/universitas-17-agustus-1945-cirebon" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1776048538-dfyRHI7Dph.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1776048538-dfyRHI7Dph.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Politeknik Kesehatan Ummi Khasanah
+                                                                                    <span class="icon icon-check-badge-solid text-lg"></span>
+</a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 055013
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Politeknik
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        B
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/politeknik-kesehatan-ummi-khasanah" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1773133116-vbiavdXKMs.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1773133116-vbiavdXKMs.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas Universal
+                                                                                    <span class="icon icon-check-badge-solid text-lg"></span>
+</a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 171025
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Universitas
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        Baik Sekali
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/universitas-universal" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1772608980-ind5BWk6RW.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1772608980-ind5BWk6RW.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Politeknik Penerbangan Indonesia Curug
+                                                                                    <span class="icon icon-check-badge-solid text-lg"></span>
+</a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 425018
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Politeknik
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        Baik Sekali
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/politeknik-penerbangan-indonesia-curug" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1771402708-37EAk666la.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1771402708-37EAk666la.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas Ary Ginanjar
+                                                                                    <span class="icon icon-check-badge-solid text-lg"></span>
+</a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 031083
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Universitas
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        Baik
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/universitas-ary-ginanjar" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1763352452-Ffr8tavUjI.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1763352452-Ffr8tavUjI.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Institut Agama Islam Bakti Negara Tegal
+                                                                                    <span class="icon icon-check-badge-solid text-lg"></span>
+</a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 212078
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Institut
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        Baik
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/institut-agama-islam-bakti-negara-tegal" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1763004405-7fxrQ7sHs1.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1763004405-7fxrQ7sHs1.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a class="flex flex-row items-center gap-1" href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Institut Kesehatan Bina Husada Serang
+                                                                                    <span class="icon icon-check-badge-solid text-lg"></span>
+</a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 042033
+                                </span>
+</div>
+</div>
+</td>
+<td>
+                        Institut
+                    </td>
+<td>
+                        Swasta
+                    </td>
+<td>
+                        Belum Terakreditasi
+                    </td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<form action="../crm/dashboard.html" enctype="multipart/form-data" method="POST" target="_blank">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="btn btn_primary btn_icon" data-tooltip="Login Sebagai Kampus" type="submit">
+<span class="icon icon-identification-solid"></span>
+</button>
+</form>
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/universities/institut-kesehatan-bina-husada-serang" data-tooltip="Lihat Kampus" href="#" target="_blank">
+<span class="icon icon-arrow-top-right-on-square"></span>
+</a>
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline btn_icon" data-toggle="dropdown">
+<span class="icon icon-ellipsis-horizontal"></span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama.html">Detail</a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-universitas-sentra-vidya-utama-edit.html">
+                                            Edit
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a data-target="#delete__modal" data-toggle="modal" x-on:click="$dispatch('set-delete', {action: '#'});">
+                                            Hapus
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="box-table__footer">
+<div class="box-table__action">
+<div class="box-table__action-left">
+<p class="box-table__result">
+                Menampilkan
+                <b>1-10</b> dari Total 894
+                data
+            </p>
+</div>
+<div class="box-table__action-right">
+<div class="pagination">
+<button class="pagination__button-previous" disabled="">
+</button>
+<ul class="pagination__list" data-mobile-text="Halaman 1 dari 90">
+<li class="pagination__item active">1</li>
+<li class="pagination__item"><a href="master-universities.html">2</a>
+</li>
+<li class="pagination__item"><a href="master-universities.html">3</a>
+</li>
+<li class="pagination__item"><a href="master-universities.html">4</a>
+</li>
+<li class="pagination__item"><a href="master-universities.html">5</a>
+</li>
+<li class="pagination__item"><a href="master-universities.html">6</a>
+</li>
+<li class="pagination__item"><a href="master-universities.html">7</a>
+</li>
+<li class="pagination__item"><a href="master-universities.html">8</a>
+</li>
+<li class="pagination__item"><a href="master-universities.html">9</a>
+</li>
+<li class="pagination__item"><a href="master-universities.html">10</a>
+</li>
+<li class="pagination__ellipsis">...</li>
+<li class="pagination__item"><a href="master-universities.html">89</a>
+</li>
+<li class="pagination__item"><a href="master-universities.html">90</a>
+</li>
+</ul>
+<a class="pagination__button-next" href="master-universities.html">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

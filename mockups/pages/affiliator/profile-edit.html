@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Edit Profil</title>
+
+<meta content="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template header_position-static">
+<div class="header__row-wrapper">
+<div class="header__group">
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="lazy object-cover header__logo !rounded-lg entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1779420063-fowvtXxSk0.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Universitas Sentra Vidya Utama</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="header__action">
+<div class="dropdown dropdown_nav dropdown_notification">
+<button aria-expanded="false" class="btn btn_icon btn_nav !border-white/50" data-toggle="dropdown" id="qn-nav-notification">
+<span class="icon icon-bell-solid"></span>
+</button>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 z-10 !hidden md:!flex">
+            9+
+        </span>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 !hidden animate-ping md:!flex">
+            9+
+        </span>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="notification">
+<div class="notification__header">
+<div class="notification__wrapper">
+<h3 class="notification__title"><span class="icon icon-x-mark-mini" data-toggle="dropdown"></span>
+                        Notifikasi
+                    </h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/mark-all-as-read" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__header-btn" type="submit">
+                                Tandai Sudah Dibaca Semua
+                            </button>
+</form>
+</div>
+<nav class="nav-tab">
+<ul class="nav-tab__wrapper">
+<li class="nav-tab__item active" data-target="#notification-general-section" data-toggle="tab">
+                            Semua
+                                                            <span class="badge badge_sm badge_secondary-primary">
+    9+
+</span>
+</li>
+</ul>
+</nav>
+</div>
+<div class="notification__body">
+<div class="notification__section p-0 active" id="notification-general-section">
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 20 Mei 2026</h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/103aacd2-2d37-4757-befc-3b44901f289a" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>akun desin testing</b> mengajukan pendaftaran menggunakan kode afiliasi Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Senin, 27 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/e6daddac-3d6f-4c83-bdfd-c0cb8b5c41cf" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+                                                    Profil afiliator anda telah diperbarui oleh admin. Silakan cek kembali profil anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Perubahan Profil oleh Admin
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/5b7dc113-7776-46a6-aad2-e76593739f75" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User test Tolak</b> mengajukan pendaftaran menggunakan kode afiliasi Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Selasa, 21 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/f70d4f49-9786-469d-af61-881969c14449" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User Testing Daftar Affliator</b> mengajukan pendaftaran menggunakan kode afiliasi Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Selasa, 31 Mar 2026</h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/b6b85ed6-9a5f-497d-9c44-b2bb6d244e05" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+                                                    Profil afiliator anda telah diperbarui oleh admin. Silakan cek kembali profil anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    3 bulan yang lalu -
+                                                    Perubahan Profil oleh Admin
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="notification__footer">
+<a class="notification__footer-btn mx-auto" data-mockup-unresolved="/affiliator/notifications" href="#">
+                    Lihat semua
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dropdown dropdown_nav dropdown_profile">
+<button class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Desintya Sevima">
+<p class="avatar__acronym">De</p></span>
+<span class="header__switch-avatar-name">Desintya Sevima</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Desintya Sevima">
+<p class="avatar__acronym">De</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Desintya Sevima</span>
+<span class="avatar__subtitle">
+                                        Afiliator
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/affiliator/onboarding" href="#">
+<span class="icon icon-arrow-path-rounded-square-solid"></span>
+                                        Ganti Kampus Afiliasi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="profile-change-password.html">
+<span class="icon icon-key-solid"></span>
+                                    Ganti Password
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="prospects.html">
+<span>Manajemen Prospek</span>
+</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="affiliates.html">
+<span>Afiliasi Saya</span>
+</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="payment-histories.html">
+<span>Riwayat Pembayaran</span>
+</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="marketing-kit.html">
+<span>Marketing Kit</span>
+<span class="icon icon-sparkles-solid"></span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<main class="main">
+<form action="profile-edit.html" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="PATCH"/> <div class="form-nav">
+<div class="form-nav__left">
+<a class="btn btn_outline" href="dashboard.html">
+<span class="icon icon-arrow-left-mini"></span>
+<span class="btn__text !font-medium">
+            Kembali
+        </span>
+</a>
+</div>
+<div class="form-nav__middle" style="opacity: 1;">
+<ul class="form-nav__breadcrumb">
+<li class="form-nav__breadcrumb-item">
+<a class="form-nav__breadcrumb-btn" href="profile-edit.html">Profil</a>
+</li>
+<li class="form-nav__breadcrumb-diagonal"></li>
+<li class="form-nav__breadcrumb-item active">
+                Edit
+            </li>
+</ul>
+</div>
+<div class="form-nav__right">
+<div class="form-nav__wrapper">
+<div class="form-nav__button-wrapper" data-placement="left">
+<button class="btn btn_primary" type="submit">
+                        Simpan
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="main__header">
+<div class="main__location">
+<div class="main__wrapper">
+<h1 class="main__title">Edit Profil</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+</div>
+</div>
+<div class="card card_form">
+<div class="card__body">
+<div class="cols-1 grid">
+<div class="grid">
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__name">Nama Afiliator
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" helper="" id="input__name" name="name" placeholder="Masukkan nama afiliator" required="true" type="text" value="Desintya Sevima"/>
+<span data-clear="input"></span>
+</div>
+<p class="form-control__helper"></p>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__nik">NIK
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" data-label="NIK" helper="" id="input__nik" maxlength="16" minlength="16" name="nik" oninput="formatNumberOnly(event)" placeholder="Masukkan NIK (16 digit)" required="true" type="tel" value="9999222277778888"/>
+<span data-clear="input"></span>
+</div>
+<p class="form-control__helper"></p>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__email">Email
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<span data-input-icon="email"></span>
+<input class="form-control__input" helper="" id="input__email" name="email" placeholder="Masukkan email" readonly="" required="true" type="email" value="dsintyaafiliator@yopmail.com"/>
+<span data-clear="input"></span>
+</div>
+<p class="form-control__helper"></p>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__phone">Nomor Whatsapp
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" data-label="Nomor Whatsapp" helper="" id="input__phone" maxlength="15" name="phone" oninput="formatNumberOnly(event)" placeholder="Masukkan nomor whatsapp" required="true" type="tel" value="08123456789"/>
+<span data-clear="input"></span>
+</div>
+<p class="form-control__helper"></p>
+</div>
+</div>
+<div class="col-12">
+<hr/>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__account_name">Nama Pemilik Akun Bank
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" helper="" id="input__account_name" name="account_name" placeholder="Masukkan nama pemilik akun bank" type="text" value="Desintya Rahma"/>
+<span data-clear="input"></span>
+</div>
+<p class="form-control__helper"></p>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__bank_id">Nama Bank/Dompet Digital
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" helper="" hidden="" id="select__bank_id" name="bank_id" tabindex="-1"><option data-custom-properties="[object Object]" value="3">
+                        OVO (OVO)
+                    </option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="3">
+                        OVO (OVO)
+                    </div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Nama Bank/Dompet Digital --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__bank_id-item-choice-1" role="option">-- Pilih Nama Bank/Dompet Digital --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="1" id="choices--select__bank_id-item-choice-2" role="option">
+                        Gopay (GOPAY)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="2" id="choices--select__bank_id-item-choice-3" role="option">
+                        ShopeePay (SHOPEEPAY)
+                    </div><div class="choices__item choices__item--choice is-selected choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="3" id="choices--select__bank_id-item-choice-4" role="option">
+                        OVO (OVO)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="4" id="choices--select__bank_id-item-choice-5" role="option">
+                        Dana (DANA)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="5" id="choices--select__bank_id-item-choice-6" role="option">
+                        LinkAja (LINKAJA)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="6" id="choices--select__bank_id-item-choice-7" role="option">
+                        BPD Aceh (ACEH)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="7" id="choices--select__bank_id-item-choice-8" role="option">
+                        BPD Aceh UUS (ACEH UUS)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="9" data-select-text="" data-value="8" id="choices--select__bank_id-item-choice-9" role="option">
+                        Bank Raya Indonesia (AGRONIAGA)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="10" data-select-text="" data-value="9" id="choices--select__bank_id-item-choice-10" role="option">
+                        Bank Aladin Syariah (ALADIN)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="11" data-select-text="" data-value="10" id="choices--select__bank_id-item-choice-11" role="option">
+                        Allo Bank Indonesia (ALLO)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="12" data-select-text="" data-value="11" id="choices--select__bank_id-item-choice-12" role="option">
+                        Bank Amar Indonesia (AMAR)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="13" data-select-text="" data-value="12" id="choices--select__bank_id-item-choice-13" role="option">
+                        Bank ANZ Indonesia (ANZ)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="14" data-select-text="" data-value="13" id="choices--select__bank_id-item-choice-14" role="option">
+                        Bank Artha Graha International (ARTHA)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="15" data-select-text="" data-value="14" id="choices--select__bank_id-item-choice-15" role="option">
+                        BPD Bali (BALI)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="16" data-select-text="" data-value="15" id="choices--select__bank_id-item-choice-16" role="option">
+                        Bank of America Merill-Lynch (BAML)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="17" data-select-text="" data-value="16" id="choices--select__bank_id-item-choice-17" role="option">
+                        BPD Banten (BANTEN)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="18" data-select-text="" data-value="17" id="choices--select__bank_id-item-choice-18" role="option">
+                        Bank Central Asia (BCA)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="19" data-select-text="" data-value="18" id="choices--select__bank_id-item-choice-19" role="option">
+                        Bank Central Asia Digital (BCA DIGITAL)
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="20" data-select-text="" data-value="19" id="choices--select__bank_id-item-choice-20" role="option">
+                        Bank Central Asia Syariah (BCA SYR)
+                    </div></div></div></div>
+</div>
+<p class="form-control__helper"></p>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__account_number">Nomor Rekening
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" data-label="Nomor Rekening" helper="" id="input__account_number" maxlength="16" name="account_number" oninput="formatNumberOnly(event)" placeholder="Masukkan nomor rekening" type="tel" value="081234567890"/>
+<span data-clear="input"></span>
+</div>
+<p class="form-control__helper"></p>
+</div>
+</div>
+<div class="col-12">
+<hr/>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__code">Kode Afiliator
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" helper="Jika dikosongi maka akan digenerate otomatis" id="input__code" maxlength="8" name="code" pattern="^[A-Z0-9]+$" placeholder="Masukkan kode afiliator" title="Kode afiliasi harus berupa huruf kapital atau angka dan tidak boleh ada karakter spesial" type="text" value="DES11"/>
+<span data-clear="input"></span>
+</div>
+<p class="form-control__helper">Jika dikosongi maka akan digenerate otomatis</p>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__expired_at">Batas Waktu Link
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" disabled="" id="input__expired_at" name="expired_at" required="required" type="date" value="2026-10-07"/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="form-table form-table_sticky-bottom" style="top: 208.438px;"><div class="form-table__wrapper"><div class="form-table__button-wrapper" data-placement="top">
+<button class="btn btn_primary" type="submit">
+                        Simpan
+                    </button>
+</div></div></div></form>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

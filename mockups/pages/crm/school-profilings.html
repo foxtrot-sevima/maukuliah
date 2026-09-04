@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Profiling Sekolah</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template">
+<div class="header__row-wrapper">
+<div class="header__group"><button aria-label="Toggle sidebar" class="header__sidebar-nav header__sidebar-nav_simple"><span class="icon icon-bars-3-bottom-left-solid"></span></button>
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="lazy object-cover header__logo !rounded-lg entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1779420063-fowvtXxSk0.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Universitas Sentra Vidya Utama</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="header__action">
+<div class="dropdown dropdown_nav dropdown_notification">
+<button aria-expanded="false" class="btn btn_icon btn_nav !border-white/50" data-toggle="dropdown" id="qn-nav-notification">
+<span class="icon icon-bell-solid"></span>
+</button>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 z-10 !hidden md:!flex">
+            9+
+        </span>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 !hidden animate-ping md:!flex">
+            9+
+        </span>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="notification">
+<div class="notification__header">
+<div class="notification__wrapper">
+<h3 class="notification__title"><span class="icon icon-x-mark-mini" data-toggle="dropdown"></span>
+                        Notifikasi
+                    </h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/mark-all-as-read" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__header-btn" type="submit">
+                                Tandai Sudah Dibaca Semua
+                            </button>
+</form>
+</div>
+<nav class="nav-tab">
+<ul class="nav-tab__wrapper">
+<li class="nav-tab__item active" data-target="#notification-general-section" data-toggle="tab">
+                            Semua
+                                                            <span class="badge badge_sm badge_secondary-primary">
+    9+
+</span>
+</li>
+</ul>
+</nav>
+</div>
+<div class="notification__body">
+<div class="notification__section p-0 active" id="notification-general-section">
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 08 Jul 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/4c97d8b4-3e4e-45da-a518-32165e486ee7" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/f3f06c53-1232-4142-9578-47171ed17245" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 20 Mei 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/e56eac70-ec49-4b93-ba17-f883b2bd6607" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>akun desin testing</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Senin, 27 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/0cef242b-261a-40ee-b364-2c9cbe0ac9ef" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User test Tolak</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Selasa, 21 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/f07c6af0-bef2-45ad-84f5-5e0b27519e42" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User Testing Daftar Affliator</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="notification__footer">
+<a class="notification__footer-btn mx-auto" data-mockup-unresolved="/crm/notifications" href="#">
+                    Lihat semua
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dropdown dropdown_nav dropdown_profile">
+<button class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a href="../super-admin/dashboard.html">
+<span class="icon icon-arrow-uturn-left"></span>
+                                    Kembali ke Super Admin
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Profiling Sekolah_files/school-profilings">
+<span>Profil Kampus</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Profil Kampus</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Informasi Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-university-majors.html">
+                                        Program Studi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-prices.html">Biaya Kuliah</a>
+</li>
+<div x-data="{ showDropdown: false }">
+<li class="dropdown__item">
+<a class="w-full" href="./Sevima CRM _ Profiling Sekolah_files/school-profilings" x-on:click="showDropdown = !showDropdown">
+                                            Manajemen Konten
+                                            <span :class="{ '-rotate-180': showDropdown }" class="icon icon-chevron-down ml-auto transition-all duration-500"></span>
+</a>
+</li>
+<li hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDropdown">
+<ul>
+<li class="dropdown__item">
+<a href="galleries.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Galeri
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="brochures.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Brosur
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="articles.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Artikel
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="testimonies.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Testimoni
+                                                </a>
+</li>
+</ul>
+</li>
+</div>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="admission-cycles.html">Periode Pendaftaran</a>
+</li>
+<li class="dropdown__item">
+<a href="admissions.html">Jalur Pendaftaran</a>
+</li>
+<li class="dropdown__item">
+<a href="scholarships.html">Beasiswa</a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="admins.html">Staf PMB</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Profiling Sekolah_files/school-profilings">
+<span>CRM</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">CRM</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="prospects.html">
+                                            Manajemen Prospek
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a class="flex w-full flex-row items-center gap-1" href="interested-users.html">
+                                        Peminat Baru
+                                        <span class="icon icon-fire-solid ml-auto"></span>
+</a>
+</li>
+<div x-data="{ showDropdown: false }">
+<li class="dropdown__item">
+<a class="w-full" href="./Sevima CRM _ Profiling Sekolah_files/school-profilings" x-on:click="showDropdown = !showDropdown">
+                                                Afiliator
+                                                <span :class="{ '-rotate-180': showDropdown }" class="icon icon-chevron-down ml-auto transition-all duration-500"></span>
+</a>
+</li>
+<li hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDropdown">
+<ul>
+<li class="dropdown__item">
+<a href="dashboard-affiliator.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Dashboard Afiliator
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/affiliates/validate" href="#">
+<span class="icon icon-arrow-right"></span>
+                                                        Validasi Peminat
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliates-payment.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Pembayaran Komisi
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliates-payment-histories.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Riwayat Pembayaran
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="admission-cycles-referral-commission.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Tarif Komisi
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliators.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Afiliator Kampus
+                                                    </a>
+</li>
+</ul>
+</li>
+<li class="dropdown__line"></li>
+</div>
+<li class="dropdown__item">
+<a href="custom-landing-pages.html">
+                                            Tracker &amp; Landing Page
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Profiling Sekolah_files/school-profilings">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="school-profilings.html">Profiling Sekolah</a>
+</li>
+<li class="dropdown__item">
+<a href="test.html">Tes Potensi Siswa</a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">Tryout</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<aside class="sidebar sidebar_without-icon sidebar_without-scroll">
+<div class="sidebar__group">
+<div class="sidebar__group-header">
+<span class="sidebar__group-title">Analitik</span>
+</div>
+<ul class="sidebar__list">
+<li class="sidebar__item active">
+<a class="sidebar__link" href="school-profilings.html">
+<span class="sidebar__link-text">Profiling Sekolah</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="test.html">
+<span class="sidebar__link-text">Tes Potensi Siswa</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="tryouts.html">
+<span class="sidebar__link-text">Tryout</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<main class="main">
+<div class="container">
+<div class="modal" id="filter__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Filter Lain</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<form method="GET" onsubmit="addParams(event)">
+<div class="modal__body">
+<div class="modal__content-input">
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__year">Tahun Ajaran
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__year" name="filter[year]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Tahun Ajaran --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Tahun Ajaran --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Tahun Ajaran --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__year-item-choice-1" role="option">-- Pilih Tahun Ajaran --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="2024" id="choices--select__year-item-choice-2" role="option">
+                        2024
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="2023" id="choices--select__year-item-choice-3" role="option">
+                        2023
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="2022" id="choices--select__year-item-choice-4" role="option">
+                        2022
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="2021" id="choices--select__year-item-choice-5" role="option">
+                        2021
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__type">Jenis Sekolah
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__type" name="filter[type]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Jenis Sekolah --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Jenis Sekolah --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Jenis Sekolah --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__type-item-choice-1" role="option">-- Pilih Jenis Sekolah --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="SMA" id="choices--select__type-item-choice-2" role="option">
+                        Sekolah Menengah Atas
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="SMK" id="choices--select__type-item-choice-3" role="option">
+                        Sekolah Menengah Kejuruan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="MA" id="choices--select__type-item-choice-4" role="option">
+                        Madrasah Aliyah
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="MAK" id="choices--select__type-item-choice-5" role="option">
+                        Madrasah Aliyah Kejuruan
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__status">Status
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__status" name="filter[status]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Status --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Status --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Status --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__status-item-choice-1" role="option">-- Pilih Status --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="state" id="choices--select__status-item-choice-2" role="option">
+                        Negeri
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="private" id="choices--select__status-item-choice-3" role="option">
+                        Swasta
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="modal modal_confirmation-error" id="delete__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Hapus Data Sekolah</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<p>Apakah anda yakin ingin menghapus sekolah ini?</p>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<form enctype="multipart/form-data" method="POST" x-on:set-delete.window="$el.action = $event.detail.action">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="DELETE"/> <button class="btn btn_destructive w-full" type="submit">
+<span class="btn__text !font-medium">
+            Hapus
+        </span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" id="import__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Import Data Prospek</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<div class="modal__content-input">
+<form action="#" data-mockup-unresolved="/crm/import" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <div class="grid">
+<div class="col-12">
+<a class="btn btn_outline" data-mockup-unresolved="/assets/backend/excel/template-data-sekolah.xlsx" href="#">
+<span class="icon icon-arrow-down-tray-solid"></span>
+<span class="btn__text !font-medium">
+            Unduh Template Import
+        </span>
+</a>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__file">File Data Sekolah
+                            <span class="important">*</span>
+</label>
+<iframe class="mb-2 hidden h-[500px] w-full rounded-lg" frameborder="0" id="iframe-input__file" src="./Sevima CRM _ Profiling Sekolah_files/saved_resource.html">
+</iframe>
+<label for="input__file">
+<img alt="preview" class="mb-2 hidden aspect-video w-full max-w-sm cursor-pointer rounded-lg border bg-slate-300 object-contain hover:brightness-50" id="preview-input__file" src="_assets/captured-images/school-profilings"/>
+</label>
+<div class="form-control__group">
+<div class="upload-draggable upload-draggable_inline">
+<div class="upload-draggable__box-inline">
+<input accept=".xls,.xlsx" class="upload-draggable__file-input" id="input__file" name="file_school" required="true" type="file"/>
+<div class="upload-draggable__inline-wrapper">
+<label class="upload-draggable__icon">
+<span class="icon icon-cloud-arrow-up"></span>
+</label>
+<div class="upload-draggable__wrapper">
+<h2 class="upload-draggable__title">
+                            Klik untuk pilih file
+                            <span class="upload-draggable__subtitle">
+                                atau seret file ke sini
+                            </span>
+</h2>
+<p class="upload-draggable__support">
+                            XLS atau XLSX
+                        </p>
+</div>
+</div>
+</div>
+<div class="upload-draggable__success line-clamp-1 break-all">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<button class="btn btn_primary w-full" disabled="" type="submit">
+<span class="btn__text !font-medium">
+            Simpan
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="main__header">
+<div class="main__location">
+<div class="main__wrapper">
+<h1 class="main__title">Profiling Sekolah</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+<button class="btn btn_primary" data-target="#import__modal" data-toggle="modal">
+<span class="icon icon-arrow-down-tray"></span>
+<span class="btn__text !font-medium">
+            Import Data Sekolah
+        </span>
+</button>
+</div>
+</div>
+<div class="card card_detail-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-cube-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Total Pendaftar Sekolah 2024</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="grid">
+<div class="col-6 col-md-3">
+<div class="flex h-full flex-col overflow-hidden rounded-lg bg-slate-100 hover:brightness-90">
+<div class="flex flex-row flex-wrap items-center gap-2 bg-blue-600 p-2">
+<div class="flex flex-row items-center justify-center rounded-full border bg-white p-2">
+<span class="icon icon-users-solid"></span>
+</div>
+<span class="font-semibold text-white">SMA</span>
+<div class="ml-auto font-medium text-white">
+                                    140
+                                    Mahasiswa
+                                </div>
+</div>
+<div class="mt-auto flex flex-col gap-2 p-2">
+<span class="flex flex-row items-center gap-2 font-semibold">
+<span class="icon icon-building-office-2-solid"></span>
+                                    SMA Negeri 84 Jakarta
+                                </span>
+<span class="flex flex-row items-center gap-2 font-semibold">
+<span class="icon icon-users-solid"></span>
+                                    89 Mahasiswa
+                                </span>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<div class="flex h-full flex-col overflow-hidden rounded-lg bg-slate-100 hover:brightness-90">
+<div class="flex flex-row flex-wrap items-center gap-2 bg-blue-600 p-2">
+<div class="flex flex-row items-center justify-center rounded-full border bg-white p-2">
+<span class="icon icon-users-solid"></span>
+</div>
+<span class="font-semibold text-white">SMK</span>
+<div class="ml-auto font-medium text-white">
+                                    12
+                                    Mahasiswa
+                                </div>
+</div>
+<div class="mt-auto flex flex-col gap-2 p-2">
+<span class="flex flex-row items-center gap-2 font-semibold">
+<span class="icon icon-building-office-2-solid"></span>
+                                    SMK PGRI 23 Jakarta
+                                </span>
+<span class="flex flex-row items-center gap-2 font-semibold">
+<span class="icon icon-users-solid"></span>
+                                    12 Mahasiswa
+                                </span>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<div class="flex h-full flex-col overflow-hidden rounded-lg bg-slate-100 hover:brightness-90">
+<div class="flex flex-row flex-wrap items-center gap-2 bg-blue-600 p-2">
+<div class="flex flex-row items-center justify-center rounded-full border bg-white p-2">
+<span class="icon icon-users-solid"></span>
+</div>
+<span class="font-semibold text-white">MA</span>
+<div class="ml-auto font-medium text-white">
+                                    11
+                                    Mahasiswa
+                                </div>
+</div>
+<div class="mt-auto flex flex-col gap-2 p-2">
+<span class="flex flex-row items-center gap-2 font-semibold">
+<span class="icon icon-building-office-2-solid"></span>
+                                    MAN 17 Jakarta
+                                </span>
+<span class="flex flex-row items-center gap-2 font-semibold">
+<span class="icon icon-users-solid"></span>
+                                    11 Mahasiswa
+                                </span>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<div class="flex h-full flex-col overflow-hidden rounded-lg bg-slate-100 hover:brightness-90">
+<div class="flex flex-row flex-wrap items-center gap-2 bg-blue-600 p-2">
+<div class="flex flex-row items-center justify-center rounded-full border bg-white p-2">
+<span class="icon icon-users-solid"></span>
+</div>
+<span class="font-semibold text-white">MAK</span>
+<div class="ml-auto font-medium text-white">
+                                    82
+                                    Mahasiswa
+                                </div>
+</div>
+<div class="mt-auto flex flex-col gap-2 p-2">
+<span class="flex flex-row items-center gap-2 font-semibold">
+<span class="icon icon-building-office-2-solid"></span>
+                                    MAK UNGGULAN INFORMATIKA
+                                </span>
+<span class="flex flex-row items-center gap-2 font-semibold">
+<span class="icon icon-users-solid"></span>
+                                    82 Mahasiswa
+                                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card card_detail-default" id="card__chart">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-presentation-chart-line-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Grafik Tren Pendaftaran</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col gap-4">
+<div>
+<div class="flex flex-col items-center justify-center gap-4">
+<img alt="empty" class="lazy object-cover entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/empty-state.webp" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/empty-state.webp"/>
+<div class="empty-list__content my-4">
+<h1 class="text-center">Pilih Sekolah untuk melihat grafik</h1>
+<p class="text-center">Silakan pilih sekolah terlebih dahulu untuk melihat grafik tren pendaftaran 5 tahun terakhir</p>
+</div>
+</div>
+</div>
+<form enctype="multipart/form-data" method="GET" onsubmit="addParams(event)">
+<div class="grid">
+<div class="col-12 col-sm-3">
+<div class="form-control">
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__top_school_1" name="filter[top_school_1]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Sekolah --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Sekolah --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Sekolah --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__top_school_1-item-choice-1" role="option">-- Pilih Sekolah --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="10138" id="choices--select__top_school_1-item-choice-2" role="option">
+                        MAN 17 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="16214" id="choices--select__top_school_1-item-choice-3" role="option">
+                        SMA Karang Turi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="25692" id="choices--select__top_school_1-item-choice-4" role="option">
+                        SMA Negeri 23 Bandung
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="26973" id="choices--select__top_school_1-item-choice-5" role="option">
+                        SMA Negeri 84 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="44175" id="choices--select__top_school_1-item-choice-6" role="option">
+                        SMK PGRI 23 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="45615" id="choices--select__top_school_1-item-choice-7" role="option">
+                        MAK UNGGULAN INFORMATIKA
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-3">
+<div class="form-control">
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__top_school_2" name="filter[top_school_2]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Sekolah --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Sekolah --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Sekolah --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__top_school_2-item-choice-1" role="option">-- Pilih Sekolah --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="10138" id="choices--select__top_school_2-item-choice-2" role="option">
+                        MAN 17 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="16214" id="choices--select__top_school_2-item-choice-3" role="option">
+                        SMA Karang Turi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="25692" id="choices--select__top_school_2-item-choice-4" role="option">
+                        SMA Negeri 23 Bandung
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="26973" id="choices--select__top_school_2-item-choice-5" role="option">
+                        SMA Negeri 84 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="44175" id="choices--select__top_school_2-item-choice-6" role="option">
+                        SMK PGRI 23 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="45615" id="choices--select__top_school_2-item-choice-7" role="option">
+                        MAK UNGGULAN INFORMATIKA
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-3">
+<div class="form-control">
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__top_school_3" name="filter[top_school_3]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Sekolah --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Sekolah --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Sekolah --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__top_school_3-item-choice-1" role="option">-- Pilih Sekolah --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="10138" id="choices--select__top_school_3-item-choice-2" role="option">
+                        MAN 17 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="16214" id="choices--select__top_school_3-item-choice-3" role="option">
+                        SMA Karang Turi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="25692" id="choices--select__top_school_3-item-choice-4" role="option">
+                        SMA Negeri 23 Bandung
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="26973" id="choices--select__top_school_3-item-choice-5" role="option">
+                        SMA Negeri 84 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="44175" id="choices--select__top_school_3-item-choice-6" role="option">
+                        SMK PGRI 23 Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="45615" id="choices--select__top_school_3-item-choice-7" role="option">
+                        MAK UNGGULAN INFORMATIKA
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-3">
+<button class="btn btn_primary w-full" type="submit">
+<span class="icon icon-arrows-right-left-solid"></span>
+<span class="btn__text !font-medium">
+            Bandingkan
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="card card_table">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-building-office-2-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Daftar Seluruh Sekolah</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="box-table">
+<div class="box-table__header">
+<div class="!grid grid-cols-12 gap-4">
+<div class="col-span-12 lg:col-span-4">
+<form enctype="multipart/form-data" method="GET" onsubmit="addParams(event)">
+<div class="form-control">
+<div class="form-control__group">
+<span data-input-icon="search"></span>
+<input class="form-control__input" id="input__search" name="filter[search]" placeholder="Cari data sekolah" type="search" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</form>
+</div>
+<div class="col-span-12 lg:col-span-8">
+<div class="flex flex-row items-center justify-end gap-4">
+<button class="btn btn_outline w-full lg:w-max" data-target="#filter__modal" data-toggle="modal">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+<span class="icon icon-funnel-solid"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="school-profilings.html">
+<span class="icon icon-arrow-path"></span>
+<span class="btn__text !font-medium">
+            Reset Filter
+        </span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="box-table__content">
+<div class="table-max" id="table-max" style="--qn-table-cell-action-width: 141.33440000000002px; --qn-table-shadow-right-bottom-offset: 0px;">
+<table>
+<thead>
+<tr>
+<th class="">
+            Nama Sekolah
+    </th>
+<th class="text-center">
+            Tipe Sekolah
+    </th>
+<th class="text-center">
+            Jenis Sekolah
+    </th>
+<th class="text-center cell-sorting" onclick="sortBy('year')">
+            Tahun Ajaran
+    </th>
+<th class="text-center cell-sorting" onclick="sortBy('number_of_college_students')">
+            Jumlah Mahasiswa
+    </th>
+<th class="cell-action">
+            Aksi
+    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            SMA Negeri 84 Jakarta
+                        </h3>
+</td>
+<td class="text-center">
+                        SMA
+                    </td>
+<td class="text-center">
+                        Negeri
+                    </td>
+<td class="text-center">2024</td>
+<td class="text-center">89 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            MAK UNGGULAN INFORMATIKA
+                        </h3>
+</td>
+<td class="text-center">
+                        MAK
+                    </td>
+<td class="text-center">
+                        Negeri
+                    </td>
+<td class="text-center">2024</td>
+<td class="text-center">82 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            SMA Karang Turi
+                        </h3>
+</td>
+<td class="text-center">
+                        SMA
+                    </td>
+<td class="text-center">
+                        Swasta
+                    </td>
+<td class="text-center">2024</td>
+<td class="text-center">27 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            SMA Negeri 23 Bandung
+                        </h3>
+</td>
+<td class="text-center">
+                        SMA
+                    </td>
+<td class="text-center">
+                        Negeri
+                    </td>
+<td class="text-center">2024</td>
+<td class="text-center">24 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            SMK PGRI 23 Jakarta
+                        </h3>
+</td>
+<td class="text-center">
+                        SMK
+                    </td>
+<td class="text-center">
+                        Swasta
+                    </td>
+<td class="text-center">2024</td>
+<td class="text-center">12 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            MAN 17 Jakarta
+                        </h3>
+</td>
+<td class="text-center">
+                        MA
+                    </td>
+<td class="text-center">
+                        Negeri
+                    </td>
+<td class="text-center">2024</td>
+<td class="text-center">11 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            SMA Negeri 84 Jakarta
+                        </h3>
+</td>
+<td class="text-center">
+                        SMA
+                    </td>
+<td class="text-center">
+                        Negeri
+                    </td>
+<td class="text-center">2023</td>
+<td class="text-center">77 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            MAK UNGGULAN INFORMATIKA
+                        </h3>
+</td>
+<td class="text-center">
+                        MAK
+                    </td>
+<td class="text-center">
+                        Negeri
+                    </td>
+<td class="text-center">2023</td>
+<td class="text-center">44 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            SMA Karang Turi
+                        </h3>
+</td>
+<td class="text-center">
+                        SMA
+                    </td>
+<td class="text-center">
+                        Swasta
+                    </td>
+<td class="text-center">2023</td>
+<td class="text-center">38 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            SMA Negeri 23 Bandung
+                        </h3>
+</td>
+<td class="text-center">
+                        SMA
+                    </td>
+<td class="text-center">
+                        Negeri
+                    </td>
+<td class="text-center">2023</td>
+<td class="text-center">23 Mahasiswa</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-tooltip="Lihat Detail" href="school-profilings-45615.html">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="box-table__footer">
+<div class="box-table__action">
+<div class="box-table__action-left">
+<p class="box-table__result">
+                Menampilkan
+                <b>1-10</b> dari Total 19
+                data
+            </p>
+</div>
+<div class="box-table__action-right">
+<div class="pagination">
+<button class="pagination__button-previous" disabled="">
+</button>
+<ul class="pagination__list" data-mobile-text="Halaman 1 dari 2">
+<li class="pagination__item active">1</li>
+<li class="pagination__item"><a href="school-profilings.html">2</a>
+</li>
+</ul>
+<a class="pagination__button-next" href="school-profilings.html">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/chart.js"></script><script>
+            //convert topSchoolChart to js object
+            let chartData = {"labels":[],"datas":[]};
+
+            chartData = {
+                labels: chartData.labels,
+                datasets: Object.entries(chartData.datas).map(([label, data]) => ({
+                    label,
+                    data: chartData.labels.map((year) => data[year] || 0),
+                    borderWidth: 2,
+                    pointRadius: 6,
+                    pointBorderColor: '#FFFFFF',
+                    pointBackgroundColor: data.backgroundColor,
+                    borderColor: data.backgroundColor,
+                    backgroundColor: data.backgroundColor,
+                })),
+            };
+
+            const ctxTrendRegistration = document.getElementById('chart__trend').getContext('2d');
+            const chartTrendRegistration = new Chart(ctxTrendRegistration, {
+                type: 'line',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += context.parsed.y + ' Mahasiswa';
+                                    }
+                                    return label;
+                                },
+                            },
+                        },
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 10,
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: '#E5E5EA',
+                            },
+                            border: {
+                                display: false,
+                            },
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#E5E5EA',
+                            },
+                            border: {
+                                display: false,
+                            },
+                            ticks: {
+                                stepSize: 1,
+                                autoSkip: false,
+                            },
+                        },
+                    },
+                },
+            });
+        </script><script src="_assets/mockup-interactions.js"></script></body></html>

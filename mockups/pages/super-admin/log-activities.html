@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Log Aktivitas</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template">
+<div class="header__row-wrapper">
+<div class="header__group"><button aria-label="Toggle sidebar" class="header__sidebar-nav header__sidebar-nav_simple"><span class="icon icon-bars-3-bottom-left-solid"></span></button>
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="header__logo" src="_assets/captured-images/mk-crm-logo-mini.webp"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Sevima Platform</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="dropdown dropdown_nav dropdown_profile">
+<button class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="../crm/super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="log-activities.html">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="interested-users.html">
+                                        Pengajuan Pendaftaran
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="consultations.html">
+                                        Konsultasi
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="subscriptions.html">
+                                        Subscription
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="log-activities.html">
+<span>Data</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Data</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-users.html">
+                                        Pengguna
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-majors.html">
+                                        Jurusan Umum
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-categories.html">
+                                        Kategori Jurusan
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-jobs.html">
+                                        Prospek Kerja
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-schools.html">
+                                        Sekolah Asal
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="scholarships.html">
+                                        Beasiswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="banners.html">
+                                        Banner
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="modules.html">
+                                        Modul Fitur
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="log-activities.html">
+<span>Tes Maukuliah</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Tes Maukuliah</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="test.html">
+                                        Tes Potensi Siswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">
+                                        Tryout
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="log-activities.html">
+<span>Log</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Log</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/applications" href="#">
+                                        Log Aplikasi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/accesses" href="#">
+                                        Log Akses
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-activities.html">
+                                        Log Aktivitas
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-modules.html">
+                                        Log Penggunaan Modul
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<aside class="sidebar sidebar_without-icon sidebar_without-scroll">
+<div class="sidebar__group">
+<div class="sidebar__group-header">
+<span class="sidebar__group-title">Log Maukuliah</span>
+</div>
+<ul class="sidebar__list">
+<li class="sidebar__item">
+<a class="sidebar__link" data-mockup-unresolved="/super-admin/log/applications" href="#">
+<span class="sidebar__link-text">Log Aplikasi</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" data-mockup-unresolved="/super-admin/log/accesses" href="#">
+<span class="sidebar__link-text">Log Akses</span>
+</a>
+</li>
+<li class="sidebar__item active">
+<a class="sidebar__link" href="log-activities.html">
+<span class="sidebar__link-text">Log Aktivitas</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="log-modules.html">
+<span class="sidebar__link-text">Log Penggunaan Modul</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<main class="main">
+<div class="container">
+<div class="modal" id="filter__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Filter Lain</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<form method="GET" onsubmit="addParams(event)">
+<div class="modal__body">
+<div class="modal__content-input">
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__weight">Bobot
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__weight" name="filter[activity_weight]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Bobot --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Bobot --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Bobot --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__weight-item-choice-1" role="option">-- Pilih Bobot --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="low" id="choices--select__weight-item-choice-2" role="option">
+                        Rendah
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="medium" id="choices--select__weight-item-choice-3" role="option">
+                        Sedang
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="high" id="choices--select__weight-item-choice-4" role="option">
+                        Tinggi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__status">Tipe
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__status" name="filter[activity_type]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Tipe --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Tipe --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Tipe --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__status-item-choice-1" role="option">-- Pilih Tipe --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="view" id="choices--select__status-item-choice-2" role="option">
+                        Lihat
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="click" id="choices--select__status-item-choice-3" role="option">
+                        Klik
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="download" id="choices--select__status-item-choice-4" role="option">
+                        Unduh
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="take" id="choices--select__status-item-choice-5" role="option">
+                        Melakukan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="action" id="choices--select__status-item-choice-6" role="option">
+                        Aksi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__start-date">Tanggal Awal
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__start-date" max="" name="filter[start_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__end-date">Tanggal Akhir
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__end-date" min="" name="filter[end_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="modal modal_confirmation-error" id="delete__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Hapus Data Log Aktivitas</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<div class="modal__body">
+<p>Apakah anda yakin ingin menghapus log aktivitas ini?</p>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<form enctype="multipart/form-data" method="POST" x-on:set-delete.window="$el.action = $event.detail.action">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="DELETE"/> <button class="btn btn_destructive w-full" type="submit">
+<span class="btn__text !font-medium">
+            Hapus
+        </span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="main__header">
+<div class="main__location">
+<div class="main__wrapper">
+<h1 class="main__title">Log Aktivitas</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+<a class="btn btn_primary" data-mockup-unresolved="/super-admin/log/activities/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+<span class="btn__text !font-medium">
+            Pengaturan
+        </span>
+</a>
+</div>
+</div>
+<div class="card card_table">
+<div class="card__body">
+<div class="box-table">
+<div class="box-table__header">
+<div class="!grid grid-cols-12 gap-4">
+<div class="col-span-12 lg:col-span-4">
+<form enctype="multipart/form-data" method="GET" onsubmit="addParams(event)">
+<div class="form-control">
+<div class="form-control__group">
+<span data-input-icon="search"></span>
+<input class="form-control__input" id="input__search" name="filter[search]" placeholder="Cari data log aktivitas" type="search" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</form>
+</div>
+<div class="col-span-12 lg:col-span-8">
+<div class="flex flex-row items-center justify-end gap-4">
+<button class="btn btn_outline w-full lg:w-max" data-target="#filter__modal" data-toggle="modal">
+<span class="btn__text !font-medium">
+            09 Jun 2026 -
+                                09 Jul 2026
+        </span>
+<span class="icon icon-funnel-solid"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="log-activities.html">
+<span class="icon icon-arrow-path"></span>
+<span class="btn__text !font-medium">
+            Reset Filter
+        </span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="box-table__content">
+<div class="table-max" id="table-max" style="--qn-table-cell-action-width: 124.3344px; --qn-table-shadow-right-bottom-offset: 0px;">
+<table>
+<thead>
+<tr>
+<th class="">
+            Pengunjung
+    </th>
+<th class="">
+            Aktivitas
+    </th>
+<th class="text-center">
+            Tipe Aktivitas
+    </th>
+<th class="text-center">
+            Bobot
+    </th>
+<th class="text-center cell-sorting" onclick="sortBy('point')">
+            Poin
+    </th>
+<th class="text-center cell-sorting" onclick="sortBy('created_at')">
+            Tanggal Aktivitas
+    </th>
+<th class="cell-action">
+            Aksi
+    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Azka Saqinah</h3>
+<span class="cell-double__subtitle">maukuliah-RkYHOycUbw</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">do-finishing-riasec-test</h3>
+<span class="cell-double__subtitle">Menyelesaikan Tes Minat Bakat</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Melakukan
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-success">
+    Tinggi
+</span>
+</div>
+</td>
+<td class="text-center">4</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745234" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Guest</h3>
+<span class="cell-double__subtitle">maukuliah-DIIlWXjXov</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">view-university-major</h3>
+<span class="cell-double__subtitle">Lihat Detail Program Studi</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Lihat
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Rendah
+</span>
+</div>
+</td>
+<td class="text-center">1</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745233" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Sopi nurfitrianti</h3>
+<span class="cell-double__subtitle">maukuliah-62ibOQHdai</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">do-finishing-riasec-test</h3>
+<span class="cell-double__subtitle">Menyelesaikan Tes Minat Bakat</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Melakukan
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-success">
+    Tinggi
+</span>
+</div>
+</td>
+<td class="text-center">4</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745232" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Eldiya Nesa</h3>
+<span class="cell-double__subtitle">maukuliah-MTrSDPBeOw</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">do-riasec-test</h3>
+<span class="cell-double__subtitle">Mengerjakan Tes Minat Bakat</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Melakukan
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-warning">
+    Sedang
+</span>
+</div>
+</td>
+<td class="text-center">2</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745231" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Guest</h3>
+<span class="cell-double__subtitle">maukuliah-aUAW82IvW3</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">view-university-major</h3>
+<span class="cell-double__subtitle">Lihat Detail Program Studi</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Lihat
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Rendah
+</span>
+</div>
+</td>
+<td class="text-center">1</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745230" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Guest</h3>
+<span class="cell-double__subtitle">maukuliah-aUAW82IvW3</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">view-university</h3>
+<span class="cell-double__subtitle">Lihat Profil Kampus</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Lihat
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Rendah
+</span>
+</div>
+</td>
+<td class="text-center">1</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745229" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Abdurrohman Rosyadi</h3>
+<span class="cell-double__subtitle">maukuliah-bozIp8pTqX</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">do-learning-style-test</h3>
+<span class="cell-double__subtitle">Mengerjakan Tes Gaya Belajar</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Melakukan
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-warning">
+    Sedang
+</span>
+</div>
+</td>
+<td class="text-center">2</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745228" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Azka Saqinah</h3>
+<span class="cell-double__subtitle">maukuliah-RkYHOycUbw</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">do-riasec-test</h3>
+<span class="cell-double__subtitle">Mengerjakan Tes Minat Bakat</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Melakukan
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-warning">
+    Sedang
+</span>
+</div>
+</td>
+<td class="text-center">2</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745227" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Azka Saqinah</h3>
+<span class="cell-double__subtitle">maukuliah-RkYHOycUbw</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">do-riasec-test</h3>
+<span class="cell-double__subtitle">Mengerjakan Tes Minat Bakat</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Melakukan
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-warning">
+    Sedang
+</span>
+</div>
+</td>
+<td class="text-center">2</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745226" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="cell-double">
+<h3 class="cell-double__title">Guest</h3>
+<span class="cell-double__subtitle">maukuliah-6piwBhp4tu</span>
+</td>
+<td class="cell-double">
+<h3 class="cell-double__title">view-university-major</h3>
+<span class="cell-double__subtitle">Lihat Detail Program Studi</span>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Lihat
+</span>
+</div>
+</td>
+<td>
+<div class="flex flex-row items-center justify-center">
+<span class="badge badge_sm badge_secondary-default">
+    Rendah
+</span>
+</div>
+</td>
+<td class="text-center">1</td>
+<td class="text-center">09 Juli 2026</td>
+<td class="cell-action">
+<div class="flex flex-row items-center justify-center gap-1">
+<a class="btn btn_outline btn_icon" data-mockup-unresolved="/super-admin/log/activities/1745225" data-tooltip="Lihat" href="#">
+<span class="icon icon-eye-solid"></span>
+</a>
+<button class="btn btn_outline btn_icon" data-mockup-confirm="Yakin ingin menghapus data ini? (mockup - tidak tersambung ke server)" data-target="#delete__modal" data-toggle="modal" data-tooltip="Hapus" x-on:click="$dispatch('set-delete', {action: '#'});">
+<span class="icon icon-trash-solid"></span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="box-table__footer">
+<div class="box-table__action">
+<div class="box-table__action-left">
+<p class="box-table__result">
+                Menampilkan
+                <b>1-10</b> dari Total 47317
+                data
+            </p>
+</div>
+<div class="box-table__action-right">
+<div class="pagination">
+<button class="pagination__button-previous" disabled="">
+</button>
+<ul class="pagination__list" data-mobile-text="Halaman 1 dari 4732">
+<li class="pagination__item active">1</li>
+<li class="pagination__item"><a href="log-activities.html">2</a>
+</li>
+<li class="pagination__item"><a href="log-activities.html">3</a>
+</li>
+<li class="pagination__item"><a href="log-activities.html">4</a>
+</li>
+<li class="pagination__item"><a href="log-activities.html">5</a>
+</li>
+<li class="pagination__item"><a href="log-activities.html">6</a>
+</li>
+<li class="pagination__item"><a href="log-activities.html">7</a>
+</li>
+<li class="pagination__item"><a href="log-activities.html">8</a>
+</li>
+<li class="pagination__item"><a href="log-activities.html">9</a>
+</li>
+<li class="pagination__item"><a href="log-activities.html">10</a>
+</li>
+<li class="pagination__ellipsis">...</li>
+<li class="pagination__item"><a href="log-activities.html">4731</a>
+</li>
+<li class="pagination__item"><a href="log-activities.html">4732</a>
+</li>
+</ul>
+<a class="pagination__button-next" href="log-activities.html">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

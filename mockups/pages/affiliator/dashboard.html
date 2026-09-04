@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Dashboard</title>
+
+<meta content="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template">
+<div class="header__row-wrapper">
+<div class="header__group">
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="lazy object-cover header__logo !rounded-lg entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1779420063-fowvtXxSk0.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Universitas Sentra Vidya Utama</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="header__action">
+<div class="dropdown dropdown_nav dropdown_notification">
+<button aria-expanded="false" class="btn btn_icon btn_nav !border-white/50" data-toggle="dropdown" id="qn-nav-notification">
+<span class="icon icon-bell-solid"></span>
+</button>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 z-10 !hidden md:!flex">
+            9+
+        </span>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 !hidden animate-ping md:!flex">
+            9+
+        </span>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="notification">
+<div class="notification__header">
+<div class="notification__wrapper">
+<h3 class="notification__title"><span class="icon icon-x-mark-mini" data-toggle="dropdown"></span>
+                        Notifikasi
+                    </h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/mark-all-as-read" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__header-btn" type="submit">
+                                Tandai Sudah Dibaca Semua
+                            </button>
+</form>
+</div>
+<nav class="nav-tab">
+<ul class="nav-tab__wrapper">
+<li class="nav-tab__item active" data-target="#notification-general-section" data-toggle="tab">
+                            Semua
+                                                            <span class="badge badge_sm badge_secondary-primary">
+    9+
+</span>
+</li>
+</ul>
+</nav>
+</div>
+<div class="notification__body">
+<div class="notification__section p-0 active" id="notification-general-section">
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 20 Mei 2026</h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/103aacd2-2d37-4757-befc-3b44901f289a" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>akun desin testing</b> mengajukan pendaftaran menggunakan kode afiliasi Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Senin, 27 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/e6daddac-3d6f-4c83-bdfd-c0cb8b5c41cf" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+                                                    Profil afiliator anda telah diperbarui oleh admin. Silakan cek kembali profil anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Perubahan Profil oleh Admin
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/5b7dc113-7776-46a6-aad2-e76593739f75" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User test Tolak</b> mengajukan pendaftaran menggunakan kode afiliasi Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Selasa, 21 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/f70d4f49-9786-469d-af61-881969c14449" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User Testing Daftar Affliator</b> mengajukan pendaftaran menggunakan kode afiliasi Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Selasa, 31 Mar 2026</h3>
+<form action="#" data-mockup-unresolved="/affiliator/notifications/read/b6b85ed6-9a5f-497d-9c44-b2bb6d244e05" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+                                                    Profil afiliator anda telah diperbarui oleh admin. Silakan cek kembali profil anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    3 bulan yang lalu -
+                                                    Perubahan Profil oleh Admin
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="notification__footer">
+<a class="notification__footer-btn mx-auto" data-mockup-unresolved="/affiliator/notifications" href="#">
+                    Lihat semua
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dropdown dropdown_nav dropdown_profile">
+<button aria-expanded="false" class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Desintya Sevima">
+<p class="avatar__acronym">De</p></span>
+<span class="header__switch-avatar-name">Desintya Sevima</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Desintya Sevima">
+<p class="avatar__acronym">De</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Desintya Sevima</span>
+<span class="avatar__subtitle">
+                                        Afiliator
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/affiliator/onboarding" href="#">
+<span class="icon icon-arrow-path-rounded-square-solid"></span>
+                                        Ganti Kampus Afiliasi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="profile-change-password.html">
+<span class="icon icon-key-solid"></span>
+                                    Ganti Password
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="prospects.html">
+<span>Manajemen Prospek</span>
+</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="affiliates.html">
+<span>Afiliasi Saya</span>
+</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="payment-histories.html">
+<span>Riwayat Pembayaran</span>
+</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="marketing-kit.html">
+<span>Marketing Kit</span>
+<span class="icon icon-sparkles-solid"></span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<main class="main">
+<div class="container">
+<div class="modal" id="filter__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Filter Lain</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<form method="GET" onsubmit="addParams(event)">
+<div class="modal__body">
+<div class="modal__content-input">
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__time-period">Periode Waktu
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__time-period" name="filter[time_period]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Periode Waktu --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Periode Waktu --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Periode Waktu --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__time-period-item-choice-1" role="option">-- Pilih Periode Waktu --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="daily" id="choices--select__time-period-item-choice-2" role="option">
+                        Harian
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="weekly" id="choices--select__time-period-item-choice-3" role="option">
+                        Mingguan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="monthly" id="choices--select__time-period-item-choice-4" role="option">
+                        Bulanan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="annually" id="choices--select__time-period-item-choice-5" role="option">
+                        Tahunan
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__start-date">Tanggal Awal
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__start-date" max="" name="filter[start_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__end-date">Tanggal Akhir
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__end-date" min="" name="filter[end_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="main__header">
+<div class="main__location">
+<div class="main__wrapper">
+<h1 class="main__title">Dashboard</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+<button class="btn btn_outline w-full lg:w-max" data-target="#filter__modal" data-toggle="modal">
+<span class="btn__text !font-medium">
+            09 Jun 2026 -
+                09 Jul 2026
+        </span>
+<span class="icon icon-funnel-solid"></span>
+</button>
+<a class="btn btn_primary" href="dashboard.html">
+<span class="btn__text !font-medium">
+            Perbarui Data
+        </span>
+<span class="icon icon-arrow-path"></span>
+</a>
+</div>
+</div>
+</div>
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-qr-code-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Kode Afiliasi</h2>
+</div>
+</div>
+<div class="card__header-right">
+<div class="dropdown">
+<button aria-expanded="false" class="btn btn_outline" data-toggle="dropdown">
+<span class="icon icon-share-solid"></span>
+<span class="btn__text !font-medium">
+            Bagikan
+        </span>
+</button>
+<ul class="dropdown__list dropdown__list_menu-end">
+<li class="dropdown__item">
+<a href="dashboard.html" onclick="copyCode('DES11')">
+                            Salin Kode
+                        </a>
+</li>
+<li class="dropdown__item">
+<a href="dashboard.html" onclick="copyLink('DES11')">
+                            Salin Link
+                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/send" href="#" target="_blank">
+                            Bagikan ke Whatsapp
+                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/sharer/sharer.php" href="#" target="_blank">
+                            Bagikan ke Facebook
+                        </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/intent/tweet" href="#" target="_blank">
+                            Bagikan ke Twitter/X
+                        </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="grid">
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="relative flex flex-col flex-wrap gap-2 rounded-lg bg-slate-900 p-4">
+<svg class="absolute inset-0 z-0 opacity-10" height="100%" id="patternId" width="100%" xmlns="#">
+<defs>
+<pattern height="173.21" id="a" patterntransform="scale(2) rotate(0)" patternunits="userSpaceOnUse" width="100">
+<rect fill="hsla(0, 0%, 100%, 0)" height="100%" width="100%" x="0" y="0"></rect>
+<path d="M0 0v4.74L2.73 0zm4.14 0 6.44 11.15 2.38-4.12L8.9 0zm23.81 0 .49.84h-14.3l2.39 4.13h11.9l-7.14 12.37h4.77L34.39 2.9 32.71 0zm9.52 0 .49.84h19.05l7.14 12.37H49.87l2.38 4.13h11.9l-7.14 12.37h4.76l8.34-14.44L61.28 0zm28.57 0 7.64 13.21h19.04l7.15 12.37h-14.3l2.39 4.13h11.9l-7.14 12.37h4.77l2.5-4.34V17.57l-3.7-6.42 3.7-6.41V0h-2.01l-5.25 9.1H78.44L83.7 0h-4.77l-4.06 7.03L70.81 0zm22.41 0-2.87 4.97h4.76L93.21 0zm-50.5 4.97-9.51 16.5h-14.3l7.15-12.38h-4.76L10.58 19.4 3.44 7.03l-2.39 4.12 8.34 14.43h19.05l7.14 12.38H21.29l2.39 4.12h11.9l-7.14 12.38h4.75l8.34-14.44-9.52-16.5 7.14-12.37 7.14 12.37 2.38-4.12-5.95-10.3h14.29l-2.38-4.13zm35.72 12.37-9.52 16.5H49.87l7.14-12.38h-4.76l-5.96 10.31-7.14-12.37-2.38 4.12 8.33 14.44h19.05l7.14 12.37H57.01l2.38 4.13h11.9l-7.14 12.37h4.76l8.33-14.44-9.52-16.5 7.14-12.37 7.15 12.38 2.38-4.13-5.95-10.3h14.28l-2.38-4.13zM0 17.57v20.16l5.82-10.08zm9.39 12.14-9.4 16.27v4.57L7 62.71H0v4.12h7L0 78.97v.23h4.63l8.33-14.43-9.52-16.5 7.14-12.37 7.14 12.37 2.38-4.13-5.95-10.3h14.29l-2.38-4.13zm65.47 2.06-2.38 4.13 8.34 14.43h19.05l.13.22v-4.57l-.13.23h-14.3l7.15-12.38h-4.76l-5.95 10.31zM45.1 42.08l-9.52 16.5H21.29l7.15-12.37h-4.76l-5.96 10.3-7.14-12.37-2.38 4.13 8.33 14.44h19.05l7.14 12.37H28.44l2.38 4.12h11.9l-7.14 12.37h4.76l8.33-14.43-9.52-16.5 7.14-12.37 7.15 12.37 2.38-4.12-5.95-10.31h14.28l-2.38-4.13zm35.72 12.38-9.53 16.49H57.01l7.14-12.37h-4.76l-5.95 10.3-7.15-12.36-2.37 4.12 8.33 14.44h19.04l7.15 12.37h-14.3l2.39 4.12h11.9l-7.14 12.37h4.77l8.33-14.43-9.53-16.5 7.15-12.37 7.14 12.37 2.38-4.12-5.95-10.31h14.29l-2.39-4.12zm11.9 8.25 2.38 4.12h4.9v-4.12zm-76.2 4.12L7 83.33H0v4.12h7l7.15 12.37H0v.23l2.25 3.9h11.9L7 116.31h4.77l8.33-14.43-9.52-16.5 7.14-12.37 7.14 12.37 2.38-4.12-5.95-10.31h14.29l-2.39-4.12zm65.49 2.06-2.38 4.12 8.33 14.44H100v-4.13h-7.28l7.15-12.37H95.1l-5.95 10.3zM100 78.97l-.13.23h.13zm-47.75.23-9.53 16.5H28.44l7.14-12.38h-4.76l-5.96 10.31-7.14-12.37-2.38 4.12 8.34 14.44h19.04l7.15 12.37h-14.3l2.39 4.12h11.9l-7.14 12.37h4.76l8.34-14.43-9.53-16.5 7.15-12.37 7.14 12.38 2.38-4.13-5.95-10.3h14.28l-2.38-4.13zM0 91.57v4.12h7l-2.37-4.12zm87.96 0-9.52 16.5h-14.3l7.15-12.38h-4.76L60.58 106l-7.14-12.37-2.39 4.13 8.34 14.43h19.05l7.14 12.37H71.29l2.38 4.12h11.9l-7.13 12.38h4.76l8.33-14.44-9.52-16.5 7.14-12.36 7.14 12.37 2.38-4.13-5.95-10.3H100v-4.13zm11.9 8.25.14.22v-.22zm-76.18 4.12-9.53 16.5H0v4.12h14.15l7.14 12.37H7l2.39 4.13h11.9l-7.14 12.37h4.76L27.24 139l-9.52-16.5 7.14-12.37 7.15 12.37 2.38-4.13-5.95-10.3h14.28l-2.38-4.13zM89.15 106l-2.38 4.13 8.33 14.43h4.9v-4.12h-.13l.13-.22v-8.26l-3.7 6.41zm-86.9 2.07L0 111.97v8.24l7-12.14zm57.14 8.24-9.52 16.5h-14.3l7.15-12.37h-4.76l-5.95 10.3-7.15-12.37-2.38 4.13 8.34 14.43h19.05l7.14 12.38H42.72l2.38 4.12h11.91l-7.14 12.37h4.76l8.33-14.43-9.52-16.5 7.14-12.37 7.14 12.37 2.39-4.12-5.96-10.31h14.29l-2.38-4.13zm-59.4 12.37v4.13h14.16l-2.38-4.13zm95.11 0-9.52 16.5H71.29l7.14-12.37h-4.75l-5.96 10.31-7.14-12.37-2.38 4.12 8.33 14.44h19.05l7.14 12.37H78.43l2.39 4.12h11.9l-4.27 7.4h4.76l5.46-9.46-9.52-16.5 7.14-12.37 3.7 6.42v-8.26l-.12-.23h.13v-4.13zM0 133.04v8.25l3.44 5.95 2.38-4.12zm30.82 8.02-9.53 16.5H7l7.15-12.38H9.39l-5.95 10.31L0 149.54v8.24l2.25 3.9h19.04l6.66 11.52h4.76l-7.85-13.58 7.15-12.38 7.14 12.38 2.38-4.13-5.95-10.3h14.29l-2.39-4.13zm65.47 2.06-2.38 4.12 6.09 10.55v-8.25zm-29.76 10.3-9.52 16.5H42.72l7.15-12.37H45.1l-5.95 10.32-7.14-12.38-2.38 4.13 7.84 13.58h23.81l-.7-1.21 7.14-12.37 7.14 12.37 2.38-4.12-5.95-10.32h14.29l-2.38-4.12zM2.25 165.8 0 169.7v3.5h2.73l.7-1.21.7 1.21H8.9L7 169.93h14.3l-2.39-4.13zm65.47 2.07-2.38 4.12.7 1.21h4.76zm32.28 1.82-2.03 3.51H100zm-19.18.24-1.9 3.27h4.77l1.89-3.27z" fill="hsla(0, 0%, 100%, 1)" stroke="none" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#a)" height="800%" transform="translate(0,0)" width="800%"></rect>
+</svg>
+<span class="text-2xl font-bold text-white">DES11</span>
+<span class="text text-white">
+                        Aktif sampai:
+                        07 Okt 2026
+                    </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-banknotes-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Estimasi Pengeluaran Komisi Afiliator</h2>
+<span class="header__subtitle">Periode Pendaftaran:
+            09 Jun 2026 -
+            09 Jul 2026</span>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="space-y-5">
+<div class="rounded-lg bg-blue-50 p-4 hover:bg-blue-100 space-y-3">
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+<div class="font-semibold">Total Estimasi</div>
+<span class="text-sm text-gray-400 flex items-center gap-1 cursor-default" title="Belum ada peminat yang menggunakan kode referral Anda pada periode ini">
+                            Belum ada peminat
+                            <span class="icon icon-information-circle-solid"></span>
+</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+<span class="text-xl font-semibold text-blue-600 cursor-default" title="Belum ada peminat yang menggunakan kode referral Anda">
+                            0 Peminat
+                        </span>
+<div class="text-xm text-gray-500 sm:max-w-xs sm:text-right">
+                        Peminat yang menggunakan kode referral Anda.<br/>Segera hubungi mereka agar mendaftar!
+                    </div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="flex flex-col gap-2 rounded-lg bg-red-50 p-4 hover:bg-red-100" title="Referral yang ditolak Admin. Komisi tidak akan diproses.">
+<div class="font-semibold">Tidak Tervalidasi</div>
+<div class="text-xl font-semibold text-red-600">
+                        1 Peminat
+                    </div>
+<div class="text-xm text-gray-600">Referral ditolak</div>
+<hr class="border-dashed"/>
+<div class="text-xs text-gray-500">
+                        Referral yang ditolak Admin. Komisi tidak akan diproses.
+                    </div>
+</div>
+<div class="flex flex-col gap-2 rounded-lg bg-yellow-50 p-4 hover:bg-yellow-100" title="Komisi sudah divalidasi Admin, menunggu proses pembayaran ke rekening Afiliator.">
+<div class="font-semibold">Tervalidasi, Belum Dibayar</div>
+<div class="text-xl font-semibold text-yellow-600">
+                        Rp0
+                    </div>
+<div class="text-xm text-gray-600">0 Peminat</div>
+<hr class="border-dashed"/>
+<div class="text-xs text-gray-500">
+                        Komisi sudah divalidasi Admin, menunggu proses pembayaran ke rekening Afiliator.
+                    </div>
+</div>
+<div class="flex flex-col gap-2 rounded-lg bg-green-50 p-4 hover:bg-green-100" title="Komisi yang sudah berhasil ditransfer ke rekening Afiliator.">
+<div class="font-semibold">Komisi Dibayarkan</div>
+<div class="text-xl font-semibold text-green-600">
+                        Rp0
+                    </div>
+<div class="text-xm text-gray-600">0 Peminat</div>
+<hr class="border-dashed"/>
+<div class="text-xs text-gray-500">
+                        Komisi yang sudah berhasil ditransfer ke rekening Afiliator.
+                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-presentation-chart-line-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Grafik Pengunjung Link Afiliasi</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col items-center justify-center gap-4">
+<img alt="empty" class="lazy object-cover entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/empty-state.webp" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/empty-state.webp"/>
+<div class="empty-list__content my-4">
+<h1 class="text-center">Grafik Total Pengunjung Belum Tersedia</h1>
+<p class="text-center">Belum ada pengunjung yang mengunjungi link affiliasi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-user-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Profil Saya</h2>
+</div>
+</div>
+<div class="card__header-right">
+<a class="btn btn_outline" href="profile-edit.html">
+<span class="icon icon-pencil-solid"></span>
+<span class="btn__text !font-medium">
+            Edit Profil
+        </span>
+</a>
+</div>
+</div>
+<div class="card__body">
+<div class="grid">
+<div class="col-12 col-sm-6 col-lg-6">
+<div class="grid">
+<div class="col-12 col-lg-12">
+<div class="row-data">
+<label class="row-data__name">Nama Afiliator</label>
+<span class="row-data__value">
+<span class="row-data__colon">:</span>
+                                Desintya Sevima
+                            </span>
+</div>
+</div>
+<div class="col-12 col-lg-12">
+<div class="row-data">
+<label class="row-data__name">Email</label>
+<span class="row-data__value">
+<span class="row-data__colon">:</span>
+<a class="text-blue-600" href="mailto:dsintyaafiliator@yopmail.com">dsintyaafiliator@yopmail.com</a>
+</span>
+</div>
+</div>
+<div class="col-12 col-lg-12">
+<div class="row-data">
+<label class="row-data__name">Nomor Telepon/Whatsapp</label>
+<span class="row-data__value">
+<span class="row-data__colon">:</span>
+<a class="text-blue-600" data-mockup-unresolved="/628123456789" href="#" target="_blank">
+                                    08123456789
+                                </a>
+</span>
+</div>
+</div>
+<div class="col-12 col-lg-12">
+<div class="row-data">
+<label class="row-data__name">NIK</label>
+<span class="row-data__value">
+<span class="row-data__colon">:</span>
+                                9999222277778888
+                            </span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-6">
+<div class="grid">
+<div class="col-12 col-lg-12">
+<div class="row-data">
+<label class="row-data__name">Nama Bank</label>
+<span class="row-data__value">
+<span class="row-data__colon">:</span>
+                                OVO
+                            </span>
+</div>
+</div>
+<div class="col-12 col-lg-12">
+<div class="row-data">
+<label class="row-data__name">Nama Pemilik Rekening</label>
+<span class="row-data__value">
+<span class="row-data__colon">:</span>
+                                Desintya Rahma
+                            </span>
+</div>
+</div>
+<div class="col-12 col-lg-12">
+<div class="row-data">
+<label class="row-data__name">No Rekening</label>
+<span class="row-data__value">
+<span class="row-data__colon">:</span>
+                                081234567890
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="A3HWb1zJSN1fZwr99MTXJNvAuPl3mnZc4fLtYSHk" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/chart.js"></script><script>
+            const visitorChart = document.getElementById('visitor__chart');
+            new Chart(visitorChart, {
+                type: 'line',
+                data: {
+                    labels: [
+                                                    ],
+                    datasets: [{
+                        label: '# Jumlah Pengunjung',
+                        data: [
+                                                            ],
+                        backgroundColor: [
+                            '#0F6AF5',
+                        ],
+                        borderColor: [
+                            '#0F6AF5',
+                        ],
+                        borderWidth: 2,
+                        pointRadius: 6,
+                        pointBorderColor: '#FFFFFF',
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        }
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 10
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false,
+                            },
+                            border: {
+                                display: false,
+                            },
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: "#E5E5EA",
+                            },
+                            border: {
+                                dash: [6, 4],
+                                display: false,
+                            },
+                            ticks: {
+                                stepSize: 1,
+                                autoSkip: false,
+                            }
+                        },
+                    }
+                }
+            });
+        </script><script src="_assets/mockup-interactions.js"></script></body></html>

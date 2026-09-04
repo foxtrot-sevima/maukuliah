@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Tambah Prospek Kerja</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+<style>
+            .choices[data-type*="text"] .choices__button {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuNzY4MiAzLjEzMThDMy41OTI0NiAyLjk1NjA3IDMuMzA3NTQgMi45NTYwNyAzLjEzMTggMy4xMzE4QzIuOTU2MDcgMy4zMDc1NCAyLjk1NjA3IDMuNTkyNDYgMy4xMzE4IDMuNzY4Mkw1LjM2MzYgNkwzLjEzMTggOC4yMzE4QzIuOTU2MDcgOC40MDc1NCAyLjk1NjA3IDguNjkyNDYgMy4xMzE4IDguODY4MkMzLjMwNzU0IDkuMDQzOTMgMy41OTI0NiA5LjA0MzkzIDMuNzY4MiA4Ljg2ODJMNiA2LjYzNjRMOC4yMzE4IDguODY4MkM4LjQwNzU0IDkuMDQzOTMgOC42OTI0NiA5LjA0MzkzIDguODY4MiA4Ljg2ODJDOS4wNDM5MyA4LjY5MjQ2IDkuMDQzOTMgOC40MDc1NCA4Ljg2ODIgOC4yMzE4TDYuNjM2NCA2TDguODY4MiAzLjc2ODJDOS4wNDM5MyAzLjU5MjQ2IDkuMDQzOTMgMy4zMDc1NCA4Ljg2ODIgMy4xMzE4QzguNjkyNDYgMi45NTYwNyA4LjQwNzU0IDIuOTU2MDcgOC4yMzE4IDMuMTMxOEw2IDUuMzYzNkwzLjc2ODIgMy4xMzE4WiIgZmlsbD0iIzlBQTRCMiIvPgo8L3N2Zz4K) !important;
+                border-left: none !important;
+                margin: 0 !important;
+                opacity: unset !important;
+                background-size: 1rem !important;
+                width: 1rem !important;
+                line-height: 1rem !important;
+            }
+
+            .choices__inner {
+                max-height: unset !important;
+                padding: 7.5px 7.5px 3.75px !important;
+            }
+
+            .choices__list--multiple.choices__list {
+                display: inline !important;
+            }
+
+            .choices__input {
+                padding: 0.25rem 0 0.25rem 0.375rem !important;
+                margin: 0 !important;
+            }
+
+            .choices__list--multiple .choices__item {
+                display: inline-block !important;
+                margin-right: 0.375rem !important;
+                margin-bottom: 0.375rem !important;
+            }
+        </style>
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template header_position-static">
+<div class="header__row-wrapper">
+<div class="header__group">
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="header__logo" src="_assets/captured-images/mk-crm-logo-mini.webp"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Sevima Platform</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="dropdown dropdown_nav dropdown_profile">
+<button class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="../crm/super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Tambah Prospek Kerja_files/create">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="interested-users.html">
+                                        Pengajuan Pendaftaran
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="consultations.html">
+                                        Konsultasi
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="subscriptions.html">
+                                        Subscription
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Tambah Prospek Kerja_files/create">
+<span>Data</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Data</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-users.html">
+                                        Pengguna
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-majors.html">
+                                        Jurusan Umum
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-categories.html">
+                                        Kategori Jurusan
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-jobs.html">
+                                        Prospek Kerja
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-schools.html">
+                                        Sekolah Asal
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="scholarships.html">
+                                        Beasiswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="banners.html">
+                                        Banner
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="modules.html">
+                                        Modul Fitur
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Tambah Prospek Kerja_files/create">
+<span>Tes Maukuliah</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Tes Maukuliah</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="test.html">
+                                        Tes Potensi Siswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">
+                                        Tryout
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Tambah Prospek Kerja_files/create">
+<span>Log</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Log</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/applications" href="#">
+                                        Log Aplikasi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/accesses" href="#">
+                                        Log Akses
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-activities.html">
+                                        Log Aktivitas
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-modules.html">
+                                        Log Penggunaan Modul
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<main class="main">
+<form action="master-jobs.html" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <div class="form-nav">
+<div class="form-nav__left">
+<a class="btn btn_outline" href="master-jobs.html">
+<span class="icon icon-arrow-left-mini"></span>
+<span class="btn__text !font-medium">
+            Kembali
+        </span>
+</a>
+</div>
+<div class="form-nav__middle" style="opacity: 0;">
+<ul class="form-nav__breadcrumb">
+<li class="form-nav__breadcrumb-item">
+<a class="form-nav__breadcrumb-btn" href="./Sevima CRM _ Tambah Prospek Kerja_files/create">Prospek Kerja</a>
+</li>
+<li class="form-nav__breadcrumb-diagonal"></li>
+<li class="form-nav__breadcrumb-item active">
+                Tambah
+            </li>
+</ul>
+</div>
+<div class="form-nav__right">
+<div class="form-nav__wrapper">
+<div class="form-nav__button-wrapper" data-placement="left" data-tooltip="Pastikan semua inputan mandatori telah diisi">
+<button class="btn btn_primary" disabled="" type="submit">
+                        Simpan
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="main__header">
+<div class="main__location">
+<ul class="breadcrumb">
+<li class="breadcrumb__item">
+<a href="master-jobs.html">Prospek Kerja</a>
+</li>
+<li class="breadcrumb__item active">
+<a href="./Sevima CRM _ Tambah Prospek Kerja_files/create">Tambah Prospek Kerja</a>
+</li>
+</ul>
+<div class="main__wrapper">
+<h1 class="main__title">Tambah Prospek Kerja</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+</div>
+</div>
+<div class="card card_form">
+<div class="card__body">
+<div class="cols-1 grid">
+<div class="form-control">
+<label class="form-control__label" for="input__name">Nama Prospek Kerja
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__name" name="name" placeholder="Masukkan nama prospek kerja" required="true" type="text" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+<div class="form-control">
+<label class="form-control__label" for="input__picture">Gambar Prospek Kerja
+                            <span class="important">*</span>
+</label>
+<iframe class="mb-2 hidden h-[500px] w-full rounded-lg" frameborder="0" id="iframe-input__picture" src="./Sevima CRM _ Tambah Prospek Kerja_files/saved_resource.html">
+</iframe>
+<label for="input__picture">
+<img alt="preview" class="mb-2 hidden aspect-video w-full max-w-sm cursor-pointer rounded-lg border bg-slate-300 object-contain hover:brightness-50" id="preview-input__picture" src="_assets/captured-images/create"/>
+</label>
+<div class="form-control__group">
+<div class="upload-draggable upload-draggable_inline">
+<div class="upload-draggable__box-inline">
+<input accept=".jpg,.jpeg,.png" class="upload-draggable__file-input" id="input__picture" name="picture" required="true" type="file"/>
+<div class="upload-draggable__inline-wrapper">
+<label class="upload-draggable__icon">
+<span class="icon icon-cloud-arrow-up"></span>
+</label>
+<div class="upload-draggable__wrapper">
+<h2 class="upload-draggable__title">
+                            Klik untuk pilih file
+                            <span class="upload-draggable__subtitle">
+                                atau seret file ke sini
+                            </span>
+</h2>
+<p class="upload-draggable__support">
+                            JPG, JPEG, atau PNG (max 2MB)
+                        </p>
+</div>
+</div>
+</div>
+<div class="upload-draggable__success line-clamp-1 break-all">
+</div>
+</div>
+</div>
+</div>
+<div class="form-control">
+<label class="form-control__label" for="input__description">Deskripsi
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<textarea class="form-control__input textarea" id="input__description" name="description" placeholder="Masukkan deskripsi prospek kerja" required="true"></textarea>
+<span data-clear="input"></span>
+</div>
+</div>
+<div class="grid">
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__min-salary">Gaji Minimum
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" data-label="Gaji Minimum" id="input__min-salary" maxlength="10" name="min_salary" oninput="formatNumberOnly(event)" placeholder="Masukkan gaji minimum" required="true" type="tel" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__max-salary">Gaji Maksimum
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" data-label="Gaji Maksimum" id="input__max-salary" maxlength="10" name="max_salary" oninput="formatNumberOnly(event)" placeholder="Masukkan gaji maksimum" required="true" type="tel" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="form-control">
+<label class="form-control__label" for="select__positions">Jabatan
+                                </label>
+<div class="form-control__group">
+<div aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="text"><div class="choices__inner"><input class="form-control__input select__add choices__input" data-choice="active" hidden="" id="select__positions" name="positions.*" placeholder="Jabatan" tabindex="-1" type="text" value=""/><div class="choices__list choices__list--multiple"></div><input aria-autocomplete="list" aria-label="Tulis jabatan" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="Tulis jabatan" role="textbox" spellcheck="false" style="min-width: 14ch; width: 1ch;" type="search"/></div><div aria-expanded="false" class="choices__list choices__list--dropdown"></div></div>
+<span data-clear="input"></span>
+</div>
+</div>
+<div class="form-control">
+<div class="form-control__group">
+<select class="form-control__select !hidden" id="select__positions-hidden" multiple="true" name="positions[]"></select>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="form-table form-table_sticky-bottom" style="top: 208.438px;"><div class="form-table__wrapper"><div class="form-table__button-wrapper" data-placement="top" data-tooltip="Pastikan semua inputan mandatori telah diisi">
+<button class="btn btn_primary" disabled="" type="submit">
+                        Simpan
+                    </button>
+</div></div></div></form>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

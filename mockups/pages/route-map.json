@@ -1,0 +1,800 @@
+{
+  "affiliator/affiliates": {
+    "module": "affiliator",
+    "page": "affiliates",
+    "path": "/affiliator/affiliates",
+    "pattern": "/affiliator/affiliates"
+  },
+  "affiliator/affiliates-dibayarkan": {
+    "module": "affiliator",
+    "page": "affiliates-dibayarkan",
+    "path": "/affiliator/affiliates",
+    "pattern": "/affiliator/affiliates"
+  },
+  "affiliator/affiliates-ditolak": {
+    "module": "affiliator",
+    "page": "affiliates-ditolak",
+    "path": "/affiliator/affiliates",
+    "pattern": "/affiliator/affiliates"
+  },
+  "affiliator/affiliates-tervalidasi": {
+    "module": "affiliator",
+    "page": "affiliates-tervalidasi",
+    "path": "/affiliator/affiliates",
+    "pattern": "/affiliator/affiliates"
+  },
+  "affiliator/dashboard": {
+    "module": "affiliator",
+    "page": "dashboard",
+    "path": "/affiliator/dashboard",
+    "pattern": "/affiliator/dashboard"
+  },
+  "affiliator/marketing-kit": {
+    "module": "affiliator",
+    "page": "marketing-kit",
+    "path": "/universities/universitas-sentra-vidya-utama/DES11",
+    "pattern": "/universities/{id}/{id}"
+  },
+  "affiliator/payment-histories": {
+    "module": "affiliator",
+    "page": "payment-histories",
+    "path": "/affiliator/payment-histories",
+    "pattern": "/affiliator/payment-histories"
+  },
+  "affiliator/payment-histories-inv14112025436": {
+    "module": "affiliator",
+    "page": "payment-histories-inv14112025436",
+    "path": "/affiliator/payment-histories/INV14112025436",
+    "pattern": "/affiliator/payment-histories/{id}"
+  },
+  "affiliator/payment-histories-inv14112025436-print": {
+    "module": "affiliator",
+    "page": "payment-histories-inv14112025436-print",
+    "path": "/affiliator/payment-histories/INV14112025436/print",
+    "pattern": "/affiliator/payment-histories/{id}/{id}"
+  },
+  "affiliator/profile-change-password": {
+    "module": "affiliator",
+    "page": "profile-change-password",
+    "path": "/affiliator/profile/change-password",
+    "pattern": "/affiliator/profile/change-password"
+  },
+  "affiliator/profile-edit": {
+    "module": "affiliator",
+    "page": "profile-edit",
+    "path": "/affiliator/profile/edit",
+    "pattern": "/affiliator/profile/edit"
+  },
+  "affiliator/prospects": {
+    "module": "affiliator",
+    "page": "prospects",
+    "path": "/affiliator/prospects",
+    "pattern": "/affiliator/prospects"
+  },
+  "affiliator/prospects-82686": {
+    "module": "affiliator",
+    "page": "prospects-82686",
+    "path": "/affiliator/prospects/82686",
+    "pattern": "/affiliator/prospects/{id}"
+  },
+  "affiliator/prospects-82686-detail-edit": {
+    "module": "affiliator",
+    "page": "prospects-82686-detail-edit",
+    "path": "/affiliator/prospects/82686/detail/edit",
+    "pattern": "/affiliator/prospects/{id}/{id}/edit"
+  },
+  "crm/admins": {
+    "module": "crm",
+    "page": "admins",
+    "path": "/crm/admins",
+    "pattern": "/crm/admins"
+  },
+  "crm/admins-setting": {
+    "module": "crm",
+    "page": "admins-setting",
+    "path": "/crm/admins/setting",
+    "pattern": "/crm/admins/{id}"
+  },
+  "crm/admission-cycles": {
+    "module": "crm",
+    "page": "admission-cycles",
+    "path": "/crm/admission-cycles",
+    "pattern": "/crm/admission-cycles"
+  },
+  "crm/admission-cycles-20242025-ganjil": {
+    "module": "crm",
+    "page": "admission-cycles-20242025-ganjil",
+    "path": "/crm/admission-cycles/20242025-ganjil",
+    "pattern": "/crm/admission-cycles/{id}"
+  },
+  "crm/admission-cycles-20242025-ganjil-edit": {
+    "module": "crm",
+    "page": "admission-cycles-20242025-ganjil-edit",
+    "path": "/crm/admission-cycles/20242025-ganjil/edit",
+    "pattern": "/crm/admission-cycles/{id}/edit"
+  },
+  "crm/admission-cycles-create": {
+    "module": "crm",
+    "page": "admission-cycles-create",
+    "path": "/crm/admission-cycles/create",
+    "pattern": "/crm/admission-cycles/create"
+  },
+  "crm/admission-cycles-referral-commission": {
+    "module": "crm",
+    "page": "admission-cycles-referral-commission",
+    "path": "/crm/admission-cycles/referral-commission",
+    "pattern": "/crm/admission-cycles/{id}"
+  },
+  "crm/admissions": {
+    "module": "crm",
+    "page": "admissions",
+    "path": "/crm/admissions",
+    "pattern": "/crm/admissions"
+  },
+  "crm/admissions-create": {
+    "module": "crm",
+    "page": "admissions-create",
+    "path": "/crm/admissions/create",
+    "pattern": "/crm/admissions/create"
+  },
+  "crm/admissions-gelombang-ii-testing-tanggal-25-edit": {
+    "module": "crm",
+    "page": "admissions-gelombang-ii-testing-tanggal-25-edit",
+    "path": "/crm/admissions/gelombang-ii-testing-tanggal-25/edit",
+    "pattern": "/crm/admissions/{id}/edit"
+  },
+  "crm/affiliates-payment": {
+    "module": "crm",
+    "page": "affiliates-payment",
+    "path": "/crm/affiliates/payment",
+    "pattern": "/crm/affiliates/payment"
+  },
+  "crm/affiliates-payment-146374": {
+    "module": "crm",
+    "page": "affiliates-payment-146374",
+    "path": "/crm/affiliates/payment/146374",
+    "pattern": "/crm/affiliates/payment/{id}"
+  },
+  "crm/affiliates-payment-histories": {
+    "module": "crm",
+    "page": "affiliates-payment-histories",
+    "path": "/crm/affiliates/payment-histories",
+    "pattern": "/crm/affiliates/payment-histories"
+  },
+  "crm/affiliates-payment-histories-inv07072026007": {
+    "module": "crm",
+    "page": "affiliates-payment-histories-inv07072026007",
+    "path": "/crm/affiliates/payment-histories/INV07072026007",
+    "pattern": "/crm/affiliates/payment-histories/{id}"
+  },
+  "crm/affiliates-payment-histories-inv07072026007-print": {
+    "module": "crm",
+    "page": "affiliates-payment-histories-inv07072026007-print",
+    "path": "/crm/affiliates/payment-histories/INV07072026007/print",
+    "pattern": "/crm/affiliates/payment-histories/{id}/{id}"
+  },
+  "crm/affiliators": {
+    "module": "crm",
+    "page": "affiliators",
+    "path": "/crm/affiliators",
+    "pattern": "/crm/affiliators"
+  },
+  "crm/affiliators-147749": {
+    "module": "crm",
+    "page": "affiliators-147749",
+    "path": "/crm/affiliators/147749",
+    "pattern": "/crm/affiliators/{id}"
+  },
+  "crm/affiliators-147749-edit": {
+    "module": "crm",
+    "page": "affiliators-147749-edit",
+    "path": "/crm/affiliators/147749/edit",
+    "pattern": "/crm/affiliators/{id}/edit"
+  },
+  "crm/affiliators-create": {
+    "module": "crm",
+    "page": "affiliators-create",
+    "path": "/crm/affiliators/create",
+    "pattern": "/crm/affiliators/create"
+  },
+  "crm/articles": {
+    "module": "crm",
+    "page": "articles",
+    "path": "/crm/articles",
+    "pattern": "/crm/articles"
+  },
+  "crm/articles-create": {
+    "module": "crm",
+    "page": "articles-create",
+    "path": "/crm/articles/create",
+    "pattern": "/crm/articles/create"
+  },
+  "crm/articles-pmb-20232024-edit": {
+    "module": "crm",
+    "page": "articles-pmb-20232024-edit",
+    "path": "/crm/articles/pmb-20232024/edit",
+    "pattern": "/crm/articles/{id}/edit"
+  },
+  "crm/brochures": {
+    "module": "crm",
+    "page": "brochures",
+    "path": "/crm/brochures",
+    "pattern": "/crm/brochures"
+  },
+  "crm/brochures-brosur-2026-updated-edit": {
+    "module": "crm",
+    "page": "brochures-brosur-2026-updated-edit",
+    "path": "/crm/brochures/brosur-2026-updated/edit",
+    "pattern": "/crm/brochures/{id}/edit"
+  },
+  "crm/brochures-create": {
+    "module": "crm",
+    "page": "brochures-create",
+    "path": "/crm/brochures/create",
+    "pattern": "/crm/brochures/create"
+  },
+  "crm/custom-landing-pages": {
+    "module": "crm",
+    "page": "custom-landing-pages",
+    "path": "/crm/custom-landing-pages",
+    "pattern": "/crm/custom-landing-pages"
+  },
+  "crm/custom-landing-pages-analytic": {
+    "module": "crm",
+    "page": "custom-landing-pages-analytic",
+    "path": "/crm/custom-landing-pages/analytic",
+    "pattern": "/crm/custom-landing-pages/{id}"
+  },
+  "crm/custom-landing-pages-embed-create-embed": {
+    "module": "crm",
+    "page": "custom-landing-pages-embed-create-embed",
+    "path": "/crm/custom-landing-pages/embed/create",
+    "pattern": "/crm/custom-landing-pages/{id}/create"
+  },
+  "crm/custom-landing-pages-tes-polteksi": {
+    "module": "crm",
+    "page": "custom-landing-pages-tes-polteksi",
+    "path": "/crm/custom-landing-pages/tes-polteksi",
+    "pattern": "/crm/custom-landing-pages/{id}"
+  },
+  "crm/custom-landing-pages-tes-polteksi-edit-university": {
+    "module": "crm",
+    "page": "custom-landing-pages-tes-polteksi-edit-university",
+    "path": "/crm/custom-landing-pages/tes-polteksi/edit",
+    "pattern": "/crm/custom-landing-pages/{id}/edit"
+  },
+  "crm/dashboard": {
+    "module": "crm",
+    "page": "dashboard",
+    "path": "/crm/dashboard",
+    "pattern": "/crm/dashboard"
+  },
+  "crm/dashboard-affiliator": {
+    "module": "crm",
+    "page": "dashboard-affiliator",
+    "path": "/crm/dashboard-affiliator",
+    "pattern": "/crm/dashboard-affiliator"
+  },
+  "crm/dashboard-affiliator-146374": {
+    "module": "crm",
+    "page": "dashboard-affiliator-146374",
+    "path": "/crm/dashboard-affiliator/146374",
+    "pattern": "/crm/dashboard-affiliator/{id}"
+  },
+  "crm/galleries": {
+    "module": "crm",
+    "page": "galleries",
+    "path": "/crm/galleries",
+    "pattern": "/crm/galleries"
+  },
+  "crm/galleries-tes2-edit": {
+    "module": "crm",
+    "page": "galleries-tes2-edit",
+    "path": "/crm/galleries/tes2/edit",
+    "pattern": "/crm/galleries/{id}/edit"
+  },
+  "crm/interested-users": {
+    "module": "crm",
+    "page": "interested-users",
+    "path": "/crm/interested-users",
+    "pattern": "/crm/interested-users"
+  },
+  "crm/interested-users-report": {
+    "module": "crm",
+    "page": "interested-users-report",
+    "path": "/crm/interested-users/report",
+    "pattern": "/crm/interested-users/{id}"
+  },
+  "crm/interested-users-report-edit": {
+    "module": "crm",
+    "page": "interested-users-report-edit",
+    "path": "/crm/interested-users/report",
+    "pattern": "/crm/interested-users/{id}"
+  },
+  "crm/master-universities": {
+    "module": "crm",
+    "page": "master-universities",
+    "path": "/crm/master/universities",
+    "pattern": "/crm/master/universities"
+  },
+  "crm/master-universities-edit": {
+    "module": "crm",
+    "page": "master-universities-edit",
+    "path": "/crm/master/universities/edit",
+    "pattern": "/crm/master/universities/edit"
+  },
+  "crm/master-universities-prices": {
+    "module": "crm",
+    "page": "master-universities-prices",
+    "path": "/crm/master/universities/prices",
+    "pattern": "/crm/master/universities/{id}"
+  },
+  "crm/master-universities-prices-biaya-tambahan-123-edit": {
+    "module": "crm",
+    "page": "master-universities-prices-biaya-tambahan-123-edit",
+    "path": "/crm/master/universities/prices/biaya-tambahan-123/edit",
+    "pattern": "/crm/master/universities/{id}/{id}/edit"
+  },
+  "crm/master-universities-prices-create": {
+    "module": "crm",
+    "page": "master-universities-prices-create",
+    "path": "/crm/master/universities/prices/create",
+    "pattern": "/crm/master/universities/{id}/create"
+  },
+  "crm/master-university-majors": {
+    "module": "crm",
+    "page": "master-university-majors",
+    "path": "/crm/master/university-majors",
+    "pattern": "/crm/master/university-majors"
+  },
+  "crm/master-university-majors-create": {
+    "module": "crm",
+    "page": "master-university-majors-create",
+    "path": "/crm/master/university-majors/create",
+    "pattern": "/crm/master/university-majors/create"
+  },
+  "crm/master-university-majors-d4-akuntansi-reguler-123456-edit": {
+    "module": "crm",
+    "page": "master-university-majors-d4-akuntansi-reguler-123456-edit",
+    "path": "/crm/master/university-majors/d4-akuntansi-reguler-123456/edit",
+    "pattern": "/crm/master/university-majors/{id}/edit"
+  },
+  "crm/prospects": {
+    "module": "crm",
+    "page": "prospects",
+    "path": "/crm/prospects",
+    "pattern": "/crm/prospects"
+  },
+  "crm/prospects-116282": {
+    "module": "crm",
+    "page": "prospects-116282",
+    "path": "/crm/prospects/116282",
+    "pattern": "/crm/prospects/{id}"
+  },
+  "crm/prospects-116282-detail-edit": {
+    "module": "crm",
+    "page": "prospects-116282-detail-edit",
+    "path": "/crm/prospects/116282/detail/edit",
+    "pattern": "/crm/prospects/{id}/{id}/edit"
+  },
+  "crm/prospects-detail-create": {
+    "module": "crm",
+    "page": "prospects-detail-create",
+    "path": "/crm/prospects/detail/create",
+    "pattern": "/crm/prospects/{id}/create"
+  },
+  "crm/scholarships": {
+    "module": "crm",
+    "page": "scholarships",
+    "path": "/crm/scholarships",
+    "pattern": "/crm/scholarships"
+  },
+  "crm/scholarships-beasiswa-prestasi-akademik-unggulan-2026-edit": {
+    "module": "crm",
+    "page": "scholarships-beasiswa-prestasi-akademik-unggulan-2026-edit",
+    "path": "/crm/scholarships/beasiswa-prestasi-akademik-unggulan-2026/edit",
+    "pattern": "/crm/scholarships/{id}/edit"
+  },
+  "crm/scholarships-create": {
+    "module": "crm",
+    "page": "scholarships-create",
+    "path": "/crm/scholarships/create",
+    "pattern": "/crm/scholarships/create"
+  },
+  "crm/school-profilings": {
+    "module": "crm",
+    "page": "school-profilings",
+    "path": "/crm/school-profilings",
+    "pattern": "/crm/school-profilings"
+  },
+  "crm/school-profilings-45615": {
+    "module": "crm",
+    "page": "school-profilings-45615",
+    "path": "/crm/school-profilings/45615",
+    "pattern": "/crm/school-profilings/{id}"
+  },
+  "crm/school-profilings-45615-clusters": {
+    "module": "crm",
+    "page": "school-profilings-45615-clusters",
+    "path": "/crm/school-profilings/45615/clusters",
+    "pattern": "/crm/school-profilings/{id}/{id}"
+  },
+  "crm/school-profilings-45615-clusters-9-edit": {
+    "module": "crm",
+    "page": "school-profilings-45615-clusters-9-edit",
+    "path": "/crm/school-profilings/45615/clusters/9/edit",
+    "pattern": "/crm/school-profilings/{id}/{id}/{id}/edit"
+  },
+  "crm/school-profilings-45615-clusters-create": {
+    "module": "crm",
+    "page": "school-profilings-45615-clusters-create",
+    "path": "/crm/school-profilings/45615/clusters/create",
+    "pattern": "/crm/school-profilings/{id}/{id}/create"
+  },
+  "crm/school-profilings-45615-contacts-create": {
+    "module": "crm",
+    "page": "school-profilings-45615-contacts-create",
+    "path": "/crm/school-profilings/45615/contacts/create",
+    "pattern": "/crm/school-profilings/{id}/{id}/create"
+  },
+  "crm/school-profilings-45615-edit": {
+    "module": "crm",
+    "page": "school-profilings-45615-edit",
+    "path": "/crm/school-profilings/45615/edit",
+    "pattern": "/crm/school-profilings/{id}/edit"
+  },
+  "crm/school-profilings-45615-events-create": {
+    "module": "crm",
+    "page": "school-profilings-45615-events-create",
+    "path": "/crm/school-profilings/45615/events/create",
+    "pattern": "/crm/school-profilings/{id}/{id}/create"
+  },
+  "crm/super-admin-profile-edit": {
+    "module": "crm",
+    "page": "super-admin-profile-edit",
+    "path": "/super-admin/profile/edit",
+    "pattern": "/super-admin/profile/edit"
+  },
+  "crm/test": {
+    "module": "crm",
+    "page": "test",
+    "path": "/crm/test",
+    "pattern": "/crm/test"
+  },
+  "crm/test-qr-code": {
+    "module": "crm",
+    "page": "test-qr-code",
+    "path": "/crm/test/qr-code",
+    "pattern": "/crm/test/{id}"
+  },
+  "crm/testimonies": {
+    "module": "crm",
+    "page": "testimonies",
+    "path": "/crm/testimonies",
+    "pattern": "/crm/testimonies"
+  },
+  "crm/testimonies-4-edit": {
+    "module": "crm",
+    "page": "testimonies-4-edit",
+    "path": "/crm/testimonies/4/edit",
+    "pattern": "/crm/testimonies/{id}/edit"
+  },
+  "crm/testimonies-create": {
+    "module": "crm",
+    "page": "testimonies-create",
+    "path": "/crm/testimonies/create",
+    "pattern": "/crm/testimonies/create"
+  },
+  "crm/tryouts": {
+    "module": "crm",
+    "page": "tryouts",
+    "path": "/crm/tryouts",
+    "pattern": "/crm/tryouts"
+  },
+  "crm/tryouts-create": {
+    "module": "crm",
+    "page": "tryouts-create",
+    "path": "/crm/tryouts/create",
+    "pattern": "/crm/tryouts/create"
+  },
+  "super-admin/banners": {
+    "module": "super-admin",
+    "page": "banners",
+    "path": "/super-admin/banners",
+    "pattern": "/super-admin/banners"
+  },
+  "super-admin/banners-create": {
+    "module": "super-admin",
+    "page": "banners-create",
+    "path": "/super-admin/banners/create",
+    "pattern": "/super-admin/banners/create"
+  },
+  "super-admin/banners-semesta-2024-edit": {
+    "module": "super-admin",
+    "page": "banners-semesta-2024-edit",
+    "path": "/super-admin/banners/semesta-2024/edit",
+    "pattern": "/super-admin/banners/{id}/edit"
+  },
+  "super-admin/consultations": {
+    "module": "super-admin",
+    "page": "consultations",
+    "path": "/super-admin/consultations",
+    "pattern": "/super-admin/consultations"
+  },
+  "super-admin/dashboard": {
+    "module": "super-admin",
+    "page": "dashboard",
+    "path": "/super-admin/dashboard",
+    "pattern": "/super-admin/dashboard"
+  },
+  "super-admin/interested-users": {
+    "module": "super-admin",
+    "page": "interested-users",
+    "path": "/super-admin/interested-users",
+    "pattern": "/super-admin/interested-users"
+  },
+  "super-admin/log-activities": {
+    "module": "super-admin",
+    "page": "log-activities",
+    "path": "/super-admin/log/activities",
+    "pattern": "/super-admin/log/activities"
+  },
+  "super-admin/log-modules": {
+    "module": "super-admin",
+    "page": "log-modules",
+    "path": "/super-admin/log/modules",
+    "pattern": "/super-admin/log/modules"
+  },
+  "super-admin/master-categories": {
+    "module": "super-admin",
+    "page": "master-categories",
+    "path": "/super-admin/master/categories",
+    "pattern": "/super-admin/master/categories"
+  },
+  "super-admin/master-categories-create": {
+    "module": "super-admin",
+    "page": "master-categories-create",
+    "path": "/super-admin/master/categories/create",
+    "pattern": "/super-admin/master/categories/create"
+  },
+  "super-admin/master-categories-pariwisata-dan-perhotelan-edit": {
+    "module": "super-admin",
+    "page": "master-categories-pariwisata-dan-perhotelan-edit",
+    "path": "/super-admin/master/categories/pariwisata-dan-perhotelan/edit",
+    "pattern": "/super-admin/master/categories/{id}/edit"
+  },
+  "super-admin/master-jobs": {
+    "module": "super-admin",
+    "page": "master-jobs",
+    "path": "/super-admin/master/jobs",
+    "pattern": "/super-admin/master/jobs"
+  },
+  "super-admin/master-jobs-create": {
+    "module": "super-admin",
+    "page": "master-jobs-create",
+    "path": "/super-admin/master/jobs/create",
+    "pattern": "/super-admin/master/jobs/create"
+  },
+  "super-admin/master-jobs-insinyur-kapal-1-edit": {
+    "module": "super-admin",
+    "page": "master-jobs-insinyur-kapal-1-edit",
+    "path": "/super-admin/master/jobs/insinyur-kapal-1/edit",
+    "pattern": "/super-admin/master/jobs/{id}/edit"
+  },
+  "super-admin/master-majors": {
+    "module": "super-admin",
+    "page": "master-majors",
+    "path": "/super-admin/master/majors",
+    "pattern": "/super-admin/master/majors"
+  },
+  "super-admin/master-majors-create": {
+    "module": "super-admin",
+    "page": "master-majors-create",
+    "path": "/super-admin/master/majors/create",
+    "pattern": "/super-admin/master/majors/create"
+  },
+  "super-admin/master-majors-pendidikan-agama-kristen-edit": {
+    "module": "super-admin",
+    "page": "master-majors-pendidikan-agama-kristen-edit",
+    "path": "/super-admin/master/majors/pendidikan-agama-kristen/edit",
+    "pattern": "/super-admin/master/majors/{id}/edit"
+  },
+  "super-admin/master-schools": {
+    "module": "super-admin",
+    "page": "master-schools",
+    "path": "/super-admin/master/schools",
+    "pattern": "/super-admin/master/schools"
+  },
+  "super-admin/master-schools-49717-edit": {
+    "module": "super-admin",
+    "page": "master-schools-49717-edit",
+    "path": "/super-admin/master/schools/49717/edit",
+    "pattern": "/super-admin/master/schools/{id}/edit"
+  },
+  "super-admin/master-schools-create": {
+    "module": "super-admin",
+    "page": "master-schools-create",
+    "path": "/super-admin/master/schools/create",
+    "pattern": "/super-admin/master/schools/create"
+  },
+  "super-admin/master-universities": {
+    "module": "super-admin",
+    "page": "master-universities",
+    "path": "/super-admin/master/universities",
+    "pattern": "/super-admin/master/universities"
+  },
+  "super-admin/master-universities-create": {
+    "module": "super-admin",
+    "page": "master-universities-create",
+    "path": "/super-admin/master/universities/create",
+    "pattern": "/super-admin/master/universities/create"
+  },
+  "super-admin/master-universities-universitas-sentra-vidya-utama": {
+    "module": "super-admin",
+    "page": "master-universities-universitas-sentra-vidya-utama",
+    "path": "/super-admin/master/universities/universitas-sentra-vidya-utama",
+    "pattern": "/super-admin/master/universities/{id}"
+  },
+  "super-admin/master-universities-universitas-sentra-vidya-utama-edit": {
+    "module": "super-admin",
+    "page": "master-universities-universitas-sentra-vidya-utama-edit",
+    "path": "/super-admin/master/universities/universitas-sentra-vidya-utama/edit",
+    "pattern": "/super-admin/master/universities/{id}/edit"
+  },
+  "super-admin/master-universities-universitas-sentra-vidya-utama-modules": {
+    "module": "super-admin",
+    "page": "master-universities-universitas-sentra-vidya-utama-modules",
+    "path": "/super-admin/master/universities/universitas-sentra-vidya-utama/modules",
+    "pattern": "/super-admin/master/universities/{id}/{id}"
+  },
+  "super-admin/master-users": {
+    "module": "super-admin",
+    "page": "master-users",
+    "path": "/super-admin/master/users",
+    "pattern": "/super-admin/master/users"
+  },
+  "super-admin/master-users-161514-edit": {
+    "module": "super-admin",
+    "page": "master-users-161514-edit",
+    "path": "/super-admin/master/users/161514/edit",
+    "pattern": "/super-admin/master/users/{id}/edit"
+  },
+  "super-admin/master-users-create": {
+    "module": "super-admin",
+    "page": "master-users-create",
+    "path": "/super-admin/master/users/create",
+    "pattern": "/super-admin/master/users/create"
+  },
+  "super-admin/modules": {
+    "module": "super-admin",
+    "page": "modules",
+    "path": "/super-admin/modules",
+    "pattern": "/super-admin/modules"
+  },
+  "super-admin/scholarships": {
+    "module": "super-admin",
+    "page": "scholarships",
+    "path": "/super-admin/scholarships",
+    "pattern": "/super-admin/scholarships"
+  },
+  "super-admin/scholarships-beasiswa-semesta-batch-7-edit": {
+    "module": "super-admin",
+    "page": "scholarships-beasiswa-semesta-batch-7-edit",
+    "path": "/super-admin/scholarships/beasiswa-semesta-batch-7/edit",
+    "pattern": "/super-admin/scholarships/{id}/edit"
+  },
+  "super-admin/scholarships-create": {
+    "module": "super-admin",
+    "page": "scholarships-create",
+    "path": "/super-admin/scholarships/create",
+    "pattern": "/super-admin/scholarships/create"
+  },
+  "super-admin/subscriptions": {
+    "module": "super-admin",
+    "page": "subscriptions",
+    "path": "/super-admin/subscriptions",
+    "pattern": "/super-admin/subscriptions"
+  },
+  "super-admin/subscriptions-2": {
+    "module": "super-admin",
+    "page": "subscriptions-2",
+    "path": "/super-admin/subscriptions/2",
+    "pattern": "/super-admin/subscriptions/{id}"
+  },
+  "super-admin/subscriptions-2-edit": {
+    "module": "super-admin",
+    "page": "subscriptions-2-edit",
+    "path": "/super-admin/subscriptions/2/edit",
+    "pattern": "/super-admin/subscriptions/{id}/edit"
+  },
+  "super-admin/subscriptions-create": {
+    "module": "super-admin",
+    "page": "subscriptions-create",
+    "path": "/super-admin/subscriptions/create",
+    "pattern": "/super-admin/subscriptions/create"
+  },
+  "super-admin/test": {
+    "module": "super-admin",
+    "page": "test",
+    "path": "/super-admin/test",
+    "pattern": "/super-admin/test"
+  },
+  "super-admin/tryouts": {
+    "module": "super-admin",
+    "page": "tryouts",
+    "path": "/super-admin/tryouts",
+    "pattern": "/super-admin/tryouts"
+  },
+  "super-admin/tryouts-create": {
+    "module": "super-admin",
+    "page": "tryouts-create",
+    "path": "/super-admin/tryouts/create",
+    "pattern": "/super-admin/tryouts/create"
+  },
+  "user/consultation": {
+    "module": "user",
+    "page": "consultation",
+    "path": "/consultation",
+    "pattern": "/consultation"
+  },
+  "user/index": {
+    "module": "user",
+    "page": "index",
+    "path": "/",
+    "pattern": "/"
+  },
+  "user/jobs": {
+    "module": "user",
+    "page": "jobs",
+    "path": "/jobs",
+    "pattern": "/jobs"
+  },
+  "user/majors": {
+    "module": "user",
+    "page": "majors",
+    "path": "/majors",
+    "pattern": "/majors"
+  },
+  "user/riasec": {
+    "module": "user",
+    "page": "riasec",
+    "path": "/riasec",
+    "pattern": "/riasec"
+  },
+  "user/scholarships": {
+    "module": "user",
+    "page": "scholarships",
+    "path": "/scholarships",
+    "pattern": "/scholarships"
+  },
+  "user/test": {
+    "module": "user",
+    "page": "test",
+    "path": "/test",
+    "pattern": "/test"
+  },
+  "user/test-learning-style": {
+    "module": "user",
+    "page": "test-learning-style",
+    "path": "/test/learning-style",
+    "pattern": "/test/{id}"
+  },
+  "user/test-mbti": {
+    "module": "user",
+    "page": "test-mbti",
+    "path": "/test/mbti",
+    "pattern": "/test/{id}"
+  },
+  "user/tryouts": {
+    "module": "user",
+    "page": "tryouts",
+    "path": "/tryouts",
+    "pattern": "/tryouts"
+  },
+  "user/universities": {
+    "module": "user",
+    "page": "universities",
+    "path": "/universities",
+    "pattern": "/universities"
+  }
+}

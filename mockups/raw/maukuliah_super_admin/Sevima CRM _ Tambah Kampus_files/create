@@ -1,0 +1,1346 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        >
+
+        <!-- Favicons -->
+        <link
+            rel="icon"
+            type="image/svg"
+            sizes="32x32"
+            href="https://maukuliah.id/crm.ico"
+        />
+
+        <!-- Title -->
+        <title>Sevima CRM | Tambah Kampus</title>
+
+        <!-- CSRF Token -->
+        <meta
+            name="csrf-token"
+            content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"
+        />
+
+        <!-- Font -->
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        >
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        >
+        <link
+            href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet"
+        >
+
+        <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+            <link
+        rel="stylesheet"
+        href="https://maukuliah.id/quantum\assets\js\vendors\choices.js-10.2.0\public\assets\styles\choices.min.css"
+    >
+        <link
+            href="https://maukuliah.id/quantum/assets/release/core.css"
+            rel="stylesheet"
+        >
+        <link rel="preload" as="style" href="https://maukuliah.id/build/assets/core-BnhZqdSm.css" /><link rel="modulepreload" href="https://maukuliah.id/build/assets/app-BbkPvvSm.js" /><link rel="stylesheet" href="https://maukuliah.id/build/assets/core-BnhZqdSm.css" data-navigate-track="reload" /><script type="module" src="https://maukuliah.id/build/assets/app-BbkPvvSm.js" data-navigate-track="reload"></script>    </head>
+
+    <body
+        x-data="{}"
+        class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600"
+    >
+        
+                                    <div class="header header_template header_position-static">
+    <div class="header__row-wrapper">
+        <div class="header__group">
+            <a
+                href="https://maukuliah.id/super-admin/dashboard"
+                class="header__identity"
+            >
+                <div class="header__identity-logo">
+                    <img
+                        class="header__logo"
+                        src="https://maukuliah.id/quantum/assets/images/logos/mk-crm-logo-mini.webp"
+                        alt="logo"
+                    >
+                </div>
+                <div class="header__identity-wrapper">
+                    <span class="header__identity-sub">Sevima CRM</span>
+                    <h1 class="header__identity-title">Sevima Platform</h1>
+                </div>
+            </a>
+        </div>
+                <div class="header__right">
+            <div class="dropdown dropdown_nav dropdown_profile">
+                <button
+                    class="header__switch-avatar"
+                    data-toggle="dropdown"
+                    id="qn-nav-profile"
+                >
+                    <span
+                        class="avatar avatar_xs"
+                        data-avatar-name="Ahmad Dimas"
+                    >
+                    </span>
+                    <span class="header__switch-avatar-name">Ahmad Dimas</span>
+                </button>
+                <div class="dropdown__box dropdown__box_menu-end">
+                    <div class="dropdown__box-header">
+                        <span
+                            class="icon icon-x-mark-mini"
+                            role="button"
+                            data-toggle="dropdown"
+                        ></span>
+                        <span class="dropdown__box-title">
+                            Profil
+                        </span>
+                    </div>
+                    <ul class="dropdown__list !p-0">
+                        <li class="dropdown__avatar p-2">
+                            <div class="avatar avatar_sm">
+                                <div
+                                    class="avatar__circle"
+                                    data-avatar-name="Ahmad Dimas"
+                                >
+                                </div>
+                                <div class="avatar__text">
+                                    <span class="avatar__title">Ahmad Dimas</span>
+                                    <span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown__line"></li>
+                                                    <li class="dropdown__item">
+                                <a href="https://maukuliah.id/super-admin/profile/edit">
+                                    <span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+                            </li>
+                                                                                                                                                    <li class="dropdown__item">
+                                <a href="https://maukuliah.id/super-admin/settings">
+                                    <span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+                            </li>
+                                                <li class="dropdown__item dropdown__item_danger">
+                            <form
+                                action="https://maukuliah.id/logout"
+                                method="POST"
+                            >
+                                <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">                                <button type="submit">
+                                    <span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__row-wrapper header__row-wrapper_nav">
+        <nav class="nav nav_template">
+            <ul
+                class="nav__list"
+                data-more-text="Lainnya"
+            >
+                <li class="nav__item">
+                    <a
+                        class="nav__link"
+                        href="https://maukuliah.id/super-admin/dashboard"
+                    >
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <div class="dropdown dropdown_nav">
+                        <a
+                            class="nav__link"
+                            href="#"
+                            data-toggle="dropdown"
+                        >
+                            <span>Analitik</span>
+                            <span class="icon icon-chevron-down-mini"></span>
+                        </a>
+                        <div class="dropdown__box">
+                            <div class="dropdown__box-header">
+                                <span
+                                    class="icon icon-x-mark-mini"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                ></span>
+                                <span class="dropdown__box-title">Analitik</span>
+                            </div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/interested-users">
+                                        Pengajuan Pendaftaran
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/consultations">
+                                        Konsultasi
+                                    </a>
+                                </li>
+                                <li class="dropdown__line"></li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/subscriptions">
+                                        Subscription
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="dropdown dropdown_nav">
+                        <a
+                            class="nav__link"
+                            href="#"
+                            data-toggle="dropdown"
+                        >
+                            <span>Data</span>
+                            <span class="icon icon-chevron-down-mini"></span>
+                        </a>
+                        <div class="dropdown__box dropdown__box_multi">
+                            <div class="dropdown__box-header">
+                                <span
+                                    class="icon icon-x-mark-mini"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                ></span>
+                                <span class="dropdown__box-title">Data</span>
+                            </div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/master/users">
+                                        Pengguna
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/master/universities">
+                                        Kampus
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/master/majors">
+                                        Jurusan Umum
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/master/categories">
+                                        Kategori Jurusan
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/master/jobs">
+                                        Prospek Kerja
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/master/schools">
+                                        Sekolah Asal
+                                    </a>
+                                </li>
+                                <li class="dropdown__line"></li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/scholarships">
+                                        Beasiswa
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/banners">
+                                        Banner
+                                    </a>
+                                </li>
+                                <li class="dropdown__line"></li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/modules">
+                                        Modul Fitur
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="dropdown dropdown_nav">
+                        <a
+                            class="nav__link"
+                            href="#"
+                            data-toggle="dropdown"
+                        >
+                            <span>Tes Maukuliah</span>
+                            <span class="icon icon-chevron-down-mini"></span>
+                        </a>
+                        <div class="dropdown__box">
+                            <div class="dropdown__box-header">
+                                <span
+                                    class="icon icon-x-mark-mini"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                ></span>
+                                <span class="dropdown__box-title">Tes Maukuliah</span>
+                            </div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/test">
+                                        Tes Potensi Siswa
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/tryouts">
+                                        Tryout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <div class="dropdown dropdown_nav">
+                        <a
+                            class="nav__link"
+                            href="#"
+                            data-toggle="dropdown"
+                        >
+                            <span>Log</span>
+                            <span class="icon icon-chevron-down-mini"></span>
+                        </a>
+                        <div class="dropdown__box">
+                            <div class="dropdown__box-header">
+                                <span
+                                    class="icon icon-x-mark-mini"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                ></span>
+                                <span class="dropdown__box-title">Log</span>
+                            </div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a href="/super-admin/log/applications">
+                                        Log Aplikasi
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/log/accesses">
+                                        Log Akses
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/log/activities">
+                                        Log Aktivitas
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="https://maukuliah.id/super-admin/log/modules">
+                                        Log Penggunaan Modul
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+                    
+                            
+        
+        
+        
+        
+
+                    <main class="main">
+                <form action="https://maukuliah.id/super-admin/master/universities" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" autocomplete="off">        <input type="hidden" name="_method" value="POST">        <div class="form-table">
+            <h4 class="form-table__title">
+                Daftar Form
+                <span class="icon"></span>
+            </h4>
+            <ul class="form-table__list">
+                <li class="form-table__item active">
+                    <a
+                        href="#information__form"
+                        class="form-table__anchor"
+                    >Informasi Kampus</a>
+                </li>
+                <li class="form-table__item">
+                    <a
+                        href="#address__form"
+                        class="form-table__anchor"
+                    >Alamat Kampus</a>
+                </li>
+                <li class="form-table__item">
+                    <a
+                        href="#contact__form"
+                        class="form-table__anchor"
+                    >Kontak Kampus</a>
+                </li>
+            </ul>
+        </div>
+        <div class="form-nav">
+    <div class="form-nav__left">
+        <a href="https://maukuliah.id/super-admin/master/universities" class="btn btn_outline">
+            <span class="icon icon-arrow-left-mini"></span>
+                <span class="btn__text !font-medium">
+            Kembali
+        </span>
+            </a>
+    </div>
+    <div
+        class="form-nav__middle"
+        style="opacity: 1;"
+    >
+        <ul class="form-nav__breadcrumb">
+            <li class="form-nav__breadcrumb-item">
+                <a
+                    href="#"
+                    class="form-nav__breadcrumb-btn"
+                >Kampus</a>
+            </li>
+            <li class="form-nav__breadcrumb-diagonal"></li>
+            <li class="form-nav__breadcrumb-item active">
+                Tambah
+            </li>
+        </ul>
+    </div>
+    <div class="form-nav__right">
+        <div class="form-nav__wrapper">
+                            <div
+                    class="form-nav__button-wrapper"
+                    data-tooltip="Pastikan semua inputan mandatori telah diisi"
+                    data-placement="left"
+                >
+                    <button
+                        type="submit"
+                        class="btn btn_primary"
+                        disabled
+                    >
+                        Simpan
+                    </button>
+                </div>
+                    </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="main__header">
+    <div class="main__location">
+                    <ul class="breadcrumb">
+            <li class="breadcrumb__item ">
+            <a href="https://maukuliah.id/super-admin/master/universities">Kampus</a>
+        </li>
+            <li class="breadcrumb__item  active ">
+            <a href="#">Tambah Kampus</a>
+        </li>
+    </ul>
+                <div class="main__wrapper">
+            <h1 class="main__title">Tambah Kampus</h1>
+            <p class="main__subtitle"></p>
+        </div>
+    </div>
+    <div class="main__action">
+        
+    </div>
+</div>
+            <div id="information__form" class="card card_form">
+        <div class="card__body">
+                        <div class="grid">
+                    <div class="col-12">
+                        <div class="form-control">
+            <label
+            for="input__logo"
+            class="form-control__label"
+        >Logo
+                            <span class="important">*</span>
+                                </label>
+                <iframe
+            id="iframe-input__logo"
+            src=""
+            frameborder="0"
+            class="mb-2 hidden h-[500px] w-full rounded-lg"
+        >
+        </iframe>
+
+        <label for="input__logo">
+            <img
+                wire:ignore
+                id="preview-input__logo"
+                src="#"
+                alt="preview"
+                class="mb-2 hidden aspect-video w-full max-w-sm cursor-pointer rounded-lg border bg-slate-300 object-contain hover:brightness-50"
+            >
+        </label>
+        <div
+        wire:ignore
+        class="form-control__group  "
+    >
+        <div class="upload-draggable upload-draggable_inline">
+            <div class="upload-draggable__box-inline">
+                <input
+                    type="file"
+                    accept=".jpg,.jpeg,.png"
+                    id="input__logo" name="logo" required="true" class="upload-draggable__file-input"
+                >
+                <div class="upload-draggable__inline-wrapper">
+                    <label class="upload-draggable__icon">
+                        <span class="icon icon-cloud-arrow-up"></span>
+                    </label>
+                    <div class="upload-draggable__wrapper">
+                        <h2 class="upload-draggable__title">
+                            Klik untuk pilih file
+                            <span class="upload-draggable__subtitle">
+                                atau seret file ke sini
+                            </span>
+                        </h2>
+                        <p class="upload-draggable__support">
+                            PNG, JPG, atau JPEG (max 2MB)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-draggable__success line-clamp-1 break-all">
+            </div>
+        </div>
+    </div>
+        
+    </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__name"
+            class="form-control__label"
+        >Nama Kampus
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="text"
+            id="input__name" name="name" value="" placeholder="Masukkan nama kampus" required="true" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__short-name"
+            class="form-control__label"
+        >Nama Singkat
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="text"
+            id="input__short-name" name="short_name" value="" placeholder="Masukkan singkatan" required="true" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__university-code"
+            class="form-control__label"
+        >Kode PDDIKTI
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="tel"
+            id="input__university-code" name="university_code" value="" placeholder="Masukkan kode PDDIKTI" required="true" maxlength="6" class="form-control__input"
+            data-label="Kode PDDIKTI"
+                                                oninput="formatNumberOnly(event)"         >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+
+
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="select__accreditation"
+            class="form-control__label"
+        >Akreditasi
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <select
+             id="select__accreditation" name="accreditation" required="true" class="select-search"                                 >
+            <option
+                value=""
+                 selected             >-- Pilih Akreditasi --</option>
+                                                                <option
+                        value="A"
+                        
+                    >
+                        A
+                    </option>
+                                                                                <option
+                        value="B"
+                        
+                    >
+                        B
+                    </option>
+                                                                                <option
+                        value="C"
+                        
+                    >
+                        C
+                    </option>
+                                                                                <option
+                        value="U"
+                        
+                    >
+                        Unggul
+                    </option>
+                                                                                <option
+                        value="BA"
+                        
+                    >
+                        Baik
+                    </option>
+                                                                                <option
+                        value="BS"
+                        
+                    >
+                        Baik Sekali
+                    </option>
+                                                                                <option
+                        value="-"
+                        
+                    >
+                        Belum Terakreditasi
+                    </option>
+                                    </select>
+    </div>
+        </div>
+
+
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="select__type"
+            class="form-control__label"
+        >Jenis
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <select
+             id="select__type" name="type" required="true" class="select-search"                                 >
+            <option
+                value=""
+                 selected             >-- Pilih Jenis --</option>
+                                                                <option
+                        value="university"
+                        
+                    >
+                        Universitas
+                    </option>
+                                                                                <option
+                        value="institute"
+                        
+                    >
+                        Institut
+                    </option>
+                                                                                <option
+                        value="polytechnic"
+                        
+                    >
+                        Politeknik
+                    </option>
+                                                                                <option
+                        value="academy"
+                        
+                    >
+                        Akademi
+                    </option>
+                                                                                <option
+                        value="high_school"
+                        
+                    >
+                        Sekolah Tinggi
+                    </option>
+                                    </select>
+    </div>
+        </div>
+
+
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="select__status"
+            class="form-control__label"
+        >Status
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <select
+             id="select__status" name="status" required="true" class="select-search"                                 >
+            <option
+                value=""
+                 selected             >-- Pilih Status --</option>
+                                                                <option
+                        value="state"
+                        
+                    >
+                        Negeri
+                    </option>
+                                                                                <option
+                        value="private"
+                        
+                    >
+                        Swasta
+                    </option>
+                                    </select>
+    </div>
+        </div>
+
+
+                    </div>
+                    <div class="col-12">
+                        <div class="form-control">
+            <label
+            for="input__description"
+            class="form-control__label"
+        >Deskripsi
+                                </label>
+        <div class="form-control__group ">
+        <textarea
+            id="input__description" name="description" placeholder="Masukkan deskripsi kampus" class="form-control__input textarea"
+                                ></textarea>
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+            <div id="address__form" class="card card_form">
+        <div class="card__body">
+                        <div class="grid">
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="select__province-id"
+            class="form-control__label"
+        >Provinsi
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <select
+             id="select__province-id" name="province_id" required="true" class="form-control__select"                                 >
+            <option
+                value=""
+                 selected             >-- Pilih Provinsi --</option>
+                                                                <option
+                        value="11"
+                        
+                    >
+                        ACEH
+                    </option>
+                                                                                <option
+                        value="12"
+                        
+                    >
+                        SUMATERA UTARA
+                    </option>
+                                                                                <option
+                        value="13"
+                        
+                    >
+                        SUMATERA BARAT
+                    </option>
+                                                                                <option
+                        value="14"
+                        
+                    >
+                        RIAU
+                    </option>
+                                                                                <option
+                        value="15"
+                        
+                    >
+                        JAMBI
+                    </option>
+                                                                                <option
+                        value="16"
+                        
+                    >
+                        SUMATERA SELATAN
+                    </option>
+                                                                                <option
+                        value="17"
+                        
+                    >
+                        BENGKULU
+                    </option>
+                                                                                <option
+                        value="18"
+                        
+                    >
+                        LAMPUNG
+                    </option>
+                                                                                <option
+                        value="19"
+                        
+                    >
+                        KEPULAUAN BANGKA BELITUNG
+                    </option>
+                                                                                <option
+                        value="21"
+                        
+                    >
+                        KEPULAUAN RIAU
+                    </option>
+                                                                                <option
+                        value="31"
+                        
+                    >
+                        DKI JAKARTA
+                    </option>
+                                                                                <option
+                        value="32"
+                        
+                    >
+                        JAWA BARAT
+                    </option>
+                                                                                <option
+                        value="33"
+                        
+                    >
+                        JAWA TENGAH
+                    </option>
+                                                                                <option
+                        value="34"
+                        
+                    >
+                        DI YOGYAKARTA
+                    </option>
+                                                                                <option
+                        value="35"
+                        
+                    >
+                        JAWA TIMUR
+                    </option>
+                                                                                <option
+                        value="36"
+                        
+                    >
+                        BANTEN
+                    </option>
+                                                                                <option
+                        value="51"
+                        
+                    >
+                        BALI
+                    </option>
+                                                                                <option
+                        value="52"
+                        
+                    >
+                        NUSA TENGGARA BARAT
+                    </option>
+                                                                                <option
+                        value="53"
+                        
+                    >
+                        NUSA TENGGARA TIMUR
+                    </option>
+                                                                                <option
+                        value="61"
+                        
+                    >
+                        KALIMANTAN BARAT
+                    </option>
+                                                                                <option
+                        value="62"
+                        
+                    >
+                        KALIMANTAN TENGAH
+                    </option>
+                                                                                <option
+                        value="63"
+                        
+                    >
+                        KALIMANTAN SELATAN
+                    </option>
+                                                                                <option
+                        value="64"
+                        
+                    >
+                        KALIMANTAN TIMUR
+                    </option>
+                                                                                <option
+                        value="65"
+                        
+                    >
+                        KALIMANTAN UTARA
+                    </option>
+                                                                                <option
+                        value="71"
+                        
+                    >
+                        SULAWESI UTARA
+                    </option>
+                                                                                <option
+                        value="72"
+                        
+                    >
+                        SULAWESI TENGAH
+                    </option>
+                                                                                <option
+                        value="73"
+                        
+                    >
+                        SULAWESI SELATAN
+                    </option>
+                                                                                <option
+                        value="74"
+                        
+                    >
+                        SULAWESI TENGGARA
+                    </option>
+                                                                                <option
+                        value="75"
+                        
+                    >
+                        GORONTALO
+                    </option>
+                                                                                <option
+                        value="76"
+                        
+                    >
+                        SULAWESI BARAT
+                    </option>
+                                                                                <option
+                        value="81"
+                        
+                    >
+                        MALUKU
+                    </option>
+                                                                                <option
+                        value="82"
+                        
+                    >
+                        MALUKU UTARA
+                    </option>
+                                                                                <option
+                        value="91"
+                        
+                    >
+                        PAPUA BARAT
+                    </option>
+                                                                                <option
+                        value="94"
+                        
+                    >
+                        PAPUA
+                    </option>
+                                                                                <option
+                        value="101"
+                        
+                    >
+                        Papua Barat Daya
+                    </option>
+                                                                                <option
+                        value="102"
+                        
+                    >
+                        Papua Pegunungan
+                    </option>
+                                                                                <option
+                        value="103"
+                        
+                    >
+                        Papua Tengah
+                    </option>
+                                                                                <option
+                        value="104"
+                        
+                    >
+                        Papua Selatan
+                    </option>
+                                    </select>
+    </div>
+        </div>
+
+
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="select__city-id"
+            class="form-control__label"
+        >Kota/Kabupaten
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <select
+             id="select__city-id" name="city_id" required="true" class="form-control__select"                                 >
+            <option
+                value=""
+                 selected             >-- Pilih Kota/Kabupaten --</option>
+                    </select>
+    </div>
+        </div>
+
+
+                    </div>
+                    <div class="col-12">
+                        <div class="form-control">
+            <label
+            for="input__postal-code"
+            class="form-control__label"
+        >Kode Pos
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="tel"
+            id="input__postal-code" name="postal_code" value="" placeholder="Masukkan kode pos" required="true" maxlength="5" class="form-control__input"
+            data-label="Kode Pos"
+                                                oninput="formatNumberOnly(event)"         >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+
+
+                    </div>
+                    <div class="col-12">
+                        <div class="form-control">
+            <label
+            for="input__address"
+            class="form-control__label"
+        >Alamat
+                            <span class="important">*</span>
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="text"
+            id="input__address" name="address" value="" placeholder="Masukkan alamat" required="true" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+            <div id="contact__form" class="card card_form">
+        <div class="card__body">
+                        <div class="grid">
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__website"
+            class="form-control__label"
+        >Website
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="url"
+            id="input__website" name="website" value="" placeholder="Masukkan website" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__email"
+            class="form-control__label"
+        >Email
+                                </label>
+        <div class="form-control__group ">
+        <span data-input-icon="email"></span>
+        <input
+            type="email"
+            id="input__email" name="email" value="" placeholder="Masukkan email" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__phone"
+            class="form-control__label"
+        >Nomor Telepon
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="tel"
+            id="input__phone" name="phone" value="" placeholder="Masukkan nomor telepon" maxlength="15" class="form-control__input"
+            data-label="Nomor Telepon"
+                                                oninput="formatNumberOnly(event)"         >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+
+
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__whatsapp"
+            class="form-control__label"
+        >Whatsapp
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="tel"
+            id="input__whatsapp" name="whatsapp" value="" placeholder="Masukkan nomor whatsapp" maxlength="15" class="form-control__input"
+            data-label="Whatsapp"
+                                                oninput="formatNumberOnly(event)"         >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+
+
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__facebook"
+            class="form-control__label"
+        >Facebook
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="url"
+            id="input__facebook" name="facebook" value="" placeholder="Contoh: https://www.facebook.com/***" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__youtube"
+            class="form-control__label"
+        >Youtube
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="url"
+            id="input__youtube" name="youtube" value="" placeholder="Contoh: https://www.youtube.com/***" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__twitter"
+            class="form-control__label"
+        >Twitter/X
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="text"
+            id="input__twitter" name="twitter" value="" placeholder="Contoh: @maukuliah.id" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-control">
+            <label
+            for="input__instagram"
+            class="form-control__label"
+        >Instagram
+                                </label>
+        <div class="form-control__group ">
+        <input
+            type="text"
+            id="input__instagram" name="instagram" value="" placeholder="Contoh: @maukuliah.id" class="form-control__input"
+                                >
+        <span data-clear="input"></span>
+    </div>
+        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+        </div>
+</form>
+                <footer class="footer">
+    <div class="footer__copyright-wrapper">
+        <div class="footer__logo-wrapper">
+            <img src="https://maukuliah.id/quantum/assets/images/logos/sevima-logo.webp" alt="logo" class="footer__logo">
+        </div>
+        <p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+    </div>
+    <p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+            </main>
+        
+        <script src="/livewire/livewire.min.js?id=0f6341c0"   data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+                <script>
+            function previewFile_input__logo() {
+                const inputFile_input__logo = document.getElementById('input__logo');
+                const preview_input__logo = document.getElementById('preview-input__logo');
+                const iframe_input__logo = document.getElementById('iframe-input__logo');
+
+                inputFile_input__logo.addEventListener('change', function() {
+                    const file = this.files[0];
+                    if (file) {
+                        if (file.size > 2048 * 1024) {
+                            alert('Ukuran file terlalu besar. Maksimal ' + 2048 + 'KB');
+                            inputFile_input__logo.value = null;
+                            inputFile_input__logo.dispatchEvent(new Event('change', {
+                                bubbles: true
+                            }));
+                            return;
+                        }
+                        const acceptedTypes = inputFile_input__logo.accept.split(',').map(type => type
+                            .replace('.', ''));
+                        const fileExtension = file.name.split('.').pop().toLowerCase();
+                        if (!acceptedTypes.includes(fileExtension)) {
+                            alert('File harus bertipe ' + inputFile_input__logo.accept);
+                            preview_input__logo.src = '';
+                            inputFile_input__logo.value = null;
+                            inputFile_input__logo.dispatchEvent(new Event('change', {
+                                bubbles: true
+                            }));
+                            return;
+                        }
+                        if (file.type.match('image.*')) {
+                            preview_input__logo.classList.remove('hidden');
+                            iframe_input__logo.classList.add('hidden');
+                            const reader = new FileReader();
+                            reader.onload = function(e) {
+                                preview_input__logo.setAttribute('src', e.target.result);
+                            };
+                            reader.readAsDataURL(file);
+                        } else if (file.type.match('application/pdf')) {
+                            preview_input__logo.classList.add('hidden');
+                            iframe_input__logo.classList.remove('hidden');
+                            iframe_input__logo.src = URL.createObjectURL(file);
+                        }
+                    } else {
+                                                    preview_input__logo.classList.add('hidden');
+                                                iframe_input__logo.classList.add('hidden');
+                    }
+                })
+            }
+
+            document.addEventListener('livewire:initialized', () => {
+                previewFile_input__logo();
+            })
+
+            Livewire.hook('commit', ({
+                component,
+                commit,
+                respond,
+                succeed,
+                fail
+            }) => {
+                // Runs immediately before a commit's payload is sent to the server...
+
+                respond(() => {
+                    // Runs after a response is received but before it's processed...
+                })
+
+                succeed(({
+                    snapshot,
+                    effect
+                }) => {
+                    previewFile_input__logo();
+                })
+
+                fail(() => {
+                    // Runs if some part of the request failed...
+                })
+            })
+        </script>
+        <script>
+        function formatNumberOnly(event) {
+            let numberOnly = event.target.value;
+            numberOnly = numberOnly.replace(/[^0-9]/g, '');
+            event.target.value = numberOnly;
+
+            const inputLabel = event.target.getAttribute('data-label');
+            const inputMinLength = event.target.getAttribute('minlength') ?? 0;
+            const inputMaxLength = event.target.getAttribute('maxlength') ?? 15;
+
+            if (numberOnly.length > 0 && numberOnly.length < inputMinLength) {
+                event.target.setCustomValidity(inputLabel + ' harus diisi minimal ' + inputMinLength + ' karakter');
+            } else if (numberOnly.length > 0 && numberOnly.length > inputMaxLength) {
+                event.target.setCustomValidity(inputLabel + ' harus diisi maksimal ' + inputMaxLength + ' karakter');
+            } else {
+                event.target.setCustomValidity('');
+            }
+        }
+    </script>
+    <script src="https://maukuliah.id/quantum\assets\js\vendors\choices.js-10.2.0\public\assets\scripts\choices.min.js"></script>
+        <script>
+            const selectProvince = document.getElementById('select__province-id');
+            const selectCity = document.getElementById('select__city-id');
+            const optionCity = document.createElement('option');
+            optionCity.value = '';
+            optionCity.innerText = '-- Pilih Kota/Kabupaten --';
+
+            selectProvince.addEventListener('change', function() {
+                const id = this.value;
+                if (!id) {
+                    selectCity.disabled = true;
+                    return;
+                }
+                const url = `https://maukuliah.id/super-admin/master/universities/get-city/:id`.replace(':id', id);
+                selectCity.disabled = true;
+                fetch(url)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        selectCity.innerHTML = '';
+                        selectCity.appendChild(optionCity);
+                        data.forEach((item) => {
+                            const option = document.createElement('option');
+                            option.value = item.value;
+                            option.innerText = item.label;
+                            selectCity.appendChild(option);
+                        });
+                    });
+                selectCity.disabled = false;
+            });
+            if (selectProvince.value && selectCity.value == null) {
+                selectProvince.dispatchEvent(new Event('change'));
+                selectCity.disabled = false;
+            } else if (selectProvince.value && selectCity.value) {
+                selectCity.disabled = false;
+            } else {
+                selectCity.disabled = true;
+            }
+        </script>
+            <script
+            type="text/javascript"
+            src="https://maukuliah.id/quantum/assets/release/core.js"
+        ></script>
+    </body>
+
+</html>

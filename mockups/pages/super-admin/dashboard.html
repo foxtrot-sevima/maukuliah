@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Dashboard</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template">
+<div class="header__row-wrapper">
+<div class="header__group">
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="header__logo" src="_assets/captured-images/mk-crm-logo-mini.webp"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Sevima Platform</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="dropdown dropdown_nav dropdown_profile">
+<button aria-expanded="false" class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="../crm/super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="dashboard.html">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="interested-users.html">
+                                        Pengajuan Pendaftaran
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="consultations.html">
+                                        Konsultasi
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="subscriptions.html">
+                                        Subscription
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="dashboard.html">
+<span>Data</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Data</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-users.html">
+                                        Pengguna
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-majors.html">
+                                        Jurusan Umum
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-categories.html">
+                                        Kategori Jurusan
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-jobs.html">
+                                        Prospek Kerja
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-schools.html">
+                                        Sekolah Asal
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="scholarships.html">
+                                        Beasiswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="banners.html">
+                                        Banner
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="modules.html">
+                                        Modul Fitur
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="dashboard.html">
+<span>Tes Maukuliah</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Tes Maukuliah</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="test.html">
+                                        Tes Potensi Siswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">
+                                        Tryout
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="dashboard.html">
+<span>Log</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Log</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/applications" href="#">
+                                        Log Aplikasi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/accesses" href="#">
+                                        Log Akses
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-activities.html">
+                                        Log Aktivitas
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-modules.html">
+                                        Log Penggunaan Modul
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<main class="main">
+<div class="container">
+<div class="modal" id="filter__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Filter Lain</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<form method="GET" onsubmit="addParams(event)">
+<div class="modal__body">
+<div class="modal__content-input">
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__time-period">Periode Waktu
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__time-period" name="filter[time_period]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Periode Waktu --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Periode Waktu --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Periode Waktu --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__time-period-item-choice-1" role="option">-- Pilih Periode Waktu --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="daily" id="choices--select__time-period-item-choice-2" role="option">
+                        Harian
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="weekly" id="choices--select__time-period-item-choice-3" role="option">
+                        Mingguan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="monthly" id="choices--select__time-period-item-choice-4" role="option">
+                        Bulanan
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="annually" id="choices--select__time-period-item-choice-5" role="option">
+                        Tahunan
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__start-date">Tanggal Awal
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__start-date" max="" name="filter[start_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__end-date">Tanggal Akhir
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__end-date" min="" name="filter[end_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="main__header">
+<div class="main__location">
+<div class="main__wrapper">
+<h1 class="main__title">Dashboard</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+<div class="flex flex-row items-center gap-4">
+<button class="btn btn_outline" data-target="#filter__modal" data-toggle="modal">
+<span class="btn__text !font-medium">
+            09 Jun 2026 -
+                09 Jul 2026
+        </span>
+<span class="icon icon-funnel-solid"></span>
+</button>
+<form action="#" data-mockup-unresolved="/super-admin/forget-cache" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <input name="cache_key" type="hidden" value="super-admin-dashboard-daily-2026-06-09-2026-07-09"/>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Perbarui Data
+        </span>
+<span class="icon icon-arrow-path"></span>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-clock-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Subscription</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="!grid grid-cols-1 gap-2 lg:grid-cols-2">
+<div class="!grid grid-cols-1 gap-2 rounded-lg bg-slate-100 p-2">
+<a class="mb-auto flex flex-row flex-wrap items-center justify-between gap-2 rounded-lg bg-white px-5 py-3 hover:bg-red-50 hover:ring-2 hover:ring-red-600" href="subscriptions-2.html">
+<div class="line-clamp-1 text-sm font-semibold">
+                                Universitas Atma Jaya Yogyakarta
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<div class="flex flex-row items-center gap-2 text-xs font-semibold">
+<span class="icon icon-calendar text-xl"></span>
+<span>
+                                        08 Juni 2024
+                                    </span>
+</div>
+<div class="bg-red-600 inline-flex rounded-full px-2 py-1 text-xs font-semibold text-white">
+                                                                            Telat:
+                                        2 tahun yang lalu
+                                                                    </div>
+</div>
+</a>
+<a class="mb-auto flex flex-row flex-wrap items-center justify-between gap-2 rounded-lg bg-white px-5 py-3 hover:bg-red-50 hover:ring-2 hover:ring-red-600" href="subscriptions-2.html">
+<div class="line-clamp-1 text-sm font-semibold">
+                                Universitas Wisnuwardhana
+                            </div>
+<div class="flex flex-row items-center gap-2">
+<div class="flex flex-row items-center gap-2 text-xs font-semibold">
+<span class="icon icon-calendar text-xl"></span>
+<span>
+                                        02 Februari 2025
+                                    </span>
+</div>
+<div class="bg-red-600 inline-flex rounded-full px-2 py-1 text-xs font-semibold text-white">
+                                                                            Telat:
+                                        1 tahun yang lalu
+                                                                    </div>
+</div>
+</a>
+</div>
+<div class="!grid grid-cols-3 gap-2 rounded-lg bg-slate-100 p-2">
+<div class="flex flex-col items-center justify-center gap-2 rounded-lg bg-[#0F6AF5] py-4 hover:brightness-75">
+<h2 class="text-4xl font-bold text-white">
+                            0
+                        </h2>
+<span class="text-lg font-semibold text-white">Berjalan</span>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 rounded-lg bg-red-600 py-4 hover:brightness-75">
+<h2 class="text-4xl font-bold text-white">
+                            3
+                        </h2>
+<span class="text-lg font-semibold text-white">Telat</span>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 rounded-lg bg-slate-600 py-4 hover:brightness-75">
+<h2 class="text-4xl font-bold text-white">
+                            3
+                        </h2>
+<span class="text-lg font-semibold text-white">Total</span>
+</div>
+</div>
+<a class="btn btn_outline lg:col-span-2" href="subscriptions.html">
+<span class="btn__text !font-medium">
+            Lihat Detail
+        </span>
+</a>
+</div>
+</div>
+</div>
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-presentation-chart-line-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Grafik Konsultasi Pengunjung</h2>
+</div>
+</div>
+<div class="card__header-right">
+<a class="btn btn_outline" href="consultations.html">
+<span class="btn__text !font-medium">
+            Lihat Detail
+        </span>
+</a>
+</div>
+</div>
+<div class="card__body">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<div class="flex flex-col gap-4">
+<canvas class="max-h-[300px]" height="375" id="consultation__chart" width="804"></canvas>
+<div class="flex flex-col divide-y divide-dashed">
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<svg fill="none" height="17" viewbox="0 0 16 17" width="16" xmlns="#">
+<rect fill="#99A1AE" height="16" rx="4" width="16" y="0.75"></rect>
+</svg>
+<span class="font-semibold">
+                                        Informasi Lainnya
+                                    </span>
+</div>
+<span>
+                                    6
+                                    Pengguna
+                                </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<svg fill="none" height="17" viewbox="0 0 16 17" width="16" xmlns="#">
+<rect fill="#0F6AF5" height="16" rx="4" width="16" y="0.75"></rect>
+</svg>
+<span class="font-semibold">
+                                        Informasi Universitas
+                                    </span>
+</div>
+<span>
+                                    3
+                                    Pengguna
+                                </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<svg fill="none" height="17" viewbox="0 0 16 17" width="16" xmlns="#">
+<rect fill="#F69D51" height="16" rx="4" width="16" y="0.75"></rect>
+</svg>
+<span class="font-semibold">
+                                        Informasi Pendaftaran
+                                    </span>
+</div>
+<span>
+                                    2
+                                    Pengguna
+                                </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<svg fill="none" height="17" viewbox="0 0 16 17" width="16" xmlns="#">
+<rect fill="#00B711" height="16" rx="4" width="16" y="0.75"></rect>
+</svg>
+<span class="font-semibold">
+                                        Informasi Beasiswa
+                                    </span>
+</div>
+<span>
+                                    1
+                                    Pengguna
+                                </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<svg fill="none" height="17" viewbox="0 0 16 17" width="16" xmlns="#">
+<rect fill="#DC2626" height="16" rx="4" width="16" y="0.75"></rect>
+</svg>
+<span class="font-semibold">
+                                        Informasi Jurusan
+                                    </span>
+</div>
+<span>
+                                    0
+                                    Pengguna
+                                </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex flex-col gap-4 rounded-lg border p-4">
+<div class="flex flex-row items-start justify-between">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-user-solid"></span>
+<span class="line-clamp-1 w-[200px] break-all font-semibold">
+                                        Nita Marta Tasik
+                                    </span>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="flex flex-row items-center">
+<span class="flex flex-row items-center gap-2">
+<svg fill="none" height="17" viewbox="0 0 16 17" width="16" xmlns="#">
+<rect fill="#99A1AE" height="16" rx="4" width="16" y="0.5"></rect>
+</svg>
+<span class="font-semibold">
+                                                Informasi Lainnya
+                                            </span>
+</span>
+</div>
+<span>
+                                        1 hari yang lalu
+                                    </span>
+</div>
+</div>
+<span>
+                                Berapa biaya pembayaran selama kuliah di taruna bhakti
+                            </span>
+</div>
+<div class="flex flex-col gap-4 rounded-lg border p-4">
+<div class="flex flex-row items-start justify-between">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-user-solid"></span>
+<span class="line-clamp-1 w-[200px] break-all font-semibold">
+                                        Nita Marta Tasik
+                                    </span>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="flex flex-row items-center">
+<span class="flex flex-row items-center gap-2">
+<svg fill="none" height="17" viewbox="0 0 16 17" width="16" xmlns="#">
+<rect fill="#99A1AE" height="16" rx="4" width="16" y="0.5"></rect>
+</svg>
+<span class="font-semibold">
+                                                Informasi Lainnya
+                                            </span>
+</span>
+</div>
+<span>
+                                        1 hari yang lalu
+                                    </span>
+</div>
+</div>
+<span>
+                                Berapa biaya pembayaran selama kuliah di taruna bhakti
+                            </span>
+</div>
+<div class="flex flex-col gap-4 rounded-lg border p-4">
+<div class="flex flex-row items-start justify-between">
+<div class="flex flex-row items-center gap-2">
+<span class="icon icon-user-solid"></span>
+<span class="line-clamp-1 w-[200px] break-all font-semibold">
+                                        Nita Marta Tasik
+                                    </span>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="flex flex-row items-center">
+<span class="flex flex-row items-center gap-2">
+<svg fill="none" height="17" viewbox="0 0 16 17" width="16" xmlns="#">
+<rect fill="#F69D51" height="16" rx="4" width="16" y="0.5"></rect>
+</svg>
+<span class="font-semibold">
+                                                Informasi Pendaftaran
+                                            </span>
+</span>
+</div>
+<span>
+                                        1 hari yang lalu
+                                    </span>
+</div>
+</div>
+<span>
+                                Saya ingin bertanya mengenai biaya pendaftaran di universitas taruna bhakti
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-trophy-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Ranking Kampus Favorit</h2>
+</div>
+</div>
+<div class="card__header-right">
+<a class="btn btn_outline" data-mockup-unresolved="/super-admin/favourite-universities" href="#">
+<span class="btn__text !font-medium">
+            Lihat Detail
+        </span>
+</a>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed">
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="Universitas Lancang Kuning" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/101007.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/101007.jpg"/>
+<span class="font-semibold">Universitas Lancang Kuning</span>
+</div>
+<span>
+                                159 Pendaftar
+                            </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="STIKES IST Buton" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/093176.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/093176.jpg"/>
+<span class="font-semibold">STIKES IST Buton</span>
+</div>
+<span>
+                                12 Pendaftar
+                            </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="Politeknik Ilmu Pemasyarakatan" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/365001.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/365001.jpg"/>
+<span class="font-semibold">Politeknik Ilmu Pemasyarakatan</span>
+</div>
+<span>
+                                12 Pendaftar
+                            </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="Universitas Bhinneka PGRI Tulungagung" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/071101.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/071101.jpg"/>
+<span class="font-semibold">Universitas Bhinneka PGRI Tulungagung</span>
+</div>
+<span>
+                                12 Pendaftar
+                            </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="Universitas Pasundan" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/041008.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/041008.jpg"/>
+<span class="font-semibold">Universitas Pasundan</span>
+</div>
+<span>
+                                10 Pendaftar
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/chart.js"></script><script>
+            const consultationChart = document.getElementById('consultation__chart');
+            new Chart(consultationChart, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                                                    'Informasi Lainnya',
+                                                    'Informasi Universitas',
+                                                    'Informasi Pendaftaran',
+                                                    'Informasi Beasiswa',
+                                                    'Informasi Jurusan',
+                                            ],
+                    datasets: [{
+                        label: '# Jumlah Konsultasi',
+                        data: [
+                                                            '6',
+                                                            '3',
+                                                            '2',
+                                                            '1',
+                                                            '0',
+                                                    ],
+                        backgroundColor: [
+                                                            '#99A1AE',
+                                                            '#0F6AF5',
+                                                            '#F69D51',
+                                                            '#00B711',
+                                                            '#DC2626',
+                                                    ],
+                    }],
+                },
+                options: {
+                    borderRadius: 10,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.dataset.data[context.dataIndex] > 0) {
+                                        label += context.dataset.data[context
+                                            .dataIndex] + ' (' + Math.round(
+                                            context
+                                            .dataset.data[context.dataIndex] /
+                                            12 *
+                                            100) + '%)';
+                                    } else {
+                                        label += '0 (0%)';
+                                    }
+                                    return label;
+                                },
+                            },
+                        },
+                    },
+                },
+            });
+        </script><script src="_assets/mockup-interactions.js"></script></body></html>

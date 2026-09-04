@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+
+
+<title>Sevima CRM | Cetak Riwayat Pembayaran</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+ <style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+<style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased"><div class="layout-overlay"></div>
+<div class="container mx-auto min-h-screen max-w-[30cm] border bg-white print:max-w-full print:border-0">
+<div class="flex flex-row items-center justify-between bg-slate-100 p-4 print:hidden">
+<a class="btn btn_outline" href="affiliates-payment-histories-inv07072026007.html">
+<span class="icon icon-arrow-left-solid"></span>
+<span class="btn__text !font-medium">
+            Kembali
+        </span>
+</a>
+<button class="btn btn_primary" id="button__print" type="button">
+<span class="icon icon-printer-solid"></span>
+<span class="btn__text !font-medium">
+            Cetak
+        </span>
+</button>
+</div>
+<div class="flex flex-col gap-4 p-4 text-black">
+<div class="relative flex flex-row items-center py-4">
+<div class="absolute">
+<img alt="logo" class="h-20 w-20 object-contain" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="flex flex-grow flex-col items-center justify-center gap-1">
+<h1 class="font-bold">Universitas Sentra Vidya Utama</h1>
+<p class="max-w-[75%] text-center text-sm">
+                        Medokan Asri Tengah MA-2 Blok Q No 16, Medokan Ayu, Kec. Rungkut, Surabaya, Jawa Timur 60295, Surabaya, Jawa Timur
+                        60295
+                    </p>
+</div>
+</div>
+<hr class="border-b border-black"/>
+<h1 class="text-center font-bold uppercase">Invoice Pembayaran Komisi Afiliator</h1>
+<div class="mb-8 !grid grid-cols-2 gap-2 text-sm">
+<div class="!grid grid-cols-2">
+<div>No</div>
+<div>: INV07072026007</div>
+</div>
+<div class="!grid grid-cols-2">
+<div>Tanggal Pembayaran</div>
+<div>:
+                        Selasa, 07 Juli 2026
+                    </div>
+</div>
+<div class="!grid grid-cols-2">
+<div>Perihal</div>
+<div class="flex flex-row">
+<span>: </span>
+<span>Invoice Pembayaran Komisi Afiliator</span>
+</div>
+</div>
+</div>
+<p class="mb-4 text-sm">
+                Berikut adalah list peminat yang telah dibayarkan komisinya pada invoice ini:
+            </p>
+<table>
+<thead class="border-y-2 border-black">
+<tr>
+<th class="p-2 text-center text-sm font-semibold">Tanggal Daftar</th>
+<th class="p-2 text-center text-sm font-semibold">ID Peminat</th>
+<th class="p-2 text-center text-sm font-semibold">Nama Peminat</th>
+<th class="p-2 text-center text-sm font-semibold">Prodi Pilihan</th>
+<th class="p-2 text-center text-sm font-semibold">Komisi</th>
+<th class="p-2 text-center text-sm font-semibold">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-black text-sm">
+<td class="p-2 text-center">
+                                06 Apr 2026
+                            </td>
+<td class="p-2 text-center">
+                                MK545020260406
+                            </td>
+<td class="p-2">
+                                Muhammad Nur Fauzan
+                            </td>
+<td class="p-2">
+                                S1-Manajemen Bisnis
+                            </td>
+<td class="p-2 text-right">
+                                Rp500.000
+                            </td>
+<td class="p-2 text-center font-semibold">
+                                Lunas
+                            </td>
+</tr>
+</tbody>
+</table>
+<div class="mt-4 flex flex-col gap-2">
+<p class="text-sm">
+                    Komisi telah dibayarkan melalui metode pembayaran
+                    <b id="label-method-payment">Tunai</b>
+                    kepada Afiliator dengan detail sebagai berikut:
+                </p>
+<div class="!grid w-1/2 grid-cols-1 gap-2 text-sm">
+<div class="!grid grid-cols-2">
+<div>Nama Afiliator</div>
+<div>: Muhammad Nur Fauzan</div>
+</div>
+<div class="!grid grid-cols-2">
+<div>Jumlah Pembayaran</div>
+<div>: Rp500.000</div>
+</div>
+</div>
+</div>
+<hr class="mt-4 border-b border-black"/>
+<div class="mt-4 flex flex-col gap-2">
+<div class="!grid w-1/2 grid-cols-1 gap-2 text-sm">
+<div class="!grid grid-cols-2">
+<div>Dicetak Oleh</div>
+<div>: <b>Ahmad Dimas</b></div>
+</div>
+<div class="!grid grid-cols-2">
+<div>Dicetak Pada:</div>
+<div>: <b>09 Juli 2026 14:47 WIB</b></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

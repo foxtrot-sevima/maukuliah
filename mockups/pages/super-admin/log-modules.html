@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Log Penggunaan Modul Fitur</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template">
+<div class="header__row-wrapper">
+<div class="header__group"><button aria-label="Toggle sidebar" class="header__sidebar-nav header__sidebar-nav_simple"><span class="icon icon-bars-3-bottom-left-solid"></span></button>
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="header__logo" src="_assets/captured-images/mk-crm-logo-mini.webp"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Sevima Platform</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="dropdown dropdown_nav dropdown_profile">
+<button class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="../crm/super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="log-modules.html">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="interested-users.html">
+                                        Pengajuan Pendaftaran
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="consultations.html">
+                                        Konsultasi
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="subscriptions.html">
+                                        Subscription
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="log-modules.html">
+<span>Data</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Data</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-users.html">
+                                        Pengguna
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-majors.html">
+                                        Jurusan Umum
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-categories.html">
+                                        Kategori Jurusan
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-jobs.html">
+                                        Prospek Kerja
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-schools.html">
+                                        Sekolah Asal
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="scholarships.html">
+                                        Beasiswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="banners.html">
+                                        Banner
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="modules.html">
+                                        Modul Fitur
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="log-modules.html">
+<span>Tes Maukuliah</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Tes Maukuliah</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="test.html">
+                                        Tes Potensi Siswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">
+                                        Tryout
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="log-modules.html">
+<span>Log</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Log</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/applications" href="#">
+                                        Log Aplikasi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/accesses" href="#">
+                                        Log Akses
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-activities.html">
+                                        Log Aktivitas
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-modules.html">
+                                        Log Penggunaan Modul
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<aside class="sidebar sidebar_without-icon sidebar_without-scroll">
+<div class="sidebar__group">
+<div class="sidebar__group-header">
+<span class="sidebar__group-title">Log Maukuliah</span>
+</div>
+<ul class="sidebar__list">
+<li class="sidebar__item">
+<a class="sidebar__link" data-mockup-unresolved="/super-admin/log/applications" href="#">
+<span class="sidebar__link-text">Log Aplikasi</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" data-mockup-unresolved="/super-admin/log/accesses" href="#">
+<span class="sidebar__link-text">Log Akses</span>
+</a>
+</li>
+<li class="sidebar__item">
+<a class="sidebar__link" href="log-activities.html">
+<span class="sidebar__link-text">Log Aktivitas</span>
+</a>
+</li>
+<li class="sidebar__item active">
+<a class="sidebar__link" href="log-modules.html">
+<span class="sidebar__link-text">Log Penggunaan Modul</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<main class="main">
+<div class="container">
+<div class="modal" id="filter__modal">
+<div class="modal__overlay" data-dismiss="modal"></div>
+<div class="modal__wrapper">
+<div class="modal__header">
+<div class="modal__header-wrapper">
+<h3 class="modal__title">Filter Lain</h3>
+</div>
+<span class="icon icon-x-mark-mini" data-dismiss="modal"></span>
+</div>
+<form method="GET" onsubmit="addParams(event)">
+<div class="modal__body">
+<div class="modal__content-input">
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="select__university">Universitas
+                                </label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__university" name="filter[university]" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Universitas --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Universitas --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Universitas --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__university-item-choice-1" role="option">-- Pilih Universitas --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="8" id="choices--select__university-item-choice-2" role="option">
+                        Universitas HKBP Nommensen Pematangsiantar
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="7" id="choices--select__university-item-choice-3" role="option">
+                        Poltekkes Kemenkes Manado
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="2" id="choices--select__university-item-choice-4" role="option">
+                        Politeknik Industri Furnitur dan Pengolahan Kayu
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="4" id="choices--select__university-item-choice-5" role="option">
+                        Universitas PGRI Mahadewa Indonesia
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="194" id="choices--select__university-item-choice-6" role="option">
+                        Universitas Cordova
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="877" id="choices--select__university-item-choice-7" role="option">
+                        Universitas Islam Dr Khez Muttaqien
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="558" id="choices--select__university-item-choice-8" role="option">
+                        Universitas Teknologi Mataram
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="9" data-select-text="" data-value="590" id="choices--select__university-item-choice-9" role="option">
+                        Institut Agama Islam Negeri Kerinci
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="10" data-select-text="" data-value="34" id="choices--select__university-item-choice-10" role="option">
+                        Sekolah Tinggi Ilmu Ekonomi Semarang
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="11" data-select-text="" data-value="45" id="choices--select__university-item-choice-11" role="option">
+                        Politeknik Penerbangan Makassar
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="12" data-select-text="" data-value="248" id="choices--select__university-item-choice-12" role="option">
+                        Universitas Komputer Indonesia UNIKOM
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="13" data-select-text="" data-value="236" id="choices--select__university-item-choice-13" role="option">
+                        Universitas Krisnadwipayana
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="14" data-select-text="" data-value="13" id="choices--select__university-item-choice-14" role="option">
+                        Poltekkes Kemenkes Aceh
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="15" data-select-text="" data-value="228" id="choices--select__university-item-choice-15" role="option">
+                        Universitas Nasional
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="16" data-select-text="" data-value="36" id="choices--select__university-item-choice-16" role="option">
+                        Universitas Muhammadiyah Kotabumi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="17" data-select-text="" data-value="26" id="choices--select__university-item-choice-17" role="option">
+                        STIKES Mitra RIA Husada Jakarta
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="18" data-select-text="" data-value="267" id="choices--select__university-item-choice-18" role="option">
+                        Universitas Negeri Lampung
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="19" data-select-text="" data-value="25" id="choices--select__university-item-choice-19" role="option">
+                        Institut Agama Islam Negeri Lhokseumawe
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="20" data-select-text="" data-value="41" id="choices--select__university-item-choice-20" role="option">
+                        Sekolah Tinggi Keguruan Ilmu Pendidikan Melawi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__start-date">Tanggal Awal
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__start-date" max="" name="filter[start_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__end-date">Tanggal Akhir
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__end-date" min="" name="filter[end_date]" type="date" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal__footer">
+<div class="!grid grid-cols-1 gap-4 lg:grid-cols-2">
+<button class="btn btn_outline order-last lg:order-first" data-dismiss="modal" type="button">
+<span class="btn__text !font-medium">
+            Batal
+        </span>
+</button>
+<button class="btn btn_primary" type="submit">
+<span class="btn__text !font-medium">
+            Filter
+        </span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="main__header">
+<div class="main__location">
+<div class="main__wrapper">
+<h1 class="main__title">Log Penggunaan Modul</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+<div class="flex flex-row items-center justify-end gap-4">
+<button class="btn btn_outline w-full lg:w-max" data-target="#filter__modal" data-toggle="modal">
+<span class="btn__text !font-medium">
+            09 Jun 2026 -
+                09 Jul 2026
+        </span>
+<span class="icon icon-funnel-solid"></span>
+</button>
+<a class="btn btn_outline btn_icon" href="log-modules.html">
+<span class="icon icon-arrow-path"></span>
+<span class="btn__text !font-medium">
+            Reset Filter
+        </span>
+</a>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-trophy-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Kampus yang Paling Banyak Menggunakan Modul</h2>
+<span class="header__subtitle">Daftar kampus yang paling banyak menggunakan modul</span>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed">
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="logo" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1745466143-myrl4eXZ40.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1745466143-myrl4eXZ40.jpg"/>
+<span class="font-semibold">Jakarta Global University</span>
+</div>
+<span>
+                            2031 Kali Modul Digunakan
+                        </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="logo" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1736823866-rMPIgHxIWL.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1736823866-rMPIgHxIWL.jpg"/>
+<span class="font-semibold">Politeknik Semen Indonesia</span>
+</div>
+<span>
+                            1090 Kali Modul Digunakan
+                        </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="logo" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/031009.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/031009.jpg"/>
+<span class="font-semibold">Universitas Kristen Indonesia</span>
+</div>
+<span>
+                            772 Kali Modul Digunakan
+                        </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="logo" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/213584.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/213584.jpg"/>
+<span class="font-semibold">Institut Ummul Quro AL-Islami Bogor Jawa Barat</span>
+</div>
+<span>
+                            306 Kali Modul Digunakan
+                        </span>
+</div>
+<div class="flex flex-row items-center justify-between py-2">
+<div class="flex flex-row items-center gap-2">
+<img alt="logo" class="lazy object-cover size-10 rounded-full border-2 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/101007.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/101007.jpg"/>
+<span class="font-semibold">Universitas Lancang Kuning</span>
+</div>
+<span>
+                            304 Kali Modul Digunakan
+                        </span>
+</div>
+<div class="box-table__action">
+<div class="box-table__action-left">
+<p class="box-table__result">
+                Menampilkan
+                <b>1-5</b> dari Total 12
+                data
+            </p>
+</div>
+<div class="box-table__action-right">
+<div class="pagination">
+<button class="pagination__button-previous" disabled="">
+</button>
+<ul class="pagination__list" data-mobile-text="Halaman 1 dari 3">
+<li class="pagination__item active">1</li>
+<li class="pagination__item"><a href="log-modules.html">2</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">3</a>
+</li>
+</ul>
+<a class="pagination__button-next" href="log-modules.html">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card card_details-default">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-cube-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Informasi Modul</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="!grid grid-cols-2 gap-2">
+<div class="card">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-queue-list-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">10 Log</h2>
+<span class="header__subtitle">crm</span>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" x-data="{ showDetail: false }">
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/view-list-prospect" href="#">
+<span class="font-semibold">
+                                        Melihat daftar prospek
+                                    </span>
+<span class="whitespace-nowrap">
+                                        164 Log
+                                    </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/view-detail-prospect" href="#">
+<span class="font-semibold">
+                                        Melihat detail prospek
+                                    </span>
+<span class="whitespace-nowrap">
+                                        45 Log
+                                    </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/update-prospect" href="#">
+<span class="font-semibold">
+                                        Mengubah data prospek
+                                    </span>
+<span class="whitespace-nowrap">
+                                        37 Log
+                                    </span>
+</a>
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDetail">
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/add-prospect-log" href="#">
+<span class="font-semibold">
+                                            Menambahkan Log Prospek
+                                        </span>
+<span class="whitespace-nowrap">
+                                            15 Log
+                                        </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/assign-agent-prospect" href="#">
+<span class="font-semibold">
+                                            Menambahkan agen ke prospek
+                                        </span>
+<span class="whitespace-nowrap">
+                                            6 Log
+                                        </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/delete-prospect" href="#">
+<span class="font-semibold">
+                                            Menghapus data prospek
+                                        </span>
+<span class="whitespace-nowrap">
+                                            5 Log
+                                        </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/export-prospect" href="#">
+<span class="font-semibold">
+                                            Mengunduh data prospek
+                                        </span>
+<span class="whitespace-nowrap">
+                                            3 Log
+                                        </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/import-prospect" href="#">
+<span class="font-semibold">
+                                            Import Prospek
+                                        </span>
+<span class="whitespace-nowrap">
+                                            3 Log
+                                        </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/edit-prospect" href="#">
+<span class="font-semibold">
+                                            Mengubah data prospek
+                                        </span>
+<span class="whitespace-nowrap">
+                                            2 Log
+                                        </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/update-status-prospect" href="#">
+<span class="font-semibold">
+                                            Mengubah status prospek
+                                        </span>
+<span class="whitespace-nowrap">
+                                            1 Log
+                                        </span>
+</a>
+</div>
+<span class="flex cursor-pointer flex-row items-center justify-center gap-1 p-2 hover:bg-slate-100 hover:text-blue-600" x-on:click="showDetail = !showDetail">
+<span class="font-semibold" x-text="showDetail ? 'Sembunyikan' : 'Lihat Lainnya'">Lihat Lainnya</span>
+<span :class="showDetail ? '-rotate-180' : ''" class="icon icon-arrow-down transition-all duration-500"></span>
+</span>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-queue-list-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">3 Log</h2>
+<span class="header__subtitle">affiliate</span>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" x-data="{ showDetail: false }">
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/add-affiliator" href="#">
+<span class="font-semibold">
+                                        Menambahkan afiliator baru
+                                    </span>
+<span class="whitespace-nowrap">
+                                        6 Log
+                                    </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/print-payment-history-affiliate" href="#">
+<span class="font-semibold">
+                                        Cetak Riwayat Pembayaran Komisi Afiliasi
+                                    </span>
+<span class="whitespace-nowrap">
+                                        1 Log
+                                    </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/validate-affiliate" href="#">
+<span class="font-semibold">
+                                        Memvalidasi Afiliasi
+                                    </span>
+<span class="whitespace-nowrap">
+                                        1 Log
+                                    </span>
+</a>
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDetail">
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-queue-list-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">2 Log</h2>
+<span class="header__subtitle">riasec</span>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" x-data="{ showDetail: false }">
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/view-riasec-registrar" href="#">
+<span class="font-semibold">
+                                        Melihat Data peserta RIASEC
+                                    </span>
+<span class="whitespace-nowrap">
+                                        10 Log
+                                    </span>
+</a>
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/export-riasec-registrar" href="#">
+<span class="font-semibold">
+                                        Export Data peserta RIASEC
+                                    </span>
+<span class="whitespace-nowrap">
+                                        3 Log
+                                    </span>
+</a>
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDetail">
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-queue-list-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">1 Log</h2>
+<span class="header__subtitle">mbti-test</span>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" x-data="{ showDetail: false }">
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/view-mbti-test-registrar" href="#">
+<span class="font-semibold">
+                                        Melihat Data peserta Tes MBTI
+                                    </span>
+<span class="whitespace-nowrap">
+                                        2 Log
+                                    </span>
+</a>
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDetail">
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-queue-list-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">1 Log</h2>
+<span class="header__subtitle">learning-style-test</span>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" x-data="{ showDetail: false }">
+<a class="flex flex-row items-start justify-between gap-2 p-2 hover:bg-blue-100 hover:text-blue-600" data-mockup-unresolved="/super-admin/log/modules/view-learning-style-test-registrar" href="#">
+<span class="font-semibold">
+                                        Melihat Data peserta Tes gaya Belajar
+                                    </span>
+<span class="whitespace-nowrap">
+                                        5 Log
+                                    </span>
+</a>
+<div class="flex flex-col divide-y divide-dashed overflow-hidden rounded-lg bg-slate-100" hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDetail">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card card_table">
+<div class="card__header flex-wrap">
+<div class="card__header-left">
+<div class="card__header-icon">
+<span class="icon icon-clock-solid"></span>
+</div>
+<div class="card__header-block">
+<h2 class="header__title">Daftar Log Penggunaan Modul</h2>
+</div>
+</div>
+</div>
+<div class="card__body">
+<div class="box-table">
+<div class="box-table__content">
+<div class="table-max" id="table-max" style="--qn-table-cell-action-width: 0px; --qn-table-cell-action-alone-width: 8px; --qn-table-shadow-right-translate-x: 8px;">
+<table>
+<thead>
+<tr>
+<th class="">
+            Modul
+    </th>
+<th class="">
+            Aktivitas
+    </th>
+<th class="">
+            Universitas
+    </th>
+<th class="">
+            Pengguna
+    </th>
+<th class="text-center cell-sorting" onclick="sortBy('created_at')">
+            Tanggal Log
+    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            crm
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Melihat daftar prospek
+                                    <span class="badge badge_sm badge_secondary-primary">
+    2 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Lihat
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/101007.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/101007.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas Lancang Kuning
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 171007
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Yogo Turnandes, M.Kom</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 14:31
+                    </td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            crm
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Melihat daftar prospek
+                                    <span class="badge badge_sm badge_secondary-primary">
+    1 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Lihat
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/101007.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/101007.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas Lancang Kuning
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 171007
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Arzi Al Hafiz</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 11:31
+                    </td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            crm
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Melihat detail prospek
+                                    <span class="badge badge_sm badge_secondary-primary">
+    2 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Lihat
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1779420063-fowvtXxSk0.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas Sentra Vidya Utama
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 123456
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Qausya</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 11:11
+                    </td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            crm
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Melihat daftar prospek
+                                    <span class="badge badge_sm badge_secondary-primary">
+    2 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Lihat
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1779420063-fowvtXxSk0.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas Sentra Vidya Utama
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 123456
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Qausya</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 11:11
+                    </td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            riasec
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Melihat Data peserta RIASEC
+                                    <span class="badge badge_sm badge_secondary-primary">
+    2 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Lihat
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1779420063-fowvtXxSk0.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas Sentra Vidya Utama
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 123456
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Qausya</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 11:16
+                    </td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            crm
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Menambahkan Log Prospek
+                                    <span class="badge badge_sm badge_secondary-primary">
+    6 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Aksi
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1745466143-myrl4eXZ40.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1745466143-myrl4eXZ40.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Jakarta Global University
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 041082
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Sherly</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 10:38
+                    </td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            crm
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Mengubah data prospek
+                                    <span class="badge badge_sm badge_secondary-primary">
+    17 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Aksi
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1745466143-myrl4eXZ40.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1745466143-myrl4eXZ40.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Jakarta Global University
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 041082
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Sherly</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 10:39
+                    </td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            crm
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Melihat daftar prospek
+                                    <span class="badge badge_sm badge_secondary-primary">
+    6 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Lihat
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/031009.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/031009.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Universitas Kristen Indonesia
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 031009
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Nindhia Hutagaol</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 10:59
+                    </td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            crm
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Menambahkan Log Prospek
+                                    <span class="badge badge_sm badge_secondary-primary">
+    30 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Aksi
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1745466143-myrl4eXZ40.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1745466143-myrl4eXZ40.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Jakarta Global University
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 041082
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Nadya Zalfa Z</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 10:35
+                    </td>
+</tr>
+<tr>
+<td>
+<h3 class="cell-double__title">
+                            crm
+                        </h3>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="flex flex-col">
+<h3 class="cell-double__title flex flex-row items-center gap-2">
+                                    Menambahkan Log Prospek
+                                    <span class="badge badge_sm badge_secondary-primary">
+    12 Kali
+</span>
+</h3>
+<span class="cell-double__subtitle">
+                                    Tipe: Aksi
+                                </span>
+</div>
+</div>
+</td>
+<td class="cell-double">
+<div class="flex flex-row items-center gap-4">
+<div class="avatar avatar_sm">
+<img alt="logo" class="lazy object-cover" data-src="_assets/captured-images/1745466143-myrl4eXZ40.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1745466143-myrl4eXZ40.jpg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="cell-double__title">
+<a href="master-universities-universitas-sentra-vidya-utama.html">
+                                        Jakarta Global University
+                                    </a>
+</h3>
+<span class="cell-double__subtitle">
+                                    Kode PT: 041082
+                                </span>
+</div>
+</div>
+</td>
+<td>
+<span class="font-semibold">Aryeta Ramanda S</span>
+</td>
+<td class="text-center">
+                        09 Juli 2026 10:23
+                    </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="box-table__footer">
+<div class="box-table__action">
+<div class="box-table__action-left">
+<p class="box-table__result">
+                Menampilkan
+                <b>1-10</b> dari Total 309
+                data
+            </p>
+</div>
+<div class="box-table__action-right">
+<div class="pagination">
+<button class="pagination__button-previous" disabled="">
+</button>
+<ul class="pagination__list" data-mobile-text="Halaman 1 dari 31">
+<li class="pagination__item active">1</li>
+<li class="pagination__item"><a href="log-modules.html">2</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">3</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">4</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">5</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">6</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">7</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">8</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">9</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">10</a>
+</li>
+<li class="pagination__ellipsis">...</li>
+<li class="pagination__item"><a href="log-modules.html">30</a>
+</li>
+<li class="pagination__item"><a href="log-modules.html">31</a>
+</li>
+</ul>
+<a class="pagination__button-next" href="log-modules.html">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

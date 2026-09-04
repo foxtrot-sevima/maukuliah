@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Tambah Kampus</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template header_position-static">
+<div class="header__row-wrapper">
+<div class="header__group">
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="header__logo" src="_assets/captured-images/mk-crm-logo-mini.webp"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Sevima Platform</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="dropdown dropdown_nav dropdown_profile">
+<button aria-expanded="false" class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="../crm/super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Tambah Kampus_files/create">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="interested-users.html">
+                                        Pengajuan Pendaftaran
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="consultations.html">
+                                        Konsultasi
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="subscriptions.html">
+                                        Subscription
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Tambah Kampus_files/create">
+<span>Data</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Data</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-users.html">
+                                        Pengguna
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-majors.html">
+                                        Jurusan Umum
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-categories.html">
+                                        Kategori Jurusan
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-jobs.html">
+                                        Prospek Kerja
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-schools.html">
+                                        Sekolah Asal
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="scholarships.html">
+                                        Beasiswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="banners.html">
+                                        Banner
+                                    </a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="modules.html">
+                                        Modul Fitur
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Tambah Kampus_files/create">
+<span>Tes Maukuliah</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Tes Maukuliah</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="test.html">
+                                        Tes Potensi Siswa
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">
+                                        Tryout
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a aria-expanded="false" class="nav__link" data-toggle="dropdown" href="./Sevima CRM _ Tambah Kampus_files/create">
+<span>Log</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Log</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/applications" href="#">
+                                        Log Aplikasi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/log/accesses" href="#">
+                                        Log Akses
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-activities.html">
+                                        Log Aktivitas
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="log-modules.html">
+                                        Log Penggunaan Modul
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<main class="main">
+<form action="master-universities.html" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <div class="form-table" style="top: 208.438px;">
+<h4 class="form-table__title">
+                Daftar Form
+                
+            <span class="icon"></span></h4>
+<ul class="form-table__list">
+<li class="form-table__item active">
+<a class="form-table__anchor" href="master-universities-create.html">Informasi Kampus</a>
+</li>
+<li class="form-table__item">
+<a class="form-table__anchor" href="master-universities-create.html">Alamat Kampus</a>
+</li>
+<li class="form-table__item">
+<a class="form-table__anchor" href="master-universities-create.html">Kontak Kampus</a>
+</li>
+</ul>
+</div>
+<div class="form-nav">
+<div class="form-nav__left">
+<a class="btn btn_outline" href="master-universities.html">
+<span class="icon icon-arrow-left-mini"></span>
+<span class="btn__text !font-medium">
+            Kembali
+        </span>
+</a>
+</div>
+<div class="form-nav__middle" style="opacity: 0;">
+<ul class="form-nav__breadcrumb">
+<li class="form-nav__breadcrumb-item">
+<a class="form-nav__breadcrumb-btn" href="./Sevima CRM _ Tambah Kampus_files/create">Kampus</a>
+</li>
+<li class="form-nav__breadcrumb-diagonal"></li>
+<li class="form-nav__breadcrumb-item active">
+                Tambah
+            </li>
+</ul>
+</div>
+<div class="form-nav__right">
+<div class="form-nav__wrapper">
+<div class="form-nav__button-wrapper" data-placement="left" data-tooltip="Pastikan semua inputan mandatori telah diisi">
+<button class="btn btn_primary" disabled="" type="submit">
+                        Simpan
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="main__header">
+<div class="main__location">
+<ul class="breadcrumb">
+<li class="breadcrumb__item">
+<a href="master-universities.html">Kampus</a>
+</li>
+<li class="breadcrumb__item active">
+<a href="./Sevima CRM _ Tambah Kampus_files/create">Tambah Kampus</a>
+</li>
+</ul>
+<div class="main__wrapper">
+<h1 class="main__title">Tambah Kampus</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+</div>
+</div>
+<div class="card card_form card_highlight" id="information__form">
+<div class="card__body">
+<div class="grid">
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__logo">Logo
+                            <span class="important">*</span>
+</label>
+<iframe class="mb-2 hidden h-[500px] w-full rounded-lg" frameborder="0" id="iframe-input__logo" src="./Sevima CRM _ Tambah Kampus_files/saved_resource.html">
+</iframe>
+<label for="input__logo">
+<img alt="preview" class="mb-2 hidden aspect-video w-full max-w-sm cursor-pointer rounded-lg border bg-slate-300 object-contain hover:brightness-50" id="preview-input__logo" src="_assets/captured-images/create"/>
+</label>
+<div class="form-control__group">
+<div class="upload-draggable upload-draggable_inline">
+<div class="upload-draggable__box-inline">
+<input accept=".jpg,.jpeg,.png" class="upload-draggable__file-input" id="input__logo" name="logo" required="true" type="file"/>
+<div class="upload-draggable__inline-wrapper">
+<label class="upload-draggable__icon">
+<span class="icon icon-cloud-arrow-up"></span>
+</label>
+<div class="upload-draggable__wrapper">
+<h2 class="upload-draggable__title">
+                            Klik untuk pilih file
+                            <span class="upload-draggable__subtitle">
+                                atau seret file ke sini
+                            </span>
+</h2>
+<p class="upload-draggable__support">
+                            PNG, JPG, atau JPEG (max 2MB)
+                        </p>
+</div>
+</div>
+</div>
+<div class="upload-draggable__success line-clamp-1 break-all">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__name">Nama Kampus
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__name" name="name" placeholder="Masukkan nama kampus" required="true" type="text" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__short-name">Nama Singkat
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__short-name" name="short_name" placeholder="Masukkan singkatan" required="true" type="text" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__university-code">Kode PDDIKTI
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" data-label="Kode PDDIKTI" id="input__university-code" maxlength="6" name="university_code" oninput="formatNumberOnly(event)" placeholder="Masukkan kode PDDIKTI" required="true" type="tel" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__accreditation">Akreditasi
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__accreditation" name="accreditation" required="true" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Akreditasi --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Akreditasi --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Akreditasi --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__accreditation-item-choice-1" role="option">-- Pilih Akreditasi --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="A" id="choices--select__accreditation-item-choice-2" role="option">
+                        A
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="B" id="choices--select__accreditation-item-choice-3" role="option">
+                        B
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="C" id="choices--select__accreditation-item-choice-4" role="option">
+                        C
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="U" id="choices--select__accreditation-item-choice-5" role="option">
+                        Unggul
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="BA" id="choices--select__accreditation-item-choice-6" role="option">
+                        Baik
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="BS" id="choices--select__accreditation-item-choice-7" role="option">
+                        Baik Sekali
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="-" id="choices--select__accreditation-item-choice-8" role="option">
+                        Belum Terakreditasi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__type">Jenis
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__type" name="type" required="true" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Jenis --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Jenis --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Jenis --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__type-item-choice-1" role="option">-- Pilih Jenis --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="university" id="choices--select__type-item-choice-2" role="option">
+                        Universitas
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="institute" id="choices--select__type-item-choice-3" role="option">
+                        Institut
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="polytechnic" id="choices--select__type-item-choice-4" role="option">
+                        Politeknik
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="academy" id="choices--select__type-item-choice-5" role="option">
+                        Akademi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="high_school" id="choices--select__type-item-choice-6" role="option">
+                        Sekolah Tinggi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__status">Status
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__status" name="status" required="true" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Status --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Status --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Status --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__status-item-choice-1" role="option">-- Pilih Status --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="state" id="choices--select__status-item-choice-2" role="option">
+                        Negeri
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="private" id="choices--select__status-item-choice-3" role="option">
+                        Swasta
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__description">Deskripsi
+                                </label>
+<div class="form-control__group">
+<textarea class="form-control__input textarea" id="input__description" name="description" placeholder="Masukkan deskripsi kampus"></textarea>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card card_form" id="address__form">
+<div class="card__body">
+<div class="grid">
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__province-id">Provinsi
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<select class="form-control__select" id="select__province-id" name="province_id" required="true">
+<option selected="" value="">-- Pilih Provinsi --</option>
+<option value="11">
+                        ACEH
+                    </option>
+<option value="12">
+                        SUMATERA UTARA
+                    </option>
+<option value="13">
+                        SUMATERA BARAT
+                    </option>
+<option value="14">
+                        RIAU
+                    </option>
+<option value="15">
+                        JAMBI
+                    </option>
+<option value="16">
+                        SUMATERA SELATAN
+                    </option>
+<option value="17">
+                        BENGKULU
+                    </option>
+<option value="18">
+                        LAMPUNG
+                    </option>
+<option value="19">
+                        KEPULAUAN BANGKA BELITUNG
+                    </option>
+<option value="21">
+                        KEPULAUAN RIAU
+                    </option>
+<option value="31">
+                        DKI JAKARTA
+                    </option>
+<option value="32">
+                        JAWA BARAT
+                    </option>
+<option value="33">
+                        JAWA TENGAH
+                    </option>
+<option value="34">
+                        DI YOGYAKARTA
+                    </option>
+<option value="35">
+                        JAWA TIMUR
+                    </option>
+<option value="36">
+                        BANTEN
+                    </option>
+<option value="51">
+                        BALI
+                    </option>
+<option value="52">
+                        NUSA TENGGARA BARAT
+                    </option>
+<option value="53">
+                        NUSA TENGGARA TIMUR
+                    </option>
+<option value="61">
+                        KALIMANTAN BARAT
+                    </option>
+<option value="62">
+                        KALIMANTAN TENGAH
+                    </option>
+<option value="63">
+                        KALIMANTAN SELATAN
+                    </option>
+<option value="64">
+                        KALIMANTAN TIMUR
+                    </option>
+<option value="65">
+                        KALIMANTAN UTARA
+                    </option>
+<option value="71">
+                        SULAWESI UTARA
+                    </option>
+<option value="72">
+                        SULAWESI TENGAH
+                    </option>
+<option value="73">
+                        SULAWESI SELATAN
+                    </option>
+<option value="74">
+                        SULAWESI TENGGARA
+                    </option>
+<option value="75">
+                        GORONTALO
+                    </option>
+<option value="76">
+                        SULAWESI BARAT
+                    </option>
+<option value="81">
+                        MALUKU
+                    </option>
+<option value="82">
+                        MALUKU UTARA
+                    </option>
+<option value="91">
+                        PAPUA BARAT
+                    </option>
+<option value="94">
+                        PAPUA
+                    </option>
+<option value="101">
+                        Papua Barat Daya
+                    </option>
+<option value="102">
+                        Papua Pegunungan
+                    </option>
+<option value="103">
+                        Papua Tengah
+                    </option>
+<option value="104">
+                        Papua Selatan
+                    </option>
+</select>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__city-id">Kota/Kabupaten
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<select class="form-control__select" disabled="" id="select__city-id" name="city_id" required="true">
+<option selected="" value="">-- Pilih Kota/Kabupaten --</option>
+</select>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__postal-code">Kode Pos
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" data-label="Kode Pos" id="input__postal-code" maxlength="5" name="postal_code" oninput="formatNumberOnly(event)" placeholder="Masukkan kode pos" required="true" type="tel" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-control">
+<label class="form-control__label" for="input__address">Alamat
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__address" name="address" placeholder="Masukkan alamat" required="true" type="text" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card card_form" id="contact__form">
+<div class="card__body">
+<div class="grid">
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__website">Website
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__website" name="website" placeholder="Masukkan website" type="url" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__email">Email
+                                </label>
+<div class="form-control__group">
+<span data-input-icon="email"></span>
+<input class="form-control__input" id="input__email" name="email" placeholder="Masukkan email" type="email" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__phone">Nomor Telepon
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" data-label="Nomor Telepon" id="input__phone" maxlength="15" name="phone" oninput="formatNumberOnly(event)" placeholder="Masukkan nomor telepon" type="tel" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__whatsapp">Whatsapp
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" data-label="Whatsapp" id="input__whatsapp" maxlength="15" name="whatsapp" oninput="formatNumberOnly(event)" placeholder="Masukkan nomor whatsapp" type="tel" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__facebook">Facebook
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__facebook" name="facebook" placeholder="Contoh: #" type="url" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__youtube">Youtube
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__youtube" name="youtube" placeholder="Contoh: #" type="url" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__twitter">Twitter/X
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__twitter" name="twitter" placeholder="Contoh: @maukuliah.id" type="text" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__instagram">Instagram
+                                </label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__instagram" name="instagram" placeholder="Contoh: @maukuliah.id" type="text" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="form-table form-table_sticky-bottom"><div class="collapse" id="qn-form-table-sticky" style="height: auto;">
+<h4 class="form-table__title">
+                Daftar Form
+                
+            <span class="icon"></span></h4>
+<ul class="form-table__list">
+<li class="form-table__item active">
+<a class="form-table__anchor" href="master-universities-create.html">Informasi Kampus</a>
+</li>
+<li class="form-table__item">
+<a class="form-table__anchor" href="master-universities-create.html">Alamat Kampus</a>
+</li>
+<li class="form-table__item">
+<a class="form-table__anchor" href="master-universities-create.html">Kontak Kampus</a>
+</li>
+</ul>
+</div><div class="form-table__wrapper"><button aria-expanded="false" class="btn btn_secondary btn_icon" data-target="#qn-form-table-sticky" data-toggle="collapse" type="button">
+<span class="icon icon-list-bullet-mini"></span>
+</button><div class="form-table__button-wrapper" data-placement="top" data-tooltip="Pastikan semua inputan mandatori telah diisi">
+<button class="btn btn_primary" disabled="" type="submit">
+                        Simpan
+                    </button>
+</div></div></div></form>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Tambah Program Studi</title>
+
+<meta content="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><style></style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/choices.min.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-BnhZqdSm.css" rel="stylesheet"/></head>
+<body class="scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<div class="header header_template header_position-static">
+<div class="header__row-wrapper">
+<div class="header__group">
+<a class="header__identity" href="dashboard.html">
+<div class="header__identity-logo">
+<img alt="logo" class="lazy object-cover header__logo !rounded-lg entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/1779420063-fowvtXxSk0.jpg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/1779420063-fowvtXxSk0.jpg"/>
+</div>
+<div class="header__identity-wrapper">
+<span class="header__identity-sub">Sevima CRM</span>
+<h1 class="header__identity-title">Universitas Sentra Vidya Utama</h1>
+</div>
+</a>
+</div>
+<div class="header__right">
+<div class="header__action">
+<div class="dropdown dropdown_nav dropdown_notification">
+<button aria-expanded="false" class="btn btn_icon btn_nav !border-white/50" data-toggle="dropdown" id="qn-nav-notification">
+<span class="icon icon-bell-solid"></span>
+</button>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 z-10 !hidden md:!flex">
+            9+
+        </span>
+<span class="badge badge_secondary-default badge_sm absolute -right-2 -top-2 !hidden animate-ping md:!flex">
+            9+
+        </span>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="notification">
+<div class="notification__header">
+<div class="notification__wrapper">
+<h3 class="notification__title"><span class="icon icon-x-mark-mini" data-toggle="dropdown"></span>
+                        Notifikasi
+                    </h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/mark-all-as-read" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__header-btn" type="submit">
+                                Tandai Sudah Dibaca Semua
+                            </button>
+</form>
+</div>
+<nav class="nav-tab">
+<ul class="nav-tab__wrapper">
+<li class="nav-tab__item active" data-target="#notification-general-section" data-toggle="tab">
+                            Semua
+                                                            <span class="badge badge_sm badge_secondary-primary">
+    9+
+</span>
+</li>
+</ul>
+</nav>
+</div>
+<div class="notification__body">
+<div class="notification__section p-0 active" id="notification-general-section">
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 08 Jul 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/4c97d8b4-3e4e-45da-a518-32165e486ee7" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/f3f06c53-1232-4142-9578-47171ed17245" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>fahmi test</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 hari yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Rabu, 20 Mei 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/e56eac70-ec49-4b93-ba17-f883b2bd6607" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>akun desin testing</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    1 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Senin, 27 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/0cef242b-261a-40ee-b364-2c9cbe0ac9ef" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User test Tolak</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+<div class="notification__item">
+<h3 class="notification__item-title bg-slate-100 px-4">Selasa, 21 Apr 2026</h3>
+<form action="#" data-mockup-unresolved="/crm/notifications/read/f07c6af0-bef2-45ad-84f5-5e0b27519e42" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <button class="notification__item-body px-4 hover:bg-slate-200" type="submit">
+<div class="notification__avatar">
+<div class="header__user">
+<div class="header__user-avatar">
+<div class="size-8 flex items-center justify-center rounded-full bg-blue-300">
+<span class="icon icon-user-solid !text-blue-600">
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="notification__content">
+<div class="notification__content-nav">
+<span class="notification__text text-start">
+<b>User Testing Daftar Affliator</b> mengajukan pendaftaran di kampus Anda.
+                                                </span>
+<span class="notification__text-muted text-start">
+                                                    2 bulan yang lalu -
+                                                    Pengajuan Pendaftaran
+                                                </span>
+</div>
+</div>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="notification__footer">
+<a class="notification__footer-btn mx-auto" data-mockup-unresolved="/crm/notifications" href="#">
+                    Lihat semua
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dropdown dropdown_nav dropdown_profile">
+<button class="header__switch-avatar" data-toggle="dropdown" id="qn-nav-profile">
+<span class="avatar avatar_xs" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></span>
+<span class="header__switch-avatar-name">Ahmad Dimas</span>
+</button>
+<div class="dropdown__box dropdown__box_menu-end">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">
+                            Profil
+                        </span>
+</div>
+<ul class="dropdown__list !p-0">
+<li class="dropdown__avatar p-2">
+<div class="avatar avatar_sm">
+<div class="avatar__circle" data-avatar-name="Ahmad Dimas">
+<p class="avatar__acronym">Ah</p></div>
+<div class="avatar__text">
+<span class="avatar__title">Ahmad Dimas</span>
+<span class="avatar__subtitle">
+                                        Super Admin
+                                    </span>
+</div>
+</div>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="super-admin-profile-edit.html">
+<span class="icon icon-user-solid"></span>
+                                    Profil
+                                </a>
+</li>
+<li class="dropdown__item">
+<a href="../super-admin/dashboard.html">
+<span class="icon icon-arrow-uturn-left"></span>
+                                    Kembali ke Super Admin
+                                </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/super-admin/settings" href="#">
+<span class="icon icon-cog-6-tooth-solid"></span>
+                                    Pengaturan
+                                </a>
+</li>
+<li class="dropdown__item dropdown__item_danger">
+<form action="#" data-mockup-unresolved="/logout" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <button type="submit">
+<span class="icon icon-arrow-left-on-rectangle-mini"></span>
+                                    Keluar
+                                </button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header__row-wrapper header__row-wrapper_nav">
+<nav class="nav nav_template">
+<ul class="nav__list" data-more-text="Lainnya">
+<li class="nav__item">
+<a class="nav__link" href="dashboard.html">
+<span>Dashboard</span>
+</a>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="master-university-majors-create.html">
+<span>Profil Kampus</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Profil Kampus</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="master-universities.html">
+                                        Informasi Kampus
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-university-majors.html">
+                                        Program Studi
+                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="master-universities-prices.html">Biaya Kuliah</a>
+</li>
+<div x-data="{ showDropdown: false }">
+<li class="dropdown__item">
+<a class="w-full" href="master-university-majors-create.html" x-on:click="showDropdown = !showDropdown">
+                                            Manajemen Konten
+                                            <span :class="{ '-rotate-180': showDropdown }" class="icon icon-chevron-down ml-auto transition-all duration-500"></span>
+</a>
+</li>
+<li hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDropdown">
+<ul>
+<li class="dropdown__item">
+<a href="galleries.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Galeri
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="brochures.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Brosur
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="articles.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Artikel
+                                                </a>
+</li>
+<li class="dropdown__item">
+<a href="testimonies.html">
+<span class="icon icon-arrow-right"></span>
+                                                    Testimoni
+                                                </a>
+</li>
+</ul>
+</li>
+</div>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="admission-cycles.html">Periode Pendaftaran</a>
+</li>
+<li class="dropdown__item">
+<a href="admissions.html">Jalur Pendaftaran</a>
+</li>
+<li class="dropdown__item">
+<a href="scholarships.html">Beasiswa</a>
+</li>
+<li class="dropdown__line"></li>
+<li class="dropdown__item">
+<a href="admins.html">Staf PMB</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="master-university-majors-create.html">
+<span>CRM</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">CRM</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="prospects.html">
+                                            Manajemen Prospek
+                                        </a>
+</li>
+<li class="dropdown__item">
+<a class="flex w-full flex-row items-center gap-1" href="interested-users.html">
+                                        Peminat Baru
+                                        <span class="icon icon-fire-solid ml-auto"></span>
+</a>
+</li>
+<div x-data="{ showDropdown: false }">
+<li class="dropdown__item">
+<a class="w-full" href="master-university-majors-create.html" x-on:click="showDropdown = !showDropdown">
+                                                Afiliator
+                                                <span :class="{ '-rotate-180': showDropdown }" class="icon icon-chevron-down ml-auto transition-all duration-500"></span>
+</a>
+</li>
+<li hidden="" style="display: none; height: 0px; overflow: hidden;" x-collapse="" x-show="showDropdown">
+<ul>
+<li class="dropdown__item">
+<a href="dashboard-affiliator.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Dashboard Afiliator
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a data-mockup-unresolved="/crm/affiliates/validate" href="#">
+<span class="icon icon-arrow-right"></span>
+                                                        Validasi Peminat
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliates-payment.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Pembayaran Komisi
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliates-payment-histories.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Riwayat Pembayaran
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="admission-cycles-referral-commission.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Tarif Komisi
+                                                    </a>
+</li>
+<li class="dropdown__item">
+<a href="affiliators.html">
+<span class="icon icon-arrow-right"></span>
+                                                        Afiliator Kampus
+                                                    </a>
+</li>
+</ul>
+</li>
+<li class="dropdown__line"></li>
+</div>
+<li class="dropdown__item">
+<a href="custom-landing-pages.html">
+                                            Tracker &amp; Landing Page
+                                        </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<div class="dropdown dropdown_nav">
+<a class="nav__link" data-toggle="dropdown" href="master-university-majors-create.html">
+<span>Analitik</span>
+<span class="icon icon-chevron-down-mini"></span>
+</a>
+<div class="dropdown__box dropdown__box_multi">
+<div class="dropdown__box-header">
+<span class="icon icon-x-mark-mini" data-toggle="dropdown" role="button"></span>
+<span class="dropdown__box-title">Analitik</span>
+</div>
+<ul class="dropdown__list">
+<li class="dropdown__item">
+<a href="school-profilings.html">Profiling Sekolah</a>
+</li>
+<li class="dropdown__item">
+<a href="test.html">Tes Potensi Siswa</a>
+</li>
+<li class="dropdown__item">
+<a href="tryouts.html">Tryout</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<main class="main">
+<form action="master-university-majors.html" enctype="multipart/form-data" method="POST">
+<input autocomplete="off" name="_token" type="hidden" value="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH"/> <input name="_method" type="hidden" value="POST"/> <div class="form-nav">
+<div class="form-nav__left">
+<a class="btn btn_outline" href="master-university-majors.html">
+<span class="icon icon-arrow-left-mini"></span>
+<span class="btn__text !font-medium">
+            Kembali
+        </span>
+</a>
+</div>
+<div class="form-nav__middle" style="opacity: 0;">
+<ul class="form-nav__breadcrumb">
+<li class="form-nav__breadcrumb-item">
+<a class="form-nav__breadcrumb-btn" href="master-university-majors-create.html">Program Studi</a>
+</li>
+<li class="form-nav__breadcrumb-diagonal"></li>
+<li class="form-nav__breadcrumb-item active">
+                Tambah
+            </li>
+</ul>
+</div>
+<div class="form-nav__right">
+<div class="form-nav__wrapper">
+<div class="form-nav__button-wrapper" data-placement="left" data-tooltip="Pastikan semua inputan mandatori telah diisi">
+<button class="btn btn_primary" disabled="" type="submit">
+                        Simpan
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="main__header">
+<div class="main__location">
+<ul class="breadcrumb">
+<li class="breadcrumb__item">
+<a href="master-university-majors.html">Program Studi</a>
+</li>
+<li class="breadcrumb__item active">
+<a href="master-university-majors-create.html">Tambah Program Studi</a>
+</li>
+</ul>
+<div class="main__wrapper">
+<h1 class="main__title">Tambah Program Studi</h1>
+<p class="main__subtitle"></p>
+</div>
+</div>
+<div class="main__action">
+</div>
+</div>
+<div class="card card_form">
+<div class="card__body">
+<div class="cols-1 grid">
+<div class="form-control">
+<label class="form-control__label" for="input__name">Nama Program Studi
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input class="form-control__input" id="input__name" name="name" placeholder="Masukkan nama program studi" required="true" type="text" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+<div class="grid">
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="input__level">Jenjang
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="input__level" name="level" required="true" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Jenjang --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Jenjang --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Jenjang --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--input__level-item-choice-1" role="option">-- Pilih Jenjang --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="D1" id="choices--input__level-item-choice-2" role="option">
+                        Diploma 1
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="D2" id="choices--input__level-item-choice-3" role="option">
+                        Diploma 2
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="D3" id="choices--input__level-item-choice-4" role="option">
+                        Diploma 3
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="D4" id="choices--input__level-item-choice-5" role="option">
+                        Diploma 4
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="S1" id="choices--input__level-item-choice-6" role="option">
+                        Sarjana
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="S2" id="choices--input__level-item-choice-7" role="option">
+                        Magister
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="S3" id="choices--input__level-item-choice-8" role="option">
+                        Doktor
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="9" data-select-text="" data-value="SP1" id="choices--input__level-item-choice-9" role="option">
+                        Spesialis 1
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="10" data-select-text="" data-value="SP2" id="choices--input__level-item-choice-10" role="option">
+                        Spesialis 2
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="11" data-select-text="" data-value="PROF" id="choices--input__level-item-choice-11" role="option">
+                        Profesi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__accreditation">Akreditasi
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__accreditation" name="accreditation" required="true" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Akreditasi --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Akreditasi --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Akreditasi --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__accreditation-item-choice-1" role="option">-- Pilih Akreditasi --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="A" id="choices--select__accreditation-item-choice-2" role="option">
+                        A
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="B" id="choices--select__accreditation-item-choice-3" role="option">
+                        B
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="C" id="choices--select__accreditation-item-choice-4" role="option">
+                        C
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="U" id="choices--select__accreditation-item-choice-5" role="option">
+                        Unggul
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="BA" id="choices--select__accreditation-item-choice-6" role="option">
+                        Baik
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="BS" id="choices--select__accreditation-item-choice-7" role="option">
+                        Baik Sekali
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="-" id="choices--select__accreditation-item-choice-8" role="option">
+                        Belum Terakreditasi
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-control">
+<label class="form-control__label" for="select__major_id">Jurusan Umum
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<div aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" class="choices is-flipped" data-type="select-one" role="combobox" tabindex="0"><div class="choices__inner"><select class="select-search choices__input" data-choice="active" hidden="" id="select__major_id" name="major_id" required="true" tabindex="-1"><option data-custom-properties="[object Object]" value="">-- Pilih Jurusan Umum --</option></select><div class="choices__list choices__list--single"><div aria-selected="true" class="choices__item choices__placeholder choices__item--selectable" data-custom-properties="[object Object]" data-id="1" data-item="" data-value="">-- Pilih Jurusan Umum --</div></div></div><div aria-expanded="false" class="choices__list choices__list--dropdown"><input aria-autocomplete="list" aria-label="-- Pilih Jurusan Umum --" autocapitalize="off" autocomplete="off" class="choices__input choices__input--cloned" name="search_terms" placeholder="" role="textbox" spellcheck="false" type="search"/><div class="choices__list" role="listbox"><div aria-selected="true" class="choices__item choices__item--choice is-selected choices__placeholder choices__item--selectable is-highlighted" data-choice="" data-choice-selectable="" data-id="1" data-select-text="" data-value="" id="choices--select__major_id-item-choice-1" role="option">-- Pilih Jurusan Umum --</div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="2" data-select-text="" data-value="268" id="choices--select__major_id-item-choice-2" role="option">
+                        Pendidikan Agama Kristen
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="3" data-select-text="" data-value="267" id="choices--select__major_id-item-choice-3" role="option">
+                        Misiologi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="4" data-select-text="" data-value="266" id="choices--select__major_id-item-choice-4" role="option">
+                        Pendidikan Sejarah
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="5" data-select-text="" data-value="265" id="choices--select__major_id-item-choice-5" role="option">
+                        Komunikasi dan Penyiaran Islam
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="6" data-select-text="" data-value="264" id="choices--select__major_id-item-choice-6" role="option">
+                        Manajemen Pendidikan Islam
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="7" data-select-text="" data-value="263" id="choices--select__major_id-item-choice-7" role="option">
+                        Pendidikan Madrasah Ibtidaiyah
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="8" data-select-text="" data-value="262" id="choices--select__major_id-item-choice-8" role="option">
+                        Psikologi Islam
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="9" data-select-text="" data-value="261" id="choices--select__major_id-item-choice-9" role="option">
+                        Pendidikan Kimia
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="10" data-select-text="" data-value="260" id="choices--select__major_id-item-choice-10" role="option">
+                        Pendidikan Akuntansi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="11" data-select-text="" data-value="259" id="choices--select__major_id-item-choice-11" role="option">
+                        Pendidikan Teknologi Informasi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="12" data-select-text="" data-value="258" id="choices--select__major_id-item-choice-12" role="option">
+                        Manajemen Dakwah
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="13" data-select-text="" data-value="257" id="choices--select__major_id-item-choice-13" role="option">
+                        Tasawuf dan Psikoterapi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="14" data-select-text="" data-value="256" id="choices--select__major_id-item-choice-14" role="option">
+                        Pendidikan Geografi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="15" data-select-text="" data-value="255" id="choices--select__major_id-item-choice-15" role="option">
+                        Pendidikan Ekonomi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="16" data-select-text="" data-value="254" id="choices--select__major_id-item-choice-16" role="option">
+                        Pendidikan Luar Biasa
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="17" data-select-text="" data-value="253" id="choices--select__major_id-item-choice-17" role="option">
+                        Pendidikan Agama Islam
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="18" data-select-text="" data-value="252" id="choices--select__major_id-item-choice-18" role="option">
+                        Pendidikan Biologi
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="19" data-select-text="" data-value="251" id="choices--select__major_id-item-choice-19" role="option">
+                        Ilmu Falak
+                    </div><div class="choices__item choices__item--choice choices__item--selectable" data-choice="" data-choice-selectable="" data-id="20" data-select-text="" data-value="250" id="choices--select__major_id-item-choice-20" role="option">
+                        Pendidikan Tata Niaga
+                    </div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="form-control">
+<label class="form-control__label" for="type[]">
+                            Tipe Kelas
+                            <span class="important">*</span>
+</label>
+<div class="checkbox-inline">
+<input class="form-control__checkbox" id="check-reguler" name="type[]" required="" type="checkbox" value="Reguler"/>
+<label class="form-control__label-checkbox" for="check-reguler">
+                                Reguler
+                            </label>
+</div>
+<div class="checkbox-inline">
+<input class="form-control__checkbox" id="check-karyawan" name="type[]" required="" type="checkbox" value="Karyawan"/>
+<label class="form-control__label-checkbox" for="check-karyawan">
+                                Karyawan
+                            </label>
+</div>
+<div class="checkbox-inline">
+<input class="form-control__checkbox" id="check-online" name="type[]" required="" type="checkbox" value="Online"/>
+<label class="form-control__label-checkbox" for="check-online">
+                                Online
+                            </label>
+</div>
+</div>
+<div class="form-control">
+<label class="form-control__label" for="input__description">Deskripsi
+                                </label>
+<div class="form-control__group">
+<textarea class="form-control__input textarea" id="input__description" name="description" placeholder="Masukkan deskripsi program studi"></textarea>
+<span data-clear="input"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="form-table form-table_sticky-bottom" style="top: 208.438px;"><div class="form-table__wrapper"><div class="form-table__button-wrapper" data-placement="top" data-tooltip="Pastikan semua inputan mandatori telah diisi">
+<button class="btn btn_primary" disabled="" type="submit">
+                        Simpan
+                    </button>
+</div></div></div></form>
+<footer class="footer">
+<div class="footer__copyright-wrapper">
+<div class="footer__logo-wrapper">
+<img alt="logo" class="footer__logo" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer__copyright">
+            © 2005-2026 SEVIMA. All Rights Reserved
+        </p>
+</div>
+<p class="footer__brand-name">
+        SEVIMA Platform
+    </p>
+</footer>
+</main>
+
+
+
+
+<div class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" style="display: block;"><template shadowrootmode="open"><div><div class="gf-app"></div></div></template></div><script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="jcYOAoisPpDAzIFJAD3BjyL8kyMBqffIzztK2wyH" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

@@ -497,6 +497,48 @@
     "path": "/crm/tryouts/create",
     "pattern": "/crm/tryouts/create"
   },
+  "login/index": {
+    "module": "login",
+    "page": "index",
+    "path": "/login",
+    "pattern": "/login"
+  },
+  "preferences/akreditasi": {
+    "module": "preferences",
+    "page": "akreditasi",
+    "path": "/preferences/accreditation",
+    "pattern": "/preferences/accreditation"
+  },
+  "preferences/index": {
+    "module": "preferences",
+    "page": "index",
+    "path": "/preferences/major",
+    "pattern": "/preferences/major"
+  },
+  "preferences/jenis-pt": {
+    "module": "preferences",
+    "page": "jenis-pt",
+    "path": "/preferences/campus-type",
+    "pattern": "/preferences/campus-type"
+  },
+  "preferences/ukt": {
+    "module": "preferences",
+    "page": "ukt",
+    "path": "/preferences/tuition",
+    "pattern": "/preferences/tuition"
+  },
+  "preferences/wilayah": {
+    "module": "preferences",
+    "page": "wilayah",
+    "path": "/preferences/region",
+    "pattern": "/preferences/region"
+  },
+  "register/index": {
+    "module": "register",
+    "page": "index",
+    "path": "/register",
+    "pattern": "/register"
+  },
   "super-admin/banners": {
     "module": "super-admin",
     "page": "banners",

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<link href="_assets/captured-images/sevima-logo.webp" rel="icon" sizes="32x32" type="image/svg"/>
+
+<title>Sevima CRM | Login</title>
+
+<meta content="heitsgM4zCyDtX9B5CuRfQrUc4zfl37lgUFgmQWQ" name="csrf-token"/>
+
+
+
+
+<style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+ <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><link href="_assets/captured/css2.css" rel="stylesheet"/><link href="_assets/captured/core.css" rel="stylesheet"/><link href="_assets/captured/core-Bz0ctQ8Z.css" rel="stylesheet"/></head>
+<body class="body body_white scroll-smooth antialiased selection:bg-blue-100 selection:text-blue-600" x-data="{}"><div class="layout-overlay"></div>
+<main class="main main_advanced-login">
+<div class="advanced-login__form">
+<div class="header-login w-full justify-center">
+<div class="header-login__logo !max-w-[150px]">
+<a href="../user/index.html">
+<img alt="logo" class="lazy object-cover entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/maukuliah-sevima.webp" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/maukuliah-sevima.webp"/>
+</a>
+</div>
+<span class="header-login__separator"></span>
+<h1 class="header-login__name">Maukuliah</h1>
+</div>
+<div class="form-login">
+<div class="form-login__content">
+<div class="form-login__content-wrapper">
+<h2 class="form-login__content-title">Masuk ke Maukuliah</h2>
+<p class="form-login__content-subtitle">
+            Temukan Informasi Perkuliahan dan Pendaftaran dengan mudah
+        </p>
+</div>
+<div class="form-login__content-main">
+<a class="btn btn_outline" href="../preferences/index.html" id="button__google">
+<span class="btn__text !font-medium">
+<span class="flex flex-row items-center gap-1 text-sm">
+<img alt="google" class="lazy object-cover size-6 entered loaded" data-ll-status="loaded" data-src="_assets/captured-images/google.svg" loading="lazy" onerror="this.src='/quantum/assets/images/default.webp'" src="_assets/captured-images/google.svg"/>
+                Login dengan Google
+            </span>
+</span>
+</a>
+<div class="hr-intext">
+<span class="hr-intext__line"></span>
+<p class="hr-intext__text">atau gunakan</p>
+</div>
+<form action="../preferences/index.html" enctype="multipart/form-data" method="POST" onsubmit="event.preventDefault();location.href=this.getAttribute('action')">
+<input autocomplete="off" name="_token" type="hidden" value="heitsgM4zCyDtX9B5CuRfQrUc4zfl37lgUFgmQWQ"/> <input name="_method" type="hidden" value="POST"/> <div class="form-control">
+<label class="form-control__label" for="input_email">Email
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<span data-input-icon="email"></span>
+<input autocomplete="email" class="form-control__input" id="input_email" name="email" placeholder="Masukkan Email Anda" required="true" type="email" value=""/>
+<span data-clear="input"></span>
+</div>
+</div>
+<div class="form-control">
+<label class="form-control__label" for="input_password">Password
+                            <span class="important">*</span>
+</label>
+<div class="form-control__group">
+<input autocomplete="current-password" class="form-control__input" id="input_password" name="password" placeholder="Masukkan Password Anda" required="true" type="password"/>
+<span data-type="password" data-visibility="input"></span>
+</div>
+</div>
+<input id="input__redirect" name="redirect" type="hidden" value=""/>
+<div class="form-control form_action-area">
+<div class="checkbox">
+<input class="form-control__checkbox" id="checkbox__remember-me" name="remember" type="checkbox"/>
+<label class="form-control__label-checkbox" for="checkbox__remember-me">
+                        Ingatkan Saya
+                    </label>
+</div>
+<div class="form-control__float-right">
+<a class="link" data-mockup-unresolved="/password/reset" href="#">Lupa Password?</a>
+</div>
+</div>
+<button class="btn btn_primary" id="button__login" type="submit">
+<span class="btn__text !font-medium">
+            Masuk
+        </span>
+</button>
+</form>
+
+<div class="link-signup">
+<p class="link-signup__text">
+<span>Belum punya akun?</span>
+<a class="link" href="../register/index.html">
+                    Daftar Sekarang
+                </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-login gap-2">
+<div class="footer-login__logo">
+<img alt="logo" class="!w-[100px] !object-contain" src="_assets/captured-images/sevima-logo.webp"/>
+</div>
+<p class="footer-login__text">© 2005-2026 Sevima. All Rights Reserved</p>
+<div class="footer-login__language">
+<div class="flex flex-row items-center divide-x">
+<a class="px-1 hover:underline" data-mockup-unresolved="/terms-and-condition" href="#">
+                                Syarat dan Ketentuan
+                            </a>
+<a class="px-1 hover:underline" data-mockup-unresolved="/privacy-policy" href="#">
+                                Kebijakan Privasi
+                            </a>
+</div>
+</div>
+</div>
+</div>
+<div class="advanced-login__wrapper">
+<div class="advanced-login__illustration relative bg-orange-400">
+<div class="advanced-login__separator">
+<div class="advanced-login__separator-top"></div>
+<div class="advanced-login__separator-top-corner-middle"></div>
+<div class="advanced-login__separator-top-corner-top"></div>
+<div class="advanced-login__separator-top-corner-bottom"></div>
+<div class="advanced-login__separator-bottom"></div>
+<div class="advanced-login__separator-bottom-corner-middle"></div>
+<div class="advanced-login__separator-bottom-corner-top"></div>
+<div class="advanced-login__separator-bottom-corner-bottom"></div>
+</div>
+<img alt="maukuliah" class="advanced-login__illustration-image" src="_assets/captured-images/auth.webp"/>
+</div>
+</div>
+</main>
+
+
+<script data-navigate-track="reload" src="_assets/app.js"></script><script data-csrf="heitsgM4zCyDtX9B5CuRfQrUc4zfl37lgUFgmQWQ" data-navigate-once="true" data-update-uri="/livewire/update" src="_assets/livewire.min.js"></script><script src="_assets/mockup-interactions.js"></script></body></html>

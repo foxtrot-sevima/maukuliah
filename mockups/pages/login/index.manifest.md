@@ -4,7 +4,7 @@
 - Generated mockup: `mockups/pages/login/index.html`
 - Rendering CSS source: **captured (3 file(s))**
   (this page's own captured stylesheet was used, so visuals should match production exactly)
-- Everything is local now - 20 font/pattern url()s resolved to first-party QUANTUM files (`quantum-symbols`, header/sidebar patterns), 0 unresolvable external url()s dropped to `none`.
+- Everything is local now - 0 font/pattern url()s resolved to first-party QUANTUM files (`quantum-symbols`, header/sidebar patterns), 0 unresolvable external url()s dropped to `none`.
 
 ## Production/testing domain safety check
 

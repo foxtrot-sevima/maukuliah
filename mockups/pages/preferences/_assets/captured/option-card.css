@@ -1,0 +1,194 @@
+/*
+ * option-card - kartu pilihan (checkbox/radio) untuk form preferensi.
+ * Pola mengikuti radio-card/checkbox-card; memakai checkbox QUANTUM asli
+ * (.form-control__checkbox) dan token --qn-*. Flat, tanpa shadow.
+ * Kandidat untuk diusulkan ke QUANTUM.
+ */
+.option-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.option-group {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+.option-group__title {
+    padding: 0;
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+    color: var(--qn-neutral-500);
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.option-card {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    min-height: 2.75rem;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    border: 0.063rem solid var(--qn-neutral-300);
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    color: var(--qn-neutral-800);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.option-card:hover {
+    border-color: var(--qn-neutral-400);
+}
+
+.option-card:has(input:checked) {
+    border-color: var(--qn-primary-500);
+    background-color: var(--qn-primary-100);
+    color: var(--qn-primary-600);
+}
+
+.option-card:has(input:focus-visible) {
+    outline: 0.125rem solid var(--qn-primary-300);
+    outline-offset: 0.125rem;
+}
+
+.option-card[hidden],
+.option-group[hidden] {
+    display: none;
+}
+
+.option-card input[type="radio"] {
+    flex: 0 0 auto;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin: 0;
+    padding: 0;
+    border: 0.063rem solid #9aa4b2;
+    border-radius: 50%;
+    background-color: #ffffff;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.15s ease, border-width 0.15s ease;
+}
+
+.option-card input[type="radio"]:checked {
+    border: 0.3125rem solid var(--qn-primary-500);
+}
+
+.option-card__text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.option-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 1.25rem;
+}
+
+.option-count {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--qn-neutral-500);
+}
+
+.option-empty {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--qn-neutral-500);
+}
+
+.option-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.option-nav .link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.option-nav .icon {
+    font-size: 0.875rem;
+    line-height: 1;
+}
+
+.option-progress {
+    display: flex;
+    gap: 0.25rem;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.option-progress__step {
+    flex: 1 1 0;
+    height: 0.25rem;
+    border-radius: 999px;
+    background-color: var(--qn-neutral-200);
+}
+
+.option-progress__step_done {
+    background-color: var(--qn-primary-500);
+}
+
+.option-actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    border-top: 0.063rem solid var(--qn-neutral-200);
+    background-color: #ffffff;
+}
+
+.option-actions .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/*
+ * Ilustrasi kanan: tinggi dikunci ke tinggi layar dan menempel saat halaman
+ * di-scroll, supaya ukurannya sama di semua langkah (tanpa ini tingginya
+ * mengikuti panjang konten, sehingga gambar membesar/terpotong beda-beda).
+ */
+.main_advanced-login {
+    min-height: 100vh;
+}
+
+.main_advanced-login .advanced-login__wrapper {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 25rem) {
+    .option-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

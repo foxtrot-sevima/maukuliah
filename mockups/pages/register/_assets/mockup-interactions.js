@@ -352,3 +352,28 @@
         window.jQuery(this).selectize();
     });
 })();
+
+// Form input helpers from the production core.js (not recoverable from the
+// capture): the password show/hide eye and the clear-input "x". Their icons
+// are pure CSS ([data-visibility]/[data-clear]); only the click behaviour is
+// missing without this.
+document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (!t || !t.matches) return;
+    if (t.matches("[data-clear='input']")) {
+        var inp = t.parentNode && t.parentNode.querySelector('.form-control__input');
+        if (inp) {
+            inp.value = '';
+            inp.dispatchEvent(new Event('change'));
+            inp.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+    }
+    if (t.matches("[data-visibility='input']")) {
+        var field = t.parentNode && t.parentNode.querySelector('input');
+        if (field) {
+            var show = t.dataset.type !== 'text';
+            field.type = show ? 'text' : 'password';
+            t.dataset.type = show ? 'text' : 'password';
+        }
+    }
+});

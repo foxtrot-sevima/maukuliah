@@ -515,6 +515,71 @@ INTERACTIONS_JS = """// Local Bootstrap-5-compatible interaction layer for this 
         window.jQuery(this).selectize();
     });
 })();
+
+// Form input helpers from the production core.js (not recoverable from the
+// capture): the password show/hide eye and the clear-input "x". Their icons
+// are pure CSS ([data-visibility]/[data-clear]); only the click behaviour is
+// missing without this.
+document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (!t || !t.matches) return;
+    if (t.matches("[data-clear='input']")) {
+        var inp = t.parentNode && t.parentNode.querySelector('.form-control__input');
+        if (inp) {
+            inp.value = '';
+            inp.dispatchEvent(new Event('change'));
+            inp.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+    }
+    if (t.matches("[data-visibility='input']")) {
+        var field = t.parentNode && t.parentNode.querySelector('input');
+        if (field) {
+            var show = t.dataset.type !== 'text';
+            field.type = show ? 'text' : 'password';
+            t.dataset.type = show ? 'text' : 'password';
+        }
+    }
+});
+
+// Preference form helpers (mockup scaffolding - the real app does this with
+// Livewire/Alpine): live filter for long option lists,
+// price-range presets that fill the min/max inputs, and Rupiah formatting.
+(function () {
+    function fmt(digits) {
+        return digits ? 'Rp ' + digits.replace(/\B(?=(\d{3})+(?!\d))/g, '.') : '';
+    }
+    document.addEventListener('input', function (e) {
+        var t = e.target;
+        if (t.matches && t.matches('[data-filter-list]')) {
+            var list = document.querySelector(t.getAttribute('data-filter-list'));
+            if (!list) return;
+            var q = t.value.trim().toLowerCase(), shown = 0;
+            list.querySelectorAll('.option-card').forEach(function (c) {
+                var hit = !q || c.textContent.toLowerCase().indexOf(q) !== -1;
+                c.hidden = !hit;
+                if (hit) shown++;
+            });
+            list.querySelectorAll('.option-group').forEach(function (g) {
+                g.hidden = !g.querySelector('.option-card:not([hidden])');
+            });
+            var empty = document.querySelector('[data-filter-empty="' + t.getAttribute('data-filter-list') + '"]');
+            if (empty) empty.hidden = shown > 0;
+        }
+        if (t.matches && t.matches('[data-money]')) {
+            t.value = fmt(t.value.replace(/\D/g, ''));
+            document.querySelectorAll('[data-range-preset]').forEach(function (r) { r.checked = false; });
+        }
+    });
+    document.addEventListener('change', function (e) {
+        var t = e.target;
+        if (t.matches && t.matches('[data-range-preset]')) {
+            var min = document.getElementById('input__price-min');
+            var max = document.getElementById('input__price-max');
+            if (min) min.value = fmt(t.getAttribute('data-min'));
+            if (max) max.value = fmt(t.getAttribute('data-max'));
+        }
+    });
+})();
 """
 
 CSS_URL_RE = re.compile(r"url\(\s*(['\"]?)(?!data:)([^'\")]+)\1\s*\)")
@@ -817,7 +882,12 @@ def load_json(path):
 def find_capture_assets_dir(raw_html_path):
     """Browser 'Save Complete' saves a sibling '<name>_files' folder."""
     candidate = raw_html_path.parent / f"{raw_html_path.stem}_files"
-    return candidate if candidate.exists() else None
+    if candidate.exists():
+        return candidate
+    # Several pages of one flow can share a single asset folder: '_files'
+    # next to the HTML files (e.g. raw/maukuliah_preferensi/_files).
+    shared = raw_html_path.parent / "_files"
+    return shared if shared.exists() else None
 
 
 # The real app already ships a "Hapus X? Data tidak dapat dikembalikan"
@@ -1201,7 +1271,7 @@ def localize_inline_styles(soup, out_dir):
 # Pages of the authentication flow and where a completed login/register
 # continues (post-auth landing page of the user area).
 AUTH_PAGES = {"login/index", "register/index"}
-AUTH_NEXT = "user/index"
+AUTH_NEXT = "preferences/index"  # post-auth: optional preference pipeline, which then continues to user/index
 
 
 def resolve_internal_links(soup, module, page, route_map):
@@ -1233,8 +1303,10 @@ def resolve_internal_links(soup, module, page, route_map):
         # OAuth button) lands on the user area in production, so the static
         # mockup continues there instead of reloading the auth page itself.
         if (tag.name == "form" and target in AUTH_PAGES) or path.rstrip("/") == "/auth/google":
-            if "user/index" in route_map:
+            if AUTH_NEXT in route_map:
                 target = AUTH_NEXT
+            elif "user/index" in route_map:
+                target = "user/index"
         if target:
             target_module, target_page = target.split("/", 1)
             tag[attr] = relative_link(module, target_module, target_page)
@@ -1822,7 +1894,7 @@ def main():
         soup, out_dir, capture_assets_dir, kept_inline_scripts, modulepreload_matches))
     head_stats.update(localize_inline_styles(soup, out_dir))
     link_stats, pending_paths = resolve_internal_links(soup, module, page, route_map)
-    if page_id(module, page) in AUTH_PAGES:
+    if page_id(module, page) in AUTH_PAGES or module == "preferences":
         # Livewire enables the submit button once the fields are filled; with
         # no backend it would stay disabled forever, so enable it here (native
         # `required` validation still applies on submit).

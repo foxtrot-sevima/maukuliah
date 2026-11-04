@@ -305,3 +305,60 @@
         grid-template-columns: minmax(0, 1fr);
     }
 }
+
+/*
+ * Posisi konsisten antar langkah dengan satu scroll (scroll halaman, di tepi
+ * kanan). Kolom form minimal setinggi layar dan konten mulai dari atas.
+ * Tombol Lanjut/Lewati menempel di dasar layar (sticky) sehingga selalu
+ * tampil: di halaman pendek ia berada di dasar kolom, di halaman panjang ia
+ * tetap di dasar layar selama scroll - posisinya sama di semua langkah.
+ * Footer disembunyikan di alur ini agar dasar kolom = dasar layar.
+ */
+.advanced-login__form {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding-bottom: 0;
+}
+
+.advanced-login__form .footer-login {
+    display: none;
+}
+
+.advanced-login__form .form-login {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    padding: 1rem 0 0;
+}
+
+.advanced-login__form .form-login__content,
+.advanced-login__form .form-login__content-main,
+.advanced-login__form .form-login__content-main > form.option-form {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.advanced-login__form .form-login__content-wrapper {
+    padding-bottom: 1rem;
+}
+
+.option-scroll {
+    flex: 1 1 auto;
+}
+
+.option-actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+.option-nav {
+    margin-bottom: 0.75rem;
+}
+
+.option-progress {
+    margin-bottom: 1rem;
+}

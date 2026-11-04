@@ -105,7 +105,7 @@
 <div class="form-login__content-wrapper">
 <div class="option-nav">
 <a class="link" href="wilayah.html"><span class="icon icon-arrow-left-mini"></span>Kembali</a>
-<a class="link" href="../user/index.html">Lewati semua</a>
+<a class="link option-nav__skip" href="../user/index.html">Lewati semua</a>
 </div>
 <div aria-label="Langkah 3 dari 5" aria-valuemax="5" aria-valuemin="1" aria-valuenow="3" class="option-progress" role="progressbar"><span class="option-progress__step option-progress__step_done"></span><span class="option-progress__step option-progress__step_done"></span><span class="option-progress__step option-progress__step_done"></span><span class="option-progress__step"></span><span class="option-progress__step"></span></div>
 <h2 class="form-login__content-title">Jenis perguruan tinggi apa?</h2>
@@ -115,8 +115,8 @@
 <form action="akreditasi.html" class="option-form" enctype="multipart/form-data" method="POST" onsubmit="event.preventDefault();location.href=this.getAttribute('action')">
 <input autocomplete="off" name="_token" type="hidden" value="heitsgM4zCyDtX9B5CuRfQrUc4zfl37lgUFgmQWQ"/> <input name="_method" type="hidden" value="POST"/>
 <div class="option-grid">
-<label class="option-card" for="checkbox__statuses-1"><input class="form-control__checkbox" id="checkbox__statuses-1" name="statuses[]" type="checkbox" value="Negeri"/><span class="option-card__text">Negeri</span></label>
-<label class="option-card" for="checkbox__statuses-2"><input class="form-control__checkbox" id="checkbox__statuses-2" name="statuses[]" type="checkbox" value="Swasta"/><span class="option-card__text">Swasta</span></label>
+<label class="option-card" for="checkbox__statuses-1"><input class="option-card__input" id="checkbox__statuses-1" name="statuses[]" type="checkbox" value="Negeri"/><span aria-hidden="true" class="option-card__tile"><span class="icon icon-building-library"></span></span><span class="option-card__body"><span class="option-card__text">Negeri</span><span class="option-card__desc">Kampus milik pemerintah</span></span><span aria-hidden="true" class="option-card__check"><span class="icon icon-check-mini"></span></span></label>
+<label class="option-card" for="checkbox__statuses-2"><input class="option-card__input" id="checkbox__statuses-2" name="statuses[]" type="checkbox" value="Swasta"/><span aria-hidden="true" class="option-card__tile"><span class="icon icon-building-office-2"></span></span><span class="option-card__body"><span class="option-card__text">Swasta</span><span class="option-card__desc">Kampus milik yayasan</span></span><span aria-hidden="true" class="option-card__check"><span class="icon icon-check-mini"></span></span></label>
 </div>
 <div class="option-actions">
 <button class="btn btn_primary btn_lg" type="submit"><span class="btn__text !font-medium">Lanjut</span></button>

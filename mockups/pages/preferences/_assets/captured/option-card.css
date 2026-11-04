@@ -264,3 +264,44 @@
 .option-nav .link.option-nav__skip:hover {
     color: var(--qn-neutral-800);
 }
+
+/*
+ * Grid 2 kolom sama lebar untuk daftar panjang. Kartu seragam tingginya,
+ * teks panjang turun baris. Di layar sempit daftar bergambar jadi 1 kolom.
+ */
+.option-grid_2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.option-card_sm {
+    min-height: 3.25rem;
+    gap: 0.625rem;
+    padding: 0.5rem 0.625rem;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+.option-card_sm .option-card__tile {
+    width: 2rem;
+    height: 2rem;
+}
+
+.option-card_sm .option-card__tile .icon {
+    font-size: 1.125rem;
+}
+
+/* kartu bergambar: status dipilih cukup dari warna ikon dan border */
+.option-card_sm .option-card__check {
+    display: none;
+}
+
+.option-card_compact {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+}
+
+@media only screen and (max-width: 30rem) {
+    .option-grid_2:has(.option-card_sm) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

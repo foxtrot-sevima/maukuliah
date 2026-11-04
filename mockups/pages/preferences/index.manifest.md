@@ -48,7 +48,7 @@ Charts: 2 functional script(s) vendored locally (Chart.js + datalabels plugin + 
 - `sym-*` icon classes referenced: **0**
 - Bootstrap-style utility classes: **4**
 - `qn-*` classes NOT found in local QUANTUM copy (possible drift): **0**
-- Other/unclassified (likely app-specific, one-off): **52**
+- Other/unclassified (likely app-specific, one-off): **54**
 
 ### Other / app-specific classes (review manually)
 
@@ -58,6 +58,7 @@ Charts: 2 functional script(s) vendored locally (Chart.js + datalabels plugin + 
 - `option-card__input` (15x)
 - `option-card__text` (15x)
 - `option-card__tile` (15x)
+- `option-card_sm` (15x)
 - `option-progress__step` (5x)
 - `!font-medium` (2x)
 - `hover:underline` (2x)
@@ -91,8 +92,7 @@ Charts: 2 functional script(s) vendored locally (Chart.js + datalabels plugin + 
 - `header-login__separator` (1x)
 - `items-center` (1x)
 - `lazy` (1x)
-- `loaded` (1x)
-- ... and 12 more
+- ... and 14 more
 
 ## Colors
 

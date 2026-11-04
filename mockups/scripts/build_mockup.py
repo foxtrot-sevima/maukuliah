@@ -527,12 +527,17 @@ def find_known_local_asset(basename):
     return None
 
 
-def localize_css_urls(css_text, out_dir):
+def localize_css_urls(css_text, out_dir, css_dir=None):
     """Resolve every url() in a CSS blob to something local: a known
     first-party QUANTUM asset if we have one, otherwise `none` - never left
     pointing at an external domain."""
     stats = Counter()
     vendor_dir = out_dir / "_assets" / "vendor" / "local-assets"
+    images_dir = out_dir / "_assets" / "vendor" / "images"
+    # url()s are resolved by the browser relative to the CSS FILE, not the page:
+    # a stylesheet in _assets/captured/ needs '../vendor/...', while an inline
+    # <style> in the page needs '_assets/vendor/...'.
+    css_dir = css_dir or out_dir
 
     def _sub(m):
         raw_url = m.group(2)
@@ -544,7 +549,25 @@ def localize_css_urls(css_text, out_dir):
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(local_src, dest)
             stats["local_assets_matched"] += 1
-            return f"url({Path(os.path.relpath(dest, out_dir)).as_posix()})"
+            return f"url({Path(os.path.relpath(dest, css_dir)).as_posix()})"
+        # Relative refs into QUANTUM's image tree ('./../../assets/images/icons/
+        # input-email.svg', patterns, heroicons...) - these are the form-input
+        # icons, password-visibility toggles, chevrons and card patterns. The
+        # capture never saves them, but QUANTUM ships the originals.
+        marker = "assets/images/"
+        clean = raw_url.split("#")[0].split("?")[0]
+        if marker in clean and not clean.startswith(("http://", "https://")):
+            rel = clean.split(marker, 1)[1]
+            img_src = QUANTUM_ASSET_ROOT / "assets" / "images" / rel
+            if img_src.exists():
+                dest = images_dir / rel
+                if not dest.exists():
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(img_src, dest)
+                stats["local_assets_matched"] += 1
+                return f"url({Path(os.path.relpath(dest, css_dir)).as_posix()})"
+            stats["image_assets_missing"] += 1
+            return "none"
         if raw_url.startswith("http://") or raw_url.startswith("https://") or raw_url.startswith("/"):
             stats["external_urls_dropped"] += 1
             return "none"
@@ -1067,7 +1090,7 @@ def vendor_captured_stylesheets(soup, out_dir, capture_assets_dir):
                 continue
             dest.parent.mkdir(parents=True, exist_ok=True)
             text = src.read_text(encoding="utf-8", errors="ignore")
-            text, url_stats = localize_css_urls(text, out_dir)
+            text, url_stats = localize_css_urls(text, out_dir, css_dir=dest.parent)
             stats.update(url_stats)
             dest.write_text(text, encoding="utf-8")
             hrefs.append(href)
@@ -1175,6 +1198,12 @@ def localize_inline_styles(soup, out_dir):
     return stats
 
 
+# Pages of the authentication flow and where a completed login/register
+# continues (post-auth landing page of the user area).
+AUTH_PAGES = {"login/index", "register/index"}
+AUTH_NEXT = "user/index"
+
+
 def resolve_internal_links(soup, module, page, route_map):
     """Every <a href>/<form action> pointing at an external http(s) origin
     (navbar tabs, "Tambah"/Edit/Detail buttons, logout, etc.) either becomes
@@ -1200,6 +1229,12 @@ def resolve_internal_links(soup, module, page, route_map):
             # view), so the truest mockup equivalent is the crm dashboard
             # itself, not a dead '#'.
             target = "crm/dashboard"
+        # Auth flow: a successful login/register (form POST, or the Google
+        # OAuth button) lands on the user area in production, so the static
+        # mockup continues there instead of reloading the auth page itself.
+        if (tag.name == "form" and target in AUTH_PAGES) or path.rstrip("/") == "/auth/google":
+            if "user/index" in route_map:
+                target = AUTH_NEXT
         if target:
             target_module, target_page = target.split("/", 1)
             tag[attr] = relative_link(module, target_module, target_page)
@@ -1787,6 +1822,16 @@ def main():
         soup, out_dir, capture_assets_dir, kept_inline_scripts, modulepreload_matches))
     head_stats.update(localize_inline_styles(soup, out_dir))
     link_stats, pending_paths = resolve_internal_links(soup, module, page, route_map)
+    if page_id(module, page) in AUTH_PAGES:
+        # Livewire enables the submit button once the fields are filled; with
+        # no backend it would stay disabled forever, so enable it here (native
+        # `required` validation still applies on submit).
+        for btn in soup.select('form button[type="submit"][disabled]'):
+            del btn["disabled"]
+        # A static server answers POST with 405, so "submit" just navigates
+        # to the form's action (the user area) after native validation passes.
+        for form in soup.find_all("form", action=True):
+            form["onsubmit"] = "event.preventDefault();location.href=this.getAttribute('action')"
     head_stats.update(link_stats)
     if module_warning:
         head_stats["module_warning"] = module_warning

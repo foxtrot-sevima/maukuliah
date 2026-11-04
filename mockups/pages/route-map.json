@@ -497,6 +497,18 @@
     "path": "/crm/tryouts/create",
     "pattern": "/crm/tryouts/create"
   },
+  "login/index": {
+    "module": "login",
+    "page": "index",
+    "path": "/login",
+    "pattern": "/login"
+  },
+  "register/index": {
+    "module": "register",
+    "page": "index",
+    "path": "/register",
+    "pattern": "/register"
+  },
   "super-admin/banners": {
     "module": "super-admin",
     "page": "banners",

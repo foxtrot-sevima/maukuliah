@@ -1271,6 +1271,13 @@ def localize_inline_styles(soup, out_dir):
 # Pages of the authentication flow and where a completed login/register
 # continues (post-auth landing page of the user area).
 AUTH_PAGES = {"login/index", "register/index"}
+AUTH_LAYOUT_CSS = (
+    # Kolom ilustrasi kanan setinggi layar dan menempel saat scroll, sama dengan
+    # halaman preferensi, supaya ukurannya tidak berubah mengikuti tinggi form.
+    ".main_advanced-login{min-height:100vh}"
+    ".main_advanced-login .advanced-login__wrapper{position:sticky;top:0;"
+    "align-self:flex-start;box-sizing:border-box;height:100vh}"
+)
 AUTH_NEXT = "preferences/index"  # post-auth: optional preference pipeline, which then continues to user/index
 
 
@@ -1904,6 +1911,10 @@ def main():
         # to the form's action (the user area) after native validation passes.
         for form in soup.find_all("form", action=True):
             form["onsubmit"] = "event.preventDefault();location.href=this.getAttribute('action')"
+        if page_id(module, page) in AUTH_PAGES and soup.head is not None:
+            style = soup.new_tag("style")
+            style.string = AUTH_LAYOUT_CSS
+            soup.head.append(style)
     head_stats.update(link_stats)
     if module_warning:
         head_stats["module_warning"] = module_warning

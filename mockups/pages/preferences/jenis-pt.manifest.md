@@ -52,7 +52,7 @@ Charts: 2 functional script(s) vendored locally (Chart.js + datalabels plugin + 
 
 ### Other / app-specific classes (review manually)
 
-- `option-progress__step` (5x)
+- `option-progress__step` (4x)
 - `option-progress__step_done` (3x)
 - `!font-medium` (2x)
 - `hover:underline` (2x)

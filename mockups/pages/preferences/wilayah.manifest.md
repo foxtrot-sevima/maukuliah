@@ -62,7 +62,7 @@ Charts: 2 functional script(s) vendored locally (Chart.js + datalabels plugin + 
 - `option-grid_2` (6x)
 - `option-group` (6x)
 - `option-group__title` (6x)
-- `option-progress__step` (5x)
+- `option-progress__step` (4x)
 - `!font-medium` (2x)
 - `hover:underline` (2x)
 - `option-form` (2x)

@@ -503,12 +503,6 @@
     "path": "/login",
     "pattern": "/login"
   },
-  "preferences/akreditasi": {
-    "module": "preferences",
-    "page": "akreditasi",
-    "path": "/preferences/accreditation",
-    "pattern": "/preferences/accreditation"
-  },
   "preferences/index": {
     "module": "preferences",
     "page": "index",

@@ -1,6 +1,6 @@
 # Mockup sync report - preferences/ukt
 
-- Source capture: `mockups/raw/maukuliah_preferensi/Maukuliah _ Preferensi 5 ukt.html`
+- Source capture: `mockups/raw/maukuliah_preferensi/Maukuliah _ Preferensi 4 ukt.html`
 - Generated mockup: `mockups/pages/preferences/ukt.html`
 - Rendering CSS source: **captured (4 file(s))**
   (this page's own captured stylesheet was used, so visuals should match production exactly)
@@ -52,14 +52,14 @@ Charts: 2 functional script(s) vendored locally (Chart.js + datalabels plugin + 
 
 ### Other / app-specific classes (review manually)
 
-- `option-progress__step` (5x)
-- `option-progress__step_done` (5x)
 - `option-card` (4x)
 - `option-card__body` (4x)
 - `option-card__check` (4x)
 - `option-card__input` (4x)
 - `option-card__text` (4x)
 - `option-card__tile` (4x)
+- `option-progress__step` (4x)
+- `option-progress__step_done` (4x)
 - `!font-medium` (2x)
 - `hover:underline` (2x)
 - `option-grid` (2x)

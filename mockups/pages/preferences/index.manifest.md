@@ -59,7 +59,7 @@ Charts: 2 functional script(s) vendored locally (Chart.js + datalabels plugin + 
 - `option-card__text` (15x)
 - `option-card__tile` (15x)
 - `option-card_sm` (15x)
-- `option-progress__step` (5x)
+- `option-progress__step` (4x)
 - `!font-medium` (2x)
 - `hover:underline` (2x)
 - `!max-w-[150px]` (1x)
